@@ -1,3 +1,81 @@
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
+@import url('https://fonts.googleapis.com/css2?family=Prosto+One&family=Sora:wght@100..800&display=swap');
+
+
+prosto-one-regular {
+  font-family: "Prosto One", sans-serif;
+  font-weight: 400;
+  font-style: normal;
+}
+h1, h2, h3, h4, h5, h6,
+p, span, li, ul, div, label, button {
+  font-family: "Sora", sans-serif;
+  font-optical-sizing: auto;
+  font-weight: 500;
+  font-style: normal;
+}
+
+.no-hover-effect {
+  background-color: transparent !important;
+  color: inherit !important;
+}
+
+.no-hover-effect:hover {
+  background-color: transparent !important;
+  color: inherit !important;
+}
+
+
+@keyframes slideDown {
+    0% {
+      transform: translateY(-100%);
+    }
+    100% {
+      transform: translateY(0);
+    }
+  }
+  
+  .slide-down {
+    animation: slideDown 0.5s ease;
+  }
+ 
+  
+  .custom_scroll_behaviour{
+    overflow-y: auto; /* allow vertical scrollbar */
+        overflow-x: hidden; /* hide horizontal scrollbar */
+  }
+  
+  /* Add this to your CSS file or within a <style> tag in your component file */
+
+.custom_scroll_container {
+  scrollbar-width: none; /* Firefox */
+  -ms-overflow-style: none;  /* Internet Explorer 10+ */
+}
+
+.custom_scroll_container::-webkit-scrollbar {
+  width: 0;
+  height: 0; /* Safari and Chrome */
+}
+
+.smooth_scroll {
+  scroll-behavior: smooth;
+}
+
+.scrollbar{
+  scrollbar-width:none;
+}
+
+/* Add this to your Tailwind CSS file or a custom CSS file */
+.input-field {
+  @apply w-full rounded-md border-b border-gray-300 p-2;
+}
+.input-field:focus {
+  @apply outline-none;
+}
+
+
+
+
+  
