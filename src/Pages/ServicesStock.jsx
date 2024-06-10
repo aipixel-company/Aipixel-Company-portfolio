@@ -5,6 +5,7 @@ import EngineeringServices from '../Components/EngineeringServices'
 import OptimisationServices from '../Components/OptimisationServices'
 import ExpertiseServices from '../Components/ExpertiseServices'
 import ContactusFormSection from '../Components/ContactusFormSection'
+import IndustriesWeWorkServices from '../Components/IndustriesWeWorkServices'
 
 export default function ServicesStock() {
   return (
@@ -13,6 +14,7 @@ export default function ServicesStock() {
     <AdvisorySection/>
     <EngineeringServices/>
     <OptimisationServices/>
+    <IndustriesWeWorkServices/>
     <ExpertiseServices/>
     <ContactusFormSection/>
       

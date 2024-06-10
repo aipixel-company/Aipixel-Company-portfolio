@@ -10,7 +10,6 @@ export default function AboutStock() {
     <>
     <div className=' bg-gray-100'>
     <AboutSlider/>
-    {/* <SolutionsSection/> */}
      <OurVison/>
      <Map/>
      <OurUniqueFeatures/>

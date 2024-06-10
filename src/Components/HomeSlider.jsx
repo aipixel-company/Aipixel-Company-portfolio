@@ -5,7 +5,7 @@ import adventureclubbackgorund from "../assets/adventureclubbackground.jpg";
 import dtec from "../assets/dtec.jpg";
 import seed from "../assets/background.jpg";
 import larace from "../assets/larace.png";
-import dofar from "../assets/dofar.png";
+import adventureclub from "../assets/adventureclub.png";
 import dtecch from "../assets/dtec.png";
 import riyadhbank from "../assets/bankriyadh.png";
 import moosa from "../assets/moosa.png";
@@ -17,7 +17,7 @@ const cards = [
     id: 1,
     title: "Riyad Bank",
     logo: riyadhbank,
-    description: "Bank AL-Riyad",
+    description: "Bank AL-Riyad is a leading financial institution in Saudi Arabia, offering a wide range of banking services and solutions.",
     backgroundImage: fianance,
     logoHeight: "35px",
   },
@@ -25,23 +25,23 @@ const cards = [
     id: 2,
     title: "Dtec",
     logo: dtecch,
-    description: "DTEC",
+    description: "DTEC provides innovative tech solutions to enhance business efficiency and drive growth in various sectors.",
     backgroundImage: dtec,
     logoHeight: "50px",
   },
   {
     id: 3,
-    title: "Dofar",
-    logo: dofar,
-    description: "Dhofar",
+    title: "Adventure Club",
+    logo: adventureclub,
+    description: "Adventure Club offers thrilling and adventurous activities for those who seek excitement and unforgettable experiences.",
     backgroundImage: seed,
-    logoHeight: "50px",
+    logoHeight: "70px",
   },
   {
     id: 4,
     title: "Moosa Group",
     logo: moosa,
-    description: "Moosa Group",
+    description: "Moosa Group is a conglomerate with diverse business interests, delivering quality products and services.",
     backgroundImage: moosagroup,
     logoHeight: "55px",
   },
@@ -49,7 +49,7 @@ const cards = [
     id: 5,
     title: "LA Race",
     logo: larace,
-    description: "LARACE",
+    description: "LA Race is an organization dedicated to organizing exciting and competitive racing events.",
     backgroundImage: laracee,
     logoHeight: "65px",
   },
@@ -101,24 +101,20 @@ function HomeSlider() {
       <div>
         <div className="mb-28 mt-10 cursor-default">
           <h
-            className="text-6xl text-white 
-          
-prosto-one-regular 
-          
-          
+            className="text-6xl text-white prosto-one-regular 
           "
           >
-            Built in Your Way
+           We Turn your Dreams into Reality
           </h>
-          <h1 className=" prosto-one-regular  text-6xl text-white">
-           but with Our Expert Approach
+          <h1 className=" prosto-one-regular  text-5xl text-white">
+           Where Pixel get's Smarter
           </h1>
         </div>
         <div className="flex flex-row">
           {cards.map((card) => (
             <div
               key={card.id}
-              className={`w-52 h-36 cursor-pointer transition-transform duration-500 ${
+              className={`w-56 h-60 cursor-pointer transition-transform duration-500 ${
                 activeCardId === card.id
                   ? "bg-white shadow-md text-white transform scale-105 rounded-lg"
                   : "bg-white shadow-md border text-white opacity-70"
@@ -143,7 +139,7 @@ prosto-one-regular
                   </div>
                   {activeCardId === card.id && (
                     <div className="mt-5 transition-opacity duration-500 opacity-100">
-                      <p className="text-black font-semibold  mx-auto">
+                      <p className="text-black text-sm font-light mx-auto px-2">
                         {card.description}
                       </p>
                     </div>

@@ -140,14 +140,12 @@ export default function Footer() {
           <div class="grid grid-cols-1 gap-8 lg:grid-cols-3">
             <div>
               <div className=" mb-10">
-
-             <img src={navlogo} alt="" className=" h-[5rem]" />
+                <img src={navlogo} alt="" className=" h-[5rem]" />
               </div>
               <h1 className=" font-bold">Address:</h1>
 
               <p class="mt-4 max-w-xs text-gray-500">
-                Lorem ipsum dolor, sit amet consectetur adipisicing elit. Esse
-                non cupiditate quae nam molestias.
+                37L Block Johar Town, Lahore
               </p>
 
               <ul class="mt-8 flex gap-6">
@@ -177,7 +175,7 @@ export default function Footer() {
 
                 <li>
                   <a
-                    href="#"
+                    href="https://www.instagram.com/aipixel2023?igsh=b2pxajdxc3JnODFk"
                     rel="noreferrer"
                     target="_blank"
                     class="text-gray-700 transition hover:opacity-75"
@@ -201,12 +199,12 @@ export default function Footer() {
 
                 <li>
                   <a
-                    href="#"
+                    href="https://www.linkedin.com/company/aipixel123/"
                     rel="noreferrer"
                     target="_blank"
                     class="text-gray-700 transition hover:opacity-75"
                   >
-                    <span class="sr-only">Twitter</span>
+                    <span class="sr-only">LinkedIn</span>
 
                     <svg
                       class="h-6 w-6"
@@ -214,7 +212,7 @@ export default function Footer() {
                       viewBox="0 0 24 24"
                       aria-hidden="true"
                     >
-                      <path d="M8.29 20.251c7.547 0 11.675-6.253 11.675-11.675 0-.178 0-.355-.012-.53A8.348 8.348 0 0022 5.92a8.19 8.19 0 01-2.357.646 4.118 4.118 0 001.804-2.27 8.224 8.224 0 01-2.605.996 4.107 4.107 0 00-6.993 3.743 11.65 11.65 0 01-8.457-4.287 4.106 4.106 0 001.27 5.477A4.072 4.072 0 012.8 9.713v.052a4.105 4.105 0 003.292 4.022 4.095 4.095 0 01-1.853.07 4.108 4.108 0 003.834 2.85A8.233 8.233 0 012 18.407a11.616 11.616 0 006.29 1.84" />
+                      <path d="M19 0h-14c-2.75 0-5 2.25-5 5v14c0 2.75 2.25 5 5 5h14c2.75 0 5-2.25 5-5v-14c0-2.75-2.25-5-5-5zm-11 19h-3v-10h3v10zm-1.5-11.4c-.96 0-1.6-.7-1.6-1.6s.65-1.6 1.6-1.6 1.6.7 1.6 1.6-.65 1.6-1.6 1.6zm13.5 11.4h-3v-5.6c0-1.4-.5-2.3-1.7-2.3-1 0-1.5.7-1.8 1.3-.1.2-.1.4-.1.7v5.9h-3v-10h3v1.3c.5-.7 1.3-1.7 3.1-1.7 2.2 0 3.7 1.4 3.7 4.3v6.1z" />
                     </svg>
                   </a>
                 </li>
@@ -241,7 +239,7 @@ export default function Footer() {
                       />
                     </svg>
                   </a>
-                </li> 
+                </li>
               </ul>
             </div>
 
@@ -423,7 +421,7 @@ export default function Footer() {
           </div>
         </div>
         <div className=" mx-11 p-5">
-        <p class="text-xs text-gray-500  border-t pt-7">
+          <p class="text-xs text-gray-500  border-t pt-7">
             &copy; 2024. AI-PIXEL. All rights reserved.
           </p>
         </div>

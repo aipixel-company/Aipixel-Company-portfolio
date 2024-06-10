@@ -19,7 +19,6 @@ const expertiseData = [
     image:
       "https://images.unsplash.com/photo-1690228254548-31ef53e40cd1?w=500&auto=format&fit=crop&q=60&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8MTF8fHVpJTIwdXhiYWNrZ3JvdW5kfGVufDB8fDB8fHww",
   },
-  
   {
     id: 3,
     field: "Artificial Intelligence",
@@ -143,57 +142,59 @@ export default function HomeExpertise() {
     <div className="flex flex-col items-center">
       <div className="flex flex-col items-center pt-16 pb-20">
         <h1 className="text-4xl font-semibold mb-3 capitalize">
-          Achieve Your Goals with Us!
+          See how we can help you reach your goals
         </h1>
       </div>
 
       <div className="flex flex-row w-full h-[70vh] overflow-hidden">
-        {" "}
         <div className="w-full flex flex-col h-[70vh] mx-5">
           <div
             className="flex overflow-x-auto space-x-1 h-[60vh] scrollbar"
-            style={{ maxWidth: "calc(100% - 100px)" }}
+            style={{ maxWidth: "calc(100% - 100px)"}}
             ref={containerRef}
           >
             {expertiseData.map((expertise) => (
               <div
                 key={expertise.id}
-                className="flex-shrink-0 overflow-y-hidden w-80 border-2 bg-white rounded-md p-2"
-                style={{
-                  backgroundImage: `url(${expertise.image})`,
-                  backgroundSize: "cover",
-                  backgroundPosition: "center",
-                }}
+                className="relative expertise-card flex-shrink-0 w-80 border-2 bg-white rounded-md p-2"
               >
-                <div className="content-start flex bg-opacity-75 bg-gray-500 p-2 rounded-t-md">
-                  <GoDotFill className="text-black" />
-                  <h2 className="text-sm font-light text-black ml-2">
-                    {expertise.field}
-                  </h2>
-                </div>
-                <div className="flex flex-col items-center mt-20 h-full bg-opacity-75 bg-gray-300 p-2 rounded-b-md">
-                  <div>
-                    <h2 className="text-lg font-semibold mb-2 text-black">
-                      {expertise.name}
+                <div
+                  className="absolute bottom-0 w-full h-1/2 rounded-lg"
+                  style={{
+                    backgroundImage: `url(${expertise.image})`,
+                    backgroundPosition: 'center',
+                    backgroundSize: 'cover',
+                  }}
+                />
+                <div className="relative z-10 expertise-overlay flex flex-col h-full">
+                  <div className="content-start flex bg-opacity-75  rounded-t-md">
+                    <GoDotFill className="text-black" />
+                    <h2 className="text-sm font-light text-black ml-2 p-1">
+                      {expertise.field}
                     </h2>
-                    <p className="text-black">{expertise.description}</p>
+                  </div>
+                  <div className="flex flex-col items-center mt-20 h-full bg-opacity-75 p-2 rounded-b-md">
+                    <div>
+                      <h2 className="text-lg font-semibold mb-2 text-black">
+                        {expertise.name}
+                      </h2>
+                      <p className="text-black">{expertise.description}</p>
+                    </div>
                   </div>
                 </div>
               </div>
             ))}
           </div>
-          <div className="flex mt-4 mb-4 justify-center gap-3">
-            {/* Left scroll button */}
+          <div className="flex mt-4 mb-4 gap-3">
             <button
               onClick={handleScrollLeft}
-              className="mx-2 p-1 text-5xl bg-gray-200 rounded-full hover:bg-gray-300 hover:drop-shadow-2xl"
+              className="mx-2 p-1 text-xl  bg-gray-200 rounded-full hover:bg-gray-300 hover:drop-shadow-2xl"
             >
               <FiChevronLeft />
             </button>
-            {/* Right scroll button */}
             <button
               onClick={handleScrollRight}
-              className="mx-2 p-1 text-5xl bg-gray-200 rounded-full hover:bg-gray-300 hover:drop-shadow-2xl"
+              className="mx-2 p-1 text-xl bg-gray-200 rounded-full hover:bg-gray-300 hover:drop-shadow-2xl"
             >
               <FiChevronRight />
             </button>

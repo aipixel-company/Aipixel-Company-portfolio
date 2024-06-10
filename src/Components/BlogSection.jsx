@@ -18,7 +18,7 @@ const BlogSection = () => {
         "Unlock the power of systematic investment with us and watch your profits soar. Our expert team will guide you on the path to financial..",
     },
 
-    // Add more slides as needed
+   
   ];
 
   const handlePrevSlide = () => {

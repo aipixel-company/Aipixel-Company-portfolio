@@ -5,8 +5,9 @@ import bankriyadh from "../assets/bankriyadh.png";
 import dtec from "../assets/dtec.png";
 import adventureclub from "../assets/adventureclub.png"
 import arkaan from "../assets/arkaan.png"
-import dofar from "../assets/dofar.png"
 import techgalaxy from "../assets/techgalaxy.png"
+
+import seedlogo from "../assets/seedlogo.png"
 
 import universalskills from "../assets/universalskills.png"
 import turing from "../assets/turing.png"
@@ -49,10 +50,10 @@ const testimonials = [
     height: "80px"
   },
   {
-    logo: dofar,
+    logo: seedlogo,
     companyType: "Finance",
     description: "One of the largest financial institutions in the Kingdom of Saudi Arabia and the Middle East.",
-    height: "70px"
+    height: "60px"
   },
   {
     logo: techgalaxy,

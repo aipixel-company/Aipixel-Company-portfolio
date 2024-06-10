@@ -1,33 +1,47 @@
 import React from "react";
 
-export default function IndustriesTimeline() {
-  const timelineItems = [
+export default function ProjectWorkflow() {
+  const workflowSteps = [
     {
-      date: "1-6 May, 2021",
-      title: "Registration",
+      title: "Project Initiation",
       description:
-        "Pick your favourite event(s) and register in that event by filling the form corresponding to that event. Its that easy :)",
+        "Gather project requirements, define scope, and establish objectives.",
+      date: "1st Week",
       position: "right",
     },
     {
-      date: "6-9 May, 2021",
-      title: "Participation",
+      title: "Planning & Design",
       description:
-        "Participate online. The links for your registered events will be sent to you via email and whatsapp groups. Use those links and show your talent.",
+        "Create project plan, allocate resources, and design project architecture.",
+      date: "2nd Week",
       position: "left",
     },
     {
-      date: "10 May, 2021",
-      title: "Result Declaration",
+      title: "Development",
       description:
-        "The ultimate genius will be revealed by our judging panel on 10th May, 2021 and the results will be announced on the whatsapp groups and will be mailed to you.",
+        "Implement features according to design, conduct testing, and iterate.",
+      date: "3rd - 5th Week",
       position: "right",
     },
     {
-      date: "12 May, 2021",
-      title: "Prize Distribution",
+      title: "Testing & QA",
       description:
-        "The winners will be contacted by our team for their addresses and the winning goodies will be sent at their addresses.",
+        "Perform comprehensive testing, identify bugs, and ensure quality standards.",
+      date: "6th Week",
+      position: "left",
+    },
+    {
+      title: "Deployment",
+      description:
+        "Deploy the project on the production environment and monitor performance.",
+      date: "7th Week",
+      position: "right",
+    },
+    {
+      title: "Maintenance & Support",
+      description:
+        "Provide ongoing maintenance, offer support, and address user feedback.",
+      date: "Ongoing",
       position: "left",
     },
   ];
@@ -38,22 +52,18 @@ export default function IndustriesTimeline() {
         <div className="bg-black text-white py-8">
           <div className="container mx-auto flex flex-col items-start md:flex-row my-12 md:my-24">
             <div className="flex flex-col w-full sticky md:top-36 lg:w-1/3 mt-2 md:mt-12 px-8">
-              <p className="ml-2 text-yellow-300 uppercase tracking-loose">
-                Working Process
-              </p>
               <p className="text-3xl md:text-4xl leading-normal md:leading-relaxed mb-2">
-                Working Process of Fest
+                Project Workflow
               </p>
               <p className="text-sm md:text-base text-gray-50 mb-4">
-                Here’s your guide to the tech fest 2021 process. Go through all
-                the steps to know the exact process of the fest.
+                Explore the stages involved in the project development process.
               </p>
-              <a
+              {/* <a
                 href="#"
                 className="bg-transparent mr-auto hover:bg-yellow-300 text-yellow-300 hover:text-white rounded shadow hover:shadow-lg py-2 px-4 border border-yellow-300 hover:border-transparent"
               >
-                Explore Now
-              </a>
+                Learn More
+              </a> */}
             </div>
             <div className="ml-0 md:ml-12 lg:w-2/3 sticky">
               <div className="container mx-auto w-full h-full">
@@ -74,34 +84,35 @@ export default function IndustriesTimeline() {
                       borderRadius: "1%",
                     }}
                   ></div>
-                  {timelineItems.map((item, index) => (
+                  {workflowSteps.map((step, index) => (
                     <div
                       key={index}
                       className={`mb-8 flex justify-between ${
-                        item.position === "right" ? "flex-row-reverse" : ""
+                        step.position === "right" ? "flex-row-reverse" : ""
                       } items-center w-full ${
-                        item.position === "left"
+                        step.position === "left"
                           ? "right-timeline"
                           : "left-timeline"
                       }`}
                     >
                       <div className="order-1 w-5/12"></div>
                       <div
-                        className={`order-1 w-5/12 px-1 py-4 text-${item.position}`}
+                        className={`order-1 w-5/12 px-1 py-4 text-${step.position}`}
                       >
                         <p className="mb-3 text-base text-yellow-300">
-                          {item.date}
+                          {step.date}
                         </p>
                         <h4 className="mb-3 font-bold text-lg md:text-2xl">
-                          {item.title}
+                          {step.title}
                         </h4>
                         <p className="text-sm md:text-base leading-snug text-gray-50 text-opacity-100">
-                          {item.description}
+                          {step.description}
                         </p>
                       </div>
                     </div>
                   ))}
                 </div>
+                {/* Placeholder image */}
                 <img
                   className="mx-auto -mt-36 md:-mt-36"
                   src="https://user-images.githubusercontent.com/54521023/116968861-ef21a000-acd2-11eb-95ac-a34b5b490265.png"

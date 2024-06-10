@@ -13,7 +13,7 @@ import Map from '../Components/Map'
 export default function HomeStock() {
   return (
     <>
-        <div className=' bg-gray-100'>
+        <div className=''>
 
       <HomeSlider/>
        <HomeExpertise/>

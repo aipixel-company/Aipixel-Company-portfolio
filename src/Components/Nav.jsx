@@ -212,7 +212,7 @@ export default function Nav() {
     <div
       className={`py-3 items-center flex-row ${
         scrolled
-          ? " bg-gray-300 bg-opacity-50 drop-shadow-lg slide-down"
+          ? " bg-white drop-shadow-lg slide-down"
           : "bg-transparent text-white"
       } px-[50px] w-full fixed box-border z-50`}
     >

@@ -1,4 +1,5 @@
 import React, { useState } from "react";
+import expertiseservices from "../assets/expertiseservices.jpg";
 
 const expertise = [
   {
@@ -52,7 +53,7 @@ function FAQItem({ question, answer, isOpen, onClick }) {
           </svg>
         </span>
       </div>
-      {isOpen && <p className="text-gray-800 mt-3 animate-fadeIn">{answer}</p>}
+      {isOpen && <p className="text-gray-800 mt-3 font-normal text-sm animate-fadeIn">{answer}</p>}
     </div>
   );
 }
@@ -71,8 +72,8 @@ export default function ExpertiseServices() {
           Our Expertise
         </h2>
         <p className="text-gray-600 mt-3">
-          Lorem ipsum dolor sit amet, consectetur adipisicing elit. Sunt soluta
-          veniam esse.
+          We work with advanced technologies covering a
+          broad spectrum of specialisms. 
         </p>
       </div>
 
@@ -92,7 +93,7 @@ export default function ExpertiseServices() {
         </div>
         <div className="w-1/2 pl-5 mt-11">
           <img
-            src="https://plus.unsplash.com/premium_photo-1661416307260-5013ab7adc3f?w=500&auto=format&fit=crop&q=60&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8MjV8fHNvZnR3YXJlJTIwZXhwZXJ0aXNlfGVufDB8fDB8fHww"
+            src={expertiseservices}
             alt="Expertise illustration"
             className="w-full h-auto"
           />

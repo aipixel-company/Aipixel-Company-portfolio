@@ -29,7 +29,7 @@ export default function IndustriesMain() {
                     />
                   </svg>
 
-                  <span class="mx-2">Clean and Simple Layout</span>
+                  <span class="mx-2">Market Trends</span>
                 </p>
 
                 <p class="flex items-center -mx-2 text-gray-200">
@@ -48,7 +48,7 @@ export default function IndustriesMain() {
                     />
                   </svg>
 
-                  <span class="mx-2">Just Copy Paste Codeing</span>
+                  <span class="mx-2">Supply Chain and Logistics</span>
                 </p>
 
                 <p class="flex items-center -mx-2 text-gray-200">
@@ -67,7 +67,7 @@ export default function IndustriesMain() {
                     />
                   </svg>
 
-                  <span class="mx-2">Easy to Use</span>
+                  <span class="mx-2">Customer Demographics and Behavior</span>
                 </p>
               </div>
             </div>

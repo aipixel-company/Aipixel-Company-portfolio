@@ -3,7 +3,7 @@ import about from "../assets/about.gif";
 
 function HomeSlider() {
   return (
-    <div className="flex items-center h-[90vh] ">
+    <div className="flex items-center h-[90vh] bg-gray-400">
       <div className="flex-1">
         <img
           src={about}

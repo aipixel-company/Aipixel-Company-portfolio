@@ -20,7 +20,7 @@ const expertiseData = [
     details:
       "We develop IoT solutions that connect devices and systems, providing real-time data and analytics to drive informed decision-making.",
     backgroundImage:
-      "https://images.unsplash.com/photo-1505751172876-fa1923c5c528?fit=crop&w=800&q=80",
+      "https://plus.unsplash.com/premium_photo-1688678097473-2ce11d23e30c?q=80&w=1570&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
   },
   {
     title: "Market Research",
@@ -41,7 +41,7 @@ const expertiseData = [
     details:
       "Our digital enterprise solutions enable businesses to leverage technology for improved efficiency, productivity, and innovation.",
     backgroundImage:
-      "https://images.unsplash.com/photo-1556742400-b5a63e27c4df?fit=crop&w=800&q=80",
+      "https://images.unsplash.com/photo-1542744173-8e7e53415bb0?w=500&auto=format&fit=crop&q=60&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8NTV8fGRpZ2l0YWwlMjBlbnRlcnByaXNlfGVufDB8fDB8fHww",
   },
   {
     title: "Nearshore Development",
@@ -55,7 +55,7 @@ const expertiseData = [
     details:
       "We offer UX consulting services to enhance user experience, ensuring your products are intuitive, user-friendly, and meet the needs of your target audience.",
     backgroundImage:
-      "https://images.unsplash.com/photo-1529634822884-260cbb07c5a0?fit=crop&w=800&q=80",
+      "https://images.unsplash.com/photo-1681164316281-2901decc23bf?w=500&auto=format&fit=crop&q=60&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8MTJ8fHV4fGVufDB8fDB8fHww",
   },
 ];
 

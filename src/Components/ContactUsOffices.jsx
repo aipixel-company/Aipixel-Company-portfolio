@@ -1,13 +1,29 @@
 import React from "react";
+import ceo from "../assets/ceo.jpg"
+import teamlead from "../assets/teamlead.jpg"
+import cfo from "../assets/cfo.jpg"
 
 export default function ContactUsOffices() {
   const teamMembers = [
+    
     {
-      name: "Andres Berlin",
+      name: "Faheem Masood",
+      title: "Chief Finance Officer",
+      image: cfo,
+      description:
+        "Overseeing financial operations and strategies to ensure stability and growth. Expert in financial planning, analysis, and risk management.",
+      socialLinks: {
+        github: "javascript:void(0)",
+        twitter: "javascript:void(0)",
+        instagram: "javascript:void(0)",
+      },
+    },
+    {
+      name: "Mian Usman",
       title: "Chief Executive Officer",
-      image: "https://cdn.tuk.dev/assets/photo-1564061170517-d3907caa96ea.jfif",
+      image: ceo,
       description:
-        "The CEO's role in raising a company's corporate IQ is to establish an atmosphere that promotes knowledge sharing and collaboration.",
+        "Leading the company with a focus on innovation, growth, and customer satisfaction. Promotes a collaborative and knowledge-sharing environment.",
       socialLinks: {
         github: "javascript:void(0)",
         twitter: "javascript:void(0)",
@@ -15,67 +31,17 @@ export default function ContactUsOffices() {
       },
     },
     {
-      name: "Silene Tokyo",
-      title: "Product Design Head",
-      image: "https://cdn.tuk.dev/assets/photo-1530577197743-7adf14294584.jfif",
+      name: "Mian Moiz",
+      title: "Team Lead",
+      image: teamlead ,
       description:
-        "The emphasis on innovation and technology in our companies has resulted in a few of them establishing global benchmarks in product design and development.",
+        "Guiding the team towards achieving project goals with efficiency and excellence. Expertise in team management and project coordination.",
       socialLinks: {
         github: "javascript:void(0)",
         twitter: "javascript:void(0)",
         instagram: "javascript:void(0)",
       },
     },
-    {
-      name: "Johnson Stone",
-      title: "Manager Development",
-      image: "https://cdn.tuk.dev/assets/photo-1566753323558-f4e0952af115.jfif",
-      description:
-        "Our services encompass the assessment and repair of property damage caused by water, fire, smoke, or mold. We can also be a part of the restoration.",
-      socialLinks: {
-        github: "javascript:void(0)",
-        twitter: "javascript:void(0)",
-        instagram: "javascript:void(0)",
-      },
-    },
-    {
-      name: "Dean Jones",
-      title: "Principal Software Engineer",
-      image: "https://cdn.tuk.dev/assets/boy-smiling_23-2148155640.jpg",
-      description:
-        "An avid open-source developer who loves to be creative and inventive. I have 20 years of experience in the field.",
-      socialLinks: {
-        github: "javascript:void(0)",
-        twitter: "javascript:void(0)",
-        instagram: "javascript:void(0)",
-      },
-    },
-    {
-      name: "Rachel Adams",
-      title: "Product Design Head",
-      image:
-        "https://cdn.tuk.dev/assets/blond-man-happy-expression_1194-2873.jpg",
-      description:
-        "Product designer with interests in immersive computing and XR, political ventures, and emerging technologies. Able to take ideas and give them a life.",
-      socialLinks: {
-        github: "javascript:void(0)",
-        twitter: "javascript:void(0)",
-        instagram: "javascript:void(0)",
-      },
-    },
-    {
-        name: "Rachel Adams",
-        title: "Product Design Head",
-        image:
-          "https://cdn.tuk.dev/assets/blond-man-happy-expression_1194-2873.jpg",
-        description:
-          "Product designer with interests in immersive computing and XR, political ventures, and emerging technologies. Able to take ideas and give them a life.",
-        socialLinks: {
-          github: "javascript:void(0)",
-          twitter: "javascript:void(0)",
-          instagram: "javascript:void(0)",
-        },
-      },
   ];
 
   return (
@@ -83,13 +49,12 @@ export default function ContactUsOffices() {
       <div className="mb-16">
         <div className="container flex justify-center mx-auto pt-16">
           <div>
-            
-            <h1 className="xl:text-4xl text-3xl text-center text-gray-800 font-extrabold pb-6 sm:w-4/6 w-5/6 mx-auto">
-              The Talented People Behind the Scenes of the Organization
+            <h1 className="xl:text-4xl text-3xl text-center text-gray-800 ">
+              Our Core Team
             </h1>
           </div>
         </div>
-        <div className="w-full bg-gray-100 px-10 pt-10">
+        <div className="w-full px-10 pt-10">
           <div className="container mx-auto">
             <div
               role="list"
@@ -120,11 +85,11 @@ export default function ContactUsOffices() {
                       <p className="text-gray-800 text-sm text-center">
                         {member.title}
                       </p>
-                      <p className="text-center text-gray-600 text-base pt-3 font-normal">
+                      <p className="text-gray-600 pt-3 font-normal text-center">
                         {member.description}
                       </p>
                       <div className="w-full flex justify-center pt-5 pb-5">
-                        <a href={member.socialLinks.github} className="mx-5">
+                        {/* <a href={member.socialLinks.github} className="mx-5">
                           <div aria-label="Github" role="img">
                             <svg
                               xmlns="http://www.w3.org/2000/svg"
@@ -191,7 +156,7 @@ export default function ContactUsOffices() {
                               ></line>
                             </svg>
                           </div>
-                        </a>
+                        </a> */}
                       </div>
                     </div>
                   </div>
