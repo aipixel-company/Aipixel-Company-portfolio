@@ -5,7 +5,7 @@ import turing from "../assets/turing.png";
 import techgalaxy from "../assets/techgalaxy.png";
 import larace from "../assets/larace.png";
 import dtec from "../assets/dtec.png";
-import bankriyadh from "../assets/bankriyadh.png";
+import bankmusqat from "../assets/bankmusqat.png";
 
 export default function CollaboratingPartners() {
   return (
@@ -23,21 +23,24 @@ export default function CollaboratingPartners() {
               <img src={larace} alt="Larace" className="h-36 mx-2" />
               <img src={dtec} alt="Dtec" className="h-20 mx-2" />
               <img src={universalskills} alt="Universal Skills" className="h-32 mx-2" />
-              <img src={bankriyadh} alt="Bank Riyadh" className="h-11 mx-2" />
+              {/* <img src={bankriyadh} alt="Bank Riyadh" className="h-11 mx-2" /> */}
+              <img src={bankmusqat} alt="Bank Riyadh" className="h-11 mx-2" />
               <img src={turing} alt="Turing" className="h-20 mx-2" />
               <img src={arkaan} alt="Arkaan" className="h-24 mx-2" />
               <img src={techgalaxy} alt="Tech Galaxy" className="h-14 mx-2" />
               <img src={larace} alt="Larace" className="h-36 mx-2" />
               <img src={dtec} alt="Dtec" className="h-20 mx-2" />
               <img src={universalskills} alt="Universal Skills" className="h-32 mx-2" />
-              <img src={bankriyadh} alt="Bank Riyadh" className="h-11 mx-2" />
+              {/* <img src={bankriyadh} alt="Bank Riyadh" className="h-11 mx-2" /> */}
+              <img src={bankmusqat} alt="Bank Riyadh" className="h-11 mx-2" />
               <img src={turing} alt="Turing" className="h-20 mx-2" />
               <img src={arkaan} alt="Arkaan" className="h-24 mx-2" />
               <img src={techgalaxy} alt="Tech Galaxy" className="h-14 mx-2" />
               <img src={larace} alt="Larace" className="h-36 mx-2" />
               <img src={dtec} alt="Dtec" className="h-20 mx-2" />
               <img src={universalskills} alt="Universal Skills" className="h-32 mx-2" />
-              <img src={bankriyadh} alt="Bank Riyadh" className="h-11 mx-2" />
+              {/* <img src={bankriyadh} alt="Bank Riyadh" className="h-11 mx-2" /> */}
+              <img src={bankmusqat} alt="Bank Riyadh" className="h-11 mx-2" />
               <img src={turing} alt="Turing" className="h-20 mx-2" />
             </div>
           </div>

@@ -4,21 +4,22 @@ import { FaAngleRight } from "react-icons/fa6";
 
 const features = [
   {
-    title: "Engineering with passion",
+    title: "Engineering with Passion",
     description:
-      "At Ai-Pixel, we blend innovation and dedication to create AI-driven software solutions that transform ideas into reality. Our passionate team is committed to pushing boundaries, delivering excellence, and driving success in every project we undertake.",
+      "At AI-PIXEL, we blend innovation and dedication to create AI-driven software solutions that transform ideas into reality. Our passionate team of AI engineers is committed to pushing boundaries, delivering excellence, and driving success in every AI project we undertake.",
   },
   {
-    title: "Performance focus",
+    title: "Performance Focus",
     description:
-      "At Ai-Pixel, we prioritize performance in every aspect of our work. Our AI-driven solutions are designed to optimize efficiency, enhance user experience, and deliver exceptional results. Our commitment to high performance ensures your business thrives in the digital landscape.",
+      "At AI-PIXEL, we prioritize performance in every aspect of our AI-driven solutions. Our advanced AI technologies are designed to optimize efficiency, enhance user experience, and deliver exceptional results. Our commitment to high performance ensures your business thrives in the competitive digital landscape.",
   },
   {
-    title: "Dedication to success",
+    title: "Dedication to Success",
     description:
-      "At Ai-Pixel, your success is our mission. We are dedicated to providing innovative AI-driven solutions that drive growth and deliver outstanding results. Our unwavering commitment ensures your business achieves its fullest potential.",
+      "At AI-PIXEL, your success is our mission. We are dedicated to providing innovative AI-driven solutions that drive business growth and deliver outstanding results. Our unwavering commitment to your success ensures your business achieves its fullest potential in the AI and technology space.",
   },
 ];
+
 
 export default function OurUniqueFeatures() {
   return (

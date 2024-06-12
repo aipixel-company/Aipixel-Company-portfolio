@@ -8,14 +8,26 @@ const testimonials = [
   },
   {
     quote:
-      "we just ask for development ! they build the whole product with branding I,d happily describe them A reliable service company",
-    author: "Jhon",
+      "we just ask for development! they build the whole product with branding I,d happily describe them A reliable service company",
+    author: "Badar-al-sahi",
   },
   {
    
     quote:
-      "Your software is a must-have for anyone who wants to create a  DASHBOARD. It's easy to use, affordable, and has all the features you need to make your portfolio stand out from the crowd",
-    author: "David",
+      "When looking for a strategic IT-partner for the development of a corporate ERP solution, we chose Ai-Pixel. The company proved itself a reliable provider of IT services.",
+    author: "Horizon Trading",
+  },
+  {
+   
+    quote:
+      "Your software is a must-have for anyone who wants to create a DASHBOARD. It's easy to use, affordable, and has all the features you need to make your portfolio stand out from the crowd.",
+    author: "Robsoreson",
+  },
+  {
+   
+    quote:
+      "Ai-Pixel was chosen to replace our previous development team and to work on relaunching our freight forwarding logistics web-service after careful research and several conversations.",
+    author: "Muhanad",
   },
 ];
 

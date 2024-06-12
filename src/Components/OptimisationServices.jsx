@@ -4,24 +4,24 @@ const services = [
   {
     title: "Software Audit",
     description:
-      "Conduct a thorough analysis of your software to identify potential issues and ensure compliance with industry standards.",
+      "At AI-Pixel, we conduct thorough software audits to identify potential issues and ensure compliance with industry standards. Our expert team provides detailed analysis and actionable insights to enhance your software’s performance, security, and reliability.",
   },
   {
     title: "Support",
     description:
-      "Provide comprehensive support services to ensure smooth operation and maintenance of your software systems.",
+      "AI-Pixel offers comprehensive support services to ensure the smooth operation and maintenance of your software systems. Our dedicated support team is available to address any technical issues, perform updates, and provide ongoing assistance.",
   },
   {
     title: "Quality Assurance",
     description:
-      "Implement rigorous testing processes to ensure your software meets the highest standards of quality and reliability.",
+      "Ensure your software meets the highest standards of quality and reliability with AI-Pixel's rigorous quality assurance services. Our team implements advanced testing processes to detect and rectify any issues before deployment.",
   },
 ];
 
 export default function OptimisationServices() {
   return (
     <div className="w-full">
-      <h1 className="text-4xl font-semibold ml-10 px-3 mt-5">
+      <h1 className="text-4xl font-semibold ml-5 px-4 mt-5">
         Optimisation
       </h1>
       <div className="grid grid-cols-3 gap-4 mt-6 p-[4rem]">
@@ -33,7 +33,7 @@ export default function OptimisationServices() {
             <div className="absolute top-0 left-0  text-blue-800 rounded-full h-7 w-7 p-7 flex items-center justify-center font-semibold">
               0{index + 1}
             </div>
-            <div className="flex flex-col items-center text-center  bg-opacity-80 p-4 rounded-md">
+            <div className="flex flex-col items-center bg-opacity-80 p-4 rounded-md">
               <h1 className="font-body font-medium text-lg mb-2">
                 {service.title}
               </h1>

@@ -1,7 +1,7 @@
 import React from "react";
 import moosa from "../assets/moosa.png";
 import larace from "../assets/larace.png";
-import bankriyadh from "../assets/bankriyadh.png";
+import bankmusqat from "../assets/bankmusqat.png";
 import dtec from "../assets/dtec.png";
 import adventureclub from "../assets/adventureclub.png"
 import arkaan from "../assets/arkaan.png"
@@ -16,65 +16,65 @@ const testimonials = [
   {
     logo: larace,
     companyType: "Blockchain",
-    description: "Excitement of horse racing meets the limitless possibilities of the metaverse.",
+    description: "Experience the thrill of horse racing combined with the endless opportunities of the blockchain-powered metaverse.",
     height: "180px"
   },
   {
     logo: dtec,
     companyType: "Retail",
-    description: "A Complete Start-up Echosystem",
+    description: "Discover a comprehensive start-up ecosystem designed for retail innovation and success.",
     height: "70px"
   },
   {
     logo: moosa,
-    companyType: "Automotive ",
-    description: "Top Automotive firm in Oman.",
+    companyType: "Automotive",
+    description: "Leading automotive company in Oman, renowned for excellence and innovation.",
     height: "70px"
   },
   {
-    logo: bankriyadh,
+    logo: bankmusqat,
     companyType: "Finance",
-    description: "One of the largest financial institutions in the Kingdom of Saudi Arabia and the Middle East.",
+    description: "Top financial institution in Saudi Arabia and the Middle East, providing exceptional banking services.",
     height: "50px"
   },
   {
     logo: adventureclub,
     companyType: "Finance",
-    description: "One of the largest financial institutions in the Kingdom of Saudi Arabia and the Middle East.",
+    description: "Premier financial institution in Saudi Arabia and the Middle East, offering unmatched financial solutions.",
     height: "90px"
   },
   {
     logo: arkaan,
     companyType: "Finance",
-    description: "One of the largest financial institutions in the Kingdom of Saudi Arabia and the Middle East.",
+    description: "Leading financial institution in Saudi Arabia and the Middle East, delivering outstanding financial services.",
     height: "80px"
   },
   {
     logo: seedlogo,
     companyType: "Finance",
-    description: "One of the largest financial institutions in the Kingdom of Saudi Arabia and the Middle East.",
+    description: "Prominent financial institution in Saudi Arabia and the Middle East, specializing in comprehensive financial services.",
     height: "60px"
   },
   {
     logo: techgalaxy,
     companyType: "Finance",
-    description: "One of the largest financial institutions in the Kingdom of Saudi Arabia and the Middle East.",
+    description: "Top-tier financial institution in Saudi Arabia and the Middle East, offering cutting-edge financial services.",
     height: "60px"
   },
   {
     logo: turing,
     companyType: "Finance",
-    description: "One of the largest financial institutions in the Kingdom of Saudi Arabia and the Middle East.",
+    description: "Leading financial institution in Saudi Arabia and the Middle East, renowned for exceptional financial solutions.",
     height: "75px"
   },
   {
     logo: universalskills,
     companyType: "Finance",
-    description: "One of the largest financial institutions in the Kingdom of Saudi Arabia and the Middle East.",
+    description: "Premier financial institution in Saudi Arabia and the Middle East, delivering top-notch financial services.",
     height: "90px"
   },
-  
 ];
+
 
 const ClientsSection = () => (
   <div className="bg-gray-900 text-gray-100 pt-12">
@@ -98,8 +98,8 @@ const ClientsSection = () => (
             <div className="flex flex-col justify-center items-center flex-grow z-10 transition-all duration-500 ease-in-out group-hover:transform group-hover:translate-y-[-3rem]">
               <img src={testimonial.logo} style={{ height: testimonial.height }} className="" />
             </div>
-            <div className="absolute inset-0 flex justify-center items-center z-10 transition-opacity duration-500 ease-in-out opacity-0 group-hover:opacity-100">
-              <div className="text-center text-black text-sm">
+            <div className="absolute inset-0 mt-3 flex justify-center items-center z-10 transition-opacity duration-500 ease-in-out opacity-0 group-hover:opacity-100">
+              <div className=" px-3 pt-2 text-black text-sm">
                 {testimonial.description}
               </div>
             </div>

@@ -2,6 +2,9 @@ import React, { useState } from "react";
 import { GrAttachment } from "react-icons/gr";
 import aboutbackground from "../assets/aboutbackground.jpg";
 import { Checkbox } from "@material-tailwind/react";
+import { collection, addDoc } from "firebase/firestore";
+import { ref, uploadBytes, getDownloadURL } from "firebase/storage";
+import { db, storage } from "../../Firebase"; // Make sure these paths are correct
 
 function ContactUsMain() {
   const [form, setForm] = useState({
@@ -13,10 +16,10 @@ function ContactUsMain() {
     state: "",
     zip: "",
     attachment: null,
-    newsSubscription: false, // Added for news subscription checkbox
   });
 
   const [errors, setErrors] = useState({});
+  const [loading, setLoading] = useState(false);
 
   const validate = () => {
     let tempErrors = {};
@@ -44,23 +47,49 @@ function ContactUsMain() {
     setErrors({ ...errors, attachment: "" });
   };
 
-  const handleSubmit = (e) => {
+  const handleSubmit = async (e) => {
     e.preventDefault();
     if (validate()) {
-      // Handle form submission logic here
-      console.log(form);
-      // Reset form after submission
-      setForm({
-        firstName: "",
-        lastName: "",
-        email: "",
-        address: "",
-        city: "",
-        state: "",
-        zip: "",
-        attachment: null,
-        newsSubscription: false,
-      });
+      setLoading(true);
+      try {
+        let attachmentURL = "";
+        if (form.attachment) {
+          const attachmentName = encodeURIComponent(form.attachment.name);
+          const storageRef = ref(storage, `attachments/${attachmentName}`);
+          await uploadBytes(storageRef, form.attachment);
+          attachmentURL = await getDownloadURL(storageRef);
+        }
+
+        await addDoc(collection(db, "contacts"), {
+          firstName: form.firstName,
+          lastName: form.lastName,
+          email: form.email,
+          address: form.address,
+          city: form.city,
+          state: form.state,
+          zip: form.zip,
+          attachmentURL,
+          createdAt: new Date(),
+        });
+
+        alert("Form submitted successfully!");
+        // Reset form after submission
+        setForm({
+          firstName: "",
+          lastName: "",
+          email: "",
+          address: "",
+          city: "",
+          state: "",
+          zip: "",
+          attachment: null,
+        });
+      } catch (error) {
+        console.error("Error submitting form: ", error);
+        alert(`Error submitting form: ${error.message}`);
+      } finally {
+        setLoading(false);
+      }
     }
   };
 
@@ -157,23 +186,7 @@ function ContactUsMain() {
                 <p className="text-red-500 text-sm">{errors.attachment}</p>
               )}
             </div>
-            <div className="mt-6 flex items-center">
-              <Checkbox
-                id="newsSubscription"
-                name="newsSubscription"
-                checked={form.newsSubscription}
-                onChange={handleChange}
-                color="gray"
-                outline={false}
-                size="sm"
-              />
-              <label
-                htmlFor="newsSubscription"
-                className="cursor-pointer block text-sm font-medium"
-              >
-                I want to receive news
-              </label>
-            </div>
+            
           </div>
           <div>
             <div className="mb-4">
@@ -216,9 +229,10 @@ function ContactUsMain() {
           </div>
           <div>
             <p className="text-white">
-              We're Pakistan's premier software house, crafting AI-driven
-              solutions that redefine possibilities. Explore our portfolio and
-              discover how we can elevate your business in the digital realm.
+              At AI Pixel, we're not bound by the limitations of the present.
+              We're a pioneering force in software landscape, wielding the power
+              of AI to craft solutions that rewrite the rules of what's
+              possible.
             </p>
             <p className="text-xl mt-2">CEO, </p>
             <span>Mian Usman</span>
@@ -228,8 +242,9 @@ function ContactUsMain() {
           <button
             type="submit"
             className="border rounded-lg px-4 py-2 bg-gray-900 text-white"
+            disabled={loading}
           >
-            Contact Us
+            {loading ? "Submitting..." : "Contact Us"}
           </button>
         </div>
       </form>

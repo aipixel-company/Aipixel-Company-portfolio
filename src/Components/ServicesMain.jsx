@@ -1,6 +1,6 @@
 import React from "react";
 import servicesbackground from "../assets/servicesbackground.jpg";
-// import awardsImage from "../assets/awards.png";  
+// import awardsImage from "../assets/awards.png";
 function ServicesMain() {
   return (
     <div className="relative h-[70vh]">
@@ -17,10 +17,11 @@ function ServicesMain() {
         <div className="flex flex-col text-left space-y-4">
           <h1 className="text-white text-4xl">AI-PIXEL Services</h1>
           <h3 className=" text-gray-500 font-normal max-w-2xl">
-            Ai-Pixel provides expert software engineering and consultancy services to
-            global enterprises, SMEs, and technology challengers. Since 2021, we
-            have been helping businesses in multiple industries design, develop
-            and deliver products and services faster and more cost-effectively.
+            In today's digital age, a strong online presence is crucial for
+            success. AI Pixel empowers businesses of all sizes to thrive by
+            providing a comprehensive suite of services tailored to crafting
+            exceptional digital products. Here's how their expertise can elevate
+            your digital strategy
           </h3>
         </div>
         <div className="w-1/3 flex justify-end">

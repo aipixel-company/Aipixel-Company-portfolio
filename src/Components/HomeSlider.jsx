@@ -1,13 +1,13 @@
 import React, { useState, useEffect } from "react";
 import { Typography } from "@material-tailwind/react";
-import fianance from "../assets/fianance.jpg";
+import bankmusqatt from "../assets/bankmusqatt.jpg";
 import adventureclubbackgorund from "../assets/adventureclubbackground.jpg";
 import dtec from "../assets/dtec.jpg";
 import seed from "../assets/background.jpg";
 import larace from "../assets/larace.png";
 import adventureclub from "../assets/adventureclub.png";
 import dtecch from "../assets/dtec.png";
-import riyadhbank from "../assets/bankriyadh.png";
+import bankmusqat from "../assets/bankmusqat.png";
 import moosa from "../assets/moosa.png";
 import laracee from "../assets/larace.jpg";
 import moosagroup from "../assets/moosagroup.jpg";
@@ -15,10 +15,10 @@ import moosagroup from "../assets/moosagroup.jpg";
 const cards = [
   {
     id: 1,
-    title: "Riyad Bank",
-    logo: riyadhbank,
-    description: "Bank AL-Riyad is a leading financial institution in Saudi Arabia, offering a wide range of banking services and solutions.",
-    backgroundImage: fianance,
+    title: "Bank Muscat",
+    logo: bankmusqat,
+    description: "Bank Muscat is a leading financial institution in Oman, offering a wide range of banking services and solutions.",
+    backgroundImage: bankmusqatt,
     logoHeight: "35px",
   },
   {

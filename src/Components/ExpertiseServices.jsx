@@ -3,29 +3,29 @@ import expertiseservices from "../assets/expertiseservices.jpg";
 
 const expertise = [
   {
-    question: "HR",
+    question: "DevOps",
     answer:
-      "SAAS platform is a cloud-based software service that allows users to access and use a variety of tools and functionality.",
+      "AI Pixel bridges the gap between development and operations, utilizing continuous integration/delivery (CI/CD) and infrastructure as code (IaC) practices to streamline development lifecycles, ensure consistent quality, and automate deployments. This harmonious approach minimizes disruptions and delivers software faster.",
   },
   {
-    question: "Figma Design",
+    question: "VR/AR/MR",
     answer:
-      "We offers a variety of billing options, including monthly and annual subscription plans, as well as pay-as-you-go pricing for certain services. Payment is typically made through a credit card or other secure online payment method.",
+      "AI Pixel isn't confined to the physical plane. They leverage the immersive power of virtual reality (VR), augmented reality (AR), and mixed reality (MR) to create next-generation experiences. Imagine training employees in a virtual environment or showcasing products in an interactive AR setting. AI Pixel brings these possibilities to life.",
   },
   {
-    question: "Web Development",
+    question: "Market Research",
     answer:
-      "We offers a 30-day money-back guarantee for most of its subscription plans. If you are not satisfied with your subscription within the first 30 days, you can request a full refund. Refunds for subscriptions that have been active for longer than 30 days may be considered on a case-by-case basis.",
+      "They act as your digital compass, conducting market research to understand your target audience, competitor landscape, and industry trends. This intelligence empowers you to make data-driven decisions and develop products that resonate with your market.",
   },
   {
-    question: "Bussiness Development",
+    question: "Digital Enterprise Solutions",
     answer:
-      "To cancel your We subscription, you can log in to your account and navigate to the subscription management page. From there, you should be able to cancel your subscription and stop future billing.",
+      "AI Pixel understands the modern digital enterprise. They offer a comprehensive suite of solutions to streamline internal processes, enhance collaboration, and foster a data-driven culture.  This empowers your organization to operate more efficiently and achieve its full potential.",
   },
   {
-    question: "HR Consultation",
+    question: "Human-Centered Interface (HCI) Design",
     answer:
-      "We offers a free trial of its platform for a limited time. During the trial period, you will have access to a limited set of features and functionality, but you will not be charged.",
+      "AI Pixel goes beyond aesthetics with a focus on Human-Centered Interface (HCI) design. They prioritize usability, accessibility, and user psychology to create interfaces that are intuitive, engaging, and cater to a diverse range of users. This translates to increased user adoption and satisfaction.",
   },
 ];
 

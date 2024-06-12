@@ -1,58 +1,59 @@
 import React from "react";
 import { FaAngleRight } from "react-icons/fa6";
+import { Link } from "react-router-dom";
 
 const services = [
   {
     title: "Product Design",
     description:
-      "Create visually appealing and user-friendly designs that enhance user experience and engagement.",
+      "AI Pixel doesn't just design products; they design experiences. Their team goes beyond aesthetics, prioritizing user-centered design principles.  They leverage the latest UI/UX trends and conduct user research to create visually appealing and intuitive interfaces that resonate with your target audience.",
   },
   {
     title: "Web Development",
     description:
-      "Develop robust and scalable web applications tailored to your business needs.",
+      "AI Pixel builds robust and secure web applications engineered for growth. They don't just focus on functionality; they prioritize performance optimization. Their developers leverage cutting-edge technologies and best practices to ensure your website loads quickly, delivers a seamless user experience across all devices.",
   },
   {
     title: "Project Management",
     description:
-      "Efficiently plan, execute, and finalize projects to meet your goals and deadlines.",
+      "AI Pixel understands the importance of efficient project management. Their experienced project managers utilize agile methodologies and industry-leading tools to ensure your project stays on schedule, within budget. They prioritize clear communication and collaboration, keeping you informed and involved throughout the entire development process.",
   },
   {
-    title: "Responsiveness",
+    title: "Responsive Design",
     description:
-      "Ensure your web applications are fully responsive and provide a seamless experience across all devices.",
+      "In today's mobile-centric world, responsiveness is no longer a luxury; it's a necessity. AI Pixel ensures your website and web applications adapt flawlessly to any screen size, be it desktops, tablets, or smartphones.  They go beyond basic responsiveness by optimizing user interfaces for touch interactions, creating a smooth and intuitive experience regardless of the device used.",
   },
   {
-    title: "SEO",
+    title: "SEO Optimization",
     description:
-      "Optimize your website to rank higher in search engine results and attract more organic traffic.",
+      "AI Pixel understands the power of organic search traffic. Their SEO specialists integrate proven strategies into your website development process, optimizing your content and website structure to rank higher in search engine results pages (SERPs) for relevant keywords. This translates to increased visibility, attracting potential customers who are actively searching for your offerings.",
   },
   {
     title: "IT Consulting Services",
     description:
-      "Provide expert advice on IT strategies, solutions, and best practices to drive business success.",
+      "Navigating the ever-evolving IT landscape can be challenging. AI Pixel's IT consulting services provide valuable insights and strategic recommendations tailored to your business goals. Their experienced consultants analyze your current IT infrastructure, identify potential areas for improvement, and suggest cost-effective solutions that align with your unique needs.",
   },
   {
     title: "Software Development",
     description:
-      "Build custom software solutions to streamline your business processes and improve efficiency.",
+      "AI Pixel builds custom software solutions that tackle your specific business challenges. They don't offer a one-size-fits-all approach.  Their development team takes the time to understand your workflows and pain points, crafting software solutions that automate tasks, improve efficiency, and streamline your operations, freeing up your team to focus on core business activities.",
   },
   {
     title: "Technical Feasibility Study",
     description:
-      "Analyze the technical aspects of your project to ensure it is viable and cost-effective.",
+      "AI Pixel offers technical feasibility studies to assess the viability and cost-effectiveness of your project before development begins. This in-depth analysis considers technical constraints, resource requirements, and potential challenges, ensuring your project vision is grounded in technical reality. This proactive approach saves you time, money, and resources by identifying potential roadblocks in the early stages.",
   },
   {
     title: "Mobile App Development",
     description:
-      "Design and develop high-quality mobile applications for both Android and iOS platforms.",
+      "AI Pixel designs and develops high-quality mobile applications for both Android and iOS platforms. They understand the unique user behavior patterns associated with mobile devices and create app experiences that are intuitive, engaging, and optimized for performance.AI Pixel works closely with you to ensure your mobile app delivers value to your users and strengthens your brand presence in the mobile ecosystem.",
   },
 ];
 
 export default function AdvisorySection() {
   return (
     <div className="w-full">
-      <h1 className="text-4xl font-semibold ml-5 px-3 mt-5">
+      <h1 className="text-4xl font-semibold ml-5 px-4 mt-5">
         Advisory Services
       </h1>
       <div className="grid grid-cols-3 gap-4 mt-2 p-[4rem]">
@@ -64,11 +65,11 @@ export default function AdvisorySection() {
             <div className="absolute top-0 left-0  text-blue-800 rounded-full h-7 w-7 p-7 flex items-center justify-center font-semibold">
               {index + 1 < 10 ? `0${index + 1}` : index + 1}
             </div>
-            <div className="flex flex-col items-center text-center p-4 rounded-md">
+            <div className="flex flex-col items-center p-4 rounded-md">
               <h1 className="font-body font-medium text-lg mb-2">
                 {service.title}
               </h1>
-              <p className="mt-4 text-gray-600">{service.description}</p>
+              <p className="mt-4 text-gray-600 text-sm">{service.description}</p>
             </div>
           </div>
         ))}
@@ -84,12 +85,11 @@ export default function AdvisorySection() {
               </p>
             </div>
             <div className="  m-auto">
-              <a
-                href="/contact-us"
+              <Link to="/contact-us"
                 className="text-xl text-white inline-flex items-center"
               >
                 Partner with us <FaAngleRight className="ml-1" />
-              </a>
+              </Link>
             </div>
           </div>
         </div>

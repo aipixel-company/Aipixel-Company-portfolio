@@ -14,43 +14,10 @@ export default function ContactusFormSection() {
     attachment: null,
   });
 
-  const [currentIndex, setCurrentIndex] = useState(0);
 
-  const testimonials = [
-    {
-      rating: 5,
-      title: "Stayin' Alive",
-      quote:
-        "No, Rose, they are not breathing. And they have no arms or legs … Where are they? You know what? If we come across somebody with no arms or legs, do we bother resuscitating them? I mean, what quality of life do we have there?",
-      author: "Michael Scott",
-    },
-    {
-      rating: 5,
-      title: "Stayin' Alive",
-      quote:
-        "No, Rose, they are not breathing. And they have no arms or legs … Where are they? You know what? If we come across somebody with no arms or legs, do we bother resuscitating them? I mean, what quality of life do we have there?",
-      author: "Michael Scott",
-    },
-    {
-      rating: 5,
-      title: "Stayin' Alive",
-      quote:
-        "No, Rose, they are not breathing. And they have no arms or legs … Where are they? You know what? If we come across somebody with no arms or legs, do we bother resuscitating them? I mean, what quality of life do we have there?",
-      author: "Michael Scott",
-    },
-  ];
+  
 
-  const handleNext = () => {
-    setCurrentIndex((prevIndex) =>
-      prevIndex === testimonials.length - 1 ? 0 : prevIndex + 1
-    );
-  };
 
-  const handlePrev = () => {
-    setCurrentIndex((prevIndex) =>
-      prevIndex === 0 ? testimonials.length - 1 : prevIndex - 1
-    );
-  };
 
   const handleChange = (e) => {
     const { name, value, files } = e.target;

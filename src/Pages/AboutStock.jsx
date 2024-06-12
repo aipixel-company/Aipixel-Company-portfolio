@@ -11,8 +11,8 @@ export default function AboutStock() {
     <div className=' bg-gray-100'>
     <AboutSlider/>
      <OurVison/>
-     <Map/>
      <OurUniqueFeatures/>
+     <Map/>
     <ContactusFormSection/>
     </div>
      

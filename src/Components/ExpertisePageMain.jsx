@@ -2,8 +2,7 @@ import React from "react";
 
 // Data for the section
 const sectionData = {
-  title: "Our",
-  subtitle: "Expertise",
+  title: "Our Expertise",
   description:
     "Our team of skilled professionals is dedicated to delivering innovative, reliable, and efficient software solutions that propel your business forward.",
   
@@ -50,7 +49,6 @@ const ExpertisePageMain = () => (
       <div className="container mx-auto flex flex-col md:flex-row items-center my-12 md:my-24">
         <SectionHeader
           title={sectionData.title}
-          subtitle={sectionData.subtitle}
           description={sectionData.description}
           
         />

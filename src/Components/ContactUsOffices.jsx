@@ -85,7 +85,7 @@ export default function ContactUsOffices() {
                       <p className="text-gray-800 text-sm text-center">
                         {member.title}
                       </p>
-                      <p className="text-gray-600 pt-3 font-normal text-center">
+                      <p className="text-gray-600 pt-3 font-normal">
                         {member.description}
                       </p>
                       <div className="w-full flex justify-center pt-5 pb-5">

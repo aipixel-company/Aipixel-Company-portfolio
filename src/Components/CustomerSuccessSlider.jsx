@@ -56,17 +56,31 @@ const CustomerSuccessSlider = () => {
       image: profilepic // Replace with actual image URL
     },
     {
-      title: "Jhon",
+      title: "Badar-al-Sahi",
       content:
         "We just ask for development! They build the whole product with branding. I'd happily describe them as a reliable service company.",
-      author: 'Jhon',
+      author: 'Badar-al-Sahi',
       image: profilepic // Replace with actual image URL
     },
     {
-      title: "David",
+      title: "Horizon Trading",
+      content:
+        "When looking for a strategic IT-partner for the development of a corporate ERP solution, we chose Ai-Pixel. The company proved itself a reliable provider of IT services.",
+      author: 'Horizon Trading',
+      image: profilepic // Replace with actual image URL
+    },
+    {
+      title: "Robsoreson",
       content:
         "Your software is a must-have for anyone who wants to create a DASHBOARD. It's easy to use, affordable, and has all the features you need to make your portfolio stand out from the crowd.",
-      author: 'David',
+      author: 'Robsoreson',
+      image: profilepic // Replace with actual image URL
+    },
+    {
+      title: "Muhanad",
+      content:
+        "Ai-Pixel was chosen to replace our previous development team and to work on relaunching our freight forwarding logistics web-service after careful research and several conversations.",
+      author: 'Robsoreson',
       image: profilepic // Replace with actual image URL
     },
   ];
