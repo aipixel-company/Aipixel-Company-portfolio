@@ -1,8 +1,11 @@
-import React from "react";
+import React, { useEffect } from "react";
 import navlogo from "../assets/navlogo.png";
 import { Link } from "react-router-dom";
 
 export default function Footer() {
+  useEffect(() => {
+    window.scrollTo(0, 0);
+  }, []);
   return (
     <>
       <footer className="bg-white">
@@ -197,11 +200,14 @@ export default function Footer() {
         </div>
       </footer>
 
-      <div className="bg-gray-100">
+      <div className="bg-gray-100 flex justify-between items-center">
         <div className="mx-10 max-w-screen-xl px-4 py-6 sm:flex sm:items-center sm:justify-between sm:px-6 lg:px-8">
           <p className="mt-4 text-center text-sm text-gray-500 sm:order-first sm:mt-0">
             &copy; 2023 AI Pixel. All rights reserved.
           </p>
+        </div>
+        <div>
+          <Link to="/privacy-policy" className="mx-10 text-sm">Privacy policy</Link>
         </div>
       </div>
     </>
