@@ -13,12 +13,6 @@ export default function ContactusFormSection() {
     message: "",
     attachment: null,
   });
-
-
-  
-
-
-
   const handleChange = (e) => {
     const { name, value, files } = e.target;
     if (name === "attachment") {
@@ -70,7 +64,7 @@ export default function ContactusFormSection() {
 
   return (
     <div className="bg-[#1e1d28] px-4 py-12 sm:px-6 lg:me-0 lg:py-16 lg:pe-0 lg:ps-8 xl:py-24">
-      <div className="grid gap-8 grid-cols-2 mx-5 p-4">
+      <div className="grid gap-8 sm:grid-cols-2 mx-5 p-4">
         <div className="max-w-xl ltr:sm:text-left rtl:sm:text-right p-5">
           <h2 className="text-3xl font-bold tracking-tight text-white sm:text-4xl">
             Ready to discuss your software requirements?
@@ -184,7 +178,7 @@ export default function ContactusFormSection() {
             </button>
           </form>
         </div>
-        <div className="px-4 h-full">
+        <div className="px-4 h-full lg:block md:block hidden">
           <CustomerReveiw />
         </div>
       </div>

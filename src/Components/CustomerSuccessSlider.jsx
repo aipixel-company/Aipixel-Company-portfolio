@@ -87,7 +87,7 @@ const CustomerSuccessSlider = () => {
 
   return (
     <section className="">
-      <div className="mx-auto max-w-[1340px] px-4 sm:px-6 lg:me-0 lg:py-16 lg:pe-0 lg:ps-8 xl:py-24">
+      <div className="mx-auto max-w-[1340px] px-4 sm:px-6 lg:me-0 lg:py-16 overflow-hidden lg:pe-0 lg:ps-8 xl:py-24">
         <div className="grid grid-cols-1 gap-8 lg:grid-cols-3 lg:items-center lg:gap-16">
           <div className="max-w-xl text-center ltr:sm:text-left">
             <h2 className="text-3xl font-bold tracking-tight text-gray-900 sm:text-4xl">
@@ -143,7 +143,7 @@ const CustomerSuccessSlider = () => {
             <div ref={sliderRef} className="keen-slider">
               {cardDetails.map((card, index) => (
                 <div key={index} className="keen-slider__slide">
-                  <blockquote className="flex h-full flex-col justify-between bg-gradient-to-r from-white to-blue-100 p-6 shadow-sm sm:p-8 lg:p-12">
+                  <blockquote className="flex h-full  flex-col justify-between bg-gradient-to-r from-white to-blue-100 p-6 shadow-sm sm:p-8 lg:p-12">
                     <div className="flex items-start">
                       <img
                         src={card.image}

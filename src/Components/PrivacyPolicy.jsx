@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useRef } from "react";
 
 export default function PrivacyPolicy() {
   const privacyPolicySteps = [
@@ -7,7 +7,7 @@ export default function PrivacyPolicy() {
       description: (
         <>
           We are AI-PIXEL, a software company located at 37L Block Johar Town,
-          Lahore. We provide a range of digital services worldwide.{" "}
+          Lahore. We provide a range of digital services worldwide.
         </>
       ),
     },
@@ -26,7 +26,6 @@ export default function PrivacyPolicy() {
           Also, you may always object to our processing activities based on the
           legitimate interest and have your data completely erased from all our
           systems.
-          <br />
         </>
       ),
     },
@@ -36,13 +35,13 @@ export default function PrivacyPolicy() {
         <>
           Here is a complete list of the personal data we may want to know about
           you:
-          <ul>
-            <li>- Your full name</li>
-            <li>- Your email</li>
-            <li>- Your phone number</li>
-            <li>- The fact that you’ve visited our website</li>
-            <li>- Your Company Name</li>
-            <li>- What website referred you to aipixel.solutions</li>
+          <ul className="list-disc list-inside ml-4">
+            <li>Your full name</li>
+            <li>Your email</li>
+            <li>Your phone number</li>
+            <li>The fact that you’ve visited our website</li>
+            <li>Your Company Name</li>
+            <li>What website referred you to aipixel.solutions</li>
           </ul>
         </>
       ),
@@ -95,14 +94,14 @@ export default function PrivacyPolicy() {
           piece of privacy legislation as for now.
           <br />
           Your rights are as follows (more info):
-          <ul>
-            <li>- The right to be informed</li>
-            <li>- The right of access</li>
-            <li>- The right to rectification</li>
-            <li>- The right of erasure</li>
-            <li>- The right to restrict processing</li>
-            <li>- The right for data portability</li>
-            <li>- The right to object</li>
+          <ul className="list-disc list-inside ml-4">
+            <li>The right to be informed</li>
+            <li>The right of access</li>
+            <li>The right to rectification</li>
+            <li>The right of erasure</li>
+            <li>The right to restrict processing</li>
+            <li>The right for data portability</li>
+            <li>The right to object</li>
             <li>
               Your rights in relation to automated decision making and profiling
             </li>
@@ -142,7 +141,7 @@ export default function PrivacyPolicy() {
           unreliable practices regarding the security of the information we deal
           with. Consequently, we take all appropriate technical and
           organisational measures to keep your data safe, as required by the
-          GDPR. Below are the examples of how we do that.{" "}
+          GDPR. Below are the examples of how we do that.
         </>
       ),
     },
@@ -151,7 +150,7 @@ export default function PrivacyPolicy() {
       description: (
         <>
           You can reach us at aipixel.solutions , if you:
-          <ul>
+          <ul className="list-disc list-inside ml-4">
             <li>Want to know more about privacy of your information</li>
             <li>
               Want to make any kind of claim or request with regard to your
@@ -170,6 +169,12 @@ export default function PrivacyPolicy() {
     },
   ];
 
+  const sectionRefs = privacyPolicySteps.map(() => useRef(null));
+
+  const handleClick = (index) => {
+    sectionRefs[index].current.scrollIntoView({ behavior: "smooth" });
+  };
+
   return (
     <>
       <section>
@@ -180,9 +185,11 @@ export default function PrivacyPolicy() {
               "url('https://img.freepik.com/free-vector/patent-law-illustration_23-2148684285.jpg?w=826&t=st=1718300970~exp=1718301570~hmac=f389e896cb09c230962d2981a866b1dd679a4b2cd0472cfcfc0f8ffeb2a48147')",
           }}
         >
-          <div className="bg-white bg-opacity-40 py-8 px-32">
-            <h1 className="mt-20 text-center text-5xl">AI-PIXEL Privacy Policy</h1>
-            <p className="mt-5">Last Updated: 13th June 2024</p>
+          <div className="bg-white bg-opacity-40 py-8 px-6 sm:px-16 md:px-32">
+            <h1 className="mt-20 text-center text-3xl md:text-5xl">
+              AI-PIXEL Privacy Policy
+            </h1>
+            <p className="mt-5 text-center">Last Updated: 13th June 2024</p>
             <hr className="my-4" />
             <p className="leading-loose mt-3">
               We at AI-PIXEL respect your personal data and want to be GDPR
@@ -194,22 +201,32 @@ export default function PrivacyPolicy() {
         </div>
         <div className="text-black py-8 cursor-default">
           <div className="container mx-auto flex flex-col items-start md:flex-row my-12 md:my-24">
-            <div className="flex flex-col w-full sticky md:top-36 lg:w-1/3 mt-2 md:mt-12 px-8">
+            <div className="flex flex-col w-full md:sticky md:top-36 lg:w-1/3 mt-2 md:mt-12 px-4 md:px-8">
               <div className="space-y-4 p-3 border-2">
                 {privacyPolicySteps.map((step, index) => (
-                  <div key={index} className="text-black cursor-default">
+                  <div
+                    key={index}
+                    className="text-black cursor-pointer"
+                    onClick={() => handleClick(index)}
+                  >
                     {step.title}
                   </div>
                 ))}
               </div>
             </div>
-            <div className="ml-0 md:ml-12 lg:w-2/3">
+            <div className="ml-0 md:ml-12 lg:w-2/3 mt-8 md:mt-0">
               <div className="container mx-auto w-full h-full">
-                <div className="p-10 h-full">
+                <div className="p-4 md:p-10 h-full">
                   {privacyPolicySteps.map((step, index) => (
-                    <div key={index} className={`mb-8 flex w-full`}>
-                      <div className="w-full px-1 py-4">
-                        <h4 className="mb-3 font-bold text-lg md:text-2xl">{step.title}</h4>
+                    <div
+                      key={index}
+                      ref={sectionRefs[index]}
+                      className="mb-8 flex w-full"
+                    >
+                      <div className="w-full px-1 py-4 mt-16">
+                        <h4 className="mb-3 font-bold text-lg md:text-2xl">
+                          {step.title}
+                        </h4>
                         <p className="font-light">{step.description}</p>
                       </div>
                     </div>

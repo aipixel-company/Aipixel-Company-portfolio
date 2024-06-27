@@ -78,42 +78,42 @@ const industries = [
     logo: trading,
     industryType: "Food",
     description:
-      "AI-Pixel delivers high-quality food products and innovative culinary solutions. Our sustainable practices and advanced technologies meet the evolving demands of the food industry, ensuring quality and customer satisfaction",
+      "AI-Pixel delivers high-quality food products and innovative culinary solutions. Our sustainable practices and advanced technologies meet the evolving demands of the food industry, ensuring quality and customer satisfaction.",
     height: "70px",
   },
 ];
 
 const IndustriesWeWorkServices = () => (
   <>
-    <div className="mt-24 py-16 mx-auto text-gray-900">
+    <div className="sm:mt-24 sm:py-16 mx-auto text-gray-900">
       <div>
         <h2 className="text-center text-gray-800 text-4xl lg:text-5xl font-bold leading-tight">
           Industries We Work With
         </h2>
-        <div className="my-4 mx-auto w-[90vh] h-2 border-4 border-indigo-500"></div>
+        <div className="my-4 mx-auto sm:w-[90vh] h-2 border-4 border-indigo-500"></div>
         <div className="text-center text-gray-700 font-light">
           We are proud to serve a diverse range of industries
         </div>
       </div>
-      <div className="grid grid-cols-5 p-2">
+      <div className="grid grid-cols-2 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-5 gap-4 sm:p-4">
         {industries.map((industry, index) => (
           <div
             key={index}
-            className="relative border border-gray-200 h-[15rem] hover:text-black shadow p-3 bg-gray-100 text-gray-700 leading-snug flex flex-col justify-between overflow-hidden group"
+            className="relative border border-gray-200 sm:h-[17rem] hover:text-black shadow p-3 bg-gray-100 text-gray-700 leading-snug sm:flex sm:flex-col sm:justify-between sm:overflow-hidden group"
           >
-            <div className="flex flex-col justify-center items-center flex-grow z-10 transition-all duration-500 ease-in-out group-hover:opacity-0 group-hover:translate-y-[-3rem]">
+            <div className="sm:flex sm:flex-col sm:justify-center hidden sm:items-center sm:flex-grow z-10 transition-all duration-500 sm:ease-in-out sm:group-hover:opacity-0 sm:group-hover:translate-y-[-3rem]">
               <img
                 src={industry.logo}
                 style={{ height: industry.height }}
                 className=""
               />
             </div>
-            <div className="absolute inset-0 flex justify-center items-center z-10 transition-opacity duration-500 ease-in-out opacity-0 group-hover:opacity-100 group-hover:delay-200">
-              <div className=" text-black text-sm px-2">
+            <div className="absolute inset-0 hidden sm:flex justify-center items-center z-10 transition-opacity duration-500 ease-in-out opacity-0 group-hover:opacity-100 group-hover:delay-200">
+              <div className="text-black text-sm px-2">
                 {industry.description}
               </div>
             </div>
-            <div className="text-center mt-4 z-10">
+            <div className="text-center sm:mt-4 p-2 z-10">
               <span className="text-sm font-medium border py-1 px-2 border-gray-600 hover:border-white rounded-lg">
                 {industry.industryType}
               </span>

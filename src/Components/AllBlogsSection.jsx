@@ -91,7 +91,7 @@ export default function AllBlogsSection() {
             </div>
           </a>
         ))}
-        <div className="grid justify-center  grid-cols-3">
+        <div className="grid justify-center  sm:grid-cols-3">
           {blogPosts.slice(1).map((post) => (
             <a
               key={post.id}

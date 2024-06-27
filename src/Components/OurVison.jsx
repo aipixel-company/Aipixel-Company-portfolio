@@ -12,7 +12,7 @@ const OurVision = () => {
       <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8 pt-5">
         <div className="flex justify-center flex-wrap md:flex-wrap lg:flex-nowrap lg:flex-row lg:justify-between gap-8">
           <div className="w-full flex items-center justify-center flex-col lg:w-2/5">
-            <div className="block lg:text-left text-center">
+            <div className="block lg:text-left sm:text-center">
               <h2 className="text-4xl font-bold text-gray-900 leading-[3.25rem] mb-5">
                 Our <span className="text-indigo-600">Vision</span>
               </h2>
@@ -27,7 +27,7 @@ const OurVision = () => {
               </p>
             </div>
           </div>
-          <div className="lg:w-3/5 py-3 rounded-lg">
+          <div className="lg:w-3/5 sm:py-3 rounded-lg">
             <div className="max-w-xl mx-auto">
               <img
                 src={slides[0].image}

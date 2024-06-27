@@ -37,7 +37,7 @@ export default function IndustriesCards() {
   return (
     <>
       <div className="bg-black">
-        <div className=" px-6 py-10 mx-auto">
+        <div className=" sm:px-6 p-3 py-10 mx-auto">
           <h1 className="text-3xl font-semibold capitalize lg:text-4xl text-white">
             AI Pixel: Powering Innovation with Cutting-Edge Technologies
           </h1>

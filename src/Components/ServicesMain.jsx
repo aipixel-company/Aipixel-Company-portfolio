@@ -24,9 +24,9 @@ function ServicesMain() {
             your digital strategy
           </h3>
         </div>
-        <div className="w-1/3 flex justify-end">
+        {/* <div className="w-1/3 flex justify-end"> */}
           {/* <img src={awardsImage} alt="Awards" className="w-full h-auto object-contain" /> */}
-        </div>
+        {/* </div> */}
       </div>
     </div>
   );

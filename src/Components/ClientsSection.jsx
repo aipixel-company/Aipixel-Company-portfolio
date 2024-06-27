@@ -77,38 +77,38 @@ const testimonials = [
 
 
 const ClientsSection = () => (
-  <div className="bg-gray-900 text-gray-100 pt-12">
-    <div className="mt-24 py-16 mx-auto bg-gray-100 text-gray-900 sm:rounded-lg shadow-lg">
+  <div className="bg-gray-900 text-gray-100 sm:pt-12">
+    <div className="sm:mt-24 py-5 sm:py-16 mx-auto bg-gray-100 text-gray-900 sm:rounded-lg shadow-lg">
       <div>
         <h2 className="text-center text-gray-800 text-4xl lg:text-5xl font-bold leading-tight">
           Our Clients
         </h2>
-        <div className="my-4 mx-auto w-[90vh] h-2 border-4 border-indigo-500"></div>
+        <div className="my-4 mx-auto sm:w-[90vh] h-2 border-4 border-indigo-500"></div>
         <div className="text-center text-gray-700 font-light">
           We are proud of contributing to the success of the world’s leading
           brands
         </div>
       </div>
-      <div className="grid grid-cols-5 p-2">
+      <div className="grid sm:grid-cols-5 p-2">
         {testimonials.map((testimonial, index) => (
           <div
             key={index}
-            className="relative  border border-gray-200 h-[15rem] hover:text-black shadow p-3 bg-gray-100 text-gray-700 leading-snug flex flex-col justify-between overflow-hidden group"
+            className="relative border border-gray-200 h-[15rem] hover:text-black shadow p-3 bg-gray-100 text-gray-700 leading-snug flex flex-col justify-between overflow-hidden group"
           >
-            <div className="flex flex-col justify-center items-center flex-grow z-10 transition-all duration-500 ease-in-out group-hover:transform group-hover:translate-y-[-3rem]">
+            <div className="flex flex-col justify-center items-center flex-grow sm:z-10 transition-all duration-500 sm:ease-in-out sm:group-hover:transform sm:group-hover:translate-y-[-3rem]">
               <img src={testimonial.logo} style={{ height: testimonial.height }} className="" />
             </div>
-            <div className="absolute inset-0 mt-3 flex justify-center items-center z-10 transition-opacity duration-500 ease-in-out opacity-0 group-hover:opacity-100">
+            <div className=" hidden absolute inset-0 mt-3 sm:flex justify-center items-center z-10 transition-opacity duration-500 ease-in-out opacity-0 group-hover:opacity-100">
               <div className=" px-3 pt-2 text-black text-sm">
                 {testimonial.description}
               </div>
             </div>
-            <div className="text-center  mt-4 z-10">
+            <div className=" hidden sm:block text-center  mt-4 z-10">
               <span className="text-sm font-medium border py-1 px-2 border-gray-600 hover:border-white rounded-lg">
                 {testimonial.companyType}
               </span>
             </div>
-            <div className="absolute inset-0 bg-gradient-to-t from-gray-200 to-gray-500 transform scale-y-0 origin-bottom transition-transform duration-500 ease-in-out group-hover:scale-y-100"></div>
+            <div className=" hidden sm:block absolute inset-0 bg-gradient-to-t from-gray-200 to-gray-500 transform scale-y-0 origin-bottom transition-transform duration-500 ease-in-out group-hover:scale-y-100"></div>
           </div>
         ))}
       </div>

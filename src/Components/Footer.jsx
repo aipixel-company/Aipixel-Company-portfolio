@@ -9,19 +9,19 @@ export default function Footer() {
   return (
     <>
       <footer className="bg-white">
-        <div className="mx-10 max-w-screen-xl space-y-8 py-16 lg:space-y-16">
-          <div className="grid grid-cols-1 gap-8 lg:grid-cols-3">
+        <div className="sm:mx-8  space-y-8 py-16 lg:space-y-16">
+          <div className="grid grid-cols-1 sm:gap-8 sm:grid-cols-3">
             <div>
               <div className="mb-10">
-                <img src={navlogo} alt="" className="h-[5rem]" />
+                <img src={navlogo} alt="" className="sm:h-[5rem] h-[3rem] mx-auto sm:mx-0 " />
               </div>
-              <h1 className="font-bold">Address:</h1>
+              <h1 className="font-bold  text-center sm:text-left">Address:</h1>
 
-              <p className="mt-4 max-w-xs text-gray-500">
+              <p className="mt-4 sm:max-w-xs text-gray-500 text-center sm:text-left">
                 37L Block Johar Town, Lahore
               </p>
 
-              <ul className="mt-8 flex gap-6">
+              <ul className="mt-8 flex gap-6 justify-center sm:justify-start ">
                 <li>
                   <a
                     href="#"
@@ -86,7 +86,7 @@ export default function Footer() {
                 </li>
               </ul>
             </div>
-            <div className="col-span-2 grid grid-cols-1 gap-8 sm:grid-cols-2 md:grid-cols-4 lg:col-span-2">
+            <div className="col-span-2 grid grid-cols-3 mx-3 sm:mx-0 mt-5 sm:mt-0 gap-8 lg:col-span-2 sm:justify-center">
               <div>
                 <p className="font-medium">Services</p>
 
@@ -200,14 +200,14 @@ export default function Footer() {
         </div>
       </footer>
 
-      <div className="bg-gray-100 flex justify-between items-center">
+      <div className="bg-gray-100 flex flex-col sm:flex-row justify-between items-center">
         <div className="mx-10 max-w-screen-xl px-4 py-6 sm:flex sm:items-center sm:justify-between sm:px-6 lg:px-8">
           <p className="mt-4 text-center text-sm text-gray-500 sm:order-first sm:mt-0">
-            &copy; 2023 AI Pixel. All rights reserved.
+            &copy; 2022 AI Pixel. All rights reserved.
           </p>
         </div>
         <div>
-          <Link to="/privacy-policy" className="mx-10 text-sm">Privacy policy</Link>
+          <Link to="/privacy-policy" className="mx-10 text-sm sm:p-0 p-4">Privacy policy</Link>
         </div>
       </div>
     </>

@@ -15,8 +15,7 @@ const locations = [
 ];
 
 const redDotIcon = new L.Icon({
-  iconUrl:
-    "https://upload.wikimedia.org/wikipedia/commons/0/0e/Basic_red_dot.png",
+  iconUrl: "https://upload.wikimedia.org/wikipedia/commons/0/0e/Basic_red_dot.png",
   iconSize: [10, 10],
   iconAnchor: [5, 5],
 });
@@ -49,7 +48,7 @@ export default function Map() {
   }, []);
 
   return (
-    <div className="relative h-screen">
+    <div className="relative">
       <MapContainer
         center={[0, 0]}
         zoom={2}
@@ -67,23 +66,19 @@ export default function Map() {
           attribution=' <a href="https://www.openstreetmap.org/copyright"></a>  <a href="https://carto.com/attributions"></a>'
         />
         {locations.map((location, idx) => (
-          <Marker
-            key={idx}
-            position={[location.lat, location.lng]}
-            icon={redDotIcon}
-          >
+          <Marker key={idx} position={[location.lat, location.lng]} icon={redDotIcon}>
             <Tooltip direction="bottom" offset={[0, -20]} opacity={1} className="bg-white text-black border border-gray-300 p-1">
               {location.name}
             </Tooltip>
           </Marker>
         ))}
       </MapContainer>
-      <div className="flex justify-between w-full h-full relative z-10">
-        <div className="flex flex-col justify-center w-1/4 p-4">
+      <div className="flex flex-col md:flex-row sm:justify-between w-full h-full relative z-10">
+        <div className="flex flex-col justify-center w-full md:w-1/4 px-3 pt-4 sm:p-4">
           {leftColumnData.map((row, index) => (
             <div
               key={index}
-              className={`flex flex-col items-center bg-white border border-gray-300 px-4 py-10 shadow-md rounded-lg transition-transform duration-500 ${
+              className={`flex flex-col items-center bg-white border border-gray-300 px-4 py-10 shadow-md rounded-lg mb-4 md:mb-0 transition-transform duration-500 ${
                 !loading && "transform translate-x-0"
               }`}
             >
@@ -92,11 +87,11 @@ export default function Map() {
             </div>
           ))}
         </div>
-        <div className="flex flex-col justify-center w-1/4 p-4">
+        <div className="flex flex-col justify-center w-full md:w-1/4 p-4">
           {rightColumnData.map((row, index) => (
             <div
               key={index}
-              className={`flex flex-col items-center bg-white border border-gray-300 px-4 py-10 shadow-md rounded-lg transition-transform duration-500 ${
+              className={`flex flex-col items-center bg-white border border-gray-300 px-4 py-10 shadow-md rounded-lg mb-4 md:mb-0 transition-transform duration-500 ${
                 !loading && "transform translate-x-0"
               }`}
             >

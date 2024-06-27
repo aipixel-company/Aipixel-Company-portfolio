@@ -71,14 +71,14 @@ export default function ExpertiseServices() {
         <h2 className="font-bold text-3xl mt-5 tracking-tight">
           Our Expertise
         </h2>
-        <p className="text-gray-600 mt-3">
+        <p className="text-gray-600 mt-3 text-center sm:text-left">
           We work with advanced technologies covering a
           broad spectrum of specialisms. 
         </p>
       </div>
 
-      <div className="px-10 bg-white min-h-screen flex">
-        <div className="w-1/2 pr-5">
+      <div className="px-10 bg-white sm:min-h-screen flex">
+        <div className="sm:w-1/2 pr-5">
           <div className="grid divide-y divide-neutral-200 mt-8">
             {expertise.map((expertise, index) => (
               <FAQItem
@@ -91,7 +91,7 @@ export default function ExpertiseServices() {
             ))}
           </div>
         </div>
-        <div className="w-1/2 pl-5 mt-11">
+        <div className="w-1/2 pl-5 mt-11 hidden sm:block">
           <img
             src={expertiseservices}
             alt="Expertise illustration"

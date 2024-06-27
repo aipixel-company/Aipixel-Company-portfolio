@@ -95,7 +95,7 @@ function ContactUsMain() {
 
   return (
     <div
-      className="flex items-center h-screen"
+      className="flex items-center sm:h-screen"
       style={{
         backgroundImage: `url(${aboutbackground})`,
         backgroundSize: "cover",
@@ -105,10 +105,10 @@ function ContactUsMain() {
       <form
         onSubmit={handleSubmit}
         noValidate
-        className="container flex flex-col ml-5 mt-16 rounded-xl max-w-4xl bg-gradient-to-r from-blue-100 to-blue-700 p-6"
+        className="container flex flex-col sm:ml-5 sm:mt-16 sm:rounded-xl sm:max-w-4xl bg-gradient-to-r from-blue-100 to-blue-700 p-6"
       >
         <h1 className="text-4xl font-medium text-center mb-4">Get In Touch</h1>
-        <div className="grid grid-cols-3 gap-6 p-6">
+        <div className="grid sm:grid-cols-3 grid-cols-2 gap-6 p-6">
           <div>
             <div className="mb-4">
               <label
@@ -227,7 +227,7 @@ function ContactUsMain() {
               )}
             </div>
           </div>
-          <div>
+          <div className=" hidden sm:block"> 
             <p className="text-white">
               At AI Pixel, we're not bound by the limitations of the present.
               We're a pioneering force in software landscape, wielding the power

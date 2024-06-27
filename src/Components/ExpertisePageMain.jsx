@@ -13,7 +13,7 @@ const sectionData = {
   ],
 };
 
-const SectionHeader = ({ title, subtitle, description, button }) => (
+const SectionHeader = ({ title, subtitle, description }) => (
   <div className="flex flex-col w-full lg:w-1/3 justify-center items-start p-8">
     <h1 className="text-3xl md:text-5xl p-2 text-yellow-300 tracking-loose">
       {title}
@@ -22,13 +22,12 @@ const SectionHeader = ({ title, subtitle, description, button }) => (
       {subtitle}
     </h2>
     <p className="text-sm md:text-base text-gray-50 mb-4">{description}</p>
-    
   </div>
 );
 
 const SectionImages = ({ images }) => (
   <div className="p-8 mt-12 mb-6 md:mb-0 md:mt-0 ml-0 md:ml-12 lg:w-2/3 justify-center">
-    <div className="h-[40vh] flex flex-wrap content-center">
+    <div className="h-[40vh]  flex-wrap content-center sm:flex hidden">
       {images.map((src, index) => (
         <div
           key={index}
@@ -45,12 +44,11 @@ const SectionImages = ({ images }) => (
 
 const ExpertisePageMain = () => (
   <section>
-    <div className="bg-black text-white py-20">
-      <div className="container mx-auto flex flex-col md:flex-row items-center my-12 md:my-24">
+    <div className="bg-black text-white sm:py-20 py-6">
+      <div className="container mx-auto flex flex-col md:flex-row items-center sm:my-12 ">
         <SectionHeader
           title={sectionData.title}
           description={sectionData.description}
-          
         />
         <SectionImages images={sectionData.images} />
       </div>
