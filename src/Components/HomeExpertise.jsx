@@ -1,6 +1,6 @@
 import React, { useRef, useState, useMemo } from "react";
 import { FiChevronLeft, FiChevronRight } from "react-icons/fi";
-import { GoDotFill } from "react-icons/go";
+// import { GoDotFill } from "react-icons/go";
 import { LazyLoadImage } from "react-lazy-load-image-component";
 import "react-lazy-load-image-component/src/effects/blur.css";
 
@@ -309,9 +309,9 @@ const QuestionCard = React.memo(
 const ExpertiseCard = React.memo(({ expertise }) => (
   <div
     key={expertise.id}
-    className="relative expertise-card flex-shrink-0 w-80 border-2 bg-white rounded-lg shadow-lg p-2"
+    className="relative expertise-card flex-shrink-0 lg:w-80 w-[15rem] border-2 bg-white rounded-lg shadow-lg p-2"
   >
-    <div className="absolute bottom-0 w-full h-1/2 rounded-lg hidden md:block lg:block">
+    <div className="absolute bottom-0 w-full lg:h-1/2 rounded-lg hidden lg:block">
       <LazyLoadImage
         src={expertise.image}
         alt={expertise.field}
@@ -319,13 +319,13 @@ const ExpertiseCard = React.memo(({ expertise }) => (
         className="w-full h-full object-cover rounded-lg"
       />
     </div>
-    <div className="relative z-10 expertise-overlay flex flex-col h-full">
-      <div className="content-start flex items-center rounded-t-md">
+    <div className="relative z-10 expertise-overlay flex flex-col h-full lg:p-3">
+      {/* <div className="content-start hidden lg:flex items-center rounded-t-md">
         <GoDotFill className="text-black m-2" />
         <h2 className="text-sm font-light text-black ml-1 p-1">
           {expertise.field}
         </h2>
-      </div>
+      </div> */}
       <div className="flex flex-col items-center h-full bg-opacity-75 p-2 rounded-b-md">
         <div>
           <h2 className="text-lg font-semibold mb-2 text-black">
@@ -404,12 +404,12 @@ export default function HomeExpertise() {
   }, [filters]);
 
   return (
-    <div className="flex flex-col items-center w-full h-full p-10 bg-gray-50">
+    <div className="flex flex-col items-center w-full h-full p-4 lg:p-10 bg-gray-50">
       <div className="w-full flex flex-col items-center pt-16 pb-10">
-        <h1 className="md:text-3xl lg:text-3xl text-base font-semibold mb-3 capitalize text-center">
+        <h1 className="md:text-3xl lg:text-3xl text-base font-semibold mb-3 capitalize lg:text-center">
           Unleash Your Digital Potential with Cutting-Edge Solutions
         </h1>
-        <p className="md:text-base lg:text-base text-sm font-light mb-3 text-center">
+        <p className="md:text-base lg:text-base text-sm font-light mb-3 lg:text-center">
           AI Pixel empowers businesses of all sizes with a comprehensive suite
           of services designed to propel them into the future. Here's a closer
           look at how their expertise can transform your digital landscape.
@@ -431,19 +431,18 @@ export default function HomeExpertise() {
           ))}
         </div>
 
-        <div className="md:w-2/3 lg:w-2/3 overflow-scroll flex flex-col h-full md:pl-10 lg:pl-10 pl-0">
+        <div className="md:w-2/3 lg:w-2/3 w-auto overflow-scroll flex flex-col h-full md:pl-10 lg:pl-10 pl-0 scrollbar">
           <div className="flex flex-row w-full md:h-[70vh] lg:h-[70vh] overflow-hidden">
-            <div className="w-full flex flex-col md:h-[70vh] lg:h-[70vh] h-[50vh]">
+            <div className="w-full flex flex-col lg:h-[70vh]">
               <div
-                className="flex overflow-x-auto space-x-4 md:h-[60vh] lg:h-[60vh] h-[30vh] scrollbar"
-                style={{ maxWidth: "calc(100vw - 100px)" }}
+                className="flex overflow-x-auto space-x-4 lg:h-[60vh] h-[35vh] lg:max-w-[calc(100vw-100px)] scrollbar"
                 ref={containerRef}
               >
                 {filteredExpertiseData.map((expertise) => (
                   <ExpertiseCard key={expertise.id} expertise={expertise} />
                 ))}
               </div>
-              <div className="flex mt-4 mb-4 gap-3">
+              <div className="lg:flex hidden mt-4 mb-4 gap-3">
                 <button
                   onClick={handleScrollLeft}
                   className="mx-2 p-1 text-xl bg-gray-200 rounded-full hover:bg-gray-300 hover:drop-shadow-2xl"

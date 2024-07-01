@@ -177,9 +177,9 @@ function NavList({ scrolled }) {
         >
           Contact Us
         </button>
-        <div className={` m-auto ${scrolled ? "text-black" : "text-white"}`}>
+        {/* <div className={` m-auto ${scrolled ? "text-black" : "text-white"}`}>
           <IoIosSearch style={{ fontSize: "2rem"  }} />
-        </div>
+        </div> */}
       </div>
     </div>
   );
@@ -216,7 +216,7 @@ export default function Nav() {
           : "bg-transparent text-white"
       } px-[50px] w-full fixed box-border z-50`}
     >
-      <div className="flex items-center">
+      <div className="flex items-center justify-evenly">
         <div
           onClick={() => handleLinkClick("/")}
           className="h-full cursor-pointer"

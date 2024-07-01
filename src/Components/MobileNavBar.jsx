@@ -75,7 +75,7 @@ function MobileNavBar() {
           {/* Toggle Button */}
           <button
             onClick={toggleMenu}
-            className="inline-flex items-center  w-10 h-10 justify-center text-sm  rounded-lg md:hidden  focus:ring-gray-200 dark:text-gray-400 dark:hover:bg-gray-700 dark:focus:ring-gray-600"
+            className="inline-flex items-center  w-10 h-10 justify-center text-sm  rounded-lg  focus:ring-gray-200 dark:text-gray-400 dark:hover:bg-gray-700 dark:focus:ring-gray-600"
           >
             <span className="sr-only">Open main menu</span>
             <svg
@@ -96,7 +96,7 @@ function MobileNavBar() {
         </div>
       </nav>
       {isMenuOpen && (
-        <div className="md:hidden block w-full bg-white dark:bg-gray-900">
+        <div className=" w-full bg-white dark:bg-gray-900">
           <ul className="font-medium flex flex-col p-4 border border-gray-100 rounded-lg bg-gray-50 dark:bg-gray-800 dark:border-gray-700">
             {menuItemsData.map((item, index) => (
               <li key={index} className="py-2">

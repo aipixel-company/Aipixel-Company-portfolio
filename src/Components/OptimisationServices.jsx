@@ -24,7 +24,7 @@ export default function OptimisationServices() {
       <h1 className="text-4xl font-semibold sm:ml-5 px-4 mt-5">
         Optimisation
       </h1>
-      <div className="sm:grid sm:grid-cols-3 sm:gap-4 flex flex-col mt-2 sm:p-[4rem] p-[2rem]">
+      <div className="grid grid-cols-3 cards gap-3  p-[2rem]">
          {services.map((service, index) => (
           <div
             key={index}

@@ -65,8 +65,8 @@ const ExpertiseTab = () => {
   return (
     <div className=" text-black py-20">
       <div className="container mx-auto px-8">
-        <div className="flex flex-col md:flex-row">
-          <div className="w-full md:w-1/4 flex flex-col mb-8 md:mb-0">
+        <div className="flex flex-col lg:flex-row">
+          <div className="w-full lg:w-1/4 flex flex-col mb-8 lg:mb-0">
             {expertiseData.map((item, index) => (
               <button
                 key={index}
@@ -82,13 +82,13 @@ const ExpertiseTab = () => {
             ))}
           </div>
           <div
-            className="w-full md:w-3/4 p-6 ml-0 md:ml-3 bg-cover bg-center rounded-lg"
+            className="w-full lg:w-3/4 p-6 ml-0 lg:ml-3 bg-cover bg-center rounded-lg"
             style={{ backgroundImage: `url(${activeTab.backgroundImage})` }}
           >
-            <h2 className="text-3xl md:text-4xl font-bold mb-4 text-white">
+            <h2 className="text-3xl lg:text-4xl font-bold mb-4 text-white">
               {activeTab.title}
             </h2>
-            <p className="text-lg md:text-xl text-gray-200 bg-black bg-opacity-50 p-4 rounded-lg">
+            <p className="text-lg lg:text-xl text-gray-200 bg-black bg-opacity-50 p-4 rounded-lg">
               {activeTab.details}
             </p>
           </div>

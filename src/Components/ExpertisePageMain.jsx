@@ -27,7 +27,7 @@ const SectionHeader = ({ title, subtitle, description }) => (
 
 const SectionImages = ({ images }) => (
   <div className="p-8 mt-12 mb-6 md:mb-0 md:mt-0 ml-0 md:ml-12 lg:w-2/3 justify-center">
-    <div className="h-[40vh]  flex-wrap content-center sm:flex hidden">
+    <div className="h-[40vh] content-center lg:flex hidden">
       {images.map((src, index) => (
         <div
           key={index}

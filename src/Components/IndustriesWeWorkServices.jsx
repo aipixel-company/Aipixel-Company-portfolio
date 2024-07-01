@@ -90,7 +90,7 @@ const IndustriesWeWorkServices = () => (
         <h2 className="text-center text-gray-800 text-4xl lg:text-5xl font-bold leading-tight">
           Industries We Work With
         </h2>
-        <div className="my-4 mx-auto sm:w-[90vh] h-2 border-4 border-indigo-500"></div>
+        <div className="my-4 mx-auto h-2 border-4 border-indigo-500"></div>
         <div className="text-center text-gray-700 font-light">
           We are proud to serve a diverse range of industries
         </div>
@@ -114,7 +114,7 @@ const IndustriesWeWorkServices = () => (
               </div>
             </div>
             <div className="text-center sm:mt-4 p-2 z-10">
-              <span className="text-sm font-medium border py-1 px-2 border-gray-600 hover:border-white rounded-lg">
+              <span className=" text-xs whitespace-nowrap sm:text-sm sm:font-medium border py-1 px-1 border-gray-600 sm:hover:border-white rounded-lg">
                 {industry.industryType}
               </span>
             </div>

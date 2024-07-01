@@ -95,9 +95,9 @@ function ContactUsMain() {
 
   return (
     <div
-      className="flex items-center sm:h-screen"
+      className="flex items-center lg:h-screen"
       style={{
-        backgroundImage: `url(${aboutbackground})`,
+        backgroundImage: `url(${'https://firebasestorage.googleapis.com/v0/b/ai-pixel-portfolio.appspot.com/o/assets%2Faboutbackground.jpg?alt=media&token=bd77e3a0-6601-461a-94ab-f005b156e54b'})`,
         backgroundSize: "cover",
         backgroundPosition: "center",
       }}
@@ -105,10 +105,10 @@ function ContactUsMain() {
       <form
         onSubmit={handleSubmit}
         noValidate
-        className="container flex flex-col sm:ml-5 sm:mt-16 sm:rounded-xl sm:max-w-4xl bg-gradient-to-r from-blue-100 to-blue-700 p-6"
+        className="container flex flex-col lg:ml-5 lg:mt-16 lg:rounded-xl w-full sm:max-w-4xl bg-gradient-to-r from-blue-100 to-blue-700 p-6"
       >
         <h1 className="text-4xl font-medium text-center mb-4">Get In Touch</h1>
-        <div className="grid sm:grid-cols-3 grid-cols-2 gap-6 p-6">
+        <div className="grid lg:grid-cols-3 grid-cols-2 gap-6 p-6">
           <div>
             <div className="mb-4">
               <label

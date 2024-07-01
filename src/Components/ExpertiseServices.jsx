@@ -77,8 +77,8 @@ export default function ExpertiseServices() {
         </p>
       </div>
 
-      <div className="px-10 bg-white sm:min-h-screen flex">
-        <div className="sm:w-1/2 pr-5">
+      <div className="px-10 bg-white  flex">
+        <div className="lg:w-1/2 w-full pr-5">
           <div className="grid divide-y divide-neutral-200 mt-8">
             {expertise.map((expertise, index) => (
               <FAQItem
@@ -91,7 +91,7 @@ export default function ExpertiseServices() {
             ))}
           </div>
         </div>
-        <div className="w-1/2 pl-5 mt-11 hidden sm:block">
+        <div className="w-1/2 pl-5 mt-11 hidden lg:block">
           <img
             src={expertiseservices}
             alt="Expertise illustration"

@@ -17,19 +17,22 @@ const BlogSection = () => {
         "Unlock the power of systematic investment with us and watch your profits soar. Our expert team will guide you on the path to financial...",
     },
     {
-      image: "https://images.unsplash.com/photo-1499750310107-5fef28a66643?q=80&w=1470&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
+      image:
+        "https://images.unsplash.com/photo-1499750310107-5fef28a66643?q=80&w=1470&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
       title: "Maximizing your investments with expert advice",
       description:
         "Learn how to maximize your investment returns with insights from leading financial experts. Gain the knowledge you need to succeed...",
     },
     {
-      image: "https://images.unsplash.com/photo-1614028674026-a65e31bfd27c?q=80&w=1470&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
+      image:
+        "https://images.unsplash.com/photo-1614028674026-a65e31bfd27c?q=80&w=1470&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
       title: "Investment trends to watch in 2024",
       description:
         "Stay ahead of the curve with our analysis of the top investment trends to watch in 2024. Discover where the smart money is headed...",
     },
     {
-      image: "https://images.unsplash.com/photo-1522199755839-a2bacb67c546?q=80&w=1472&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
+      image:
+        "https://images.unsplash.com/photo-1522199755839-a2bacb67c546?q=80&w=1472&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
       title: "Expert tips for diversifying your portfolio",
       description:
         "Diversification is key to a successful portfolio. Learn from the experts how to balance risk and reward by spreading your investments...",
@@ -111,13 +114,13 @@ const BlogSection = () => {
             </div>
           </div>
           <div className="lg:w-3/5 border-2 py-3 rounded-lg">
-            <div className="max-w-xl mx-auto">
+            <div className="max-w-xl mx-auto p-3 sm:p-0">
               <img
                 src={slides[slideIndex].image}
                 srcSet={`${slides[slideIndex].image} 1x, ${slides[slideIndex].image} 2x`}
                 loading="lazy"
                 alt="Blog Slide"
-                className="rounded-2xl w-full mb-9 h-[20rem]"
+                className=" w-full mb-6 sm:h-[20rem]"
               />
               <h3 className="text-xl text-gray-900 font-medium leading-8 mb-4 group-hover:text-indigo-600">
                 {slides[slideIndex].title}
@@ -125,27 +128,6 @@ const BlogSection = () => {
               <p className="text-gray-500 leading-6 transition-all duration-500 mb-8">
                 {slides[slideIndex].description}
               </p>
-              {/* <a
-                href="javascript:;"
-                className="cursor-pointer flex items-center gap-2 text-lg text-indigo-700 font-semibold"
-              >
-                Read more
-                <svg
-                  width="15"
-                  height="12"
-                  viewBox="0 0 15 12"
-                  fill="none"
-                  xmlns="http://www.w3.org/2000/svg"
-                >
-                  <path
-                    d="M1.25 6L13.25 6M9.5 10.5L13.4697 6.53033C13.7197 6.28033 13.8447 6.15533 13.8447 6C13.8447 5.84467 13.7197 5.71967 13.4697 5.46967L9.5 1.5"
-                    stroke="#4338CA"
-                    strokeWidth="1.8"
-                    strokeLinecap="round"
-                    strokeLinejoin="round"
-                  />
-                </svg>
-              </a> */}
             </div>
           </div>
         </div>

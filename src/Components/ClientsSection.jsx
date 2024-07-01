@@ -83,13 +83,13 @@ const ClientsSection = () => (
         <h2 className="text-center text-gray-800 text-4xl lg:text-5xl font-bold leading-tight">
           Our Clients
         </h2>
-        <div className="my-4 mx-auto sm:w-[90vh] h-2 border-4 border-indigo-500"></div>
+        <div className="my-4 mx-auto w-full h-2 border-4 border-indigo-500"></div>
         <div className="text-center text-gray-700 font-light">
           We are proud of contributing to the success of the world’s leading
           brands
         </div>
       </div>
-      <div className="grid sm:grid-cols-5 p-2">
+      <div className="grid md:grid-cols-2 lg:grid-cols-5 p-2">
         {testimonials.map((testimonial, index) => (
           <div
             key={index}

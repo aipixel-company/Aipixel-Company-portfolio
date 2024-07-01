@@ -31,7 +31,7 @@ export default function ContactUsOffices() {
       },
     },
     {
-      name: "Mian Moiz",
+      name: "Muhammad Moiz",
       title: "Team Lead",
       image: teamlead ,
       description:

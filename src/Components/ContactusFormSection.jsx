@@ -64,8 +64,8 @@ export default function ContactusFormSection() {
 
   return (
     <div className="bg-[#1e1d28] px-4 py-12 sm:px-6 lg:me-0 lg:py-16 lg:pe-0 lg:ps-8 xl:py-24">
-      <div className="grid gap-8 sm:grid-cols-2 mx-5 p-4">
-        <div className="max-w-xl ltr:sm:text-left rtl:sm:text-right p-5">
+      <div className="grid gap-8 lg:grid-cols-2 mx-5 p-4">
+        <div className="w-auto ltr:sm:text-left rtl:sm:text-right p-5">
           <h2 className="text-3xl font-bold tracking-tight text-white sm:text-4xl">
             Ready to discuss your software requirements?
           </h2>
@@ -119,7 +119,7 @@ export default function ContactusFormSection() {
                 htmlFor="phone"
                 className="absolute text-sm text-white dark:text-gray-400 duration-300 transform -translate-y-6 scale-75 top-3 -z-10 origin-[0] peer-focus:left-0 peer-focus:text-blue-600 peer-focus:dark:text-blue-500 peer-placeholder-shown:scale-100 peer-placeholder-shown:translate-y-0 peer-focus:scale-75 peer-focus:-translate-y-6"
               >
-                Phone number (123-456-7890)
+                Phone number
               </label>
             </div>
             <div className="relative z-0 mb-6 w-full group">
@@ -136,7 +136,7 @@ export default function ContactusFormSection() {
                 htmlFor="company"
                 className="absolute text-sm text-white dark:text-gray-400 duration-300 transform -translate-y-6 scale-75 top-3 -z-10 origin-[0] peer-focus:left-0 peer-focus:text-blue-600 peer-focus:dark:text-blue-500 peer-placeholder-shown:scale-100 peer-placeholder-shown:translate-y-0 peer-focus:scale-75 peer-focus:-translate-y-6"
               >
-                Company (Ex. Google)
+                Company
               </label>
             </div>
             <div className="relative z-0 mb-6 w-full group">
@@ -178,7 +178,7 @@ export default function ContactusFormSection() {
             </button>
           </form>
         </div>
-        <div className="px-4 h-full lg:block md:block hidden">
+        <div className="px-4 h-full lg:block hidden">
           <CustomerReveiw />
         </div>
       </div>

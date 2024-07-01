@@ -10,18 +10,22 @@ export default function Footer() {
     <>
       <footer className="bg-white">
         <div className="sm:mx-8  space-y-8 py-16 lg:space-y-16">
-          <div className="grid grid-cols-1 sm:gap-8 sm:grid-cols-3">
+          <div className="grid grid-cols-1 sm:gap-8 lg:grid-cols-3">
             <div>
               <div className="mb-10">
-                <img src={navlogo} alt="" className="sm:h-[5rem] h-[3rem] mx-auto sm:mx-0 " />
+                <img
+                  src={navlogo}
+                  alt=""
+                  className="sm:h-[5rem] h-[3rem] lg:mx-0 mx-auto "
+                />
               </div>
-              <h1 className="font-bold  text-center sm:text-left">Address:</h1>
+              <h1 className="font-bold  text-center lg:text-left">Address:</h1>
 
-              <p className="mt-4 sm:max-w-xs text-gray-500 text-center sm:text-left">
+              <p className="mt-4 w-full text-gray-500 text-center lg:text-left">
                 37L Block Johar Town, Lahore
               </p>
 
-              <ul className="mt-8 flex gap-6 justify-center sm:justify-start ">
+              <ul className="mt-8 flex gap-6 justify-center lg:justify-start ">
                 <li>
                   <a
                     href="#"
@@ -86,7 +90,7 @@ export default function Footer() {
                 </li>
               </ul>
             </div>
-            <div className="col-span-2 grid grid-cols-3 mx-3 sm:mx-0 mt-5 sm:mt-0 gap-8 lg:col-span-2 sm:justify-center">
+            <div className="col-span-2 grid grid-cols-3 mx-3 lg:mx-0 mt-5 lg:mt-0 gap-8 lg:col-span-2 lg:justify-center">
               <div>
                 <p className="font-medium">Services</p>
 
@@ -97,7 +101,7 @@ export default function Footer() {
                         to="/services"
                         className="text-gray-700 transition hover:opacity-75"
                       >
-                        Product Development
+                        Advisory Services
                       </Link>
                     </li>
                     <li>
@@ -105,7 +109,7 @@ export default function Footer() {
                         to="/services"
                         className="text-gray-700 transition hover:opacity-75"
                       >
-                        Web Development
+                        Engineering Services
                       </Link>
                     </li>
                     <li>
@@ -121,7 +125,7 @@ export default function Footer() {
                         to="/services"
                         className="text-gray-700 transition hover:opacity-75"
                       >
-                        UI/UX Design
+                        Optimisation
                       </Link>
                     </li>
                   </ul>
@@ -135,7 +139,7 @@ export default function Footer() {
                   <ul className="space-y-4 text-sm">
                     <li>
                       <Link
-                        to="/about-us"
+                        to="/aboutus"
                         className="text-gray-700 transition hover:opacity-75"
                       >
                         About Us
@@ -152,7 +156,7 @@ export default function Footer() {
                     </li>
                     <li>
                       <Link
-                        to="/blog"
+                        to="/blogs"
                         className="text-gray-700 transition hover:opacity-75"
                       >
                         Blog
@@ -175,23 +179,6 @@ export default function Footer() {
                         Contact Form
                       </Link>
                     </li>
-                    <li>
-                      <Link
-                        to="/contact-us"
-                        className="text-gray-700 transition hover:opacity-75"
-                      >
-                        Location
-                      </Link>
-                    </li>
-
-                    <li>
-                      <Link
-                        to="/contact-us"
-                        className="text-gray-700 transition hover:opacity-75"
-                      >
-                        Feedback
-                      </Link>
-                    </li>
                   </ul>
                 </nav>
               </div>
@@ -203,11 +190,13 @@ export default function Footer() {
       <div className="bg-gray-100 flex flex-col sm:flex-row justify-between items-center">
         <div className="mx-10 max-w-screen-xl px-4 py-6 sm:flex sm:items-center sm:justify-between sm:px-6 lg:px-8">
           <p className="mt-4 text-center text-sm text-gray-500 sm:order-first sm:mt-0">
-            &copy; 2022 AI Pixel. All rights reserved.
+            &copy; 2020 AI Pixel. All rights reserved.
           </p>
         </div>
         <div>
-          <Link to="/privacy-policy" className="mx-10 text-sm sm:p-0 p-4">Privacy policy</Link>
+          <Link to="/privacy-policy" className="mx-10 text-sm sm:p-0 p-4">
+            Privacy policy
+          </Link>
         </div>
       </div>
     </>
