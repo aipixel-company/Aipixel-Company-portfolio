@@ -1,7 +1,5 @@
 import React, { useState } from "react";
 import { GrAttachment } from "react-icons/gr";
-import aboutbackground from "../assets/aboutbackground.jpg";
-import { Checkbox } from "@material-tailwind/react";
 import { collection, addDoc } from "firebase/firestore";
 import { ref, uploadBytes, getDownloadURL } from "firebase/storage";
 import { db, storage } from "../../Firebase"; // Make sure these paths are correct
