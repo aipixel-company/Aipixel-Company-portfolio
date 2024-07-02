@@ -4,6 +4,12 @@ import adventureclub from "../assets/adventureclub.png";
 import dtecch from "../assets/dtec.png";
 import bankmusqat from "../assets/bankmusqat.png";
 import moosa from "../assets/moosa.png";
+import dtec from "../assets/dtec.jpg"
+import background from "../assets/background.jpg"
+import bankmusqatt from "../assets/bankmusqatt.jpg"
+import laracee from "../assets/larace.jpg"
+import moosagroup from "../assets/moosagroup.jpg"
+
 
 const cards = [
   
@@ -13,9 +19,8 @@ const cards = [
     logo: dtecch,
     description:
       "DTEC provides innovative tech solutions to enhance business efficiency and drive growth in various sectors.",
-    backgroundImage:
-      "https://firebasestorage.googleapis.com/v0/b/ai-pixel-portfolio.appspot.com/o/assets%2Fdtec.jpg?alt=media&token=955e4122-bf4c-4cac-ae39-f3f071d77f2c",
-    logoHeight: "50px",
+    backgroundImage: dtec,
+     logoHeight: "50px",
   },
   {
     id: 2,
@@ -24,7 +29,7 @@ const cards = [
     description:
       "Bank Muscat is a leading financial institution in Oman, offering a wide range of banking services and solutions.",
     backgroundImage:
-      "https://firebasestorage.googleapis.com/v0/b/ai-pixel-portfolio.appspot.com/o/assets%2Fbankmusqatt.jpg?alt=media&token=0ec9fd9e-ac24-47f5-bf47-0e0e273784c0",
+    bankmusqatt,
     logoHeight: "35px",
   },
   {
@@ -34,7 +39,7 @@ const cards = [
     description:
       "Adventure Club offers thrilling and adventurous activities for those who seek excitement and unforgettable experiences.",
     backgroundImage:
-      "https://firebasestorage.googleapis.com/v0/b/ai-pixel-portfolio.appspot.com/o/assets%2Fbackground.jpg?alt=media&token=04536957-3a94-4d6a-b508-6fb19048b90f",
+      background,
     logoHeight: "70px",
   },
   {
@@ -44,7 +49,7 @@ const cards = [
     description:
       "Moosa Group is a conglomerate with diverse business interests, delivering quality products and services.",
     backgroundImage:
-      "https://firebasestorage.googleapis.com/v0/b/ai-pixel-portfolio.appspot.com/o/assets%2Fmoosagroup.jpg?alt=media&token=efa5cdd7-e7f1-442b-977d-f81e9112b030",
+      moosagroup,
     logoHeight: "55px",
   },
   {
@@ -54,7 +59,7 @@ const cards = [
     description:
       "LA Race is an organization dedicated to organizing exciting and competitive racing events.",
     backgroundImage:
-      "https://firebasestorage.googleapis.com/v0/b/ai-pixel-portfolio.appspot.com/o/assets%2Flarace.jpg?alt=media&token=853187bd-16e2-4e26-be3a-2e3811b0856d",
+      laracee,
     logoHeight: "65px",
   },
 ];
