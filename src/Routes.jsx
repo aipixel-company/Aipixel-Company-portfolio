@@ -21,16 +21,15 @@ const router = createBrowserRouter(
       <Route index element={<HomeStock />} />
       <Route path="aboutus" element={<AboutStock />} />
       <Route path="contact-us" element={<ContactUsStock />} />
-      <Route path="services" element={<ServicesStock/>} />
-      
-      <Route path="clients" element={<ClientsStock/>} />
-      
-      <Route path="expertise" element={<ExpertiseStock/>} />
-      <Route path="industries" element={<IndustriesStock/>} />
+      <Route path="services" element={<ServicesStock />} />
 
-      
-      <Route path="blogs" element={<BlogStock/>} />
-      <Route path="privacy-policy" element={<PrivacyPolicy/>} />
+      <Route path="clients" element={<ClientsStock />} />
+
+      <Route path="expertise" element={<ExpertiseStock />} />
+      <Route path="industries" element={<IndustriesStock />} />
+
+      <Route path="blogs" element={<BlogStock />} />
+      <Route path="privacy-policy" element={<PrivacyPolicy />} />
     </Route>
   )
 );

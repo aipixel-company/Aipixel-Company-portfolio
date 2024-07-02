@@ -435,7 +435,7 @@ export default function HomeExpertise() {
           <div className="flex flex-row w-full md:h-[70vh] lg:h-[70vh] overflow-hidden">
             <div className="w-full flex flex-col lg:h-[70vh]">
               <div
-                className="flex overflow-x-auto space-x-4 lg:h-[60vh] h-[35vh] lg:max-w-[calc(100vw-100px)] scrollbar"
+                className="flex overflow-x-auto space-x-4 lg:h-[60vh] h-[38vh] lg:max-w-[calc(100vw-100px)] scrollbar"
                 ref={containerRef}
               >
                 {filteredExpertiseData.map((expertise) => (

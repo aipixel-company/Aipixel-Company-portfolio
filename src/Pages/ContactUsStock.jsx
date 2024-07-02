@@ -1,13 +1,13 @@
 import React from 'react'
 import ContactUsMain from '../Components/ContactUsMain'
-import ContactUsOffices from '../Components/ContactUsOffices'
 import Map from '../Components/Map'
+import CeoMessage from '../Components/CeoMessage'
 
 export default function ContactUsStock() {
   return (
     <>
     <ContactUsMain/>
-    <ContactUsOffices/>
+    <CeoMessage/>
     <Map/>
       
     </>

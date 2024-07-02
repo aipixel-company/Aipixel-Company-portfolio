@@ -35,7 +35,7 @@ export default function ContactUsOffices() {
       title: "Team Lead",
       image: teamlead ,
       description:
-        "Guiding the team towards achieving project goals with efficiency and excellence. Expertise in team management and project coordination.",
+        "Guiding the team towards achieving project goals with efficiency and excellence. Expertise in team management, project coordination and growth.",
       socialLinks: {
         github: "javascript:void(0)",
         twitter: "javascript:void(0)",
@@ -49,7 +49,7 @@ export default function ContactUsOffices() {
       <div className="mb-16">
         <div className="container flex justify-center mx-auto pt-16">
           <div>
-            <h1 className="xl:text-4xl text-3xl text-center text-gray-800 ">
+            <h1 className="xl:text-4xl text-3xl text-center ">
               Our Core Team
             </h1>
           </div>
@@ -68,7 +68,7 @@ export default function ContactUsOffices() {
                   className="xl:w-1/3 sm:w-3/4 md:w-2/5 relative mt-16 mb-32 sm:mb-24 xl:max-w-sm lg:w-2/5"
                 >
                   <div className="rounded overflow-hidden shadow-md bg-white">
-                    <div className="absolute -mt-20 w-full flex justify-center">
+                    {/* <div className="absolute -mt-20 w-full flex justify-center">
                       <div className="h-32 w-32">
                         <img
                           src={member.image}
@@ -77,7 +77,7 @@ export default function ContactUsOffices() {
                           className="rounded-full object-cover h-full w-full shadow-md"
                         />
                       </div>
-                    </div>
+                    </div> */}
                     <div className="px-6 mt-16">
                       <h1 className="font-bold text-3xl text-center mb-1">
                         {member.name}

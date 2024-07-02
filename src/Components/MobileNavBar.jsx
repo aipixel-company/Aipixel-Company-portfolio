@@ -1,13 +1,9 @@
-import React, { useEffect, useState } from "react";
+import React, { useEffect, useState, useRef } from "react";
 import Logo from "../assets/navlogo.png";
 import { Link, useLocation } from "react-router-dom";
-import {
-  MdOutlineMiscellaneousServices,
-  MdNotificationsActive,
-} from "react-icons/md";
+import { MdOutlineMiscellaneousServices } from "react-icons/md";
 import { IoHomeSharp, IoPerson } from "react-icons/io5";
 import { FaBookOpen, FaCircleInfo } from "react-icons/fa6";
-import { BsGraphUpArrow } from "react-icons/bs";
 
 const menuItemsData = [
   {
@@ -25,7 +21,6 @@ const menuItemsData = [
     icon: IoPerson,
     path: "/clients",
   },
-  
   {
     name: "Industries",
     icon: FaBookOpen,
@@ -51,10 +46,29 @@ const menuItemsData = [
 function MobileNavBar() {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
   const location = useLocation();
+  const menuRef = useRef();
 
   useEffect(() => {
     window.scrollTo(0, 0);
   }, [location]);
+
+  useEffect(() => {
+    const handleClickOutside = (event) => {
+      if (menuRef.current && !menuRef.current.contains(event.target)) {
+        setIsMenuOpen(false);
+      }
+    };
+
+    if (isMenuOpen) {
+      document.addEventListener("mousedown", handleClickOutside);
+    } else {
+      document.removeEventListener("mousedown", handleClickOutside);
+    }
+
+    return () => {
+      document.removeEventListener("mousedown", handleClickOutside);
+    };
+  }, [isMenuOpen]);
 
   const toggleMenu = () => {
     setIsMenuOpen(!isMenuOpen);
@@ -62,41 +76,51 @@ function MobileNavBar() {
 
   return (
     <>
-      <nav className="bg-white  top-0 flex justify-between items-center h-15 p-3">
+      <nav className="bg-white top-0 flex justify-between items-center h-15 p-3">
         {/* Logo */}
         <Link to="/" className="">
           <img src={Logo} className="h-[40px]" alt="Logo" />
         </Link>
         <div className="flex items-center space-x-2">
           {/* Contact Us Button */}
-          <Link to="/contact-us" className="bg-black text-sm font-medium text-white py-2 px-6 rounded-full">
+          <Link
+            to="/contact-us"
+            className="bg-black text-sm font-medium text-white py-2 px-6 rounded-full"
+          >
             Contact Us
           </Link>
           {/* Toggle Button */}
           <button
             onClick={toggleMenu}
-            className="inline-flex items-center  w-10 h-10 justify-center text-sm  rounded-lg  focus:ring-gray-200 dark:text-gray-400 dark:hover:bg-gray-700 dark:focus:ring-gray-600"
+            className="inline-flex items-center w-10 h-10 justify-center text-sm rounded-lg focus:ring-gray-200 dark:text-gray-400 dark:hover:bg-gray-700 dark:focus:ring-gray-600"
           >
             <span className="sr-only">Open main menu</span>
-            <svg
-              xmlns="http://www.w3.org/2000/svg"
-              fill="none"
-              viewBox="0 0 24 24"
-              strokeWidth={1.5}
-              stroke="currentColor"
-              className=" size-8"
-            >
-              <path
-                strokeLinecap="round"
-                strokeLinejoin="round"
-                d="M3.75 5.25h16.5m-16.5 4.5h16.5m-16.5 4.5h16.5m-16.5 4.5h16.5"
-              />
-            </svg>
+           
+              <svg
+                xmlns="http://www.w3.org/2000/svg"
+                fill="none"
+                viewBox="0 0 24 24"
+                strokeWidth={1.5}
+                stroke="currentColor"
+                className="size-8"
+              >
+                <path
+                  strokeLinecap="round"
+                  strokeLinejoin="round"
+                  d="M3.75 5.25h16.5m-16.5 4.5h16.5m-16.5 4.5h16.5m-16.5 4.5h16.5"
+                />
+              </svg>
+          
           </button>
         </div>
       </nav>
-      {isMenuOpen && (
-        <div className=" w-full bg-white dark:bg-gray-900">
+      <div
+        ref={menuRef}
+        className={`transition-transform duration-300 ease-in-out transform ${
+          isMenuOpen ? "translate-y-0 opacity-100" : "-translate-y-full opacity-0"
+        } w-full bg-white dark:bg-gray-900 absolute z-50`}
+      >
+        {isMenuOpen && (
           <ul className="font-medium flex flex-col p-4 border border-gray-100 rounded-lg bg-gray-50 dark:bg-gray-800 dark:border-gray-700">
             {menuItemsData.map((item, index) => (
               <li key={index} className="py-2">
@@ -110,8 +134,8 @@ function MobileNavBar() {
               </li>
             ))}
           </ul>
-        </div>
-      )}
+        )}
+      </div>
     </>
   );
 }
