@@ -12,7 +12,7 @@ const BlogSection = () => {
     {
       image:
         "https://images.unsplash.com/photo-1715744005019-57c97a5d29e9?w=400&auto=format&fit=crop&q=60&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxlZGl0b3JpYWwtZmVlZHxzNXx8fGVufDB8fHx8fA%3D%3D",
-      title: "How to grow your profit through systematic investment with us",
+      title: "How to grow your profit through systematic investment",
       description:
         "Unlock the power of systematic investment with us and watch your profits soar. Our expert team will guide you on the path to financial...",
     },
@@ -113,14 +113,14 @@ const BlogSection = () => {
               </button>
             </div>
           </div>
-          <div className="lg:w-3/5 border-2 py-3 rounded-lg">
-            <div className="max-w-xl mx-auto p-3 sm:p-0">
+          <div className="lg:w-3/5 lg:border  rounded-lg">
+            <div className="max-w-xl mx-auto p-3">
               <img
                 src={slides[slideIndex].image}
                 srcSet={`${slides[slideIndex].image} 1x, ${slides[slideIndex].image} 2x`}
                 loading="lazy"
                 alt="Blog Slide"
-                className=" w-full mb-6 sm:h-[20rem]"
+                className=" w-full mb-6 sm:h-[20rem] rounded-2xl"
               />
               <h3 className="text-xl text-gray-900 font-medium leading-8 mb-4 group-hover:text-indigo-600">
                 {slides[slideIndex].title}

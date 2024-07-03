@@ -11,17 +11,9 @@ import laracee from "../assets/larace.jpg";
 import moosagroup from "../assets/moosagroup.jpg";
 
 const cards = [
+  
   {
     id: 1,
-    title: "Bank Muscat",
-    logo: bankmusqat,
-    description:
-      "Bank Muscat is a leading financial institution in Oman, offering a wide range of banking services and solutions.",
-    backgroundImage: bankmusqatt,
-    logoHeight: "35px",
-  },
-  {
-    id: 2,
     title: "Dtec",
     logo: dtecch,
     description:
@@ -30,7 +22,25 @@ const cards = [
     logoHeight: "50px",
   },
   {
+    id: 2,
+    title: "Moosa Group",
+    logo: moosa,
+    description:
+      "Moosa Group is a conglomerate with diverse business interests, delivering quality products and services.",
+    backgroundImage: moosagroup,
+    logoHeight: "60px",
+  },
+  {
     id: 3,
+    title: "Bank Muscat",
+    logo: bankmusqat,
+    description:
+      "Bank Muscat is a leading financial institution in Oman, offering a wide range of banking services and solutions.",
+    backgroundImage: bankmusqatt,
+    logoHeight: "35px",
+  },
+  {
+    id: 4,
     title: "Adventure Club",
     logo: adventureclub,
     description:
@@ -38,15 +48,7 @@ const cards = [
     backgroundImage: background,
     logoHeight: "70px",
   },
-  {
-    id: 4,
-    title: "Moosa Group",
-    logo: moosa,
-    description:
-      "Moosa Group is a conglomerate with diverse business interests, delivering quality products and services.",
-    backgroundImage: moosagroup,
-    logoHeight: "55px",
-  },
+ 
   {
     id: 5,
     title: "LA Race",
@@ -54,7 +56,7 @@ const cards = [
     description:
       "LA Race is an organization dedicated to organizing exciting and competitive racing events.",
     backgroundImage: laracee,
-    logoHeight: "65px",
+    logoHeight: "75px",
   },
 ];
 
@@ -160,14 +162,14 @@ function HomeSlider() {
 
   return (
     <div
-      className="flex items-center justify-around bg-cover bg-center w-full min-h-screen"
+      className="flex items-center justify-around bg-cover bg-center w-full xl:min-h-screen"
       style={{
         backgroundImage: `url(${activeCard.backgroundImage})`,
         transition: "background-image 0.5s ease-in-out",
       }}
     >
       <div className="w-full px-4 sm:px-8 lg:px-16 mb-5">
-        <div className="mb-28 mt-10 cursor-default text-center max-w-full">
+        <div className="lg:mb-28 mb-10 mt-10 cursor-default text-center max-w-full">
           <h1 className="text-lg sm:text-2xl md:text-4xl lg:text-6xl text-white  drop-shadow-lg">
             We Turn your Dreams into Reality
           </h1>
@@ -175,7 +177,7 @@ function HomeSlider() {
             Where Pixel gets Smarter
           </h2>
         </div>
-        <div className="hidden md:flex flex-row justify-center space-x-4">
+        <div className="hidden md:flex flex-row justify-center h-auto space-x-4">
           {cards.map((card) => (
             <Card
               key={card.id}

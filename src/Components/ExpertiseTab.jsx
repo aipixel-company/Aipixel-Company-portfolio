@@ -63,17 +63,17 @@ const ExpertiseTab = () => {
   const [activeTab, setActiveTab] = useState(expertiseData[0]);
 
   return (
-    <div className=" text-black py-20">
-      <div className="container mx-auto px-8">
-        <div className="flex flex-col lg:flex-row">
-          <div className="w-full lg:w-1/4 flex flex-col mb-8 lg:mb-0">
+    <div className=" text-black lg:py-20">
+      <div className=" mx-auto lg:px-8">
+        <div className="flex flex-col lg:flex-row p-5">
+          <div className="w-full lg:w-1/4 flex flex-col  mb-8 lg:mb-0">
             {expertiseData.map((item, index) => (
               <button
                 key={index}
                 onClick={() => setActiveTab(item)}
                 className={`py-4  px-3 mb-2 text-left rounded-md focus:outline-none transition-colors duration-300 ${
                   activeTab.title === item.title
-                    ? "bg-gradient-to-r from-gray-400 via-gray-500 to-gray-600 text-black"
+                    ? "bg-gradient-to-r from-cyan-100 via-cyan-500 to-cyan-600 text-black"
                     : "bg-gradient-to-r from-blue-700 via-blue-800 to-gray-900 hover:from-blue-600 hover:via-blue-700 hover:to-gray-800 text-white"
                 }`}
               >

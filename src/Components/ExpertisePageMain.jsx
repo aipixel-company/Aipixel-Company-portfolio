@@ -26,8 +26,8 @@ const SectionHeader = ({ title, subtitle, description }) => (
 );
 
 const SectionImages = ({ images }) => (
-  <div className="p-8 mt-12 mb-6 md:mb-0 md:mt-0 ml-0 md:ml-12 lg:w-2/3 justify-center">
-    <div className="h-[40vh] content-center lg:flex hidden">
+  <div className="lg:p-8 lg:mt-12 mb-6 md:mb-0 md:mt-0 ml-0 md:ml-12 lg:w-2/3 justify-center">
+    <div className="lgLh-[60vh] content-center lg:flex hidden">
       {images.map((src, index) => (
         <div
           key={index}
@@ -44,8 +44,8 @@ const SectionImages = ({ images }) => (
 
 const ExpertisePageMain = () => (
   <section>
-    <div className="bg-black text-white sm:py-20 py-6">
-      <div className="container mx-auto flex flex-col md:flex-row items-center sm:my-12 ">
+    <div className="bg-black text-white lg:py-6">
+      <div className=" mx-auto flex flex-col md:flex-row items-center sm:my-12 ">
         <SectionHeader
           title={sectionData.title}
           description={sectionData.description}

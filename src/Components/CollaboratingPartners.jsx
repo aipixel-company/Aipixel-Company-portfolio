@@ -39,6 +39,27 @@ export default function CollaboratingPartners() {
               <img src={universalskills} alt="Universal Skills" width="auto" height="64" className="h-32 mx-2" />
               <img src={bankmusqat} alt="Bank Riyadh" width="auto" height="22" className="h-11 mx-2" />
               <img src={turing} alt="Turing" width="auto" height="40" className="h-20 mx-2" />
+              <img src={arkaan} alt="Arkaan" width="auto" height="48" className="h-24 mx-2" />
+              <img src={techgalaxy} alt="Tech Galaxy" width="auto" height="28" className="h-14 mx-2" />
+              <img src={larace} alt="Larace" width="auto" height="72" className="h-36 mx-2" />
+              <img src={dtec} alt="Dtec" width="auto" height="40" className="h-20 mx-2" />
+              <img src={universalskills} alt="Universal Skills" width="auto" height="64" className="h-32 mx-2" />
+              <img src={bankmusqat} alt="Bank Riyadh" width="auto" height="22" className="h-11 mx-2" />
+              <img src={turing} alt="Turing" width="auto" height="40" className="h-20 mx-2" />
+              <img src={arkaan} alt="Arkaan" width="auto" height="48" className="h-24 mx-2" />
+              <img src={techgalaxy} alt="Tech Galaxy" width="auto" height="28" className="h-14 mx-2" />
+              <img src={larace} alt="Larace" width="auto" height="72" className="h-36 mx-2" />
+              <img src={dtec} alt="Dtec" width="auto" height="40" className="h-20 mx-2" />
+              <img src={universalskills} alt="Universal Skills" width="auto" height="64" className="h-32 mx-2" />
+              <img src={bankmusqat} alt="Bank Riyadh" width="auto" height="22" className="h-11 mx-2" />
+              <img src={turing} alt="Turing" width="auto" height="40" className="h-20 mx-2" />
+              <img src={arkaan} alt="Arkaan" width="auto" height="48" className="h-24 mx-2" />
+              <img src={techgalaxy} alt="Tech Galaxy" width="auto" height="28" className="h-14 mx-2" />
+              <img src={larace} alt="Larace" width="auto" height="72" className="h-36 mx-2" />
+              <img src={dtec} alt="Dtec" width="auto" height="40" className="h-20 mx-2" />
+              <img src={universalskills} alt="Universal Skills" width="auto" height="64" className="h-32 mx-2" />
+              <img src={bankmusqat} alt="Bank Riyadh" width="auto" height="22" className="h-11 mx-2" />
+              <img src={turing} alt="Turing" width="auto" height="40" className="h-20 mx-2" />
             </div>
           </div>
         </div>

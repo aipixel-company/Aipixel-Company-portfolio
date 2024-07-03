@@ -24,11 +24,11 @@ export default function EngineeringServices() {
       <h1 className="text-4xl font-semibold flex sm:ml-5 px-4 mt-5">
         Engineering Services
       </h1>
-      <div className="grid grid-cols-3 cards gap-3  p-[2rem]">
+      <div className="grid grid-cols-3 cards gap-3 p-[2rem]">
         {services.map((service, index) => (
           <div
             key={index}
-            className="relative p-2 sm:p-3 h-auto sm:h-[16.5rem] rounded-lg bg-gray-100 my-4 sm:hover:shadow-teal-100 sm:hover:shadow-xl hover:cursor-pointer flex flex-col items-center justify-center bg-cover bg-center"
+            className="relative p-2 sm:p-3 h-auto rounded-lg bg-gray-100 my-4 xl:hover:shadow-teal-100 xl:hover:shadow-xl hover:cursor-pointer flex flex-col items-center justify-center bg-cover bg-center"
            >
              <div className="sm:absolute sm:top-0 sm:left-0  text-blue-800 rounded-full h-7 w-7 sm:p-7 flex items-center justify-center font-semibold">
               0{index + 1}

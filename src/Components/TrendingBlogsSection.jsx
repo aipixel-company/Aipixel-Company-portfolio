@@ -74,7 +74,7 @@ export default function TrendingBlogsSection() {
                       <p className="text-base leading-4 text-white mt-2">
                         {post.excerpt}
                       </p>
-                      <a
+                      {/* <a
                         href="javascript:void(0)"
                         className="focus:outline-none focus:underline flex items-center mt-4 cursor-pointer text-white hover:text-gray-200 hover:underline"
                       >
@@ -97,7 +97,7 @@ export default function TrendingBlogsSection() {
                             strokeLinejoin="round"
                           />
                         </svg>
-                      </a>
+                      </a> */}
                     </div>
                   </div>
                   <img src={post.image} className="w-full" alt={post.title} />
@@ -116,7 +116,7 @@ export default function TrendingBlogsSection() {
                   <p className="text-base leading-4 text-white mt-2">
                     {blogPosts[2].excerpt}
                   </p>
-                  <a
+                  {/* <a
                     href="javascript:void(0)"
                     className="focus:outline-none focus:underline flex items-center mt-4 cursor-pointer text-white hover:text-gray-200 hover:underline"
                   >
@@ -139,7 +139,7 @@ export default function TrendingBlogsSection() {
                         strokeLinejoin="round"
                       />
                     </svg>
-                  </a>
+                  </a> */}
                 </div>
               </div>
               <img
@@ -167,7 +167,7 @@ export default function TrendingBlogsSection() {
                   <p className="text-base leading-4 text-white mt-2">
                     {blogPosts[3].excerpt}
                   </p>
-                  <a
+                  {/* <a
                     href="javascript:void(0)"
                     className="focus:outline-none focus:underline flex items-center mt-4 cursor-pointer text-white hover:text-gray-200 hover:underline"
                   >
@@ -190,7 +190,7 @@ export default function TrendingBlogsSection() {
                         strokeLinejoin="round"
                       />
                     </svg>
-                  </a>
+                  </a> */}
                 </div>
               </div>
               <img
@@ -218,7 +218,7 @@ export default function TrendingBlogsSection() {
                       <p className="text-base leading-4 text-white mt-2">
                         {post.excerpt}
                       </p>
-                      <a
+                      {/* <a
                         href="javascript:void(0)"
                         className="focus:outline-none focus:underline flex items-center mt-4 cursor-pointer text-white hover:text-gray-200 hover:underline"
                       >
@@ -241,7 +241,7 @@ export default function TrendingBlogsSection() {
                             strokeLinejoin="round"
                           />
                         </svg>
-                      </a>
+                      </a> */}
                     </div>
                   </div>
                   <img src={post.image} className="w-full" alt={post.title} />

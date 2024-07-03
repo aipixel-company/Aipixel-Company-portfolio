@@ -178,7 +178,7 @@ export default function ContactusFormSection() {
             </button>
           </form>
         </div>
-        <div className="px-4 h-full lg:block hidden">
+        <div className="px-4  lg:block hidden">
           <CustomerReveiw />
         </div>
       </div>

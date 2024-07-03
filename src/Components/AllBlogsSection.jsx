@@ -71,7 +71,7 @@ export default function AllBlogsSection() {
     <section className=" text-gray-100">
       <div className="container max-w-6xl p-6 mx-auto space-y-6 sm:space-y-12">
         {blogPosts.slice(0, 1).map((post) => (
-          <a
+          <div
             key={post.id}
             rel="noopener noreferrer"
             href="#"
@@ -83,17 +83,17 @@ export default function AllBlogsSection() {
               className="object-cover w-full h-64  sm:h-96 lg:col-span-7 bg-gray-500"
             />
             <div className="p-6 space-y-2 lg:col-span-5">
-              <h3 className="text-2xl font-semibold sm:text-4xl group-hover:underline group-focus:underline">
+              <h3 className="text-2xl font-semibold sm:text-4xl ">
                 {post.title}
               </h3>
               <span className="text-xs text-gray-400">{post.date}</span>
               <p>{post.excerpt}</p>
             </div>
-          </a>
+          </div>
         ))}
         <div className="grid justify-center  sm:grid-cols-3">
           {blogPosts.slice(1).map((post) => (
-            <a
+            <p
               key={post.id}
               rel="noopener noreferrer"
               href="#"
@@ -107,22 +107,22 @@ export default function AllBlogsSection() {
                 src={post.image}
               />
               <div className="p-6 space-y-2">
-                <h3 className="text-2xl font-semibold group-hover:underline group-focus:underline">
+                <h3 className="text-2xl font-semibold">
                   {post.title}
                 </h3>
                 <span className="text-xs text-gray-400">{post.date}</span>
                 <p>{post.excerpt}</p>
               </div>
-            </a>
+            </p>
           ))}
         </div>
         <div className="flex justify-center">
-          <button
+          {/* <button
             type="button"
             className="px-6 py-3 text-sm rounded-md hover:bg-gray-700 bg-gray-900 text-white"
           >
             Load more posts...
-          </button>
+          </button> */}
         </div>
       </div>
     </section>

@@ -60,7 +60,7 @@ export default function AdvisorySection() {
         {services.map((service, index) => (
           <div
             key={index}
-            className="relative p-2 sm:p-3 h-auto rounded-lg bg-gray-100 my-4 sm:hover:shadow-teal-100 sm:hover:shadow-xl hover:cursor-pointer flex flex-col items-center justify-center bg-cover bg-center"
+            className="relative p-2 sm:p-3 h-auto rounded-lg bg-gray-100 my-4 xl:hover:shadow-teal-100 xl:hover:shadow-xl hover:cursor-pointer flex flex-col items-center justify-center bg-cover bg-center"
           >
             <div className="sm:absolute sm:top-0 sm:left-0  text-blue-800 rounded-full h-7 w-7 sm:p-7 flex items-center justify-center font-semibold">
               {index + 1 < 10 ? `0${index + 1}` : index + 1}
@@ -77,7 +77,7 @@ export default function AdvisorySection() {
       <div className="bg-gradient-to-r from-gray-700 to-black py-4">
         <div className="container mx-auto px-4">
           <div className="flex flex-col lg:flex-row items-center lg:items-start lg:justify-between text-white text-center lg:text-left">
-            <div className=" items-center mb-4 lg:mb-0 hidden sm:flex">
+            <div className=" items-center mb-4 lg:mb-0 hidden lg:flex">
               <div className="w-1 text-5xl text-blue-500  mr-4">|</div>
               <p className="text-xl">
                 Evolve your business with one of the world’s leading <br /> software

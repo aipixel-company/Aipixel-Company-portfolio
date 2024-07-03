@@ -101,7 +101,7 @@ const Map = () => {
         ))}
       </MapContainer>
       <div className="flex flex-col md:flex-row sm:justify-between w-full h-full relative z-10">
-        <div className="flex flex-col justify-center w-full md:w-1/4 px-3 pt-4 sm:p-4">
+        <div className="flex flex-col justify-center w-full md:w-1/4 px-3 pt-4 sm:p-4 space-y-2">
           {leftColumnData.map((row, index) => (
             <InfoCard
               key={index}
@@ -111,7 +111,7 @@ const Map = () => {
             />
           ))}
         </div>
-        <div className="flex flex-col justify-center w-full md:w-1/4 p-4">
+        <div className="flex flex-col justify-center w-full md:w-1/4 p-4 space-y-2">
           {rightColumnData.map((row, index) => (
             <InfoCard
               key={index}

@@ -3,7 +3,7 @@ import about from "../assets/about.gif";
 
 function HomeSlider() {
   return (
-    <div className="flex items-center md:h-[90vh] bg-gradient-to-br from-blue-50 to-blue-700 ">
+    <div className="flex items-center xl:h-[90vh] bg-gradient-to-br from-blue-50 to-blue-700">
       <div className="md:flex-1 hidden md:block">
         <img
           src={about}

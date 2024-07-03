@@ -3,7 +3,7 @@ import servicesbackground from "../assets/servicesbackground.jpg";
 // import awardsImage from "../assets/awards.png";
 function ServicesMain() {
   return (
-    <div className="relative h-[70vh]">
+    <div className="relative xl:h-[70vh] h-[30vh]">
       <div
         className="absolute inset-0"
         style={{

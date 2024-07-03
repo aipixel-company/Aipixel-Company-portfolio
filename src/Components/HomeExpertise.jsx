@@ -405,7 +405,7 @@ export default function HomeExpertise() {
 
   return (
     <div className="flex flex-col items-center w-full h-full p-4 lg:p-10 bg-gray-50">
-      <div className="w-full flex flex-col items-center pt-16 pb-10">
+      <div className="w-full flex flex-col items-center pt-16 lg:pb-10">
         <h1 className="md:text-3xl lg:text-3xl text-base font-semibold mb-3 capitalize lg:text-center">
           Unleash Your Digital Potential with Cutting-Edge Solutions
         </h1>
@@ -435,7 +435,7 @@ export default function HomeExpertise() {
           <div className="flex flex-row w-full md:h-[70vh] lg:h-[70vh] overflow-hidden">
             <div className="w-full flex flex-col lg:h-[70vh]">
               <div
-                className="flex overflow-x-auto space-x-4 lg:h-[60vh] h-[38vh] lg:max-w-[calc(100vw-100px)] scrollbar"
+                className="flex overflow-x-auto space-x-4 lg:h-[60vh] h-[32vh] lg:max-w-[calc(100vw-100px)] scrollbar"
                 ref={containerRef}
               >
                 {filteredExpertiseData.map((expertise) => (

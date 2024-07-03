@@ -13,12 +13,7 @@ import universalskills from "../assets/universalskills.png"
 import turing from "../assets/turing.png"
 
 const testimonials = [
-  {
-    logo: larace,
-    companyType: "Blockchain",
-    description: "Experience the thrill of horse racing combined with the endless opportunities of the blockchain-powered metaverse.",
-    height: "180px"
-  },
+ 
   {
     logo: dtec,
     companyType: "Retail",
@@ -48,6 +43,12 @@ const testimonials = [
     companyType: "Finance",
     description: "Leading financial institution in Saudi Arabia and the Middle East, delivering outstanding financial services.",
     height: "80px"
+  },
+  {
+    logo: larace,
+    companyType: "Blockchain",
+    description: "Experience the thrill of horse racing combined with the endless opportunities of the blockchain-powered metaverse.",
+    height: "180px"
   },
   {
     logo: seedlogo,

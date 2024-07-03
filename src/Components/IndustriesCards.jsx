@@ -12,10 +12,11 @@ const cardData = [
       "This runtime environment empowers developers to run JavaScript on the server-side. Built on Chrome's V8 JavaScript engine, Node.js is renowned for its non-blocking, event-driven architecture, making it ideal for building scalable network applications and APIs.",
   },
   {
-    title: "Flutter",
+    title: "DevOps",
     description:
-      " Google's UI toolkit, Flutter, allows developers to create natively compiled applications for mobile, web, and desktop using a single codebase.  This translates to efficient development and high-performance applications with a visually appealing user experience across platforms.",
+      "AI Pixel embraces DevOps practices to bridge the gap between development and operations. This approach utilizes tools and techniques like continuous integration, continuous delivery, infrastructure as code, and monitoring to shorten the development lifecycle, ensure consistent quality, and automate processes.  This collaborative approach fosters efficient software delivery and minimizes deployment disruptions.",
   },
+  
   {
     title: "No-Code Platforms",
     description:
@@ -27,10 +28,11 @@ const cardData = [
       "Developed and maintained by Google, Angular is a platform and framework for building single-page client applications using HTML and TypeScript. It provides a comprehensive solution with features like two-way data binding, dependency injection, and a modular architecture, streamlining front-end development.",
   },
   {
-    title: "DevOps",
+    title: "Flutter",
     description:
-      "AI Pixel embraces DevOps practices to bridge the gap between development and operations. This approach utilizes tools and techniques like continuous integration, continuous delivery, infrastructure as code, and monitoring to shorten the development lifecycle, ensure consistent quality, and automate processes.  This collaborative approach fosters efficient software delivery and minimizes deployment disruptions.",
+      " Google's UI toolkit, Flutter, allows developers to create natively compiled applications for mobile, web, and desktop using a single codebase.  This translates to efficient development and high-performance applications with a visually appealing user experience across platforms.",
   },
+  
 ];
 
 export default function IndustriesCards() {

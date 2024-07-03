@@ -67,12 +67,12 @@ const CustomerReview = () => {
         className="w-full mx-auto rounded-3xl shadow-lg bg-[#383742] px-10 pt-16 pb-10 text-gray-600"
         style={{ maxWidth: "350px" }}
       >
-        <div className="overflow-hidden relative mb-10 h-72">
+        <div className="overflow-hidden relative mb-10 h-[10rem]">
           <div className="overflow-hidden relative h-full">
             {testimonials.map((item, index) => (
               <div
                 key={index}
-                className={`w-full h-full text-center select-none absolute top-0 left-0 transition-transform duration-500 ease-in-out ${
+                className={`w-full  text-center select-none absolute top-0 left-0 transition-transform duration-500 ease-in-out ${
                   index === currentIndex
                     ? "translate-x-0 opacity-100"
                     : "translate-x-full opacity-0"

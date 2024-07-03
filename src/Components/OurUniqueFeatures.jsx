@@ -23,14 +23,14 @@ const features = [
 
 export default function OurUniqueFeatures() {
   return (
-    <div className=" lg:h-[80vh] md:mx-14 mx-5">
+    <div className=" lg:h-[60vh] md:mx-14 mx-5">
       <h1 className="text-center text-4xl font-body pt-5 mt-5">
         What's Different About AI-PIXEL?
       </h1>
-      <div className="p-4 mt-6 bg-white">
+      <div className="p-4 mt-6 ">
         <div className="lg:flex">
           {features.map((feature, index) => (
-            <div key={index} className="p-3">
+            <div key={index} className="p-3 m-3 bg-white">
               <div className="flex flex-row items-center">
                 <GoDotFill className=" text-blue-700" />
                 <h1 className="font-body font-medium text-lg ml-2">

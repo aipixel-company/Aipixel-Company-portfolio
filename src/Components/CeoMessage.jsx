@@ -10,8 +10,11 @@ const CeoMessage = () => {
   };
 
   return (
-    <div className=" md:h-[60vh] bg-gray-100 flex items-center justify-center">
-      <div className="bg-white shadow-lg rounded-lg p-6 md:flex md:items-center md:space-x-6">
+    <div className=" bg-gray-100 flex flex-col items-center justify-center">
+      <div>
+        <h1 className=" text-center font-semibold text-4xl m-3">CEO`s Message</h1>
+      </div>
+      <div className="bg-white shadow-lg rounded-lg p-6 mb-2 md:flex md:items-center md:space-x-6">
         <img
           src={ceoDetails.image}
           alt={`${ceoDetails.name} Image`}
