@@ -47,14 +47,14 @@ export default function ContactUsOffices() {
   return (
     <>
       <div className="mb-16">
-        <div className=" flex justify-center  pt-16">
+        <div className=" flex justify-center pt-5">
           <div>
             <h1 className="xl:text-4xl text-3xl text-center ">
               Our Core Team
             </h1>
           </div>
         </div>
-        <div className="w-full px-10 lg:pt-10">
+        <div className="w-full px-10 lg:pt-6">
           <div className=" mx-auto">
             <div
               role="list"
@@ -65,11 +65,11 @@ export default function ContactUsOffices() {
                 <div
                   key={member.name}
                   role="listitem"
-                  className=" xl:mt-16 p-3  lg:w-2/5"
+                  className=" xl:mt-9 p-3  lg:w-2/5"
                 >
                   <div className="rounded overflow-hidden mb lg:h-[20rem]  xl:h-[15rem] shadow-md bg-white">
                     
-                    <div className="px-6 mt-16">
+                    <div className="px-6 mt-9">
                       <h1 className="font-bold text-3xl text-center mb-1">
                         {member.name}
                       </h1>

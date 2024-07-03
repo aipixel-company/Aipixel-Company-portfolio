@@ -87,14 +87,14 @@ const CustomerSuccessSlider = () => {
 
   return (
     <section className="">
-      <div className="mx-auto max-w-[1340px] px-4 sm:px-6 lg:me-0 lg:py-16 overflow-hidden lg:pe-0 lg:ps-8 xl:py-24">
+      <div className="mx-auto px-4 sm:px-4 lg:me-0 lg:py-8 overflow-hidden lg:pe-0 lg:ps-8 xl:py-8">
         <div className="grid grid-cols-1 gap-8 lg:grid-cols-3 lg:items-center lg:gap-16">
           <div className="max-w-xl text-center ltr:sm:text-left">
             <h2 className="text-3xl font-bold tracking-tight text-gray-900 sm:text-4xl">
               Read trusted reviews from our customers
             </h2>
            
-            <div className="hidden lg:mt-8 lg:flex lg:gap-4">
+            <div className="hidden lg:mt-8 lg:flex justify-center lg:gap-4">
               <button
                 aria-label="Previous slide"
                 onClick={handlePrev}

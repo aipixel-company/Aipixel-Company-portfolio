@@ -39,7 +39,7 @@ const rightColumnData = [
 // Memoized component for the info cards
 const InfoCard = memo(({ header, subtext, loading }) => (
   <div
-    className={`flex flex-col items-center bg-white border border-gray-300 px-4 py-10 shadow-md rounded-lg mb-4 md:mb-0 transition-transform duration-500 ${
+    className={`flex flex-col items-center bg-white border border-gray-300 px-4 py-10 shadow-md rounded-lg transition-transform duration-500 ${
       !loading && "transform translate-x-0"
     }`}
   >
@@ -101,7 +101,7 @@ const Map = () => {
         ))}
       </MapContainer>
       <div className="flex flex-col md:flex-row sm:justify-between w-full h-full relative z-10">
-        <div className="flex flex-col justify-center w-full md:w-1/4 px-3 pt-4 sm:p-4 space-y-2">
+        <div className="flex flex-col justify-center w-full md:w-1/4 px-3 space-y-2">
           {leftColumnData.map((row, index) => (
             <InfoCard
               key={index}

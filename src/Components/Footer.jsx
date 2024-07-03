@@ -1,6 +1,8 @@
 import React, { useEffect } from "react";
 import navlogo from "../assets/navlogo.png";
 import { Link } from "react-router-dom";
+import { Link as ScrollLink } from 'react-scroll'
+import { Link as RouterLink } from 'react-router-dom'
 
 export default function Footer() {
   useEffect(() => {
@@ -27,8 +29,8 @@ export default function Footer() {
 
               <ul className="mt-8 flex gap-6 justify-center lg:justify-start ">
                 <li>
-                  <a
-                    href="#"
+                  <p
+                    href="/"
                     rel="noreferrer"
                     target="_blank"
                     className="text-gray-700 transition hover:opacity-75"
@@ -46,7 +48,7 @@ export default function Footer() {
                         clipRule="evenodd"
                       />
                     </svg>
-                  </a>
+                  </p>
                 </li>
                 <li>
                   <a
@@ -91,46 +93,47 @@ export default function Footer() {
               </ul>
             </div>
             <div className="col-span-2 grid grid-cols-3 mx-3 lg:mx-0 mt-5 lg:mt-0 gap-8 lg:col-span-2 lg:justify-center">
-              <div>
-                <p className="font-medium">Services</p>
+            <div>
+  <p className="font-medium">Services</p>
 
-                <nav aria-label="Footer Navigation" className="mt-6">
-                  <ul className="space-y-4 text-sm">
-                    <li>
-                      <Link
-                        to="/services"
-                        className="text-gray-700 transition hover:opacity-75"
-                      >
-                        Advisory Services
-                      </Link>
-                    </li>
-                    <li>
-                      <Link
-                        to="/services"
-                        className="text-gray-700 transition hover:opacity-75"
-                      >
-                        Engineering Services
-                      </Link>
-                    </li>
-                    <li>
-                      <Link
-                        to="/services"
-                        className="text-gray-700 transition hover:opacity-75"
-                      >
-                        Mobile Development
-                      </Link>
-                    </li>
-                    <li>
-                      <Link
-                        to="/services"
-                        className="text-gray-700 transition hover:opacity-75"
-                      >
-                        Optimisation
-                      </Link>
-                    </li>
-                  </ul>
-                </nav>
-              </div>
+  <nav aria-label="Footer Navigation" className="mt-6">
+    <ul className="space-y-4 text-sm">
+      <li>
+        <Link
+          to="/services#advisory"
+          className="text-gray-700 transition hover:opacity-75"
+        >
+          Advisory Services
+        </Link>
+      </li>
+      <li>
+        <Link
+          to="/services#engineering"
+          className="text-gray-700 transition hover:opacity-75"
+        >
+          Engineering Services
+        </Link>
+      </li>
+      
+      <li>
+        <Link
+          to="/services#optimisation"
+          className="text-gray-700 transition hover:opacity-75"
+        >
+          Optimisation
+        </Link>
+      </li>
+      <li>
+        <Link
+          to="/services#industries"
+          className="text-gray-700 transition hover:opacity-75"
+        >
+          Industries We Work With
+        </Link>
+      </li>
+    </ul>
+  </nav>
+</div>
 
               <div>
                 <p className="font-medium">Company</p>

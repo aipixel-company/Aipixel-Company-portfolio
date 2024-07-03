@@ -285,7 +285,7 @@ const QuestionCard = React.memo(
               key={option}
               className={`px-4 py-2 border rounded-full text-sm ${
                 filters[question.id] === option
-                  ? "bg-blue-500 text-white"
+                  ? "bg-black text-white"
                   : "bg-white hover:bg-blue-100"
               }`}
               onClick={() => handleFilterChange(question.id, option, index)}
@@ -311,7 +311,7 @@ const ExpertiseCard = React.memo(({ expertise }) => (
     key={expertise.id}
     className="relative expertise-card flex-shrink-0 lg:w-80 w-[15rem] border-2 bg-white rounded-lg shadow-lg p-2"
   >
-    <div className="absolute bottom-0 w-full lg:h-1/2 rounded-lg hidden lg:block">
+    <div className="absolute bottom-0 w-full md:h-1/2 rounded-lg hidden lg:block">
       <LazyLoadImage
         src={expertise.image}
         alt={expertise.field}
@@ -431,11 +431,11 @@ export default function HomeExpertise() {
           ))}
         </div>
 
-        <div className="md:w-2/3 lg:w-2/3 w-auto overflow-scroll flex flex-col h-full md:pl-10 lg:pl-10 pl-0 scrollbar">
-          <div className="flex flex-row w-full md:h-[70vh] lg:h-[70vh] overflow-hidden">
-            <div className="w-full flex flex-col lg:h-[70vh]">
+        <div className="md:w-2/3 lg:w-2/3 w-auto overflow-scroll flex flex-col  md:pl-10 lg:pl-10 pl-0 scrollbar">
+          <div className="flex flex-row w-full  xl:h-[70vh] overflow-hidden">
+            <div className="w-full flex flex-col xl:h-[70vh]">
               <div
-                className="flex overflow-x-auto space-x-4 lg:h-[60vh] h-[32vh] lg:max-w-[calc(100vw-100px)] scrollbar"
+                className="flex overflow-x-auto space-x-4 xl:h-[60vh] h-[32vh] lg:max-w-[calc(100vw-100px)] scrollbar"
                 ref={containerRef}
               >
                 {filteredExpertiseData.map((expertise) => (

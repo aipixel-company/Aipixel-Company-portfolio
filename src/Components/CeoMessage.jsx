@@ -21,10 +21,10 @@ const CeoMessage = () => {
           className="w-24 h-24 md:w-32 md:h-32 rounded-full object-cover mx-auto md:mx-0"
         />
         <div className="mt-4 md:mt-0">
-          <h2 className="text-2xl font-semibold text-gray-800">
+          <h2 className="text-2xl md:text-left text-center font-semibold text-gray-800">
             {ceoDetails.name}
           </h2>
-          <p className="mt-2 text-gray-600">{ceoDetails.message}</p>
+          <p className="mt-2 text-gray-600 justify-center">{ceoDetails.message}</p>
         </div>
       </div>
     </div>

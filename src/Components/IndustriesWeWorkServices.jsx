@@ -85,9 +85,9 @@ const industries = [
 
 const IndustriesWeWorkServices = () => (
   <>
-    <div className="sm:mt-24 sm:py-16 mx-auto text-gray-900">
+    <div className=" mx-auto text-gray-900">
       <div>
-        <h2 className="text-center text-gray-800 p-2 text-2xl md:text-5xl font-bold leading-tight">
+        <h2 className="text-center text-gray-800 p-2 text-2xl md:text-5xl font-semibold leading-tight">
           Industries We Work With
         </h2>
         <div className="my-4 mx-auto h-2 border-4 border-indigo-500"></div>
@@ -109,7 +109,7 @@ const IndustriesWeWorkServices = () => (
               />
             </div>
             <div className="absolute inset-0 hidden sm:flex justify-center items-center z-10 transition-opacity duration-500 ease-in-out opacity-0 group-hover:opacity-100 group-hover:delay-200">
-              <div className="text-black text-sm px-2">
+              <div className="text-black text-sm font-normal px-2">
                 {industry.description}
               </div>
             </div>

@@ -10,7 +10,7 @@ import bankmusqat from "../assets/bankmusqat.png";
 export default function CollaboratingPartners() {
   return (
     <>
-      <div className="mx-auto px-5 mt-28">
+      <div className="mx-auto px-5 mt-19">
         <div className="flex flex-col justify-center">
           <div className="text-center mb-5">
             <h2 className="font-semibold text-3xl capitalize">collaborating partners</h2>

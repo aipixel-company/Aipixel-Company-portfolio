@@ -13,10 +13,10 @@ function HomeSlider() {
       </div>
       <div className="flex-1 md:p-8 p-4 mx-auto">
         <h1 className="lg:text-4xl text-2xl font-bold mb-4 text-white">
-          AI Pixel: Where Innovation Meets Ingenuity
+          AIPixel: Where Innovation Meets Ingenuity
         </h1>
         <p className="md:text-md text-lg text-white">
-          Welcome to the forefront of digital evolution. At AI Pixel, we're not
+          Welcome to the forefront of digital evolution. At AIPixel, we're not
           just software engineers; we're architects of the future. We forge
           groundbreaking ideas into reality, crafting cutting-edge AI-powered
           solutions that propel businesses into a new era of success.

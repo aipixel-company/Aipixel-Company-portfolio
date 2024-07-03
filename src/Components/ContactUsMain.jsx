@@ -93,7 +93,7 @@ function ContactUsMain() {
 
   return (
     <div
-      className="flex items-center lg:h-screen"
+      className="flex items-center xl:h-screen"
       style={{
         backgroundImage: `url(${'https://firebasestorage.googleapis.com/v0/b/ai-pixel-portfolio.appspot.com/o/assets%2Faboutbackground.jpg?alt=media&token=bd77e3a0-6601-461a-94ab-f005b156e54b'})`,
         backgroundSize: "cover",
@@ -227,7 +227,7 @@ function ContactUsMain() {
           </div>
           <div className=" hidden sm:block"> 
             <p className="text-white">
-              At AI Pixel, we're not bound by the limitations of the present.
+              At AIPixel, we're not bound by the limitations of the present.
               We're a pioneering force in software landscape, wielding the power
               of AI to craft solutions that rewrite the rules of what's
               possible.
