@@ -74,6 +74,7 @@ export default function ContactusFormSection() {
               <input
                 type="text"
                 name="fullName"
+                maxlength="30"
                 className="block py-2.5 px-0 w-full text-sm text-white bg-transparent border-0 border-b-2 border-gray-300 appearance-none dark:text-white dark:border-gray-600 dark:focus:border-blue-500 focus:outline-none focus:ring-0 focus:border-blue-600 peer"
                 placeholder=" "
                 value={formData.fullName}
@@ -91,6 +92,7 @@ export default function ContactusFormSection() {
               <input
                 type="email"
                 name="email"
+                maxlength="20"
                 className="block py-2.5 px-0 w-full text-sm text-white bg-transparent border-0 border-b-2 border-gray-300 appearance-none dark:text-white dark:border-gray-600 dark:focus:border-blue-500 focus:outline-none focus:ring-0 focus:border-blue-600 peer"
                 placeholder=" "
                 value={formData.email}
@@ -107,7 +109,8 @@ export default function ContactusFormSection() {
             <div className="relative z-0 mb-6 w-full group">
               <input
                 type="tel"
-                pattern="[0-9]{3}-[0-9]{3}-[0-9]{4}"
+                pattern="[0-9]{11}"
+                maxlength="11"
                 name="phone"
                 className="block py-2.5 px-0 w-full text-sm text-white bg-transparent border-0 border-b-2 border-gray-300 appearance-none dark:text-white dark:border-gray-600 dark:focus:border-blue-500 focus:outline-none focus:ring-0 focus:border-blue-600 peer"
                 placeholder=" "
@@ -126,6 +129,7 @@ export default function ContactusFormSection() {
               <input
                 type="text"
                 name="company"
+                maxlength="20"
                 className="block py-2.5 px-0 w-full text-sm text-white bg-transparent border-0 border-b-2 border-gray-300 appearance-none dark:text-white dark:border-gray-600 dark:focus:border-blue-500 focus:outline-none focus:ring-0 focus:border-blue-600 peer"
                 placeholder=" "
                 value={formData.company}
@@ -144,6 +148,7 @@ export default function ContactusFormSection() {
                 name="message"
                 className="block py-2.5 px-0 w-full text-sm text-white bg-transparent border-0 border-b-2 border-gray-300 appearance-none dark:text-white dark:border-gray-600 dark:focus:border-blue-500 focus:outline-none focus:ring-0 focus:border-blue-600 peer"
                 placeholder=" "
+                maxlength="200"
                 value={formData.message}
                 onChange={handleChange}
                 required
