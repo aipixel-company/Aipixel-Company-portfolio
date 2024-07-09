@@ -3,6 +3,8 @@ import { Link } from "react-router-dom";
 import blog from "../assets/blog.png"
 import blog1 from "../assets/blog1.jpg"
 import blog2 from "../assets/blog2.png"
+import blog3 from "../assets/blog3.png"
+import blog4 from "../assets/blog4.png"
 
 
 const cardsData = [
@@ -26,6 +28,20 @@ const cardsData = [
    
     title: "The Impact of Cloud Computing on Software Development",
     description: "Cloud computing has revolutionized the software development industry, offering unprecedented scalability, flexibility, and cost-efficiency. ",
+  },
+  {
+    id: 4,
+    imgSrc: blog3,
+   
+    title: "Embracing Low-Code and No-Code Development Platforms",
+    description: "Low-code and no-code development platforms are gaining popularity as they empower users with little to no programming experience to build applications quickly and efficiently.",
+  },
+  {
+    id: 5,
+    imgSrc: blog4,
+   
+    title: "Exploring the Potential of 5G in Software Development",
+    description: "The rollout of 5G technology is set to revolutionize various sectors, including software development. With its promise of ultra-fast speeds, low latency, and increased connectivity, 5G is expected to unlock new possibilities for developers. ",
   },
 ];
 
