@@ -14,6 +14,7 @@ import ExpertiseStock from "./Pages/ExpertiseStock";
 import IndustriesStock from "./Pages/IndustriesStock";
 import ContactUsStock from "./Pages/ContactUsStock";
 import PrivacyPolicy from "./Components/PrivacyPolicy";
+import TrendingBlogsSection from "./Components/TrendingBlogsSection";
 
 const router = createBrowserRouter(
   createRoutesFromElements(
@@ -30,6 +31,8 @@ const router = createBrowserRouter(
 
       <Route path="blogs" element={<BlogStock />} />
       <Route path="privacy-policy" element={<PrivacyPolicy />} />
+      
+      <Route path="/blog/:id" element={<TrendingBlogsSection />} />
     </Route>
   )
 );

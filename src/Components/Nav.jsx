@@ -197,7 +197,7 @@ export default function Nav() {
 
   useEffect(() => {
     const handleScroll = () => {
-      const isScrolled = window.scrollY > 50;
+      const isScrolled = window.scrollY > 30;
       setScrolled(isScrolled);
     };
 
