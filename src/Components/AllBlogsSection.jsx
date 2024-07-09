@@ -50,11 +50,9 @@ const Card = ({ imgSrc, category, title, description, id }) => (
     <img src={imgSrc} alt="Card img" className=" w-full h-[12rem] rounded-t-xl" />
     <div className="flex flex-grow">
       <div className="triangle"></div>
-      <div className="flex flex-col justify-between px-4 py-6 bg-white border border-gray-400">
+      <div className="flex flex-col justify-between px-4 py-5 bg-white border border-gray-400">
         <div>
-          <p  className="inline-block mb-4 text-base font-bold capitalize text-black">
-            {title}
-          </p>
+         
           
           <p className="mb-4 text-black text-sm">{description}</p>
         </div>
@@ -89,7 +87,7 @@ export default function AllBlogsSection() {
                       key={index}
                       id={card.id}
                       imgSrc={card.imgSrc}
-                      title={card.title}
+                      
                       description={card.description}
                     />
                   ))}
