@@ -74,7 +74,7 @@ export default function ContactusFormSection() {
               <input
                 type="text"
                 name="fullName"
-                maxlength="30"
+                maxlength="50"
                 className="block py-2.5 px-0 w-full text-sm text-white bg-transparent border-0 border-b-2 border-gray-300 appearance-none dark:text-white dark:border-gray-600 dark:focus:border-blue-500 focus:outline-none focus:ring-0 focus:border-blue-600 peer"
                 placeholder=" "
                 value={formData.fullName}
@@ -92,7 +92,7 @@ export default function ContactusFormSection() {
               <input
                 type="email"
                 name="email"
-                maxlength="20"
+                maxlength="80"
                 className="block py-2.5 px-0 w-full text-sm text-white bg-transparent border-0 border-b-2 border-gray-300 appearance-none dark:text-white dark:border-gray-600 dark:focus:border-blue-500 focus:outline-none focus:ring-0 focus:border-blue-600 peer"
                 placeholder=" "
                 value={formData.email}
@@ -129,7 +129,7 @@ export default function ContactusFormSection() {
               <input
                 type="text"
                 name="company"
-                maxlength="20"
+                maxlength="50"
                 className="block py-2.5 px-0 w-full text-sm text-white bg-transparent border-0 border-b-2 border-gray-300 appearance-none dark:text-white dark:border-gray-600 dark:focus:border-blue-500 focus:outline-none focus:ring-0 focus:border-blue-600 peer"
                 placeholder=" "
                 value={formData.company}
