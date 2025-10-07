@@ -6,18 +6,7 @@ import cfo from "../assets/cfo.jpg"
 export default function ContactUsOffices() {
   const teamMembers = [
     
-    {
-      name: "Faheem Masood",
-      title: "Chief Finance Officer",
-      image: cfo,
-      description:
-        "Overseeing financial operations and strategies to ensure stability and growth. Expert in financial planning, analysis, and risk management.",
-      socialLinks: {
-        github: "javascript:void(0)",
-        twitter: "javascript:void(0)",
-        instagram: "javascript:void(0)",
-      },
-    },
+    
     {
       name: "Mian Usman",
       title: "Chief Executive Officer",

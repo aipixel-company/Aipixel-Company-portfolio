@@ -12,7 +12,7 @@ export default function AboutStock() {
     <>
     <div className=' bg-gray-100'>
     <AboutSlider/>
-    <ContactUsOffices/>
+    {/* <ContactUsOffices/> */}
      <OurVison/>
      <OurUniqueFeatures/>
      <Map/>

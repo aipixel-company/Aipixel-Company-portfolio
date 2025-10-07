@@ -1,34 +1,28 @@
 import React from "react";
-import servicesbackground from "../assets/servicesbackground.jpg";
-// import awardsImage from "../assets/awards.png";
+
 function ServicesMain() {
   return (
-    <div className="relative xl:h-[70vh] h-[40vh]">
-      <div
-        className="absolute inset-0"
-        style={{
-          backgroundImage: `url(${servicesbackground})`,
-          backgroundSize: "cover",
-          backgroundPosition: "center",
-        }}
-      />
-      <div className="absolute inset-0 bg-gray-900 opacity-70" />
-      <div className="relative z-10 flex items-center justify-between h-full px-8">
-        <div className="flex flex-col text-left space-y-4 ">
-          <h1 className="text-white text-4xl">AI-PIXEL Services</h1>
-          <h3 className=" text-gray-500 font-normal max-w-2xl">
-            In today's digital age, a strong online presence is crucial for
-            success. AI Pixel empowers businesses of all sizes to thrive by
-            providing a comprehensive suite of services tailored to crafting
-            exceptional digital products. Here's how their expertise can elevate
-            your digital strategy
-          </h3>
-        </div>
-        {/* <div className="w-1/3 flex justify-end"> */}
-          {/* <img src={awardsImage} alt="Awards" className="w-full h-auto object-contain" /> */}
-        {/* </div> */}
+    <section className="relative xl:h-[70vh] h-[60vh] bg-gradient-to-r from-[#647A82] to-[#00BFA6] flex items-center">
+      {/* Overlay (optional subtle dark layer for readability) */}
+      <div className="absolute inset-0 bg-black/30"></div>
+
+      {/* Content */}
+      <div className="relative z-10 w-full flex flex-col items-center justify-center text-center px-6 lg:px-20">
+        <h1 className="text-4xl md:text-6xl font-extrabold text-white leading-tight drop-shadow-lg">
+          Powering the Future with{" "}
+          <span className="bg-gradient-to-r from-yellow-300 via-pink-400 to-indigo-400 bg-clip-text text-transparent">
+            AI & Innovation
+          </span>
+        </h1>
+
+        <p className="mt-6 text-lg md:text-xl text-gray-100 max-w-3xl">
+          At <span className="font-semibold text-yellow-300">AI-PIXEL</span>, we
+          design next-gen digital products with intelligent automation,
+          scalable technology, and human-centered design — helping your business
+          thrive in the AI era.
+        </p>
       </div>
-    </div>
+    </section>
   );
 }
 

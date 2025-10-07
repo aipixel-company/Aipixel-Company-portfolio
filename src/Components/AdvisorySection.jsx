@@ -52,48 +52,59 @@ const services = [
 
 export default function AdvisorySection() {
   return (
-    <div className="w-full">
-      <h1 className="text-4xl font-semibold sm:ml-5 px-4 mt-5">
-        Advisory Services
-      </h1>
-      <div className="grid grid-cols-3 cards gap-3  p-[2rem]">
+    <section className="w-full">
+      {/* Section Heading */}
+      <div className="text-center py-10">
+        <h1 className="text-4xl font-bold tracking-tight text-gray-900 mb-4">
+          Advisory Services
+        </h1>
+        <p className="text-gray-500 max-w-2xl mx-auto">
+          Discover how AI Pixel empowers businesses with cutting-edge technology, strategy, and design solutions tailored for growth.
+        </p>
+      </div>
+
+      {/* Services Grid */}
+      <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6 px-6 lg:px-16 pb-16">
         {services.map((service, index) => (
           <div
             key={index}
-            className="relative p-2 sm:p-3 h-auto rounded-lg bg-gray-100 my-4 xl:hover:shadow-teal-100 xl:hover:shadow-xl hover:cursor-pointer flex flex-col items-center justify-center bg-cover bg-center"
+            className="relative p-6 rounded-2xl bg-white shadow-sm hover:shadow-xl transition-all duration-300 hover:scale-[1.02] border border-gray-100"
           >
-            <div className="sm:absolute sm:top-0 sm:left-0  text-blue-800 rounded-full h-7 w-7 sm:p-7 flex items-center justify-center font-semibold">
+            {/* Number badge */}
+            <div className="absolute -top-4 -left-4 bg-gradient-to-r from-[#647A82] to-[#00BFA6] text-white rounded-full h-10 w-10 flex items-center justify-center font-semibold shadow-md">
               {index + 1 < 10 ? `0${index + 1}` : index + 1}
             </div>
-            <div className="flex flex-col items-center p-4 flex-wrap rounded-md">
-              <h1 className="font-body font-medium text-lg mb-2">
+
+            <div className="flex flex-col">
+              <h2 className="font-semibold text-lg text-gray-900 mb-3">
                 {service.title}
-              </h1>
-              <p className="mt-4 text-gray-600 text-sm hidden sm:block">{service.description}</p>
+              </h2>
+              <p className="text-gray-600 text-sm leading-relaxed">
+                {service.description}
+              </p>
             </div>
           </div>
         ))}
       </div>
-      <div className="bg-gradient-to-r from-gray-700 to-black py-4">
-        <div className="container mx-auto px-4">
-          <div className="flex flex-col lg:flex-row items-center lg:items-start lg:justify-between text-white text-center lg:text-left">
-            <div className=" items-center mb-4 lg:mb-0 hidden lg:flex">
-              <div className="w-1 text-5xl text-blue-500  mr-4">|</div>
-              <p className="text-xl">
-                Evolve your business with one of the world’s leading <br /> software
-                partners.
-              </p>
-            </div>
-            <div className="  m-auto">
-              <Link to="/contact-us"
-                className="text-xl text-white inline-flex items-center"
-              >
-                Partner with us <FaAngleRight className="ml-1" />
-              </Link>
-            </div>
+
+      {/* Call to Action */}
+      <div className="bg-gradient-to-r from-[#647A82] to-[#00BFA6] py-10">
+        <div className="container mx-auto px-6 flex flex-col lg:flex-row items-center justify-between text-white text-center lg:text-left">
+          <div className="mb-6 lg:mb-0">
+            <p className="text-2xl font-medium leading-snug">
+              Evolve your business with one of the world’s leading <br /> software partners.
+            </p>
+          </div>
+          <div>
+            <Link
+              to="/contact-us"
+              className="text-lg font-semibold bg-white text-[#647A82] px-6 py-3 rounded-full shadow-md inline-flex items-center hover:bg-gray-100 transition-all"
+            >
+              Partner with us <FaAngleRight className="ml-2" />
+            </Link>
           </div>
         </div>
       </div>
-    </div>
+    </section>
   );
 }

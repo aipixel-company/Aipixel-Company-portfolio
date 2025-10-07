@@ -20,29 +20,26 @@ const services = [
 
 export default function EngineeringServices() {
   return (
-    <div className="w-full">
-      <h1 className="text-4xl font-semibold flex sm:ml-5 px-4 mt-5">
+    <div className="w-full bg-gradient-to-r from-[#647A82] to-[#00BFA6] py-16">
+      <h1 className="text-4xl font-bold text-white text-center mb-10">
         Engineering Services
       </h1>
-      <div className="grid grid-cols-3 cards gap-3 p-[2rem]">
+      <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6 px-6">
         {services.map((service, index) => (
           <div
             key={index}
-            className="relative p-2 sm:p-3 h-auto rounded-lg bg-gray-100 my-4 xl:hover:shadow-teal-100 xl:hover:shadow-xl hover:cursor-pointer flex flex-col items-center justify-center bg-cover bg-center"
-           >
-             <div className="sm:absolute sm:top-0 sm:left-0  text-blue-800 rounded-full h-7 w-7 sm:p-7 flex items-center justify-center font-semibold">
-              0{index + 1}
+            className="bg-white/80 backdrop-blur-md rounded-2xl shadow-md hover:shadow-xl transition-all duration-300 p-6 flex flex-col justify-between"
+          >
+            <div className="flex items-center gap-3 mb-4">
+              <span className="text-lg font-bold text-[#647A82]">
+                0{index + 1}
+              </span>
+              <h1 className="font-semibold text-lg">{service.title}</h1>
             </div>
-            <div className="flex flex-col items-center bg-opacity-80 p-4 rounded-md">
-              <h1 className="font-body font-medium text-lg mb-2">
-                {service.title}
-              </h1>
-              <p className="mt-4 text-gray-600 text-sm hidden sm:block">{service.description}</p>
-            </div>
+            <p className="text-gray-700 text-sm">{service.description}</p>
           </div>
         ))}
       </div>
-      <hr />
     </div>
   );
 }

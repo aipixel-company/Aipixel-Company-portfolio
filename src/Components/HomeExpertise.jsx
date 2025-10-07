@@ -1,465 +1,262 @@
-import React, { useRef, useState, useMemo } from "react";
-import { FiChevronLeft, FiChevronRight } from "react-icons/fi";
-// import { GoDotFill } from "react-icons/go";
-import { LazyLoadImage } from "react-lazy-load-image-component";
-import "react-lazy-load-image-component/src/effects/blur.css";
+import React from "react";
 
+// --- Expertise Data ---
 const expertiseData = [
   {
     id: 1,
     field: "Web Development",
     name: "Web Development",
     description:
-      "Craft exceptional web experiences. AI Pixel specializes in building robust and scalable web applications that not only look stunning but can also handle explosive growth.",
-    image:
-      "https://images.unsplash.com/photo-1547658719-da2b51169166?w=500&auto=format&fit=crop&q=60&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8MTB8fHdlYiUyMGRlc2lnbnxlbnwwfHwwfHx8MA%3D%3D",
+      "AI Pixel builds scalable and visually appealing web applications that deliver outstanding performance and adapt seamlessly to future business growth.",
   },
   {
     id: 2,
     field: "UI/UX Design",
     name: "User Interface Design",
     description:
-      "Design that delights. AI Pixel's UI/UX design team creates intuitive and engaging user interfaces that prioritize usability and aesthetics.",
-    image:
-      "https://images.unsplash.com/photo-1690228254548-31ef53e40cd1?w=500&auto=format&fit=crop&q=60&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8MTF8fHVpJTIwdXhiYWNrZ3JvdW5kfGVufDB8fDB8fHww",
+      "Our design team creates engaging, user-friendly interfaces that balance aesthetics with usability, ensuring intuitive digital experiences for every user.",
   },
   {
     id: 3,
     field: "Artificial Intelligence",
     name: "AI Solutions",
     description:
-      " Unlock the power of AI. AI Pixel leverages cutting-edge AI solutions to tackle complex business challenges. From automating tasks to personalizing experiences. ",
-    image:
-      "https://plus.unsplash.com/premium_photo-1683121710572-7723bd2e235d?w=500&auto=format&fit=crop&q=60&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8MjR8fGFydGlmaWNpYWwlMjBpbnRlbGxpZ2VuY2V8ZW58MHx8MHx8fDA%3D",
+      "We deliver AI-driven solutions that automate workflows, personalize customer journeys, and help businesses solve complex challenges with advanced intelligence.",
   },
   {
     id: 4,
     field: "DevOps",
     name: "DevOps",
     description:
-      " Streamline your development lifecycle. AI Pixel's DevOps experts ensure seamless collaboration between development and operations teams. ",
-    image:
-      "https://t3.ftcdn.net/jpg/02/82/37/86/240_F_282378637_7DL904AvZkZovk3RqLdLwNe21RNcjpzg.jpg",
+      "Our DevOps experts streamline collaboration between development and operations, enabling faster deployments, smoother workflows, and continuous delivery pipelines.",
   },
   {
     id: 5,
     field: "Mobile App Development",
     name: "Mobile App Development",
     description:
-      "Apps that move mountains. AI Pixel helps you bring your mobile app ideas to life. Their team creates high-quality prototypes to validate your concept and ensure a smooth user experience across all devices.",
-    image:
-      "https://t3.ftcdn.net/jpg/07/54/89/84/240_F_754898470_UkeNJNbXfoYRhWUXMBytyYF2rkuzKwTZ.jpg",
+      "AI Pixel designs and develops mobile apps that offer seamless user experiences across all platforms, supported by prototypes to validate ideas effectively.",
   },
   {
     id: 6,
     field: "BlockChain",
     name: "BlockChain",
     description:
-      "Build trust and transparency. AI Pixel brings blockchain expertise to the table, helping you design and develop secure, transparent applications.",
-    image:
-      "https://images.unsplash.com/photo-1605792657660-596af9009e82?w=500&auto=format&fit=crop&q=60&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8Mnx8YmxvY2tjaGFpbnxlbnwwfHwwfHx8MA%3D%3D",
+      "We create secure and transparent blockchain-based applications that enhance trust, improve traceability, and empower businesses with decentralized technologies.",
   },
   {
     id: 7,
     field: "Quality Assurance",
     name: "Quality Assurance",
     description:
-      " Deliver flawless experiences. AI Pixel's rigorous quality assurance (QA) process ensures your software is bug-free and delivers exceptional performance.",
-    image:
-      "https://t3.ftcdn.net/jpg/03/44/80/42/240_F_344804298_22au4y0IUNj7yyv3mLyrxAeX9954M5MF.jpg",
+      "AI Pixel ensures top quality by performing rigorous testing processes that eliminate bugs and guarantee optimal stability across every software product.",
   },
   {
     id: 8,
     field: "Software Testing",
     name: "Software Testing",
     description:
-      "Guarantee optimal functionality. AI Pixel's comprehensive software testing services leave no stone unturned.",
-    image:
-      "https://images.unsplash.com/photo-1518349619113-03114f06ac3a?w=500&auto=format&fit=crop&q=60&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8M3x8c29mdHdhcmUlMjB0ZXN0aW5nfGVufDB8fDB8fHww",
+      "Our testing team validates functionality, security, and usability, ensuring flawless performance across platforms and delivering reliable software solutions.",
   },
   {
     id: 9,
     field: "WordPress",
     name: "WordPress",
     description:
-      "Empower your content creation. AI Pixel leverages the power of WordPress to create dynamic and visually appealing websites.",
-    image:
-      "https://images.unsplash.com/photo-1599305445671-ac291c95aaa9?w=500&auto=format&fit=crop&q=60&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8OHx8d29yZHByZXNzfGVufDB8fDB8fHww",
+      "We build creative, flexible, and fully optimized WordPress websites that empower businesses to publish, manage, and scale content effortlessly.",
   },
   {
     id: 10,
     field: "Fintech",
     name: "Fintech",
     description:
-      "Innovate in the financial landscape. AI Pixel offers specialized expertise in Fintech development.",
-    image:
-      "https://plus.unsplash.com/premium_photo-1683141154082-324d296f3c66?w=500&auto=format&fit=crop&q=60&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8MXx8ZmludGVjaHxlbnwwfHwwfHx8MA%3D%3D",
+      "AI Pixel develops innovative financial solutions, empowering businesses with secure, modern, and compliant technologies to transform the digital finance landscape.",
   },
   {
     id: 11,
-    field: "Application maintenance ",
-    name: "Application maintenance ",
+    field: "Application Maintenance",
+    name: "Application Maintenance",
     description:
-      "Keep your software running smoothly. AI Pixel provides ongoing application maintenance services to ensure your software remains secure, stable, and up-to-date.",
-    image:
-      "https://images.unsplash.com/photo-1454165804606-c3d57bc86b40?w=500&auto=format&fit=crop&q=60&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8Mnx8YXBwbGljYXRpb24lMjBtYW5hZ2VtZW50fGVufDB8fDB8fHww",
+      "We provide proactive support and regular maintenance services to keep software systems updated, stable, secure, and running without unexpected interruptions.",
   },
   {
     id: 12,
-    field: "Software Development ",
-    name: "Software Development ",
+    field: "Software Development",
+    name: "Software Development",
     description:
-      "Designing interactive elements for user engagement is our specialty at AI Pixel.",
-    image:
-      "https://images.unsplash.com/photo-1610563166150-b34df4f3bcd6?w=500&auto=format&fit=crop&q=60&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8Mnx8c29mdHdhcmUlMjBkZXZlbG9wbWVudHxlbnwwfHwwfHx8MA%3D%3D",
+      "Our software engineers design and deliver interactive applications that combine reliability, usability, and performance for modern business needs.",
   },
   {
     id: 13,
     field: "Project Management",
     name: "Project Management",
     description:
-      " At AI Pixel, we understand the importance of effective project management. Our experienced team ensures that projects are completed on time, within budget and highest Quality",
-    image:
-      "https://images.unsplash.com/photo-1542626991-cbc4e32524cc?w=500&auto=format&fit=crop&q=60&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8N3x8cHJvamVjdCUyMG1hbmFnZW1lbnR8ZW58MHx8MHx8fDA%3D",
+      "AI Pixel ensures projects are delivered on time, within scope, and with maximum efficiency by applying proven project management frameworks and strategies.",
   },
   {
     id: 14,
     field: "AWS",
     name: "AWS",
     description:
-      " Designing interactive elements for user engagement is our specialty at AI Pixel. We leverage the power of AWS to create scalable and reliable cloud solutions",
-    image:
-      "https://t4.ftcdn.net/jpg/05/42/29/57/240_F_542295701_fZVdsAuV5OBjQ2BUDhjOTBR32JThLRa6.jpg",
+      "We leverage Amazon Web Services to deliver secure, scalable, and cost-effective cloud infrastructure that supports growth and business transformation.",
   },
   {
     id: 15,
     field: "Data Structures and Algorithms",
     name: "Data Structures & Algorithms",
     description:
-      "Understanding how to store and manipulate data efficiently is crucial in today's data-driven world. At AI Pixel, we have expertise in designing and implementing data structures and algorithms",
-    image:
-      "https://images.unsplash.com/photo-1555949963-ff9fe0c870eb?w=500&auto=format&fit=crop&q=60&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8NjJ8fGRhdGElMjBzdHJ1Y3R1cmVzJTIwYW5kJTIwYWxnb3JpdGhtc3xlbnwwfHwwfHx8MA%3D%3D",
+      "Our experts apply data structures and algorithms to build efficient, optimized, and reliable systems that handle complex problems with precision.",
   },
   {
     id: 16,
     field: "Programming Languages",
     name: "Programming Languages",
     description:
-      " Learning various languages to create software programs is our bread and butter at AI Pixel. Our team of experienced developers is proficient in a wide range of programming languages",
-    image:
-      "https://images.unsplash.com/photo-1571171637578-41bc2dd41cd2?w=500&auto=format&fit=crop&q=60&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8Nnx8cHJvZ3JhbW1pbmd8ZW58MHx8MHx8fDA%3D",
+      "AI Pixel developers are proficient in a wide range of programming languages, enabling tailored solutions across diverse platforms and technologies.",
   },
   {
     id: 17,
     field: "Cloud Platform Integration",
     name: "Cloud Platform Integration",
     description:
-      "Scale with agility. AI Pixel integrates your applications with leading cloud platforms, enabling scalability and flexibility.",
-    image:
-      "https://images.unsplash.com/photo-1498050108023-c5249f4df085?w=500&auto=format&fit=crop&q=60&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8NHx8Y29kaW5nfGVufDB8fDB8fHww",
+      "We integrate applications with leading cloud platforms, providing flexibility, scalability, and seamless connections for businesses to grow effectively.",
   },
   {
     id: 18,
     field: "Text Editors",
     name: "Text Editors",
     description:
-      "Basic tools for writing and editing text files for programming are essential for developers. At AI Pixel",
-    image:
-      "https://images.unsplash.com/photo-1512317049220-d3c6fcaf6681?w=500&auto=format&fit=crop&q=60&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8NHx8dGV4dCUyMGVkaXRvcnxlbnwwfHwwfHx8MA%3D%3D",
+      "Our team equips developers with the best text editors that streamline productivity, simplify coding, and enhance the software development workflow.",
   },
   {
     id: 19,
     field: "Integrated Development Environments",
     name: "IDEs",
     description:
-      "Comprehensive tools for writing and debugging code are indispensable for developers. At AI Pixel, we offer access to top-tier IDEs that provide a seamless development experience",
-    image:
-      "https://images.unsplash.com/photo-1519389950473-47ba0277781c?w=500&auto=format&fit=crop&q=60&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8MTZ8fERldmVsb3BtZW50fGVufDB8fDB8fHww",
+      "We enable access to modern IDEs that simplify coding, debugging, and testing, creating efficient workflows for developers and engineering teams.",
   },
   {
     id: 20,
     field: "Databases",
     name: "Databases",
     description:
-      "At AI Pixel, we specialize in designing and implementing databases that are efficient, scalable, and secure",
-    image:
-      "https://images.unsplash.com/photo-1504639725590-34d0984388bd?w=500&auto=format&fit=crop&q=60&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8MTh8fGRhdGFiYXNlc3xlbnwwfHwwfHx8MA%3D%3D",
+      "AI Pixel designs secure, efficient, and scalable database systems that ensure reliable data storage, management, and access for modern applications.",
   },
-  // {
-  //   id: 21,
-  //   field: "Operating System",
-  //   name: "Operating Systems",
-  //   description: "The core software that manages computer resources is crucial for ensuring smooth and reliable operation. At AI Pixel, we have expertise in a variety of operating systems.",
-  //   image:
-  //     "https://images.unsplash.com/photo-1536395268859-7cf1233a5d55?w=500&auto=format&fit=crop&q=60&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8Mnx8b3BlcmF0aW5nJTIwc3lzdGVtfGVufDB8fDB8fHww",
-  // },
   {
     id: 22,
     field: "Networking Basics",
     name: "Networking Basics",
     description:
-      "At AI Pixel, we provide comprehensive training in networking basics.",
-    image:
-      "https://images.unsplash.com/photo-1544197150-b99a580bb7a8?w=500&auto=format&fit=crop&q=60&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8Nnx8bmV0d29ya2luZ3xlbnwwfHwwfHx8MA%3D%3D",
+      "We provide comprehensive networking training and solutions, empowering teams with strong foundations in connectivity, protocols, and data communication.",
   },
   {
     id: 23,
     field: "Basics of Testing",
     name: "Software Testing",
     description:
-      "At AI Pixel, we provide thorough training in the basics of software testing, equipping individuals and teams with the knowledge and skills",
-    image:
-      "https://images.unsplash.com/photo-1600267147646-33cf514b5f3e?w=500&auto=format&fit=crop&q=60&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8MTB8fHRlc3Rpbmd8ZW58MHx8MHx8fDA%3D",
+      "Our training in software testing equips professionals with essential skills to identify bugs, optimize functionality, and ensure reliable products.",
   },
-
-  // {
-  //   id: 25,
-  //   field: "Encryption and Cryptography",
-  //   name: "Encryption & Cryptography",
-  //   description: " At AI Pixel, we offer expertise in encryption and cryptography, helping businesses safeguard their sensitive information and maintain the trust of their customers.",
-  //   image: "https://www.google.com/search?q=encryption+and+cryptography+image",
-  // },
   {
     id: 26,
     field: "Software Development Life Cycle",
     name: "SDLC",
     description:
-      " At AI Pixel, we follow a rigorous SDLC methodology that ensures the successful delivery of software projects from inception to deployment.",
-    image:
-      "https://plus.unsplash.com/premium_photo-1714311947210-4e6a3410155d?w=500&auto=format&fit=crop&q=60&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8NXx8c29mdHdhcmUlMjBkZXZlbG9wbWVudCUyMGxpZmVjeWNsZXxlbnwwfHwwfHx8MA%3D%3D",
+      "AI Pixel follows a structured SDLC methodology to ensure projects move smoothly from concept to deployment with quality at every step.",
   },
-
   {
     id: 28,
     field: "SEO (Search Engine Optimization)",
     name: "SEO",
     description:
-      "At AI Pixel, we offer expertise in SEO strategies and techniques that help businesses increase their online visibility and achieve higher rankings in search engine results pages.",
-    image:
-      "https://images.unsplash.com/photo-1562577309-2592ab84b1bc?w=500&auto=format&fit=crop&q=60&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8Mnx8c2VvfGVufDB8fDB8fHww",
+      "Our SEO experts apply proven strategies that improve search visibility, drive organic traffic, and enhance brand presence across digital platforms.",
   },
 ];
 
-const questions = [
-  {
-    id: "development",
-    question: "What area of expertise are you looking for?",
-    options: [
-      "Web Development",
-      "UI/UX Design",
-      "Artificial Intelligence",
-      "DevOps",
-      "Mobile App Development",
-      "BlockChain",
-      "Quality Assurance",
-      "Software Testing",
-      "WordPress",
-      "Fintech",
-      "Project Management",
-      "AWS",
-    ],
-  },
-];
+// --- Expertise Card ---
+const ExpertiseCard = ({ expertise }) => {
+  const accentClass =
+    expertise.id % 2 === 0
+      ? "border-l-4 border-blue-600"
+      : "border-l-4 border-black";
 
-const QuestionCard = React.memo(
-  ({
-    question,
-    index,
-    activeQuestion,
-    filters,
-    handleFilterChange,
-    handleResetFilters,
-  }) => (
+  return (
     <div
-      key={question.id}
-      className={`w-full transition-transform duration-300 rounded-lg shadow-md p-4 bg-white ${
-        index === activeQuestion ? "transform -translate-y-2" : ""
-      }`}
-      style={{ opacity: index <= activeQuestion ? 1 : 0.5 }}
+      key={expertise.id}
+      className={`relative flex flex-col flex-shrink-0 w-[16rem] lg:w-80 h-[226px] p-6 bg-white rounded-xl shadow-lg 
+                  ${accentClass}
+                  hover:shadow-2xl hover:bg-gray-50 hover:-translate-y-1 transition-all duration-300 cursor-pointer`}
     >
-      <div>
-        <h2 className="text-lg font-medium mb-3">{question.question}</h2>
-        <div className="flex flex-wrap gap-2">
-          {question.options.map((option) => (
-            <button
-              key={option}
-              className={`px-4 py-2 border rounded-full text-sm ${
-                filters[question.id] === option
-                  ? "bg-black text-white"
-                  : "bg-white hover:bg-blue-100"
-              }`}
-              onClick={() => handleFilterChange(question.id, option, index)}
-              disabled={index > activeQuestion}
-            >
-              {option}
-            </button>
-          ))}
-        </div>
-        <button
-          onClick={handleResetFilters}
-          className="mt-4 px-2 py-1 bg-red-500 text-white rounded-lg hover:bg-red-600"
-        >
-          Reset Filters
-        </button>
-      </div>
-    </div>
-  )
-);
+      <div className="flex flex-col justify-start h-full">
+        {/* Field */}
+        {/* <div className="absolute top-4 right-4">
+          <span className="text-xs font-semibold px-2 py-1 bg-gray-100 text-gray-500 rounded-md">
+            {expertise.field.toUpperCase()}
+          </span>
+        </div> */}
 
-const ExpertiseCard = React.memo(({ expertise }) => (
-  <div
-    key={expertise.id}
-    className="relative expertise-card flex-shrink-0 lg:w-80 w-[15rem] border-2 bg-white rounded-lg shadow-lg p-2"
-  >
-    <div className="absolute bottom-0 w-full md:h-1/2 rounded-lg hidden lg:block">
-      <LazyLoadImage
-        src={expertise.image}
-        alt={expertise.field}
-        effect="blur"
-        className="w-full h-full object-cover rounded-lg"
-      />
-    </div>
-    <div className="relative z-10 expertise-overlay flex flex-col h-full lg:p-3">
-      {/* <div className="content-start hidden lg:flex items-center rounded-t-md">
-        <GoDotFill className="text-black m-2" />
-        <h2 className="text-sm font-light text-black ml-1 p-1">
-          {expertise.field}
+        {/* Title */}
+        <h2 className="text-xl font-extrabold text-gray-900 mb-2 pt-2">
+          {expertise.name}
         </h2>
-      </div> */}
-      <div className="flex flex-col items-center h-full bg-opacity-75 p-2 rounded-b-md">
-        <div>
-          <h2 className="text-lg font-semibold mb-2 text-black">
-            {expertise.name}
-          </h2>
-          <p className="text-black font-light">{expertise.description}</p>
-        </div>
+
+        {/* Accent bar */}
+        <div className="w-1/3 h-1 bg-blue-600 mb-4 rounded-full opacity-75" />
+
+        {/* Description */}
+        <p className="text-sm text-gray-600 leading-relaxed line-clamp-4">
+          {expertise.description}
+        </p>
       </div>
     </div>
-  </div>
-));
+  );
+};
 
+// --- Main Component ---
 export default function HomeExpertise() {
-  const [filters, setFilters] = useState({
-    development: "",
-    service: "",
-    technology: "",
-    state: "",
-    need: "",
-    requirements: "",
-  });
-
-  const [activeQuestion, setActiveQuestion] = useState(0);
-  const containerRef = useRef(null);
-
-  const handleFilterChange = (filterType, value, index) => {
-    setFilters((prevFilters) => ({
-      ...prevFilters,
-      [filterType]: value,
-    }));
-    setActiveQuestion(index + 1);
-  };
-
-  const handleResetFilters = () => {
-    setFilters({
-      development: "",
-      service: "",
-      technology: "",
-      state: "",
-      need: "",
-      requirements: "",
-    });
-    setActiveQuestion(0);
-  };
-
-  const handleScrollLeft = () => {
-    containerRef.current.scrollBy({ left: -335, behavior: "smooth" });
-  };
-
-  const handleScrollRight = () => {
-    containerRef.current.scrollBy({ left: 335, behavior: "smooth" });
-  };
-
-  const filteredExpertiseData = useMemo(() => {
-    return expertiseData.filter((expertise) => {
-      const developmentMatch =
-        !filters.development || expertise.field === filters.development;
-      const serviceMatch =
-        !filters.service || expertise.field === filters.service;
-      const technologyMatch =
-        !filters.technology || expertise.field === filters.technology;
-      const stateMatch = !filters.state || expertise.field === filters.state;
-      const needMatch = !filters.need || expertise.field === filters.need;
-      const requirementsMatch =
-        !filters.requirements || expertise.field === filters.requirements;
-
-      return (
-        developmentMatch &&
-        serviceMatch &&
-        technologyMatch &&
-        stateMatch &&
-        needMatch &&
-        requirementsMatch
-      );
-    });
-  }, [filters]);
+  // Duplicate array so scroll loops seamlessly
+  const loopedData = [...expertiseData, ...expertiseData];
 
   return (
     <div className="flex flex-col items-center w-full h-full p-4 lg:p-10 bg-gray-50">
-      <div className="w-full flex flex-col items-center pt-16 lg:pb-10">
-        <h1 className="md:text-3xl lg:text-3xl text-base font-semibold mb-3 capitalize lg:text-center">
-          Unleash Your Digital Potential with Cutting-Edge Solutions
+      {/* Header */}
+      <div className="w-full flex flex-col items-center pt-16 lg:pb-10 max-w-4xl text-center">
+        <h1 className="text-4xl lg:text-5xl font-extrabold text-gray-900 mb-4 leading-snug">
+          Unlock the Power of{" "}
+          <span className="bg-gradient-to-r from-blue-600 to-indigo-500 text-transparent bg-clip-text">
+            AI Pixel's Expertise
+          </span>
         </h1>
-        <p className="md:text-base lg:text-base text-sm font-light mb-3 lg:text-center">
-          AI Pixel empowers businesses of all sizes with a comprehensive suite
-          of services designed to propel them into the future. Here's a closer
-          look at how their expertise can transform your digital landscape.
+        <p className="text-lg text-gray-600 leading-relaxed max-w-3xl">
+          Navigate your digital transformation with our comprehensive suite of
+          cutting-edge services.
         </p>
       </div>
 
-      <div className="flex flex-row w-full h-full">
-        <div className="w-1/3 md:flex lg:flex hidden flex-col items-start ">
-          {questions.map((question, index) => (
-            <QuestionCard
-              key={question.id}
-              question={question}
-              index={index}
-              activeQuestion={activeQuestion}
-              filters={filters}
-              handleFilterChange={handleFilterChange}
-              handleResetFilters={handleResetFilters}
-            />
+      {/* Infinite Scroll */}
+      <div className="relative w-full overflow-hidden mt-12">
+        <div className="flex animate-scroll gap-6 w-max">
+          {loopedData.map((expertise, index) => (
+            <ExpertiseCard key={index} expertise={expertise} />
           ))}
         </div>
-
-        <div className="md:w-2/3 lg:w-2/3 w-auto overflow-scroll flex flex-col  md:pl-10 lg:pl-10 pl-0 scrollbar">
-          <div className="flex flex-row w-full  xl:h-[70vh] overflow-hidden">
-            <div className="w-full flex flex-col xl:h-[70vh]">
-              <div
-                className="flex overflow-x-auto space-x-4 xl:h-[60vh] h-[32vh] lg:max-w-[calc(100vw-100px)] scrollbar"
-                ref={containerRef}
-              >
-                {filteredExpertiseData.map((expertise) => (
-                  <ExpertiseCard key={expertise.id} expertise={expertise} />
-                ))}
-              </div>
-              <div className="lg:flex hidden mt-4 mb-4 gap-3">
-                <button
-                  onClick={handleScrollLeft}
-                  className="mx-2 p-1 text-xl bg-gray-200 rounded-full hover:bg-gray-300 hover:drop-shadow-2xl"
-                >
-                  <FiChevronLeft />
-                </button>
-                <button
-                  onClick={handleScrollRight}
-                  className="mx-2 p-1 text-xl bg-gray-200 rounded-full hover:bg-gray-300 hover:drop-shadow-2xl"
-                >
-                  <FiChevronRight />
-                </button>
-              </div>
-            </div>
-          </div>
-        </div>
       </div>
+
+      <style jsx>{`
+        @keyframes scroll {
+          0% {
+            transform: translateX(0);
+          }
+          100% {
+            transform: translateX(-50%);
+          }
+        }
+        .animate-scroll {
+          animation: scroll 80s linear infinite; /* slowed down */
+        }
+        // .animate-scroll:hover {
+        //   animation-play-state: paused; /* still pauses on hover */
+        // }
+      `}</style>
     </div>
   );
 }

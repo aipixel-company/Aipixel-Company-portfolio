@@ -84,45 +84,46 @@ const industries = [
 ];
 
 const IndustriesWeWorkServices = () => (
-  <>
-    <div className=" mx-auto text-gray-900">
-      <div>
-        <h2 className="text-center text-gray-800 p-2 text-2xl md:text-5xl font-semibold leading-tight">
-          Industries We Work With
-        </h2>
-        <div className="my-4 mx-auto h-2 border-4 border-indigo-500"></div>
-        <div className="text-center my-2 text-gray-700 font-light">
-          We are proud to serve a diverse range of industries
-        </div>
-      </div>
-      <div className="grid grid-cols-2 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-5 gap-4 sm:p-4">
-        {industries.map((industry, index) => (
-          <div
-            key={index}
-            className="relative border border-gray-200 sm:h-[15rem]  hover:text-black shadow p-3 bg-gray-100 text-gray-700 leading-snug sm:flex sm:flex-col sm:justify-between sm:overflow-hidden group"
-          >
-            <div className="sm:flex sm:flex-col sm:justify-center hidden sm:items-center sm:flex-grow z-10 transition-all duration-500 sm:ease-in-out sm:group-hover:opacity-0 sm:group-hover:translate-y-[-3rem]">
-              <img
-                src={industry.logo}
-                style={{ height: industry.height }}
-                className=""
-              />
-            </div>
-            <div className="absolute inset-0 hidden sm:flex justify-center items-center z-10 transition-opacity duration-500 ease-in-out opacity-0 group-hover:opacity-100 group-hover:delay-200">
-              <div className="text-black text-sm font-normal px-2">
-                {industry.description}
-              </div>
-            </div>
-            <div className="text-center sm:mt-4 p-2 z-10">
-              <span className=" text-xs whitespace-nowrap sm:text-sm sm:font-medium border py-1 px-1 border-gray-600 sm:hover:border-white rounded-lg">
-                {industry.industryType}
-              </span>
-            </div>
-          </div>
-        ))}
-      </div>
+  <div className="bg-gradient-to-r from-[#647A82] to-[#00BFA6] py-20 px-6">
+    <div className="max-w-6xl mx-auto text-center">
+      <h2 className="text-4xl md:text-5xl font-extrabold text-white drop-shadow-lg">
+        Industries We Work With
+      </h2>
+      <p className="text-gray-200 mt-4 mb-12 text-lg">
+        We are proud to serve a diverse range of industries with innovation and impact.
+      </p>
     </div>
-  </>
+
+    <div className="grid grid-cols-2 sm:grid-cols-3 lg:grid-cols-5 gap-6 max-w-6xl mx-auto">
+      {industries.map((industry, index) => (
+        <div
+          key={index}
+          className="group relative bg-white/90 backdrop-blur-lg rounded-2xl shadow-lg p-6 flex flex-col items-center justify-between overflow-hidden hover:scale-105 transition-all duration-300"
+        >
+          {/* Floating Icon */}
+          <div className="relative mb-4">
+            <img
+              src={industry.logo}
+              alt={industry.industryType}
+              style={{ height: industry.height }}
+              className="transition-transform duration-500 group-hover:scale-110 drop-shadow-md"
+            />
+            <div className="absolute inset-0 rounded-full bg-[#00BFA6]/20 blur-2xl opacity-0 group-hover:opacity-100 transition-all duration-500"></div>
+          </div>
+
+          {/* Title */}
+          <span className="text-base font-semibold text-[#647A82] mb-2">
+            {industry.industryType}
+          </span>
+
+          {/* Hover Description */}
+          {/* <p className="absolute inset-0 bg-white/95 p-4 text-gray-700 text-sm rounded-2xl opacity-0 group-hover:opacity-100 group-hover:translate-y-0 translate-y-10 transition-all duration-500 flex items-center justify-center text-center">
+            {industry.description}
+          </p> */}
+        </div>
+      ))}
+    </div>
+  </div>
 );
 
 export default IndustriesWeWorkServices;

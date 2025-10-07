@@ -2,17 +2,15 @@ import React, { useState } from "react";
 import { GrAttachment } from "react-icons/gr";
 import { collection, addDoc } from "firebase/firestore";
 import { ref, uploadBytes, getDownloadURL } from "firebase/storage";
-import { db, storage } from "../../Firebase"; // Make sure these paths are correct
+import { db, storage } from "../../Firebase";
 
 function ContactUsMain() {
   const [form, setForm] = useState({
     firstName: "",
     lastName: "",
     email: "",
-    address: "",
-    city: "",
-    state: "",
-    zip: "",
+    company: "",
+    message: "",
     attachment: null,
   });
 
@@ -26,16 +24,14 @@ function ContactUsMain() {
     if (!form.email) tempErrors.email = "Email is required.";
     else if (!/\S+@\S+\.\S+/.test(form.email))
       tempErrors.email = "Email is invalid.";
-    if (!form.address) tempErrors.address = "Company is required.";
-    if (!form.city) tempErrors.city = "Message is required.";
-    if (!form.attachment) tempErrors.attachment = "Attachment is required.";
+    if (!form.company) tempErrors.company = "Company is required.";
+    if (!form.message) tempErrors.message = "Message is required.";
     setErrors(tempErrors);
     return Object.keys(tempErrors).length === 0;
   };
 
   const handleChange = (e) => {
-    const value =
-      e.target.type === "checkbox" ? e.target.checked : e.target.value;
+    const value = e.target.value;
     setForm({ ...form, [e.target.name]: value });
     setErrors({ ...errors, [e.target.name]: "" });
   };
@@ -62,26 +58,22 @@ function ContactUsMain() {
           firstName: form.firstName,
           lastName: form.lastName,
           email: form.email,
-          address: form.address,
-          city: form.city,
-          state: form.state,
-          zip: form.zip,
+          company: form.company,
+          message: form.message,
           attachmentURL,
           createdAt: new Date(),
         });
 
-        alert("Form submitted successfully!");
-        // Reset form after submission
         setForm({
           firstName: "",
           lastName: "",
           email: "",
-          address: "",
-          city: "",
-          state: "",
-          zip: "",
+          company: "",
+          message: "",
           attachment: null,
         });
+
+        alert("Thank you! Your message has been sent successfully.");
       } catch (error) {
         console.error("Error submitting form: ", error);
         alert(`Error submitting form: ${error.message}`);
@@ -92,29 +84,45 @@ function ContactUsMain() {
   };
 
   return (
-    <div
-      className="flex items-center xl:h-screen"
-      style={{
-        backgroundImage: `url(${'https://firebasestorage.googleapis.com/v0/b/ai-pixel-portfolio.appspot.com/o/assets%2Faboutbackground.jpg?alt=media&token=bd77e3a0-6601-461a-94ab-f005b156e54b'})`,
-        backgroundSize: "cover",
-        backgroundPosition: "center",
-      }}
-    >
-      <form
-        onSubmit={handleSubmit}
-        noValidate
-        className="container flex flex-col lg:ml-5 lg:mt-16 lg:rounded-xl w-full sm:max-w-4xl bg-gradient-to-r from-blue-100 to-blue-700 p-6"
+    <section className="w-full min-h-screen flex flex-col lg:flex-row bg-gradient-to-b from-indigo-800/70 to-black/70">
+      {/* Left Panel */}
+      <div
+        className="lg:w-1/2 w-full flex flex-col justify-center items-center text-white p-10 relative"
+        style={{
+          backgroundImage:
+            "url('https://images.unsplash.com/photo-1685080462887-6c6f32d9ec85?q=80&w=2000')",
+          backgroundSize: "cover",
+          backgroundPosition: "center",
+        }}
       >
-        <h1 className="text-4xl font-medium text-center mb-4">Get In Touch</h1>
-        <div className="grid lg:grid-cols-3 grid-cols-2 gap-6 p-6">
-          <div>
-            <div className="mb-4">
-              <label
-                htmlFor="firstName"
-                className="block text-sm font-medium mb-1"
-              >
-                First Name
-              </label>
+        {/* <div className="absolute inset-0 bg-gradient-to-b from-indigo-800/70 to-black/70"></div> */}
+        <div className="relative z-10 text-center lg:text-left max-w-lg">
+          <h2 className="text-4xl font-extrabold mb-4">Let’s Build the Future</h2>
+          <p className="text-lg mb-6 opacity-90">
+            At <span className="font-semibold text-indigo-300">AI-Pixel</span>,
+            we believe in innovation without limits. Share your ideas, and let’s
+            turn them into intelligent, future-ready solutions.
+          </p>
+          <blockquote className="italic border-l-4 pl-4 border-indigo-400 text-gray-200">
+            “We don’t just write code — we craft transformations.”  
+          </blockquote>
+          <p className="mt-3 font-semibold">— Mian Usman, CEO</p>
+        </div>
+      </div>
+
+      {/* Right Panel - Contact Form */}
+      <div className="lg:w-1/2 w-full flex justify-center items-center mt-10 p-10 ">
+        <form
+          onSubmit={handleSubmit}
+          noValidate
+          className="w-full max-w-lg bg-white/70 backdrop-blur-lg rounded-2xl shadow-xl p-8 border border-gray-200"
+        >
+          <h1 className="text-3xl font-bold text-gray-900 mb-2 text-center">
+            Contact Us
+          </h1>
+
+          <div className="grid grid-cols-1 sm:grid-cols-2 gap-3">
+            <div>
               <input
                 id="firstName"
                 type="text"
@@ -122,19 +130,13 @@ function ContactUsMain() {
                 value={form.firstName}
                 onChange={handleChange}
                 placeholder="First Name"
-                className="input-field"
+                className="w-full border rounded-lg p-3 focus:ring-2 focus:ring-indigo-500"
               />
               {errors.firstName && (
                 <p className="text-red-500 text-sm">{errors.firstName}</p>
               )}
             </div>
-            <div className="mb-4">
-              <label
-                htmlFor="lastName"
-                className="block text-sm font-medium mb-1"
-              >
-                Last Name
-              </label>
+            <div>
               <input
                 id="lastName"
                 type="text"
@@ -142,111 +144,90 @@ function ContactUsMain() {
                 value={form.lastName}
                 onChange={handleChange}
                 placeholder="Last Name"
-                className="input-field"
+                className="w-full border rounded-lg p-3 focus:ring-2 focus:ring-indigo-500"
               />
               {errors.lastName && (
                 <p className="text-red-500 text-sm">{errors.lastName}</p>
               )}
             </div>
-            <div className="mb-4">
-              <label htmlFor="email" className="block text-sm font-medium mb-1">
-                Email
-              </label>
-              <input
-                id="email"
-                type="email"
-                name="email"
-                value={form.email}
-                onChange={handleChange}
-                placeholder="Email"
-                className="input-field"
-              />
-              {errors.email && (
-                <p className="text-red-500 text-sm">{errors.email}</p>
-              )}
-            </div>
-            <div className="mb-4 mt-6 flex items-center">
-              <GrAttachment className="mr-2 text-2xl" />
-              <label
-                htmlFor="attachment"
-                className="cursor-pointer block text-sm font-medium"
-              >
-                Add Attachment
-              </label>
-              <input
-                id="attachment"
-                type="file"
-                name="attachment"
-                onChange={handleFileChange}
-                className="hidden"
-              />
-              {errors.attachment && (
-                <p className="text-red-500 text-sm">{errors.attachment}</p>
-              )}
-            </div>
-            
           </div>
-          <div>
-            <div className="mb-4">
-              <label
-                htmlFor="address"
-                className="block text-sm font-medium mb-1"
-              >
-                Company
-              </label>
-              <input
-                id="address"
-                type="text"
-                name="address"
-                value={form.address}
-                onChange={handleChange}
-                placeholder="Company"
-                className="input-field"
-              />
-              {errors.address && (
-                <p className="text-red-500 text-sm">{errors.address}</p>
-              )}
-            </div>
-            <div className="mb-4">
-              <label htmlFor="city" className="block text-sm font-medium mb-1">
-                Message
-              </label>
-              <input
-                id="city"
-                type="text"
-                name="city"
-                value={form.city}
-                onChange={handleChange}
-                placeholder="Message"
-                className="input-field"
-              />
-              {errors.city && (
-                <p className="text-red-500 text-sm">{errors.city}</p>
-              )}
-            </div>
+
+          <div className="mt-4">
+            <input
+              id="email"
+              type="email"
+              name="email"
+              value={form.email}
+              onChange={handleChange}
+              placeholder="Email Address"
+              className="w-full border rounded-lg p-3 focus:ring-2 focus:ring-indigo-500"
+            />
+            {errors.email && (
+              <p className="text-red-500 text-sm">{errors.email}</p>
+            )}
           </div>
-          <div className=" hidden sm:block"> 
-            <p className="text-white">
-              At AIPixel, we're not bound by the limitations of the present.
-              We're a pioneering force in software landscape, wielding the power
-              of AI to craft solutions that rewrite the rules of what's
-              possible.
-            </p>
-            <p className="text-xl mt-2">CEO, </p>
-            <span>Mian Usman</span>
+
+          <div className="mt-4">
+            <input
+              id="company"
+              type="text"
+              name="company"
+              value={form.company}
+              onChange={handleChange}
+              placeholder="Company / Organization"
+              className="w-full border rounded-lg p-3 focus:ring-2 focus:ring-indigo-500"
+            />
+            {errors.company && (
+              <p className="text-red-500 text-sm">{errors.company}</p>
+            )}
           </div>
-        </div>
-        <div className="">
-          <button
-            type="submit"
-            className="border rounded-lg px-4 py-2 bg-gray-900 text-white"
-            disabled={loading}
-          >
-            {loading ? "Submitting..." : "Contact Us"}
-          </button>
-        </div>
-      </form>
-    </div>
+
+          <div className="mt-4">
+            <textarea
+              id="message"
+              name="message"
+              value={form.message}
+              onChange={handleChange}
+              placeholder="Your Message"
+              rows="5"
+              className="w-full border rounded-lg p-3 focus:ring-2 focus:ring-indigo-500"
+            ></textarea>
+            {errors.message && (
+              <p className="text-red-500 text-sm">{errors.message}</p>
+            )}
+          </div>
+
+          <div className="mt-4 flex items-center gap-3">
+            <label
+              htmlFor="attachment"
+              className="flex items-center cursor-pointer text-indigo-600 hover:text-indigo-800 font-medium"
+            >
+              <GrAttachment className="mr-2" /> Add Attachment
+            </label>
+            <input
+              id="attachment"
+              type="file"
+              name="attachment"
+              onChange={handleFileChange}
+              className="hidden"
+            />
+            {errors.attachment && (
+              <p className="text-red-500 text-sm">{errors.attachment}</p>
+            )}
+          </div>
+
+          <div className="mt-6">
+            <button
+              type="submit"
+              className="w-full py-3 bg-indigo-600 hover:bg-indigo-700 text-white font-semibold rounded-lg shadow-lg transition"
+              disabled={loading}
+            >
+              {loading ? "Sending..." : "Send Message"}
+            </button>
+          </div>
+        </form>
+      </div>
+    </section>
   );
 }
 

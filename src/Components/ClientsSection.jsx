@@ -6,6 +6,9 @@ import dtec from "../assets/dtec.png";
 import adventureclub from "../assets/adventureclub.png"
 import arkaan from "../assets/arkaan.png"
 import techgalaxy from "../assets/techgalaxy.png"
+import absher from "../assets/absher.png"
+import airhub from "../assets/airhub.png"
+import birdsworld from "../assets/birdsworld.png"
 
 import seedlogo from "../assets/seedlogo.png"
 
@@ -73,6 +76,24 @@ const testimonials = [
     companyType: "Finance",
     description: "Premier financial institution in Saudi Arabia and the Middle East, delivering top-notch financial services.",
     height: "90px"
+  },
+  {
+    logo: absher,
+    companyType: "NFC",
+    description: "Connect instantly using NFC technology with ABSHER digital business cards.",
+    height: "80px"
+  },
+  {
+    logo: airhub,
+    companyType: "Surveillance",
+    description: "Total Control for Your Drone Operations Fleet management, compliance, and real-time situational awareness in one secure platform.",
+    height: "80px"
+  },
+  {
+    logo: birdsworld,
+    companyType: "Ecommerce",
+    description: "An online marketplace platform where multiple vendors (suppliers, manufacturers, or wholesalers) can list and sell their products or services.",
+    height: "80px"
   },
 ];
 

@@ -67,38 +67,44 @@ export default function ExpertiseServices() {
 
   return (
     <>
-      <div className="flex flex-col justify-center items-center">
-        <h2 className="font-bold text-3xl mt-5 tracking-tight">
-          Our Expertise
-        </h2>
-        <p className="text-gray-600 mt-3 text-center sm:text-left">
-          We work with advanced technologies covering a
-          broad spectrum of specialisms. 
-        </p>
-      </div>
+     <div className="bg-gradient-to-r from-[#647A82] to-[#00BFA6] py-16">
+  <div className="text-center mb-10">
+    <h2 className="font-bold text-4xl text-white">Our Expertise</h2>
+    <p className="text-gray-200 mt-3">
+      We work with advanced technologies covering a broad spectrum of specialisms.
+    </p>
+  </div>
+  <div className="flex flex-col lg:flex-row px-6 gap-10 items-center">
+    {/* Accordion */}
+    <div className="lg:w-1/2 bg-white/90 rounded-xl shadow-md p-6">
+      {expertise.map((item, index) => (
+        <div key={index} className="border-b border-gray-200 py-4">
+          <button
+            onClick={() => handleClick(index)}
+            className="flex justify-between items-center w-full text-left"
+          >
+            <span className="font-semibold text-[#647A82]">{item.question}</span>
+            <span>{openIndex === index ? "–" : "+"}</span>
+          </button>
+          {openIndex === index && (
+            <p className="text-sm text-gray-700 mt-2 transition-all duration-300">
+              {item.answer}
+            </p>
+          )}
+        </div>
+      ))}
+    </div>
+    {/* Image */}
+    <div className="lg:w-1/2">
+      <img
+        src={expertiseservices}
+        alt="Expertise"
+        className="rounded-xl shadow-lg"
+      />
+    </div>
+  </div>
+</div>
 
-      <div className="px-10 bg-white  flex">
-        <div className="lg:w-1/2 w-full pr-5">
-          <div className="grid divide-y divide-neutral-200 mt-8">
-            {expertise.map((expertise, index) => (
-              <FAQItem
-                key={index}
-                question={expertise.question}
-                answer={expertise.answer}
-                isOpen={openIndex === index}
-                onClick={() => handleClick(index)}
-              />
-            ))}
-          </div>
-        </div>
-        <div className="w-1/2 pl-5 mt-11 hidden lg:block">
-          <img
-            src={expertiseservices}
-            alt="Expertise illustration"
-            className="w-full h-auto"
-          />
-        </div>
-      </div>
     </>
   );
 }
