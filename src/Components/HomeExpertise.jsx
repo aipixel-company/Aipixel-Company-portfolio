@@ -291,13 +291,13 @@ const ExpertiseCard = ({ expertise }) => {
         </p>
 
         {/* Learn More Button */}
-        <div className="mt-auto pt-4">
+        {/* <div className="mt-auto pt-4">
           <button className={`text-xs font-semibold px-4 py-2 rounded-lg bg-gradient-to-r ${expertise.gradient} 
                            text-white hover:shadow-lg transition-all duration-300 transform group-hover:scale-105 
                            backdrop-blur-sm bg-white/10 border border-white/20 hover:border-white/30`}>
             Learn More →
           </button>
-        </div>
+        </div> */}
       </div>
 
       {/* Hover Effect Glow */}
