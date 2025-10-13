@@ -2,7 +2,7 @@
 @tailwind components;
 @tailwind utilities;
 
-
+@import url('https://fonts.googleapis.com/css2?family=Cairo:wght@200..1000&display=swap');
 
 h1, h2, h3, h4, h5, h6,
 p, span, li, ul, div, label,Typography {
@@ -10,6 +10,15 @@ p, span, li, ul, div, label,Typography {
   font-optical-sizing: auto;
   font-weight: 500;
   font-style: normal;
+}
+
+.cairo-db {
+  font-family: "Cairo", sans-serif;
+  font-optical-sizing: auto;
+  font-weight: 800;
+  font-style: normal;
+  font-variation-settings:
+    "slnt" 0;
 }
 
 .no-hover-effect {
@@ -155,4 +164,20 @@ p, span, li, ul, div, label,Typography {
   
 
 
-  
+  /* Add to your global CSS */
+@keyframes shimmer {
+  0% {
+    transform: translateX(-100%) skewX(-12deg);
+  }
+  100% {
+    transform: translateX(200%) skewX(-12deg);
+  }
+}
+
+.animate-shimmer {
+  animation: shimmer 3s infinite;
+}
+
+.shadow-glow {
+  box-shadow: 0 0 30px rgba(255, 255, 255, 0.3);
+}

@@ -75,8 +75,8 @@ const Card = memo(
       key={card.id}
       className={`w-56 h-auto cursor-pointer transition-all duration-300 ease-in-out hover:ring-4 hover:ring-blue-500/50 rounded-xl ${
         isActive
-          ? "bg-white shadow-2xl transform scale-105 ring-4 ring-blue-500/50 z-10" // Prominent active state
-          : "bg-white/95 rounded-xl shadow-lg border border-gray-100 opacity-80 hover:opacity-100" // Subtle inactive state
+          ? "bg-white shadow-2xl transform scale-105 ring-4 ring- z-10" // Prominent active state
+          : "bg-white rounded-xl shadow-lg border border-gray-100 opacity-90 hover:opacity-100" // Subtle inactive state
       }`}
       onClick={() => onClick(card.id)}
       onMouseEnter={onMouseEnter}
@@ -101,7 +101,7 @@ const Card = memo(
           {/* Description visible only when active */}
           {isActive && (
             <div className="mt-5 transition-opacity duration-500 opacity-100 animate-fadeIn">
-              <p className="text-black text-sm font-light text-center">
+              <p className="text-black text-sm font-light text-center cario-db">
                 {card.description}
               </p>
             </div>
@@ -207,6 +207,7 @@ function HomeSlider() {
           <h2 className="text-xl sm:text-2xl md:text-3xl lg:text-4xl text-white font-light mt-4 drop-shadow-lg">
           Where Pixel gets Smarter
           </h2>
+         
         </div>
         
         {/* Desktop/Tablet Card Layout */}
