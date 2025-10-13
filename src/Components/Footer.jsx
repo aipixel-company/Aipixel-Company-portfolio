@@ -128,11 +128,11 @@ export default function Footer() {
                     <Link to="/blogs" className={linkClasses}>Blog</Link>
                   </li>
                   <li>
-                    <Link to="/careers" className={linkClasses}>Careers</Link>
+                    <Link to="/clients" className={linkClasses}>Clients</Link>
                   </li>
-                  <li>
-                    <Link to="/portfolio" className={linkClasses}>Portfolio</Link> {/* Added Portfolio for better company overview */}
-                  </li>
+                  {/* <li>
+                    <Link to="/portfolio" className={linkClasses}>Portfolio</Link> 
+                  </li> */}
                 </ul>
               </nav>
             </div>
@@ -149,12 +149,12 @@ export default function Footer() {
                   <li>
                     <Link to="/terms-of-service" className={linkClasses}>Terms of Service</Link>
                   </li>
-                   <li>
+                   {/* <li>
                     <Link to="/sitemap" className={linkClasses}>Sitemap</Link>
                   </li>
                   <li>
                     <Link to="/faq" className={linkClasses}>FAQ</Link>
-                  </li>
+                  </li> */}
                 </ul>
               </nav>
             </div>
