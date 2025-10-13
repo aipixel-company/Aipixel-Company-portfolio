@@ -1,6 +1,6 @@
 import React, { useState, useEffect, useCallback, memo } from "react";
 // Import assets - assuming these paths are correct
-import larace from "../assets/larace.png";
+import absher from "../assets/absher.png";
 import adventureclub from "../assets/adventureclub.png";
 import dtecch from "../assets/dtec.png";
 import bankmusqat from "../assets/bankmusqat.png";
@@ -8,7 +8,7 @@ import moosa from "../assets/moosa.png";
 import dtec from "../assets/dtec.jpg";
 import background from "../assets/background.jpg";
 import bankmusqatt from "../assets/bankmusqatt.jpg";
-import laracee from "../assets/larace.jpg";
+import laracee from "../assets/absherbg.png";
 import moosagroup from "../assets/moosagroup.jpg";
 
 // Card data is kept as is, but could be fetched from an API in a real-world app.
@@ -51,12 +51,12 @@ const cards = [
   },
   {
     id: 5,
-    title: "LA Race",
-    logo: larace,
+    title: "Absher",
+    logo: absher,
     description:
-      "LA Race is an organization dedicated to organizing exciting and competitive racing events.",
+      "Connect instantly using NFC technology with ABSHER digital business cards.",
     backgroundImage: laracee,
-    logoHeight: "75px",
+    logoHeight: "70px",
   },
 ];
 
@@ -204,7 +204,7 @@ function HomeSlider() {
           <h1 className="text-3xl sm:text-4xl md:text-5xl lg:text-7xl font-extrabold text-white tracking-tight drop-shadow-2xl animate-pulseOnce">
             Empowering Digital Transformation.
           </h1>
-          <h2 className="text-xl sm:text-2xl md:text-3xl lg:text-4xl text-blue-300 font-light mt-4 drop-shadow-lg">
+          <h2 className="text-xl sm:text-2xl md:text-3xl lg:text-4xl text-white font-light mt-4 drop-shadow-lg">
           Where Pixel gets Smarter
           </h2>
         </div>

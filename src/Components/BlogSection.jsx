@@ -113,7 +113,7 @@ const BlogSection = () => {
               </button>
             </div>
           </div>
-          <div className="lg:w-3/5 lg:border  rounded-lg">
+          <div className="lg:w-3/5  rounded-lg">
             <div className="max-w-xl mx-auto p-3">
               <img
                 src={slides[slideIndex].image}

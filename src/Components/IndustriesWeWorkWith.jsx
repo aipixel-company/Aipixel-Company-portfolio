@@ -18,20 +18,12 @@ const industries = [
       "https://firebasestorage.googleapis.com/v0/b/ai-pixel-portfolio.appspot.com/o/assets%2Fecommerce.avif?alt=media&token=785b25c8-10f5-4fdb-a380-57297ecb49aa",
   },
   {
-    name: "Fintech",
+    name: "FinTech", // Changed from "Fintech" to match the image case
     cardtitle: "Fintech Solutions for a Secure and Efficient Future",
     description:
       "The Fintech industry is a dynamic and rapidly evolving sector that combines finance and technology. It encompasses a wide range of applications, including mobile banking, online lending, peer-to-peer payments, blockchain, and cryptocurrency. Fintech companies aim to make financial services more accessible, efficient, and user-friendly, disrupting traditional banking models and offering innovative solutions to both businesses and consumers.",
     imageUrl:
       "https://firebasestorage.googleapis.com/v0/b/ai-pixel-portfolio.appspot.com/o/assets%2Ffintech.avif?alt=media&token=474792c3-220d-4e85-8304-4e6872f15e20",
-  },
-  {
-    name: "Tourism",
-    cardtitle: "Building intelligent travel platforms with AI-powered recommendations",
-    description:
-      "The Tourism industry encompasses a broad range of businesses and services that cater to travelers. This includes accommodations, transportation, travel agencies, tour operators, and entertainment venues. The industry plays a significant role in global economies by generating income, creating jobs, and promoting cultural exchange. Tourism is constantly evolving, with trends like eco-tourism, adventure travel, and luxury experiences shaping the market.",
-    imageUrl:
-      "https://firebasestorage.googleapis.com/v0/b/ai-pixel-portfolio.appspot.com/o/assets%2Ftourism.avif?alt=media&token=ecacc06c-6c71-42d5-a4ee-128768193f36",
   },
   {
     name: "Trading",
@@ -40,6 +32,15 @@ const industries = [
       "The Trading industry involves the buying and selling of goods and services across different markets. This industry is crucial for the global economy as it facilitates the flow of products, resources, and capital. Trading can be divided into domestic and international markets, with activities ranging from retail and wholesale trading to complex financial instruments and commodities trading. Modern technology has transformed trading, making it faster and more accessible.",
     imageUrl:
       "https://firebasestorage.googleapis.com/v0/b/ai-pixel-portfolio.appspot.com/o/assets%2Ftrading.avif?alt=media&token=4afcab9a-1198-4554-b75f-9c8d54577a11",
+  },
+  {
+    name: "Tourism",
+    cardtitle:
+      "Building intelligent travel platforms with AI-powered recommendations",
+    description:
+      "The Tourism industry encompasses a broad range of businesses and services that cater to travelers. This includes accommodations, transportation, travel agencies, tour operators, and entertainment venues. The industry plays a significant role in global economies by generating income, creating jobs, and promoting cultural exchange. Tourism is constantly evolving, with trends like eco-tourism, adventure travel, and luxury experiences shaping the market.",
+    imageUrl:
+      "https://firebasestorage.googleapis.com/v0/b/ai-pixel-portfolio.appspot.com/o/assets%2Ftourism.avif?alt=media&token=ecacc06c-6c71-42d5-a4ee-128768193f36",
   },
   {
     name: "Automotive",
@@ -55,46 +56,66 @@ const IndustriesWeWorkWith = () => {
   const [activeTab, setActiveTab] = useState(0);
 
   const industryCards = useMemo(() => {
-    return industries.map((industry, index) => (
-      <li key={index}>
-        <button
-          className={`w-full text-xs sm:text-base px-1 overflow-x-hidden lg:text-black lg:bg-white border border-gray-300 py-2 rounded-md shadow-md lg:hover:bg-gray-100 focus:outline-none ${
-            activeTab === index ? "border-indigo-600 text-white bg-black" : ""
-          }`}
-          onClick={() => setActiveTab(index)}
-        >
-          {industry.name}
-        </button>
-      </li>
-    ));
+    return industries.map((industry, index) => {
+      // Define styles for active and inactive tabs
+      const isActive = activeTab === index;
+      // Gradient for active tab: from-blue-800 to-blue-400 for a dark to light blue effect
+      const activeClasses =
+        "bg-gradient-to-r from-blue-800 to-blue-400 text-white shadow-lg";
+      const inactiveClasses =
+        "bg-white text-gray-700 hover:bg-gray-50 border border-gray-200";
+
+      // Ensure "FinTech" is displayed correctly if the data has "Fintech"
+      const name = industry.name === "Fintech" ? "FinTech" : industry.name;
+
+      return (
+        <li key={index} className="flex-shrink-0">
+          {" "}
+          <button
+            className={`
+              text-sm sm:text-base px-5 py-2.5 rounded-full font-medium transition-all duration-200 whitespace-nowrap
+              ${isActive ? activeClasses : inactiveClasses}
+            `}
+            onClick={() => setActiveTab(index)}
+          >
+            {name}{" "}
+          </button>{" "}
+        </li>
+      );
+    });
   }, [activeTab]);
 
-  return (
-    <div className="w-full px-10 mb-5 py-6">
-      <ul className="grid grid-cols-3 gap-4 mt-10">{industryCards}</ul>
+  const activeIndustry = industries[activeTab];
 
-      <div className="flex mt-8">
-        <div className="lg:w-1/2 ">
-          <h2 className="text-2xl font-semibold mb-4">
-            {industries[activeTab].cardtitle}
-          </h2>
-          <p className="text-gray-600">{industries[activeTab].description}</p>
+  return (
+    <div className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8 py-10">
+      {/* Tabs Container - styled to flow horizontally and wrap slightly */}{" "}
+      <ul className="flex justify-between mt-4 mb-16 overflow-x-auto">
+        {industryCards}
+      </ul>
+      {/* Content Card Section */}{" "}
+      <div className="flex flex-col lg:flex-row items-start lg:gap-16">
+        {/* Text Content (Left Side) */}{" "}
+        <div className="lg:w-1/2 order-2 lg:order-1 mt-8 lg:mt-0">
+          {" "}
+          <h2 className="text-3xl font-bold mb-6 text-gray-900">
+            {activeIndustry.cardtitle}{" "}
+          </h2>{" "}
+          <p className="text-gray-700 leading-relaxed text-base">
+            {activeIndustry.description}{" "}
+          </p>{" "}
         </div>
-        <div className="sm:w-1/2 hidden lg:block">
+        {/* Image Display (Right Side) */}{" "}
+        <div className="lg:w-1/2 order-1 lg:order-2 w-full">
+          {" "}
           <img
-            src={industries[activeTab].imageUrl}
-            alt={industries[activeTab].name}
-            srcSet={`
-              ${industries[activeTab].imageUrl}&w=320 320w,
-              ${industries[activeTab].imageUrl}&w=480 480w,
-              ${industries[activeTab].imageUrl}&w=800 800w
-            `}
-            sizes="(max-width: 600px) 320px, (max-width: 900px) 480px, 800px"
-            className="w-full h-[25rem] rounded-lg"
+            src={activeIndustry.imageUrl}
+            alt={activeIndustry.cardtitle}
+            className="w-full h-auto max-h-[25rem] object-cover rounded-2xl shadow-xl"
             loading="lazy"
-          />
-        </div>
-      </div>
+          />{" "}
+        </div>{" "}
+      </div>{" "}
     </div>
   );
 };

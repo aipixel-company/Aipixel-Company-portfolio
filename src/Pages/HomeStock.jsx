@@ -14,9 +14,9 @@ export default function HomeStock() {
 
       <HomeSlider/>
        <HomeExpertise/>
-       <CustomerSuccessSlider/>
        <CollaboratingPartners/>
        <BlogSection/>
+       <CustomerSuccessSlider/>
        <Map/>
        <ContactusFormSection/>
 
