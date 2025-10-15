@@ -2,9 +2,25 @@ import React from "react";
 
 function ServicesMain() {
   return (
-    <section className="relative xl:h-[70vh] h-[60vh] bg-gradient-to-r from-[#647A82] to-[#00BFA6] flex items-center">
-      {/* Overlay (optional subtle dark layer for readability) */}
-      <div className="absolute inset-0 bg-black/30"></div>
+    <section className="relative pt-[4rem] xl:h-[70vh] h-[60vh] flex items-center overflow-hidden">
+      {/* Professional Bluish Gradient Background */}
+      <div className="absolute inset-0 z-0 bg-gradient-to-r from-[#1B3C73] via-[#2E8BC0] to-[#00BFA6]" />
+
+      {/* Soft Aurora Glow Overlay for Depth */}
+      <div
+        className="absolute inset-0 z-0 opacity-80"
+        style={{
+          background: `
+            radial-gradient(ellipse 80% 60% at 70% 20%, rgba(175, 109, 255, 0.45), transparent 68%),
+            radial-gradient(ellipse 70% 60% at 20% 80%, rgba(255, 100, 180, 0.35), transparent 68%),
+            radial-gradient(ellipse 60% 50% at 60% 65%, rgba(255, 235, 170, 0.45), transparent 68%),
+            radial-gradient(ellipse 65% 40% at 50% 60%, rgba(120, 190, 255, 0.25), transparent 68%)
+          `,
+        }}
+      />
+
+      {/* Optional dark overlay for readability */}
+      <div className="absolute inset-0 bg-black/30 z-0"></div>
 
       {/* Content */}
       <div className="relative z-10 w-full flex flex-col items-center justify-center text-center px-6 lg:px-20">

@@ -1,5 +1,9 @@
-import React, { useState, useMemo } from "react";
+import React from "react"
+import industriesbg from "../assets/industries-bg.jpg"
+const DUMMY_BACKGROUND_URL = industriesbg; 
+// This image provides a dark, abstract, and high-tech/futuristic aesthetic suitable for the design.
 
+// The original industries array remains the same
 const industries = [
   {
     name: "Logistics",
@@ -18,7 +22,7 @@ const industries = [
       "https://firebasestorage.googleapis.com/v0/b/ai-pixel-portfolio.appspot.com/o/assets%2Fecommerce.avif?alt=media&token=785b25c8-10f5-4fdb-a380-57297ecb49aa",
   },
   {
-    name: "FinTech", // Changed from "Fintech" to match the image case
+    name: "FinTech",
     cardtitle: "Fintech Solutions for a Secure and Efficient Future",
     description:
       "The Fintech industry is a dynamic and rapidly evolving sector that combines finance and technology. It encompasses a wide range of applications, including mobile banking, online lending, peer-to-peer payments, blockchain, and cryptocurrency. Fintech companies aim to make financial services more accessible, efficient, and user-friendly, disrupting traditional banking models and offering innovative solutions to both businesses and consumers.",
@@ -53,69 +57,106 @@ const industries = [
 ];
 
 const IndustriesWeWorkWith = () => {
-  const [activeTab, setActiveTab] = useState(0);
+  // Use a temporary combined array for the infinite loop effect: original + copy
+  const carouselItems = [...industries, ...industries];
 
-  const industryCards = useMemo(() => {
-    return industries.map((industry, index) => {
-      // Define styles for active and inactive tabs
-      const isActive = activeTab === index;
-      // Gradient for active tab: from-blue-800 to-blue-400 for a dark to light blue effect
-      const activeClasses =
-        "bg-gradient-to-r from-blue-800 to-blue-400 text-white shadow-lg";
-      const inactiveClasses =
-        "bg-white text-gray-700 hover:bg-gray-50 border border-gray-200";
-
-      // Ensure "FinTech" is displayed correctly if the data has "Fintech"
-      const name = industry.name === "Fintech" ? "FinTech" : industry.name;
-
-      return (
-        <li key={index} className="flex-shrink-0">
-          {" "}
-          <button
-            className={`
-              text-sm sm:text-base px-5 py-2.5 rounded-full font-medium transition-all duration-200 whitespace-nowrap
-              ${isActive ? activeClasses : inactiveClasses}
-            `}
-            onClick={() => setActiveTab(index)}
-          >
-            {name}{" "}
-          </button>{" "}
-        </li>
-      );
-    });
-  }, [activeTab]);
-
-  const activeIndustry = industries[activeTab];
+  const IndustryCard = ({ industry, index }) => (
+    <div
+      // Adjusted card styling for dark background: darker background, vibrant border
+      className="flex-shrink-0 w-80 lg:w-96 p-6 mx-4 rounded-3xl bg-slate-900/90 shadow-2xl transition-all duration-300 transform hover:scale-[1.02] border border-blue-700/50 backdrop-blur-sm"
+    >
+      <div className="relative h-48 mb-4 overflow-hidden rounded-xl">
+        <img
+          src={industry.imageUrl}
+          alt={industry.cardtitle}
+          className="w-full h-full object-cover"
+          loading="lazy"
+        />
+        {/* Industry Tag Overlay */}
+        <span className="absolute top-3 left-3 bg-blue-600 text-white text-xs font-semibold px-3 py-1.5 rounded-full shadow-md uppercase tracking-wider">
+          {industry.name}
+        </span>
+      </div>
+      {/* Adjusted text colors for dark mode */}
+      <h3 className="text-xl font-bold text-white mb-3">{industry.cardtitle}</h3>
+      <p className="text-gray-400 text-sm line-clamp-4">{industry.description}</p>
+    </div>
+  );
 
   return (
-    <div className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8 py-10">
-      {/* Tabs Container - styled to flow horizontally and wrap slightly */}{" "}
-      <ul className="flex justify-between mt-4 mb-16 overflow-x-auto">
-        {industryCards}
-      </ul>
-      {/* Content Card Section */}{" "}
-      <div className="flex flex-col lg:flex-row items-start lg:gap-16">
-        {/* Text Content (Left Side) */}{" "}
-        <div className="lg:w-1/2 order-2 lg:order-1 mt-8 lg:mt-0">
-          {" "}
-          <h2 className="text-3xl font-bold mb-6 text-gray-900">
-            {activeIndustry.cardtitle}{" "}
-          </h2>{" "}
-          <p className="text-gray-700 leading-relaxed text-base">
-            {activeIndustry.description}{" "}
-          </p>{" "}
+    <div className="min-h-screen w-full relative overflow-hidden flex items-center">
+      {/* Image Background Layer (Z-index 0) */}
+      <div
+        className="absolute inset-0 z-0 bg-cover bg-center"
+        style={{
+          // Using the publicly accessible URL instead of the failed local import
+          backgroundImage: `url(${DUMMY_BACKGROUND_URL})`,
+        }}
+      >
+        {/* Dark overlay for contrast and mood */}
+        <div className="absolute inset-0 bg-black opacity-70" />
+      </div>
+
+      {/* Content/Carousel Section (Z-index 10) */}
+      <div className="relative z-10 w-full py-20">
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+          {/* Title on Top (Text colors adjusted for dark background) */}
+          <div className="text-center mb-12 lg:mb-16">
+            <span className="text-blue-400 font-semibold uppercase tracking-widest text-sm">
+              Our Expertise
+            </span>
+            <h2 className="text-4xl sm:text-5xl font-extrabold text-white mt-2">
+              Industries We Transform
+            </h2>
+            <p className="mt-4 text-xl text-gray-300 max-w-3xl mx-auto">
+              Partnering with leading businesses to build the future of their respective sectors.
+            </p>
+          </div>
+
+          {/* Auto-Scrolling Carousel Container */}
+          <div className="relative overflow-hidden group py-4">
+            {/* CSS for the auto-scroll animation (inline for simplicity/Tailwind-like usage) */}
+            <style jsx="true">{`
+              @keyframes infinite-scroll {
+                from {
+                  transform: translateX(0);
+                }
+                to {
+                  /* Move exactly half the container's width (which is the width of all original items) */
+                  transform: translateX(-50%);
+                }
+              }
+
+              /* Base speed for the scroll */
+              .carousel-scroll {
+                animation: infinite-scroll 40s linear infinite;
+              }
+
+              
+            `}</style>
+            
+            {/* Gradient Fade to create the 'infinite' effect at the edges. Blends with dark background. */}
+            <div className="absolute inset-y-0 left-0 w-20 bg-gradient-to-r from-black/90 to-transparent z-10 pointer-events-none"></div>
+            <div className="absolute inset-y-0 right-0 w-20 bg-gradient-to-l from-black/90 to-transparent z-10 pointer-events-none"></div>
+
+            {/* The scrolling track */}
+            <div
+              className="flex carousel-scroll"
+              // Set min-width to double the content length to accommodate the duplicated items
+              // 20rem (card width + margin) * 12 items = 240rem. Using a higher value for safety.
+              style={{ minWidth: `250rem` }} 
+            >
+              {carouselItems.map((industry, index) => (
+                <IndustryCard
+                  key={index} 
+                  industry={industry}
+                  index={index}
+                />
+              ))}
+            </div>
+          </div>
         </div>
-        {/* Image Display (Right Side) */}{" "}
-        <div className="lg:w-1/2 order-1 lg:order-2 w-full">
-          {" "}
-          <img
-            src={activeIndustry.imageUrl}
-            alt={activeIndustry.cardtitle}
-            className="w-full h-auto max-h-[25rem] object-cover rounded-2xl shadow-xl"
-            loading="lazy"
-          />{" "}
-        </div>{" "}
-      </div>{" "}
+      </div>
     </div>
   );
 };
