@@ -1,141 +1,197 @@
 import React from "react";
+import { motion } from "framer-motion";
 import moosa from "../assets/moosa.png";
 import larace from "../assets/larace.png";
 import bankmusqat from "../assets/bankmusqat.png";
 import dtec from "../assets/dtec.png";
-import adventureclub from "../assets/adventureclub.png"
-import arkaan from "../assets/arkaan.png"
-import techgalaxy from "../assets/techgalaxy.png"
-import absher from "../assets/absher.png"
-import airhub from "../assets/airhub.png"
-import birdsworld from "../assets/birdsworld.png"
-
-import seedlogo from "../assets/seedlogo.png"
-
-import universalskills from "../assets/universalskills.png"
-import turing from "../assets/turing.png"
-
+import adventureclub from "../assets/adventureclub.png";
+import arkaan from "../assets/arkaan.png";
+import techgalaxy from "../assets/techgalaxy.png";
+import absher from "../assets/absher.png";
+import airhub from "../assets/airhub.png";
+import birdsworld from "../assets/birdsworld.png";
+import seedlogo from "../assets/seedlogo.png";
+import universalskills from "../assets/universalskills.png";
+import turing from "../assets/turing.png";
 const testimonials = [
- 
   {
     logo: dtec,
     companyType: "Retail",
-    description: "Discover a comprehensive start-up ecosystem designed for retail innovation and success.",
-    height: "70px"
+    description:
+      "Discover a comprehensive start-up ecosystem designed for retail innovation and success.",
+    height: "70px",
   },
   {
     logo: moosa,
     companyType: "Automotive",
-    description: "Leading automotive company in Oman, renowned for excellence and innovation.",
-    height: "70px"
+    description:
+      "Leading automotive company in Oman, renowned for excellence and innovation.",
+    height: "70px",
   },
   {
     logo: bankmusqat,
     companyType: "Finance",
-    description: "Top financial institution in Saudi Arabia and the Middle East, providing exceptional banking services.",
-    height: "50px"
+    description:
+      "Top financial institution in the Middle East, providing exceptional banking services.",
+    height: "50px",
   },
   {
     logo: adventureclub,
-    companyType: "Finance",
-    description: "Premier financial institution in Saudi Arabia and the Middle East, offering unmatched financial solutions.",
-    height: "90px"
+    companyType: "Travel & Adventure",
+    description:
+      "Creating unforgettable travel experiences with a focus on exploration and adventure.",
+    height: "90px",
   },
   {
     logo: arkaan,
-    companyType: "Finance",
-    description: "Leading financial institution in Saudi Arabia and the Middle East, delivering outstanding financial services.",
-    height: "80px"
+    companyType: "Construction",
+    description:
+      "A leader in the construction industry, delivering quality and excellence in every project.",
+    height: "80px",
   },
   {
     logo: larace,
     companyType: "Blockchain",
-    description: "Experience the thrill of horse racing combined with the endless opportunities of the blockchain-powered metaverse.",
-    height: "180px"
+    description:
+      "Horse racing meets blockchain — redefining virtual sports and metaverse innovation.",
+    height: "180px",
   },
   {
     logo: seedlogo,
     companyType: "Finance",
-    description: "Prominent financial institution in Saudi Arabia and the Middle East, specializing in comprehensive financial services.",
-    height: "60px"
+    description:
+      "Prominent financial services provider with a strong focus on digital innovation.",
+    height: "60px",
   },
   {
     logo: techgalaxy,
-    companyType: "Finance",
-    description: "Top-tier financial institution in Saudi Arabia and the Middle East, offering cutting-edge financial services.",
-    height: "60px"
+    companyType: "Technology",
+    description:
+      "Building next-generation tech solutions that power digital transformation.",
+    height: "60px",
   },
   {
     logo: turing,
-    companyType: "Finance",
-    description: "Leading financial institution in Saudi Arabia and the Middle East, renowned for exceptional financial solutions.",
-    height: "75px"
+    companyType: "IT Solutions",
+    description:
+      "Leading IT company offering scalable, secure, and AI-driven software systems.",
+    height: "75px",
   },
   {
     logo: universalskills,
-    companyType: "Finance",
-    description: "Premier financial institution in Saudi Arabia and the Middle East, delivering top-notch financial services.",
-    height: "90px"
+    companyType: "Education",
+    description:
+      "Empowering global learners through innovative skill development platforms.",
+    height: "90px",
   },
   {
     logo: absher,
     companyType: "NFC",
-    description: "Connect instantly using NFC technology with ABSHER digital business cards.",
-    height: "80px"
+    description:
+      "Revolutionizing digital interactions with NFC-powered smart business cards.",
+    height: "80px",
   },
   {
     logo: airhub,
     companyType: "Surveillance",
-    description: "Total Control for Your Drone Operations Fleet management, compliance, and real-time situational awareness in one secure platform.",
-    height: "80px"
+    description:
+      "Complete drone operations management with compliance and real-time awareness.",
+    height: "80px",
   },
   {
     logo: birdsworld,
-    companyType: "Ecommerce",
-    description: "An online marketplace platform where multiple vendors (suppliers, manufacturers, or wholesalers) can list and sell their products or services.",
-    height: "80px"
+    companyType: "E-commerce",
+    description:
+    "A multi-vendor platform bringing global sellers and buyers together seamlessly.",
+    height: "80px",
   },
 ];
 
+const ClientsSection = () => {
+  return (
+    <section className="relative py-28 px-6 overflow-hidden">
+      {/* Background (Kept dark for strong contrast) */}
+      <div
+        className="absolute inset-0 -z-10"
+        style={{
+          background:
+            "radial-gradient(125% 125% at 50% 100%, #000000 40%, #010133 100%)",
+        }}
+      />
 
-const ClientsSection = () => (
-  <div className="bg-gray-900 text-gray-100 sm:pt-12">
-    <div className="sm:mt-24 py-5 sm:py-16 mx-auto bg-gray-100 text-gray-900 sm:rounded-lg shadow-lg">
-      <div>
-        <h2 className="text-center text-gray-800 text-4xl lg:text-5xl font-bold leading-tight">
-          Our Clients
+      {/* Soft glowing orb (Subtle light source) */}
+      <div className="absolute top-1/2 left-1/2 -translate-x-1/2 w-[800px] h-[800px] bg-blue-600/10 blur-[160px] rounded-full pointer-events-none" />
+
+      {/* Title Section */}
+      <motion.div
+        initial={{ opacity: 0, y: 40 }}
+        whileInView={{ opacity: 1, y: 0 }}
+        transition={{ duration: 1 }}
+        className="text-center text-white mb-14"
+      >
+        <h2 className="text-4xl md:text-5xl font-extrabold mb-4">
+          Our Valued Clients
         </h2>
-        <div className="my-4 mx-auto w-full h-2 border-4 border-indigo-500"></div>
-        <div className="text-center text-gray-700 font-light">
-          We are proud of contributing to the success of the world’s leading
-          brands
-        </div>
-      </div>
-      <div className="grid md:grid-cols-2 lg:grid-cols-5 p-2">
-        {testimonials.map((testimonial, index) => (
-          <div
+        <p className="text-gray-400 text-lg max-w-2xl mx-auto">
+          Proudly partnering with global innovators, pioneers, and industry leaders
+          to shape the digital future.
+        </p>
+        <div className="mx-auto mt-6 w-24 h-1 bg-gradient-to-r from-blue-500 via-indigo-500 to-purple-500 rounded-full" />
+      </motion.div>
+
+      {/* Clients Grid */}
+      <div className="max-w-7xl mx-auto grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 lg:grid-cols-5 gap-6 place-items-center">
+        {testimonials.map((client, index) => (
+          <motion.div
             key={index}
-            className="relative border border-gray-200 h-[15rem] hover:text-black shadow p-3 bg-gray-100 text-gray-700 leading-snug flex flex-col justify-between overflow-hidden group"
+            initial={{ opacity: 0, y: 30 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.8, delay: index * 0.05 }}
+            className="group relative 
+              
+              bg-white/50 backdrop-blur-sm border border-white/50 
+              rounded-xl p-6 w-full h-[15rem] flex flex-col items-center justify-center text-center shadow-xl
+              
+              hover:bg-white/70 hover:shadow-cyan-400/50 
+              hover:-translate-y-2 transition-all duration-500 ease-out 
+              
+              /* Ensure inner text/icons look good on the lighter card */
+              text-gray-900
+            "
           >
-            <div className="flex flex-col justify-center items-center flex-grow sm:z-10 transition-all duration-500 sm:ease-in-out sm:group-hover:transform sm:group-hover:translate-y-[-3rem]">
-              <img src={testimonial.logo} style={{ height: testimonial.height }} className="" />
-            </div>
-            <div className=" hidden absolute inset-0 mt-3 sm:flex justify-center items-center z-10 transition-opacity duration-500 ease-in-out opacity-0 group-hover:opacity-100">
-              <div className=" px-3 pt-2 text-black text-sm">
-                {testimonial.description}
-              </div>
-            </div>
-            <div className=" hidden sm:block text-center  mt-4 z-10">
-              <span className="text-sm font-medium border py-1 px-2 border-gray-600 hover:border-white rounded-lg">
-                {testimonial.companyType}
-              </span>
-            </div>
-            <div className=" hidden sm:block absolute inset-0 bg-gradient-to-t from-gray-200 to-gray-500 transform scale-y-0 origin-bottom transition-transform duration-500 ease-in-out group-hover:scale-y-100"></div>
-          </div>
+            <img
+              src={client.logo}
+              alt={client.companyType}
+              style={{ height: client.height }}
+              className="object-contain mb-4 filter drop-shadow-md" // Added filter for better contrast
+            />
+            
+            <h3 className="
+              font-bold text-sm mb-2 
+              text-gray-900 group-hover:text-blue-700
+            ">
+              {client.companyType}
+            </h3>
+            
+            <p className="
+              text-gray-700 text-xs opacity-0 group-hover:opacity-100 transition-opacity duration-500 leading-relaxed
+            ">
+              {client.description}
+            </p>
+
+            {/* Glow effect (Adjusted to a lighter glow color) */}
+            <div className="absolute inset-0 rounded-xl bg-gradient-to-b from-transparent via-transparent to-cyan-500/20 opacity-0 group-hover:opacity-100 transition-opacity duration-500" />
+            
+            {/* Added an overlay element to handle the logo and text color for mixed logos */}
+             <div className="absolute inset-0 rounded-xl bg-gray-50/10 mix-blend-multiply pointer-events-none" /> 
+          </motion.div>
         ))}
       </div>
-    </div>
-  </div>
-);
+
+      {/* Bottom fade (Adjusted to match background color) */}
+      <div className="absolute bottom-0 inset-x-0 h-40 bg-gradient-to-t from-[#000000] via-transparent to-transparent pointer-events-none" />
+    </section>
+  );
+};
 
 export default ClientsSection;

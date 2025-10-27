@@ -1,5 +1,6 @@
 import React from "react";
 
+// The expertiseFeatures data remains unchanged
 const expertiseFeatures = [
   {
     title: "Custom Software Development",
@@ -17,8 +18,8 @@ const expertiseFeatures = [
         <path
           d="M0.849976 1.74998C0.849976 1.25292 1.25292 0.849976 1.74998 0.849976H3.24998C3.74703 0.849976 4.14998 1.25292 4.14998 1.74998V2.04998H10.85V1.74998C10.85 1.25292 11.2529 0.849976 11.75 0.849976H13.25C13.747 0.849976 14.15 1.25292 14.15 1.74998V3.24998C14.15 3.74703 13.747 4.14998 13.25 4.14998H12.95V10.85H13.25C13.747 10.85 14.15 11.2529 14.15 11.75V13.25C14.15 13.747 13.747 14.15 13.25 14.15H11.75C11.2529 14.15 10.85 13.747 10.85 13.25V12.95H4.14998V13.25C4.14998 13.747 3.74703 14.15 3.24998 14.15H1.74998C1.25292 14.15 0.849976 13.747 0.849976 13.25V11.75C0.849976 11.2529 1.25292 10.85 1.74998 10.85H2.04998V4.14998H1.74998C1.25292 4.14998 0.849976 3.74703 0.849976 3.24998V1.74998ZM2.94998 4.14998V10.85H3.24998C3.74703 10.85 4.14998 11.2529 4.14998 11.75V12.05H10.85V11.75C10.85 11.2529 11.2529 10.85 11.75 10.85H12.05V4.14998H11.75C11.2529 4.14998 10.85 3.74703 10.85 3.24998V2.94998H4.14998V3.24998C4.14998 3.74703 3.74703 4.14998 3.24998 4.14998H2.94998ZM2.34998 1.74998H1.74998V2.34998V2.64998V3.24998H2.34998H2.64998H3.24998V2.64998V2.34998V1.74998H2.64998H2.34998ZM5.09998 5.99998C5.09998 5.50292 5.50292 5.09998 5.99998 5.09998H6.99998C7.49703 5.09998 7.89998 5.50292 7.89998 5.99998V6.99998C7.89998 7.03591 7.89787 7.07134 7.89378 7.10618C7.92861 7.10208 7.96405 7.09998 7.99998 7.09998H8.99998C9.49703 7.09998 9.89998 7.50292 9.89998 7.99998V8.99998C9.89998 9.49703 9.49703 9.89998 8.99998 9.89998H7.99998C7.50292 9.89998 7.09998 9.49703 7.09998 8.99998V7.99998C7.09998 7.96405 7.10208 7.92861 7.10618 7.89378C7.07134 7.89787 7.03591 7.89998 6.99998 7.89998H5.99998C5.50292 7.89998 5.09998 7.49703 5.09998 6.99998V5.99998ZM6.09998 5.99998H5.99998V6.09998V6.89998V6.99998H6.09998H6.89998H6.99998V6.89998V6.09998V5.99998H6.89998H6.09998ZM7.99998 7.99998H8.09998H8.89998H8.99998V7.99998V8.09998V8.89998V8.99998H8.89998H8.09998H7.99998V8.89998V8.09998V7.99998ZM2.64998 11.75H2.34998H1.74998V12.35V12.65V13.25H2.34998H2.64998H3.24998V12.65V12.35V11.75H2.64998ZM11.75 1.74998H12.35H12.65H13.25V2.34998V2.64998V3.24998H12.65H12.35H11.75V2.64998V2.34998V1.74998ZM12.65 11.75H12.35H11.75V12.35V12.65V13.25H12.35H12.65H13.25V12.65V12.35V11.75H12.65Z"
           fill="currentColor"
-          fill-rule="evenodd"
-          clip-rule="evenodd"
+          fillRule="evenodd"
+          clipRule="evenodd"
         ></path>
       </svg>
     ),
@@ -39,8 +40,8 @@ const expertiseFeatures = [
         <path
           d="M3.00014 2.73895C3.00014 2.94698 2.76087 3.06401 2.59666 2.93628L1.00386 1.69744C0.875177 1.59735 0.875177 1.40286 1.00386 1.30277L2.59666 0.063928C2.76087 -0.0637944 3.00014 0.0532293 3.00014 0.261266V1.00012H9.00009V0.261296C9.00009 0.0532591 9.23936 -0.0637646 9.40358 0.0639578L10.9964 1.3028C11.1251 1.40289 11.1251 1.59738 10.9964 1.69747L9.40358 2.93631C9.23936 3.06404 9.00009 2.94701 9.00009 2.73898V2.00012H3.00014V2.73895ZM9.50002 4.99998H2.50002C2.22388 4.99998 2.00002 5.22384 2.00002 5.49998V12.5C2.00002 12.7761 2.22388 13 2.50002 13H9.50002C9.77616 13 10 12.7761 10 12.5V5.49998C10 5.22384 9.77616 4.99998 9.50002 4.99998ZM2.50002 4C1.67159 4 1.00002 4.67157 1.00002 5.49998V12.5C1.00002 13.3284 1.67159 14 2.50002 14H9.50002C10.3284 14 11 13.3284 11 12.5V5.49998C11 4.67157 10.3284 4 9.50002 4H2.50002ZM0.999987 2.50002C0.999987 2.22387 1.22384 2.00002 1.50002 2.00002H2.50002C2.77616 2.00002 3.00002 2.22387 3.00002 2.50002C3.00002 2.77616 2.77616 3.00002 2.50002 3.00002H1.50002C1.22384 3.00002 0.999987 2.77616 0.999987 2.50002ZM8.00009 2.50002C8.00009 2.22387 8.22394 2.00002 8.50009 2.00002H9.50009C9.77623 2.00002 10.0001 2.22387 10.0001 2.50002C10.0001 2.77616 9.77623 3.00002 9.50009 3.00002H8.50009C8.22394 3.00002 8.00009 2.77616 8.00009 2.50002Z"
           fill="currentColor"
-          fill-rule="evenodd"
-          clip-rule="evenodd"
+          fillRule="evenodd"
+          clipRule="evenodd"
         ></path>
       </svg>
     ),
@@ -61,8 +62,8 @@ const expertiseFeatures = [
         <path
           d="M7.5 1.5C4.46243 1.5 2 3.96243 2 7C2 10.0376 4.46243 12.5 7.5 12.5C10.5376 12.5 13 10.0376 13 7C13 3.96243 10.5376 1.5 7.5 1.5ZM1 7C1 3.41015 3.91015 0.5 7.5 0.5C11.0899 0.5 14 3.41015 14 7C14 10.5899 11.0899 13.5 7.5 13.5C3.91015 13.5 1 10.5899 1 7ZM5.25 7C5.25 6.58579 5.58579 6.25 6 6.25H9C9.41421 6.25 9.75 6.58579 9.75 7C9.75 7.41421 9.41421 7.75 9 7.75H6C5.58579 7.75 5.25 7.41421 5.25 7Z"
           fill="currentColor"
-          fill-rule="evenodd"
-          clip-rule="evenodd"
+          fillRule="evenodd"
+          clipRule="evenodd"
         ></path>
       </svg>
     ),
@@ -132,26 +133,60 @@ const expertiseFeatures = [
 
 export default function ExpertiseFeatures() {
   return (
-    <>
-      <div className="max-w-4xl mx-auto px-5 my-16">
-        <div className="text-center">
-          <h2 className="font-semibold text-3xl">Features you'll love</h2>
+    // Transformed to a dark, high-contrast, professional block
+    <div className="bg-gradient-to-r from-[#0f172a]  to-[#334155] py-16 lg:py-24">
+      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+        
+        {/* Section Header */}
+        <div className="text-center mb-12">
+          <p className="text-lg font-semibold text-teal-400 uppercase tracking-wider">
+            Our Core Value Proposition
+          </p>
+          <h2 className="font-extrabold text-4xl lg:text-5xl mt-2 text-white">
+            Features You'll Love
+          </h2>
         </div>
 
-        <div className="grid md:grid-cols-2 gap-10 mt-10">
+        {/* Features Grid - 3 columns for desktop, 2 for tablet/mobile */}
+        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
           {expertiseFeatures.map((feature, index) => (
-            <div key={index} className="flex gap-4 items-start">
-              <span className="text-violet-600 bg-violet-500/10 p-3 rounded-full">
-                {feature.icon}
-              </span>
-              <div>
-                <h3 className="font-semibold text-xl">{feature.title}</h3>
-                <p className="mt-1 text-gray-500">{feature.description}</p>
+            <div 
+              key={index}
+              // The transformative professional style: dark card with border, interactive hover
+              className="
+                bg-gray-800 p-6 rounded-xl border border-gray-700 
+                shadow-lg transition-all duration-300 ease-in-out
+                hover:bg-gray-700 hover:shadow-2xl hover:border-teal-500
+                transform hover:-translate-y-1 group
+              "
+            >
+              <div className="flex items-center space-x-4">
+                {/* Icon Styling: Vibrant accent color and improved hover effect */}
+                <div className="
+                    p-4 rounded-full bg-teal-400/10 text-teal-400
+                    transition-colors duration-300
+                    group-hover:bg-teal-400 group-hover:text-gray-900
+                  "
+                >
+                  {feature.icon}
+                </div>
+                
+                {/* Title */}
+                <h3 className="font-bold text-xl text-white">
+                  {feature.title}
+                </h3>
               </div>
+              
+              {/* Description */}
+              <p className="mt-4 text-gray-400 text-base leading-relaxed">
+                {feature.description}
+              </p>
             </div>
           ))}
+
+          
         </div>
       </div>
-    </>
+    </div>
   );
 }

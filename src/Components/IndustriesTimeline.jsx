@@ -1,3 +1,4 @@
+import { ChartBarIcon, ClockIcon, SparklesIcon } from "lucide-react";
 import React from "react";
 
 export default function ProjectWorkflow() {
@@ -49,21 +50,48 @@ export default function ProjectWorkflow() {
   return (
     <>
       <section>
-        <div className="bg-black text-white py-8">
+        <div className=" text-white py-8"
+        style={{
+          background:
+            "radial-gradient(125% 125% at 50% 100%, #000000 40%, #010133 100%)",
+        }}>
           <div className="container mx-auto flex flex-col items-start lg:flex-row my-12 lg:my-24">
-            <div className="flex flex-col w-full sticky lg:top-36 lg:w-1/3 mt-2 lg:mt-12 px-8">
-              <p className="text-3xl lg:text-4xl leading-normal lg:leading-relaxed mb-2">
-                Project Workflow
-              </p>
-              <p className="text-sm lg:text-base text-gray-50 mb-4">
-                Explore the stages involved in the project development process.
-              </p>
-              {/* <a
-                href="#"
-                className="bg-transparent mr-auto hover:bg-yellow-300 text-yellow-300 hover:text-white rounded shadow hover:shadow-lg py-2 px-4 border border-yellow-300 hover:border-transparent"
-              >
-                Learn More
-              </a> */}
+            <div className="flex flex-col w-full sticky lg:top-28 lg:w-1/3 mt-1 lg:mt-12 px-8">
+              {/* Main Title */}
+            <p className="text-3xl lg:text-4xl leading-normal lg:leading-relaxed mb-2 font-extrabold">
+              Project Workflow
+            </p>
+            <p className="text-lg lg:text-xl text-gray-300 mb-6 font-semibold" >
+              A Structured Path to Digital Success
+            </p>
+            <p className="text-sm lg:text-base text-gray-400 mb-8">
+              Explore the stages involved in the project development process, ensuring transparency, predictability, and control from concept to deployment.
+            </p>
+            
+            <div className="space-y-6 mb-12">
+              <div className="flex items-start space-x-4">
+                <ClockIcon className="w-6 h-6 flex-shrink-0"  />
+                <div>
+                  <h3 className="text-xl font-bold text-white">7-Week Sprints</h3>
+                  <p className="text-sm text-gray-400">Our standard development cycle, focusing on rapid iteration and delivery.</p>
+                </div>
+              </div>
+              <div className="flex items-start space-x-4">
+                <SparklesIcon className="w-6 h-6 flex-shrink-0"  />
+                <div>
+                  <h3 className="text-xl font-bold text-white">Agile Methodology</h3>
+                  <p className="text-sm text-gray-400">Enabling flexibility and continuous client feedback throughout the process.</p>
+                </div>
+              </div>
+              <div className="flex items-start space-x-4">
+                <ChartBarIcon className="w-6 h-6 flex-shrink-0"  />
+                <div>
+                  <h3 className="text-xl font-bold text-white">98% Success Rate</h3>
+                  <p className="text-sm text-gray-400">Projects completed on time and within scope due to rigorous planning.</p>
+                </div>
+              </div>
+            </div>
+              
             </div>
             <div className="ml-0 lg:ml-12 lg:w-2/3 sticky">
               <div className="container mx-auto w-full h-full">
@@ -72,7 +100,7 @@ export default function ProjectWorkflow() {
                     className="border-2-2 border-yellow-555 absolute h-full border"
                     style={{
                       right: "50%",
-                      border: "2px solid #FFC100",
+                      border: "2px solid #46B3EF",
                       borderRadius: "1%",
                     }}
                   ></div>
@@ -80,7 +108,7 @@ export default function ProjectWorkflow() {
                     className="border-2-2 border-yellow-555 absolute h-full border"
                     style={{
                       left: "50%",
-                      border: "2px solid #FFC100",
+                      border: "2px solid #46B3EF",
                       borderRadius: "1%",
                     }}
                   ></div>
@@ -99,7 +127,7 @@ export default function ProjectWorkflow() {
                       <div
                         className={`order-1 w-5/12 px-1 py-4 text-${step.position}`}
                       >
-                        <p className="mb-3 text-base text-yellow-300">
+                        <p className="mb-3 text-base text-[#46B3EF]">
                           {step.date}
                         </p>
                         <h4 className="mb-3 font-bold text-lg lg:text-2xl">
