@@ -14,13 +14,13 @@ const cardData = [
   {
     title: "DevOps",
     description:
-      "AI Pixel embraces DevOps practices to bridge the gap between development and operations. This approach utilizes tools and techniques like continuous integration, continuous delivery, infrastructure as code, and monitoring to shorten the development lifecycle, ensure consistent quality, and automate processes.  This collaborative approach fosters efficient software delivery and minimizes deployment disruptions.",
+      "AI Pixal embraces DevOps practices to bridge the gap between development and operations. This approach utilizes tools and techniques like continuous integration, continuous delivery, infrastructure as code, and monitoring to shorten the development lifecycle, ensure consistent quality, and automate processes.  This collaborative approach fosters efficient software delivery and minimizes deployment disruptions.",
   },
   
   {
     title: "No-Code Platforms",
     description:
-      "  AI Pixel understands the growing demand for user-friendly website and application development tools.  They leverage leading no-code platforms like Bubble.io, Flutter Flow, Wix, and Webflow, empowering businesses to create functional websites and applications without extensive coding knowledge. These platforms offer intuitive interfaces, drag-and-drop functionality, and pre-built templates, allowing businesses to launch their digital presence quickly and efficiently.",
+      "  AI Pixal understands the growing demand for user-friendly website and application development tools.  They leverage leading no-code platforms like Bubble.io, Flutter Flow, Wix, and Webflow, empowering businesses to create functional websites and applications without extensive coding knowledge. These platforms offer intuitive interfaces, drag-and-drop functionality, and pre-built templates, allowing businesses to launch their digital presence quickly and efficiently.",
   },
   {
     title: "Angular",
@@ -41,11 +41,11 @@ export default function IndustriesCards() {
       <div className="bg-black">
         <div className=" sm:px-6 p-3 py-10 mx-auto">
           <h1 className="text-3xl font-semibold capitalize lg:text-4xl text-white">
-            AI Pixel: Powering Innovation with Cutting-Edge Technologies
+            AI Pixal: Powering Innovation with Cutting-Edge Technologies
           </h1>
 
           <p className="mt-4 xl:mt-6 text-gray-300">
-            AI Pixel stays at the forefront of technological advancements to
+            AI Pixal stays at the forefront of technological advancements to
             deliver the most robust and innovative solutions for your business
             needs. Here's a glimpse into the key technologies that fuel their
             expertise:

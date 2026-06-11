@@ -34,7 +34,7 @@ const expertiseData = [
     id: 1,
     field: "Web Development",
     name: "Web Development",
-    description: "AI Pixel builds scalable and visually appealing web applications that deliver outstanding performance and adapt seamlessly to future business growth.",
+    description: "AI Pixal builds scalable and visually appealing web applications that deliver outstanding performance and adapt seamlessly to future business growth.",
     image: techImages.webDev,
     gradient: "from-blue-500 to-cyan-500",
     icon: "🌐"
@@ -70,7 +70,7 @@ const expertiseData = [
     id: 5,
     field: "Mobile App Development",
     name: "Mobile App Development",
-    description: "AI Pixel designs and develops mobile apps that offer seamless user experiences across all platforms with effective prototyping.",
+    description: "AI Pixal designs and develops mobile apps that offer seamless user experiences across all platforms with effective prototyping.",
     image: techImages.mobile,
     gradient: "from-indigo-500 to-purple-500",
     icon: "📱"
@@ -88,7 +88,7 @@ const expertiseData = [
     id: 7,
     field: "Quality Assurance",
     name: "Quality Assurance",
-    description: "AI Pixel ensures top quality by performing rigorous testing processes that eliminate bugs and guarantee optimal stability.",
+    description: "AI Pixal ensures top quality by performing rigorous testing processes that eliminate bugs and guarantee optimal stability.",
     image: techImages.qa,
     gradient: "from-green-600 to-lime-500",
     icon: "✅"
@@ -115,7 +115,7 @@ const expertiseData = [
     id: 10,
     field: "Fintech",
     name: "Fintech",
-    description: "AI Pixel develops innovative financial solutions, empowering businesses with secure, modern, and compliant technologies.",
+    description: "AI Pixal develops innovative financial solutions, empowering businesses with secure, modern, and compliant technologies.",
     image: techImages.fintech,
     gradient: "from-green-600 to-emerald-600",
     icon: "💰"
@@ -142,7 +142,7 @@ const expertiseData = [
     id: 13,
     field: "Project Management",
     name: "Project Management",
-    description: "AI Pixel ensures projects are delivered on time, within scope, and with maximum efficiency using proven frameworks.",
+    description: "AI Pixal ensures projects are delivered on time, within scope, and with maximum efficiency using proven frameworks.",
     image: techImages.project,
     gradient: "from-purple-600 to-indigo-600",
     icon: "📊"
@@ -169,7 +169,7 @@ const expertiseData = [
     id: 16,
     field: "Programming Languages",
     name: "Programming Languages",
-    description: "AI Pixel developers are proficient in a wide range of programming languages, enabling tailored solutions across diverse platforms.",
+    description: "AI Pixal developers are proficient in a wide range of programming languages, enabling tailored solutions across diverse platforms.",
     image: techImages.programming,
     gradient: "from-indigo-500 to-purple-500",
     icon: "👨‍💻"
@@ -205,7 +205,7 @@ const expertiseData = [
     id: 20,
     field: "Databases",
     name: "Databases",
-    description: "AI Pixel designs secure, efficient, and scalable database systems that ensure reliable data storage and management.",
+    description: "AI Pixal designs secure, efficient, and scalable database systems that ensure reliable data storage and management.",
     image: techImages.databases,
     gradient: "from-blue-600 to-cyan-600",
     icon: "🗄️"
@@ -232,7 +232,7 @@ const expertiseData = [
     id: 26,
     field: "Software Development Life Cycle",
     name: "SDLC",
-    description: "AI Pixel follows a structured SDLC methodology to ensure projects move smoothly from concept to deployment with quality.",
+    description: "AI Pixal follows a structured SDLC methodology to ensure projects move smoothly from concept to deployment with quality.",
     image: techImages.sdlc,
     gradient: "from-indigo-500 to-purple-500",
     icon: "🔄"

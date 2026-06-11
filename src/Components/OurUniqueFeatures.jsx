@@ -6,17 +6,17 @@ const features = [
   {
     title: "Engineering with Passion",
     description:
-      "At AI-PIXEL, we blend innovation and dedication to create AI-driven software solutions that transform ideas into reality. Our passionate team of AI engineers is committed to pushing boundaries, delivering excellence, and driving success in every AI project we undertake.",
+      "At AI-PIXAL, we blend innovation and dedication to create AI-driven software solutions that transform ideas into reality. Our passionate team of AI engineers is committed to pushing boundaries, delivering excellence, and driving success in every AI project we undertake.",
   },
   {
     title: "Performance Focus",
     description:
-      "At AI-PIXEL, we prioritize performance in every aspect of our AI-driven solutions. Our advanced AI technologies are designed to optimize efficiency, enhance user experience, and deliver exceptional results. Our commitment to high performance ensures your business thrives in the competitive digital landscape.",
+      "At AI-PIXAL, we prioritize performance in every aspect of our AI-driven solutions. Our advanced AI technologies are designed to optimize efficiency, enhance user experience, and deliver exceptional results. Our commitment to high performance ensures your business thrives in the competitive digital landscape.",
   },
   {
     title: "Dedication to Success",
     description:
-      "At AI-PIXEL, your success is our mission. We are dedicated to providing innovative AI-driven solutions that drive business growth and deliver outstanding results. Our unwavering commitment to your success ensures your business achieves its fullest potential in the AI and technology space.",
+      "At AI-PIXAL, your success is our mission. We are dedicated to providing innovative AI-driven solutions that drive business growth and deliver outstanding results. Our unwavering commitment to your success ensures your business achieves its fullest potential in the AI and technology space.",
   },
 ];
 
@@ -25,7 +25,7 @@ export default function OurUniqueFeatures() {
   return (
     <div className=" lg:h-[60vh] md:mx-14 mx-5">
       <h1 className="text-center text-4xl font-body pt-5 mt-5">
-        What's Different About AI-PIXEL?
+        What's Different About AI-PIXAL?
       </h1>
       <div className="p-4 mt-6 ">
         <div className="lg:flex">

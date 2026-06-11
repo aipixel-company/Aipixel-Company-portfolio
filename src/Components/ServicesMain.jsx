@@ -32,7 +32,7 @@ function ServicesMain() {
         </h1>
 
         <p className="mt-6 text-lg md:text-xl text-gray-100 max-w-3xl">
-          At <span className="font-semibold text-yellow-300">AI-PIXEL</span>, we
+          At <span className="font-semibold text-yellow-300">AI-PIXAL</span>, we
           design next-gen digital products with intelligent automation,
           scalable technology, and human-centered design — helping your business
           thrive in the AI era.

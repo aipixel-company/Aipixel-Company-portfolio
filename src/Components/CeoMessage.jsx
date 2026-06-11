@@ -5,9 +5,9 @@ import ceo from "../assets/ceo.jpeg";
 const CeoMessage = () => {
   const ceoDetails = {
     name: "Mian Usman",
-    title: "Founder & CEO, AIPIXEL",
+    title: "Founder & CEO, AIPIXAL",
     message:
-      "Welcome to AIPIXEL — where intelligence meets innovation. We believe in transforming ideas into digital realities through the power of artificial intelligence, automation, and design excellence. Our vision is to empower businesses globally with smart, scalable, and future-driven technology solutions. Every line of code we write, every system we build, and every experience we design is guided by one mission — shaping the future of intelligent software.",
+      "Welcome to AIPIXAL — where intelligence meets innovation. We believe in transforming ideas into digital realities through the power of artificial intelligence, automation, and design excellence. Our vision is to empower businesses globally with smart, scalable, and future-driven technology solutions. Every line of code we write, every system we build, and every experience we design is guided by one mission — shaping the future of intelligent software.",
     image: ceo,
   };
 

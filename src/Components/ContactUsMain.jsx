@@ -99,7 +99,7 @@ function ContactUsMain() {
         <div className="relative z-10 text-center lg:text-left max-w-lg">
           <h2 className="text-4xl font-extrabold mb-4">Let’s Build the Future</h2>
           <p className="text-lg mb-6 opacity-90">
-            At <span className="font-semibold text-indigo-300">AI-Pixel</span>,
+            At <span className="font-semibold text-indigo-300">AI-Pixal</span>,
             we believe in innovation without limits. Share your ideas, and let’s
             turn them into intelligent, future-ready solutions.
           </p>

@@ -127,7 +127,7 @@ const CustomerSuccessSlider = () => {
     },
     {
       title: "Horizon Trading",
-      content: "When looking for a strategic IT-partner for the development of a corporate ERP solution, we chose Ai-Pixel. The company proved itself a reliable provider of IT services with exceptional technical expertise.",
+      content: "When looking for a strategic IT-partner for the development of a corporate ERP solution, we chose Ai-Pixal. The company proved itself a reliable provider of IT services with exceptional technical expertise.",
       author: 'Sarah Johnson',
       position: 'CTO',
       company: 'Horizon Trading',
@@ -149,7 +149,7 @@ const CustomerSuccessSlider = () => {
     },
     {
       title: "Muhanad",
-      content: "Ai-Pixel was chosen to replace our previous development team and to work on relaunching our freight forwarding logistics web-service after careful research and several conversations. Outstanding results!",
+      content: "Ai-Pixal was chosen to replace our previous development team and to work on relaunching our freight forwarding logistics web-service after careful research and several conversations. Outstanding results!",
       author: 'Muhanad Ali',
       position: 'Operations Director',
       company: 'Logistics Pro',
@@ -197,7 +197,7 @@ const CustomerSuccessSlider = () => {
           </h2>
           
           <p className="text-xl text-gray-600 max-w-3xl mx-auto leading-relaxed">
-            Discover why businesses trust AI Pixel for their digital transformation journey. 
+            Discover why businesses trust AI Pixal for their digital transformation journey. 
             Here's what our satisfied clients have to say about their experience.
           </p>
         </div>

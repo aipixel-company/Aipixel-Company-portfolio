@@ -43,7 +43,7 @@ export default function IndustriesMain() {
           </header>
 
           <p className={`${paragraphClasses} mx-auto lg:mx-0`}>
-            At AI Pixel, we deploy specialized expertise to create transformative AI and data engineering solutions. Our deep industry knowledge allows us to tackle the unique challenges and opportunities across diverse sectors, focusing on measurable business impact.
+            At AI Pixal, we deploy specialized expertise to create transformative AI and data engineering solutions. Our deep industry knowledge allows us to tackle the unique challenges and opportunities across diverse sectors, focusing on measurable business impact.
           </p>
           
           

@@ -4,17 +4,17 @@ const services = [
   {
     title: "Application Development",
     description:
-      "At AI-Pixel, we specialize in building robust and scalable applications tailored to your unique business needs. Leverage our expertise in cutting-edge technologies to create applications that drive efficiency, engagement, and growth.",
+      "At AI-Pixal, we specialize in building robust and scalable applications tailored to your unique business needs. Leverage our expertise in cutting-edge technologies to create applications that drive efficiency, engagement, and growth.",
   },
   {
     title: "Cloud Migration",
     description:
-      "AI-Pixel offers seamless cloud migration services to help you transition your applications and data with minimal downtime. Our cloud experts design a customized migration strategy to ensure security, scalability, and cost-efficiency.",
+      "AI-Pixal offers seamless cloud migration services to help you transition your applications and data with minimal downtime. Our cloud experts design a customized migration strategy to ensure security, scalability, and cost-efficiency.",
   },
   {
     title: "Application Re-engineering",
     description:
-      "Modernize your legacy applications with AI-Pixel's application re-engineering services. We enhance and transform your existing software to improve performance, usability, and maintainability.",
+      "Modernize your legacy applications with AI-Pixal's application re-engineering services. We enhance and transform your existing software to improve performance, usability, and maintainability.",
   },
 ];
 

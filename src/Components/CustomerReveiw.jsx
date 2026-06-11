@@ -15,7 +15,7 @@ const testimonials = [
   },
   {
     quote:
-      "When looking for a strategic IT-partner for the development of a corporate ERP solution, we chose Ai-Pixel. The company proved itself a reliable provider of IT services.",
+      "When looking for a strategic IT-partner for the development of a corporate ERP solution, we chose Ai-Pixal. The company proved itself a reliable provider of IT services.",
     author: "Horizon Trading",
     title: "Project Manager",
   },
@@ -27,7 +27,7 @@ const testimonials = [
   },
   {
     quote:
-      "Ai-Pixel was chosen to replace our previous development team and to work on relaunching our freight forwarding logistics web-service after careful research and several conversations.",
+      "Ai-Pixal was chosen to replace our previous development team and to work on relaunching our freight forwarding logistics web-service after careful research and several conversations.",
     author: "Muhanad",
     title: "Logistics Director",
   },

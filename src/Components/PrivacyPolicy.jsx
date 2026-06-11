@@ -6,7 +6,7 @@ export default function PrivacyPolicy() {
       title: "Who are we?",
       description: (
         <>
-          We are AI-PIXEL, a software company located at 37L Block Johar Town,
+          We are AI-PIXAL, a software company located at 37L Block Johar Town,
           Lahore. We provide a range of digital services worldwide.
         </>
       ),
@@ -41,7 +41,7 @@ export default function PrivacyPolicy() {
             <li>Your phone number</li>
             <li>The fact that you’ve visited our website</li>
             <li>Your Company Name</li>
-            <li>What website referred you to aipixel.solutions</li>
+            <li>What website referred you to aipixal.solutions</li>
           </ul>
         </>
       ),
@@ -50,7 +50,7 @@ export default function PrivacyPolicy() {
       title: "Who will we share your data with?",
       description: (
         <>
-          <strong>AI-PIXEL Group</strong>
+          <strong>AI-PIXAL Group</strong>
           <br />
           We may disclose your information to our affiliates or subsidiaries,
           which may help us to process it.
@@ -137,7 +137,7 @@ export default function PrivacyPolicy() {
       title: "Is my data secured?",
       description: (
         <>
-          AI-PIXEL is ISO-27001 certified. Therefore we don’t allow any
+          AI-PIXAL is ISO-27001 certified. Therefore we don’t allow any
           unreliable practices regarding the security of the information we deal
           with. Consequently, we take all appropriate technical and
           organisational measures to keep your data safe, as required by the
@@ -149,7 +149,7 @@ export default function PrivacyPolicy() {
       title: "Still have some questions?",
       description: (
         <>
-          You can reach us at aipixel.solutions , if you:
+          You can reach us at aipixal.solutions , if you:
           <ul className="list-disc list-inside ml-4">
             <li>Want to know more about privacy of your information</li>
             <li>
@@ -187,12 +187,12 @@ export default function PrivacyPolicy() {
         >
           <div className="bg-white bg-opacity-40 py-8 px-6 sm:px-16 md:px-32">
             <h1 className="mt-20 text-center text-3xl md:text-5xl">
-              AI-PIXEL Privacy Policy
+              AI-PIXAL Privacy Policy
             </h1>
             <p className="mt-5 text-center">Last Updated: 13th June 2024</p>
             <hr className="my-4" />
             <p className="leading-loose mt-3">
-              We at AI-PIXEL respect your personal data and want to be GDPR
+              We at AI-PIXAL respect your personal data and want to be GDPR
               friendly. That is why, we have tried to make information in this
               Privacy Policy understandable and clear, while boring only to the
               extent, required by the law.

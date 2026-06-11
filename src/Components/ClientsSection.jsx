@@ -13,6 +13,10 @@ import birdsworld from "../assets/birdsworld.png";
 import seedlogo from "../assets/seedlogo.png";
 import universalskills from "../assets/universalskills.png";
 import turing from "../assets/turing.png";
+import halalchef from "../assets/halalchef.png";
+import royaldelhi from "../assets/royaldelhi.png";
+import singaf from "../assets/singaf.png";
+
 const testimonials = [
   {
     logo: dtec,
@@ -103,6 +107,27 @@ const testimonials = [
     companyType: "E-commerce",
     description:
     "A multi-vendor platform bringing global sellers and buyers together seamlessly.",
+    height: "80px",
+  },
+  {
+    logo: halalchef,
+    companyType: "Food & Beverage",
+    description:
+      "Premium culinary services and gourmet food preparation adhering to the highest halal standards.",
+    height: "80px",
+  },
+  {
+    logo: royaldelhi,
+    companyType: "Food & Beverage",
+    description:
+      "Traditional Indian culinary delicacies and premium fast-food cuisines crafted with authentic taste.",
+    height: "75px",
+  },
+  {
+    logo: singaf,
+    companyType: "E-commerce",
+    description:
+      "A premier Omani fashion and lifestyle boutique marketplace connecting local designers with global buyers.",
     height: "80px",
   },
 ];

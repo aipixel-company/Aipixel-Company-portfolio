@@ -15,7 +15,7 @@ const OurVision = () => {
               Our <span className="text-indigo-600">Vision</span>
             </h2>
             <p className="text-gray-600 text-lg mb-8 max-lg:max-w-xl max-lg:mx-auto">
-              At <span className="font-semibold text-indigo-600">AI-PIXEL</span>, 
+              At <span className="font-semibold text-indigo-600">AI-PIXAL</span>, 
               we envision a future where businesses harness the full power of 
               Artificial Intelligence to innovate fearlessly and scale effortlessly.  
               We don’t just deliver software — we build <em>impactful solutions</em> 

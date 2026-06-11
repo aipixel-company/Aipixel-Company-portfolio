@@ -5,12 +5,12 @@ const expertise = [
   {
     question: "DevOps",
     answer:
-      "AI Pixel bridges the gap between development and operations, utilizing continuous integration/delivery (CI/CD) and infrastructure as code (IaC) practices to streamline development lifecycles, ensure consistent quality, and automate deployments. This harmonious approach minimizes disruptions and delivers software faster.",
+      "AI Pixal bridges the gap between development and operations, utilizing continuous integration/delivery (CI/CD) and infrastructure as code (IaC) practices to streamline development lifecycles, ensure consistent quality, and automate deployments. This harmonious approach minimizes disruptions and delivers software faster.",
   },
   {
     question: "VR/AR/MR",
     answer:
-      "AI Pixel isn't confined to the physical plane. They leverage the immersive power of virtual reality (VR), augmented reality (AR), and mixed reality (MR) to create next-generation experiences. Imagine training employees in a virtual environment or showcasing products in an interactive AR setting. AI Pixel brings these possibilities to life.",
+      "AI Pixal isn't confined to the physical plane. They leverage the immersive power of virtual reality (VR), augmented reality (AR), and mixed reality (MR) to create next-generation experiences. Imagine training employees in a virtual environment or showcasing products in an interactive AR setting. AI Pixal brings these possibilities to life.",
   },
   {
     question: "Market Research",
@@ -20,12 +20,12 @@ const expertise = [
   {
     question: "Digital Enterprise Solutions",
     answer:
-      "AI Pixel understands the modern digital enterprise. They offer a comprehensive suite of solutions to streamline internal processes, enhance collaboration, and foster a data-driven culture.  This empowers your organization to operate more efficiently and achieve its full potential.",
+      "AI Pixal understands the modern digital enterprise. They offer a comprehensive suite of solutions to streamline internal processes, enhance collaboration, and foster a data-driven culture.  This empowers your organization to operate more efficiently and achieve its full potential.",
   },
   {
     question: "Human-Centered Interface (HCI) Design",
     answer:
-      "AI Pixel goes beyond aesthetics with a focus on Human-Centered Interface (HCI) design. They prioritize usability, accessibility, and user psychology to create interfaces that are intuitive, engaging, and cater to a diverse range of users. This translates to increased user adoption and satisfaction.",
+      "AI Pixal goes beyond aesthetics with a focus on Human-Centered Interface (HCI) design. They prioritize usability, accessibility, and user psychology to create interfaces that are intuitive, engaging, and cater to a diverse range of users. This translates to increased user adoption and satisfaction.",
   },
 ];
 

@@ -4,17 +4,17 @@ const services = [
   {
     title: "Software Audit",
     description:
-      "At AI-Pixel, we conduct thorough software audits to identify potential issues and ensure compliance with industry standards. Our expert team provides detailed analysis and actionable insights to enhance your software’s performance, security, and reliability.",
+      "At AI-Pixal, we conduct thorough software audits to identify potential issues and ensure compliance with industry standards. Our expert team provides detailed analysis and actionable insights to enhance your software’s performance, security, and reliability.",
   },
   {
     title: "Support",
     description:
-      "AI-Pixel offers comprehensive support services to ensure the smooth operation and maintenance of your software systems. Our dedicated support team is available to address any technical issues, perform updates, and provide ongoing assistance.",
+      "AI-Pixal offers comprehensive support services to ensure the smooth operation and maintenance of your software systems. Our dedicated support team is available to address any technical issues, perform updates, and provide ongoing assistance.",
   },
   {
     title: "Quality Assurance",
     description:
-      "Ensure your software meets the highest standards of quality and reliability with AI-Pixel's rigorous quality assurance services. Our team implements advanced testing processes to detect and rectify any issues before deployment.",
+      "Ensure your software meets the highest standards of quality and reliability with AI-Pixal's rigorous quality assurance services. Our team implements advanced testing processes to detect and rectify any issues before deployment.",
   },
 ];
 

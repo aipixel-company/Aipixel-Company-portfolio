@@ -205,7 +205,7 @@ function HomeSlider() {
             Empowering Digital Transformation.
           </h1>
           <h2 className="text-xl sm:text-2xl md:text-3xl lg:text-4xl text-white font-light mt-4 drop-shadow-lg">
-          Where Pixel gets Smarter
+          Where Pixal gets Smarter
           </h2>
          
         </div>

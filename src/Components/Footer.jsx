@@ -27,7 +27,7 @@ export default function Footer() {
               <div className="mb-6">
                 <img
                   src={navlogo}
-                  alt="AI Pixel Logo"
+                  alt="AI Pixal Logo"
                   className="h-12 w-auto filter grayscale opacity-80"
                 />
               </div>
@@ -40,7 +40,7 @@ export default function Footer() {
                 
                 <p className="text-sm font-semibold text-gray-800 pt-3">Get in Touch:</p>
                 <p className="text-sm text-gray-600">
-                  Email: <a href="mailto:info@aipixel.com" className={linkClasses}>info@aipixel.com</a>
+                  Email: <a href="mailto:info@aipixal.com" className={linkClasses}>info@aipixal.com</a>
                 </p>
               </div>
 
@@ -59,7 +59,7 @@ export default function Footer() {
                 </li>
                 <li>
                   <a
-                    href="https://www.instagram.com/aipixel2023?igsh=b2pxajdxc3JnODFk"
+                    href="https://www.instagram.com/aipixal2023?igsh=b2pxajdxc3JnODFk"
                     rel="noreferrer"
                     target="_blank"
                     className={socialIconClasses}
@@ -73,7 +73,7 @@ export default function Footer() {
                 </li>
                 <li>
                   <a
-                    href="https://www.linkedin.com/company/aipixel123/"
+                    href="https://www.linkedin.com/company/aipixal123/"
                     rel="noreferrer"
                     target="_blank"
                     className={socialIconClasses}
@@ -167,7 +167,7 @@ export default function Footer() {
       <div className="bg-gray-50">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-4 sm:flex sm:items-center sm:justify-between">
           <p className="text-center text-sm text-gray-500">
-            &copy; {new Date().getFullYear()} AI Pixel. All rights reserved.
+            &copy; {new Date().getFullYear()} AI Pixal. All rights reserved.
           </p>
           
           {/* Subtle legal links in the corner */}

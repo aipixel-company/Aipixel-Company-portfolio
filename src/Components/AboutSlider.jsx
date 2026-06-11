@@ -57,7 +57,7 @@ function HomeSlider() {
             ease: "easeOut",
           }}
         >
-          At <span className="font-semibold text-white">AIPixel</span>, we
+          At <span className="font-semibold text-white">AIPixal</span>, we
           empower businesses to shape the digital future with human-centered
           design, AI-powered automation, and intelligent experiences that
           transform industries.
@@ -77,7 +77,7 @@ function HomeSlider() {
             “Empowering industries through intelligence, innovation, and impact.”
           </p>
           <p className="text-gray-500 text-sm md:text-base">
-            Delivering the future — one pixel of intelligence at a time.
+            Delivering the future — one pixal of intelligence at a time.
           </p>
         </motion.div>
       </motion.div>
