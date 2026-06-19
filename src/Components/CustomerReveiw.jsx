@@ -52,7 +52,7 @@ const CustomerReview = () => {
     <div className="flex items-center justify-center h-full w-full">
       {/* Testimonial Card - The Glassmorphic Element */}
       <div
-        className="w-full mx-auto p-8 md:p-10 rounded-3xl shadow-2xl backdrop-filter backdrop-blur-xl bg-white/5 border border-white/10 text-white transition duration-500"
+        className="w-full mx-auto p-8 md:p-10 rounded-3xl shadow-2xl backdrop-filter backdrop-blur-xl bg-[#1E1D28]/45 border border-white/5 text-white transition duration-500"
         style={{ maxWidth: "450px" }} // Increased max-width for better use of space
       >
         <div className="flex justify-center mb-6">
@@ -77,12 +77,12 @@ const CustomerReview = () => {
             >
               
               
-              <p className="text-lg italic leading-relaxed text-white/90">"{item.quote}"</p>
+              <p className="text-lg italic leading-relaxed text-[#8791AD]">"{item.quote}"</p>
               
               <div className="mt-5">
-                <p className="text-xl font-bold text-cyan-400">{item.author}</p>
+                <p className="text-xl font-bold text-[#3567FF]">{item.author}</p>
                 {/* Displaying the added title/role */}
-                <p className="text-sm text-white/60">{item.title}</p> 
+                <p className="text-sm text-[#8791AD]">{item.title}</p> 
               </div>
             </div>
           ))}
@@ -95,7 +95,7 @@ const CustomerReview = () => {
               key={index}
               onClick={() => goToSlide(index)}
               className={`w-3 h-3 rounded-full transition-all duration-300 ${
-                index === currentIndex ? "bg-cyan-400 w-6" : "bg-white/30 hover:bg-white/50"
+                index === currentIndex ? "bg-[#3567FF] w-6" : "bg-white/10 hover:bg-white/30"
               }`}
               aria-label={`Go to testimonial ${index + 1}`}
             ></button>

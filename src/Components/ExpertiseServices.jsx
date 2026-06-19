@@ -67,27 +67,35 @@ export default function ExpertiseServices() {
 
   return (
     <>
-     <div className="bg-gradient-to-r from-[#647A82] to-[#00BFA6] py-16">
-  <div className="text-center mb-10">
-    <h2 className="font-bold text-4xl text-white">Our Expertise</h2>
-    <p className="text-gray-200 mt-3">
+     <div className="bg-[#070508] py-16 lg:py-24 border-t border-[#2D2B3B]/30">
+  <div className="text-center mb-12">
+    <h2 className="font-bold text-4xl text-white tracking-tight">Our Expertise</h2>
+    <p className="text-[#8791AD] mt-3">
       We work with advanced technologies covering a broad spectrum of specialisms.
     </p>
   </div>
-  <div className="flex flex-col lg:flex-row px-6 gap-10 items-center">
+  <div className="flex flex-col lg:flex-row px-6 max-w-7xl mx-auto gap-10 items-center">
     {/* Accordion */}
-    <div className="lg:w-1/2 bg-white/90 rounded-xl shadow-md p-6">
+    <div className="w-full lg:w-1/2 bg-[#1E1D28] rounded-2xl border border-[#2D2B3B] shadow-xl p-8">
       {expertise.map((item, index) => (
-        <div key={index} className="border-b border-gray-200 py-4">
+        <div key={index} className="border-b border-[#2D2B3B]/60 last:border-b-0 py-4">
           <button
             onClick={() => handleClick(index)}
-            className="flex justify-between items-center w-full text-left"
+            className="flex justify-between items-center w-full text-left group py-2"
           >
-            <span className="font-semibold text-[#647A82]">{item.question}</span>
-            <span>{openIndex === index ? "–" : "+"}</span>
+            <span className={`text-lg font-semibold transition-colors duration-200 ${
+              openIndex === index ? "text-[#3567FF]" : "text-white group-hover:text-[#3567FF]"
+            }`}>
+              {item.question}
+            </span>
+            <span className={`text-xl font-medium transition-colors duration-200 ${
+              openIndex === index ? "text-[#3567FF]" : "text-[#8791AD]"
+            }`}>
+              {openIndex === index ? "–" : "+"}
+            </span>
           </button>
           {openIndex === index && (
-            <p className="text-sm text-gray-700 mt-2 transition-all duration-300">
+            <p className="text-sm text-[#8791AD] mt-2 leading-relaxed transition-all duration-300 animate-fadeIn">
               {item.answer}
             </p>
           )}
@@ -95,11 +103,11 @@ export default function ExpertiseServices() {
       ))}
     </div>
     {/* Image */}
-    <div className="lg:w-1/2">
+    <div className="w-full lg:w-1/2">
       <img
         src={expertiseservices}
         alt="Expertise"
-        className="rounded-xl shadow-lg"
+        className="rounded-2xl shadow-lg border border-[#2D2B3B]/40"
       />
     </div>
   </div>

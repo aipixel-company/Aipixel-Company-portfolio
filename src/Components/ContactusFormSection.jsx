@@ -5,6 +5,7 @@ import { ref, uploadBytes, getDownloadURL } from "firebase/storage";
 import { db, storage } from "../../Firebase";
 
 export default function ContactusFormSection() {
+  const [contactMode, setContactMode] = useState("message"); // "message" or "call"
   const [formData, setFormData] = useState({
     fullName: "",
     email: "",
@@ -66,145 +67,189 @@ export default function ContactusFormSection() {
 
   return (
     // Outer container: Dark background with a subtle gradient/texture for depth
-    <div className="bg-gradient-to-br from-gray-900 to-[#1e1d28] min-h-screen p-4 sm:p-12">
-      <div className="max-w-6xl mx-auto py-8">
-        <div className="grid gap-12 lg:grid-cols-2">
-          
-          {/* Form Section - The Glassmorphic Panel */}
-          <div className="p-8 rounded-3xl shadow-2xl backdrop-filter backdrop-blur-xl bg-white/5 border border-white/10 transform hover:shadow-cyan-500/50 transition duration-500">
-            <h2 className="text-4xl font-extrabold tracking-tight text-white mb-6 leading-tight">
-              Ready to <span className="text-cyan-400">Discuss</span> Your Software Requirements? 🚀
+    <div className="bg-[#070508] min-h-screen p-4 sm:py-6 sm:px-12">
+      <div className="flex flex-col justify-center items-center mb-10 mx-auto">
+        {contactMode === "message" ? (
+          <>
+            <h2 className="text-4xl font-extrabold tracking-tight text-white mb-4 leading-tight">
+              Ready to <span className="gradient-text-accent">Discuss</span> Your Software Requirements? 🚀
             </h2>
-            <p className="text-gray-300 mb-8">
+            <p className="text-[#8791AD] text-lg">
               Let's build something amazing together. Fill out the form and we'll be in touch.
             </p>
+          </>
+        ) : (
+          <>
+            <h2 className="text-4xl font-extrabold tracking-tight text-white mb-4 leading-tight">
+              Schedule a <span className="gradient-text-accent">Discovery Call</span> 📅
+            </h2>
+            <p className="text-[#8791AD] text-lg">
+              Select a convenient slot on our calendar to book a direct meeting with our engineering team.
+            </p>
+          </>
+        )}
+      </div>
+      <div className="max-w-6xl mx-auto py-8">
 
-            <form onSubmit={handleSubmit} className="mt-6 space-y-6">
-              {/* Full Name */}
-              <div className="relative z-0 w-full group">
-                <input
-                  type="text"
-                  name="fullName"
-                  maxLength="50"
-                  className="block py-3 px-0 w-full text-white bg-transparent border-0 border-b border-white/30 appearance-none focus:outline-none focus:ring-0 focus:border-cyan-400 peer transition duration-300"
-                  placeholder=" "
-                  value={formData.fullName}
-                  onChange={handleChange}
-                  required
-                />
-                <label
-                  htmlFor="fullName"
-                  className="absolute text-base text-white/50 duration-300 transform -translate-y-6 scale-75 top-3 -z-10 origin-[0] peer-focus:scale-75 peer-focus:-translate-y-6 peer-focus:text-cyan-400 peer-placeholder-shown:scale-100 peer-placeholder-shown:translate-y-0"
-                >
-                  Full Name
-                </label>
-              </div>
+        {/* Title and Subtitle OUTSIDE of the glassmorphic card */}
 
-              {/* Email address */}
-              <div className="relative z-0 w-full group">
-                <input
-                  type="email"
-                  name="email"
-                  maxLength="80"
-                  className="block py-3 px-0 w-full text-white bg-transparent border-0 border-b border-white/30 appearance-none focus:outline-none focus:ring-0 focus:border-cyan-400 peer transition duration-300"
-                  placeholder=" "
-                  value={formData.email}
-                  onChange={handleChange}
-                  required
-                />
-                <label
-                  htmlFor="email"
-                  className="absolute text-base text-white/50 duration-300 transform -translate-y-6 scale-75 top-3 -z-10 origin-[0] peer-focus:scale-75 peer-focus:-translate-y-6 peer-focus:text-cyan-400 peer-placeholder-shown:scale-100 peer-placeholder-shown:translate-y-0"
-                >
-                  Email address
-                </label>
-              </div>
 
-              {/* Phone number & Company (simplified for 1-column layout) */}
-              <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
-                <div className="relative z-0 w-full group">
-                  <input
-                    type="tel"
-                    pattern="[0-9]{11}"
-                    maxLength="11"
-                    name="phone"
-                    className="block py-3 px-0 w-full text-white bg-transparent border-0 border-b border-white/30 appearance-none focus:outline-none focus:ring-0 focus:border-cyan-400 peer transition duration-300"
-                    placeholder=" "
-                    value={formData.phone}
-                    onChange={handleChange}
-                    required
-                  />
-                  <label
-                    htmlFor="phone"
-                    className="absolute text-base text-white/50 duration-300 transform -translate-y-6 scale-75 top-3 -z-10 origin-[0] peer-focus:scale-75 peer-focus:-translate-y-6 peer-focus:text-cyan-400 peer-placeholder-shown:scale-100 peer-placeholder-shown:translate-y-0"
-                  >
-                    Phone number
-                  </label>
-                </div>
-                
+        <div className="grid gap-12 lg:grid-cols-2">
+
+          {/* Form Section - The Glassmorphic Panel */}
+          <div className="p-8 rounded-3xl shadow-2xl backdrop-filter backdrop-blur-xl bg-[#1E1D28]/45 border border-white/5 transform hover:shadow-blue-500/5 transition duration-500">
+            {/* Mode Switcher Tabs */}
+            <div className="flex border-b border-white/10 mb-8">
+              <button
+                type="button"
+                className={`pb-3 pr-6 text-sm font-semibold border-b-2 transition-all duration-300 ${contactMode === "message"
+                  ? "border-[#3567FF] text-[#3567FF]"
+                  : "border-transparent text-[#8791AD] hover:text-white"
+                  }`}
+                onClick={() => setContactMode("message")}
+              >
+                Send Message
+              </button>
+              <button
+                type="button"
+                className={`pb-3 px-6 text-sm font-semibold border-b-2 transition-all duration-300 ${contactMode === "call"
+                  ? "border-[#3567FF] text-[#3567FF]"
+                  : "border-transparent text-[#8791AD] hover:text-white"
+                  }`}
+                onClick={() => setContactMode("call")}
+              >
+                Schedule a Call
+              </button>
+            </div>
+
+            {contactMode === "message" ? (
+              <form onSubmit={handleSubmit} className="space-y-6">
                 <div className="relative z-0 w-full group">
                   <input
                     type="text"
-                    name="company"
-                    maxLength="50"
-                    className="block py-3 px-0 w-full text-white bg-transparent border-0 border-b border-white/30 appearance-none focus:outline-none focus:ring-0 focus:border-cyan-400 peer transition duration-300"
+                    name="fullName"
+                    className="block py-3 px-0 w-full text-white bg-transparent border-0 border-b border-white/20 appearance-none focus:outline-none focus:ring-0 focus:border-[#3567FF] peer transition duration-300"
                     placeholder=" "
-                    value={formData.company}
+                    value={formData.fullName}
                     onChange={handleChange}
                     required
                   />
                   <label
-                    htmlFor="company"
-                    className="absolute text-base text-white/50 duration-300 transform -translate-y-6 scale-75 top-3 -z-10 origin-[0] peer-focus:scale-75 peer-focus:-translate-y-6 peer-focus:text-cyan-400 peer-placeholder-shown:scale-100 peer-placeholder-shown:translate-y-0"
+                    htmlFor="fullName"
+                    className="absolute text-base text-white/50 duration-300 transform -translate-y-6 scale-75 top-3 -z-10 origin-[0] peer-focus:scale-75 peer-focus:-translate-y-6 peer-focus:text-[#3567FF] peer-placeholder-shown:scale-100 peer-placeholder-shown:translate-y-0"
                   >
-                    Company
+                    Full Name
                   </label>
                 </div>
-              </div>
 
-              {/* Message */}
-              <div className="relative z-0 w-full group">
-                <textarea
-                  name="message"
-                  className="block py-3 px-0 w-full text-white bg-transparent border-0 border-b border-white/30 appearance-none focus:outline-none focus:ring-0 focus:border-cyan-400 peer resize-none h-24 transition duration-300"
-                  placeholder=" "
-                  maxLength="200"
-                  value={formData.message}
-                  onChange={handleChange}
-                  required
-                />
-                <label
-                  htmlFor="message"
-                  className="absolute text-base text-white/50 duration-300 transform -translate-y-6 scale-75 top-3 -z-10 origin-[0] peer-focus:scale-75 peer-focus:-translate-y-6 peer-focus:text-cyan-400 peer-placeholder-shown:scale-100 peer-placeholder-shown:translate-y-0"
+                <div className="relative z-0 w-full group">
+                  <input
+                    type="email"
+                    name="email"
+                    className="block py-3 px-0 w-full text-white bg-transparent border-0 border-b border-white/20 appearance-none focus:outline-none focus:ring-0 focus:border-[#3567FF] peer transition duration-300"
+                    placeholder=" "
+                    value={formData.email}
+                    onChange={handleChange}
+                    required
+                  />
+                  <label
+                    htmlFor="email"
+                    className="absolute text-base text-white/50 duration-300 transform -translate-y-6 scale-75 top-3 -z-10 origin-[0] peer-focus:scale-75 peer-focus:-translate-y-6 peer-focus:text-[#3567FF] peer-placeholder-shown:scale-100 peer-placeholder-shown:translate-y-0"
+                  >
+                    Email address
+                  </label>
+                </div>
+
+                <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
+                  <div className="relative z-0 w-full group">
+                    <input
+                      type="tel"
+                      pattern="[0-9]{11}"
+                      name="phone"
+                      className="block py-3 px-0 w-full text-white bg-transparent border-0 border-b border-white/20 appearance-none focus:outline-none focus:ring-0 focus:border-[#3567FF] peer transition duration-300"
+                      placeholder=" "
+                      value={formData.phone}
+                      onChange={handleChange}
+                      required
+                    />
+                    <label
+                      htmlFor="phone"
+                      className="absolute text-base text-white/50 duration-300 transform -translate-y-6 scale-75 top-3 -z-10 origin-[0] peer-focus:scale-75 peer-focus:-translate-y-6 peer-focus:text-[#3567FF] peer-placeholder-shown:scale-100 peer-placeholder-shown:translate-y-0"
+                    >
+                      Phone number
+                    </label>
+                  </div>
+
+                  <div className="relative z-0 w-full group">
+                    <input
+                      type="text"
+                      name="company"
+                      className="block py-3 px-0 w-full text-white bg-transparent border-0 border-b border-white/20 appearance-none focus:outline-none focus:ring-0 focus:border-[#3567FF] peer transition duration-300"
+                      placeholder=" "
+                      value={formData.company}
+                      onChange={handleChange}
+                      required
+                    />
+                    <label
+                      htmlFor="company"
+                      className="absolute text-base text-white/50 duration-300 transform -translate-y-6 scale-75 top-3 -z-10 origin-[0] peer-focus:scale-75 peer-focus:-translate-y-6 peer-focus:text-[#3567FF] peer-placeholder-shown:scale-100 peer-placeholder-shown:translate-y-0"
+                    >
+                      Company
+                    </label>
+                  </div>
+                </div>
+
+                <div className="relative z-0 w-full group">
+                  <textarea
+                    name="message"
+                    className="block py-3 px-0 w-full text-white bg-transparent border-0 border-b border-white/20 appearance-none focus:outline-none focus:ring-0 focus:border-[#3567FF] peer resize-none h-24 transition duration-300"
+                    placeholder=" "
+                    value={formData.message}
+                    onChange={handleChange}
+                    required
+                  />
+                  <label
+                    htmlFor="message"
+                    className="absolute text-base text-white/50 duration-300 transform -translate-y-6 scale-75 top-3 -z-10 origin-[0] peer-focus:scale-75 peer-focus:-translate-y-6 peer-focus:text-[#3567FF] peer-placeholder-shown:scale-100 peer-placeholder-shown:translate-y-0"
+                  >
+                    Tell us about your project...
+                  </label>
+                </div>
+
+                {/* Attachment */}
+                <div className="relative z-0 w-full group pt-4">
+                  <label htmlFor="attachment" className="block text-base text-white/70 mb-2">
+                    Attach documents (Optional)
+                  </label>
+                  <input
+                    type="file"
+                    name="attachment"
+                    className="block w-full text-sm text-white/80 file:mr-4 file:py-2 file:px-4 file:rounded-full file:border-0 file:text-sm file:font-semibold file:bg-[#3567FF]/10 file:text-[#3567FF] hover:file:bg-[#3567FF]/20 transition duration-300"
+                    onChange={handleChange}
+                  />
+                </div>
+
+                {/* Submit Button */}
+                <button
+                  type="submit"
+                  className="w-full mt-8 py-3 px-6 text-lg font-semibold rounded-full text-white btn-premium-blue hover:shadow-[#3567FF]/25 shadow-lg transition duration-300 transform hover:scale-[1.02] active:scale-95"
                 >
-                  Tell us about your project...
-                </label>
+                  Send Your Request
+                </button>
+              </form>
+            ) : (
+              <div className="w-full rounded-2xl overflow-hidden bg-white" style={{ height: "600px" }}>
+                <iframe
+                  src="https://calendly.com/aipixelsolutions1?hide_landing_page_details=1&hide_gdpr_banner=1"
+                  width="100%"
+                  height="100%"
+                  frameBorder="0"
+                  title="Schedule a Call with AI Pixal"
+                ></iframe>
               </div>
-
-              {/* Attachment */}
-              <div className="relative z-0 w-full group pt-4">
-                <label htmlFor="attachment" className="block text-base text-white/70 mb-2">
-                  Attach documents (Optional)
-                </label>
-                <input
-                  type="file"
-                  name="attachment"
-                  className="block w-full text-sm text-white/80 file:mr-4 file:py-2 file:px-4 file:rounded-full file:border-0 file:text-sm file:font-semibold file:bg-cyan-500/20 file:text-cyan-300 hover:file:bg-cyan-500/30 transition duration-300"
-                  onChange={handleChange}
-                />
-                {/* Note: Removed 'required' from attachment as file upload is often optional */}
-              </div>
-
-              {/* Submit Button */}
-              <button
-                type="submit"
-                className="w-full mt-8 py-3 px-6 text-lg font-semibold rounded-full text-white bg-gradient-to-r from-cyan-500 to-blue-500 hover:from-cyan-400 hover:to-blue-400 shadow-lg shadow-cyan-500/50 transition duration-300 transform hover:scale-[1.02] active:scale-95"
-              >
-                Send Your Request
-              </button>
-            </form>
+            )}
           </div>
-          
+
           {/* Customer Review Section */}
           <div className="hidden lg:block">
             <CustomerReveiw />

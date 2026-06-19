@@ -1,11 +1,12 @@
 // BlogDetail.js
 import React from "react";
-import { useParams } from "react-router-dom";
+import { useParams, Link } from "react-router-dom";
 
 const blogPosts = [
   {
     id: 1,
     date: "September 20, 2025",
+    category: "AI & Technology",
     title: "The Rise of Generative AI in Everyday Applications",
     sections: [
       {
@@ -29,8 +30,7 @@ const blogPosts = [
       },
       {
         heading: "Opportunities for Businesses",
-        content:
-          "Companies can leverage generative AI to gain a competitive edge:",
+        content: "Companies can leverage generative AI to gain a competitive edge:",
         subpoints: [
           "Content Creation: Automating marketing and creative content.",
           "Customer Support: Powering intelligent chatbots and virtual assistants.",
@@ -40,13 +40,14 @@ const blogPosts = [
       {
         heading: "Conclusion",
         content:
-          "Generative AI is no longer just a futuristic concept—it’s becoming part of daily life. Businesses and developers who embrace it early will unlock greater efficiency and innovation.",
+          "Generative AI is no longer just a futuristic concept—it's becoming part of daily life. Businesses and developers who embrace it early will unlock greater efficiency and innovation.",
       },
     ],
   },
   {
     id: 2,
     date: "October 1, 2025",
+    category: "Blockchain",
     title: "Blockchain Beyond Cryptocurrency: Real-World Applications",
     sections: [
       {
@@ -65,8 +66,7 @@ const blogPosts = [
       },
       {
         heading: "Use Cases Beyond Crypto",
-        content:
-          "Blockchain is finding adoption in several real-world scenarios:",
+        content: "Blockchain is finding adoption in several real-world scenarios:",
         subpoints: [
           "Supply Chain: Tracking goods from source to destination.",
           "Healthcare: Securing patient data and medical records.",
@@ -75,8 +75,7 @@ const blogPosts = [
       },
       {
         heading: "Opportunities for Developers",
-        content:
-          "Developers can tap into blockchain opportunities by building:",
+        content: "Developers can tap into blockchain opportunities by building:",
         subpoints: [
           "Smart Contracts: Automating agreements with code.",
           "Decentralized Applications (DApps): Creating apps without central authority.",
@@ -86,13 +85,14 @@ const blogPosts = [
       {
         heading: "Conclusion",
         content:
-          "Blockchain’s future lies in its ability to solve real-world challenges. As industries adopt it, developers have a chance to shape a decentralized digital future.",
+          "Blockchain's future lies in its ability to solve real-world challenges. As industries adopt it, developers have a chance to shape a decentralized digital future.",
       },
     ],
   },
   {
     id: 3,
     date: "October 1, 2025",
+    category: "Cybersecurity",
     title: "Cybersecurity in the Age of AI: Challenges and Solutions",
     sections: [
       {
@@ -137,6 +137,7 @@ const blogPosts = [
   {
     id: 4,
     date: "October 1, 2025",
+    category: "Infrastructure",
     title: "Edge Computing: Powering the Next Wave of IoT",
     sections: [
       {
@@ -174,10 +175,10 @@ const blogPosts = [
       },
     ],
   },
-  // 🟢 ADDED BLOG 5
   {
     id: 5,
     date: "October 1, 2025",
+    category: "Sustainability",
     title: "Sustainable Tech: Green Cloud and Eco-Friendly Computing",
     sections: [
       {
@@ -211,7 +212,47 @@ const blogPosts = [
       {
         heading: "Conclusion",
         content:
-          "Sustainable tech is not just good for the planet—it’s good for business. Green computing will define the future of digital transformation.",
+          "Sustainable tech is not just good for the planet—it's good for business. Green computing will define the future of digital transformation.",
+      },
+    ],
+  },
+  {
+    id: 6,
+    date: "October 15, 2025",
+    category: "Mobile",
+    title: "Flutter vs React Native: Which to Choose in 2025?",
+    sections: [
+      {
+        heading: "Introduction",
+        content:
+          "In 2025, cross-platform mobile development remains dominated by two major frameworks: Google's Flutter and Meta's React Native. Choosing the right one for your product is a critical decision that influences velocity, cost, and user experience.",
+      },
+      {
+        heading: "Architecture Differences",
+        content:
+          "Flutter uses the Dart programming language and compiles to native machine code, painting its own pixel UI canvas. React Native leverages JavaScript/TypeScript and binds with native components via a bridge or the modern JSI (JavaScript Interface).",
+      },
+      {
+        heading: "Comparing the Frameworks",
+        content: "Here is a quick look at the strengths of each technology:",
+        subpoints: [
+          "Performance: Flutter has a minor edge in heavy graphics and smooth animations.",
+          "Developer Velocity: React Native allows sharing code with web React codebases, speeding up delivery.",
+          "Ecosystem: React Native leverages the vast npm repository, while Flutter relies on pub.dev packages.",
+        ],
+      },
+      {
+        heading: "Making the Choice",
+        content: "We recommend selecting based on your project goals:",
+        subpoints: [
+          "Choose Flutter if you require custom, design-heavy UIs and highly consistent rendering across older hardware.",
+          "Choose React Native if you have an existing React web team or need to integrate extensively with native device features and micro-frontends.",
+        ],
+      },
+      {
+        heading: "Conclusion",
+        content:
+          "Both frameworks are mature, highly capable, and fully supported. Partnering with a team like AI Pixal ensures you pick the architecture best aligned to scale.",
       },
     ],
   },
@@ -222,28 +263,76 @@ const BlogDetail = () => {
   const blog = blogPosts.find((post) => post.id === parseInt(id));
 
   if (!blog) {
-    return <div>Blog not found</div>;
+    return (
+      <div className="min-h-screen bg-[#070508] flex flex-col items-center justify-center text-center px-6">
+        <h1 className="text-4xl font-bold text-white mb-4">Blog Not Found</h1>
+        <p className="text-[#8791AD] mb-8">The blog post you're looking for doesn't exist.</p>
+        <Link
+          to="/blogs"
+          className="btn-premium-blue px-6 py-3 rounded-full text-sm font-semibold"
+        >
+          ← Back to Blogs
+        </Link>
+      </div>
+    );
   }
 
   return (
-    <div className="flex justify-center items-center bg-gradient-to-r from-gray-200 to-indigo-600">
-      <div className=" mt-[6rem] p-6 mx-auto bg-white ">
-        <div className="p-6">
-          <h1 className="text-3xl font-bold mb-4">{blog.title}</h1>
-          <p className="text-gray-600 mb-4">{blog.date}</p>
+    <div className="min-h-screen bg-[#070508]">
+      {/* Hero */}
+      <div className="relative pt-28 pb-16 px-6 border-b border-[#2D2B3B]/40">
+        <div
+          className="absolute inset-0 z-0"
+          style={{
+            background:
+              "radial-gradient(ellipse 70% 60% at 50% 0%, rgba(53,103,255,0.10), transparent 70%)",
+          }}
+        />
+        <div className="relative z-10 max-w-3xl mx-auto text-center">
+          <span className="inline-block mb-4 px-4 py-1.5 rounded-full text-xs font-semibold uppercase tracking-widest text-[#3567FF] border border-[#3567FF]/30 bg-[#3567FF]/10">
+            {blog.category}
+          </span>
+          <h1 className="text-3xl md:text-4xl font-extrabold text-white leading-tight tracking-tight mb-4">
+            {blog.title}
+          </h1>
+          <p className="text-[#8791AD] text-sm">{blog.date}</p>
+        </div>
+      </div>
+
+      {/* Content */}
+      <div className="max-w-3xl mx-auto px-6 py-16">
+        <div className="space-y-10">
           {blog.sections.map((section, index) => (
-            <div key={index} className="mb-6">
-              <h2 className="text-2xl font-semibold mb-2">{section.heading}</h2>
-              <p className="text-gray-800 mb-2">{section.content}</p>
+            <div key={index} className="glow-card rounded-2xl p-7 md:p-8">
+              <h2 className="text-xl md:text-2xl font-bold text-white mb-3 flex items-center gap-3">
+                <span className="flex-shrink-0 w-7 h-7 rounded-full bg-[#3567FF]/15 border border-[#3567FF]/25 text-[#3567FF] text-xs font-bold flex items-center justify-center">
+                  {index + 1}
+                </span>
+                {section.heading}
+              </h2>
+              <p className="text-[#8791AD] leading-relaxed mb-3">{section.content}</p>
               {section.subpoints && (
-                <ul className="list-disc list-inside ml-4">
+                <ul className="space-y-2 mt-3">
                   {section.subpoints.map((point, idx) => (
-                    <li key={idx} className="text-gray-800">{point}</li>
+                    <li key={idx} className="flex items-start gap-3 text-[#8791AD] text-sm">
+                      <span className="flex-shrink-0 w-1.5 h-1.5 rounded-full bg-[#3567FF] mt-2" />
+                      {point}
+                    </li>
                   ))}
                 </ul>
               )}
             </div>
           ))}
+        </div>
+
+        {/* Back Button */}
+        <div className="mt-14 text-center">
+          <Link
+            to="/blogs"
+            className="inline-flex items-center gap-2 px-8 py-3 rounded-full border border-[#2D2B3B] text-[#8791AD] hover:text-white hover:border-[#3567FF]/40 transition-all duration-200 text-sm font-medium"
+          >
+            ← Back to all blogs
+          </Link>
         </div>
       </div>
     </div>

@@ -178,25 +178,25 @@ const CustomerSuccessSlider = () => {
   };
 
   return (
-    <section className="relative py-16 lg:py-24 bg-gradient-to-br from-gray-50 to-blue-50/30 overflow-hidden">
+    <section className="relative py-10 lg:py-14 bg-[#070508] overflow-hidden">
       {/* Background Elements */}
-      <div className="absolute top-0 left-0 w-72 h-72 bg-purple-100 rounded-full mix-blend-multiply filter blur-xl opacity-70 animate-blob"></div>
-      <div className="absolute top-0 right-0 w-72 h-72 bg-yellow-100 rounded-full mix-blend-multiply filter blur-xl opacity-70 animate-blob animation-delay-2000"></div>
-      <div className="absolute -bottom-8 left-20 w-72 h-72 bg-pink-100 rounded-full mix-blend-multiply filter blur-xl opacity-70 animate-blob animation-delay-4000"></div>
+      <div className="absolute top-0 left-0 w-72 h-72 bg-purple-900/10 rounded-full mix-blend-screen filter blur-xl opacity-40 animate-blob"></div>
+      <div className="absolute top-0 right-0 w-72 h-72 bg-blue-900/10 rounded-full mix-blend-screen filter blur-xl opacity-40 animate-blob animation-delay-2000"></div>
+      <div className="absolute -bottom-8 left-20 w-72 h-72 bg-pink-900/10 rounded-full mix-blend-screen filter blur-xl opacity-40 animate-blob animation-delay-4000"></div>
       
       <div className="relative mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
         {/* Header Section */}
         <div className="text-center mb-16">
-          <div className="inline-flex items-center gap-2 px-4 py-2 rounded-full bg-blue-100 text-blue-700 text-sm font-medium mb-6">
-            <span className="w-2 h-2 bg-blue-600 rounded-full animate-pulse"></span>
+          <div className="inline-flex items-center gap-2 px-4 py-2 rounded-full bg-[#3567FF]/10 text-[#3567FF] text-sm font-semibold mb-6 border border-[#3567FF]/20">
+            <span className="w-2 h-2 bg-[#61CE70] rounded-full animate-pulse"></span>
             Client Success Stories
           </div>
           
-          <h2 className="text-4xl lg:text-5xl font-bold text-gray-900 mb-6">
-            What Our <span className="bg-gradient-to-r from-blue-600 to-purple-600 text-transparent bg-clip-text">Clients Say</span>
+          <h2 className="text-4xl lg:text-5xl font-bold text-white mb-6">
+            What Our <span className="gradient-text-accent">Clients Say</span>
           </h2>
           
-          <p className="text-xl text-gray-600 max-w-3xl mx-auto leading-relaxed">
+          <p className="text-xl text-[#8791AD] max-w-3xl mx-auto leading-relaxed">
             Discover why businesses trust AI Pixal for their digital transformation journey. 
             Here's what our satisfied clients have to say about their experience.
           </p>
@@ -205,21 +205,21 @@ const CustomerSuccessSlider = () => {
         <div className="grid grid-cols-1 lg:grid-cols-4 gap-8 lg:items-start">
           {/* Stats & Controls Sidebar */}
           <div className="lg:col-span-1 text-center lg:text-left">
-            <div className="bg-white rounded-2xl p-6 shadow-lg border border-gray-100">
-              <h3 className="text-2xl font-bold text-gray-900 mb-4">Client Love</h3>
+            <div className="bg-[#1E1D28] rounded-2xl p-6 border border-white/5">
+              <h3 className="text-2xl font-bold text-white mb-4">Client Love</h3>
               
               <div className="space-y-6 mb-8">
                 <div>
-                  <div className="text-3xl font-bold text-blue-600">100%</div>
-                  <div className="text-gray-600">Client Satisfaction</div>
+                  <div className="text-3xl font-bold text-[#3567FF]">95%</div>
+                  <div className="text-[#8791AD] text-sm">Client Satisfaction</div>
                 </div>
                 <div>
-                  <div className="text-3xl font-bold text-purple-600">50+</div>
-                  <div className="text-gray-600">Projects Completed</div>
+                  <div className="text-3xl font-bold text-[#b1ea109]">50+</div>
+                  <div className="text-[#8791AD] text-sm">Projects Completed</div>
                 </div>
                 <div>
-                  <div className="text-3xl font-bold text-green-600">5.0</div>
-                  <div className="text-gray-600">Average Rating</div>
+                  <div className="text-3xl font-bold text-[#61CE70]">4.8</div>
+                  <div className="text-[#8791AD] text-sm">Average Rating</div>
                 </div>
               </div>
 
@@ -228,7 +228,7 @@ const CustomerSuccessSlider = () => {
                 <button
                   aria-label="Previous slide"
                   onClick={handlePrev}
-                  className="flex items-center justify-center w-12 h-12 rounded-full border-gray-200 text-gray- bg-blue-50 text-blue-600 hover:border-blue-200 transition-all duration-300 shadow-sm hover:shadow-md"
+                  className="flex items-center justify-center w-12 h-12 rounded-full border border-white/10 bg-[#070508] text-white hover:bg-white/5 transition-all duration-300 shadow-sm hover:shadow-md"
                 >
                   <svg className="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                     <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M15 19l-7-7 7-7" />
@@ -238,7 +238,7 @@ const CustomerSuccessSlider = () => {
                 <button
                   aria-label="Next slide"
                   onClick={handleNext}
-                  className="flex items-center justify-center w-12 h-12 rounded-full bg-blue-50 text-blue-600 border-blue-200 transition-all duration-300 shadow-sm hover:shadow-md"
+                  className="flex items-center justify-center w-12 h-12 rounded-full border border-[#3567FF]/20 bg-[#3567FF]/10 text-[#3567FF] hover:bg-[#3567FF]/20 transition-all duration-300 shadow-sm hover:shadow-md"
                 >
                   <svg className="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                     <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 5l7 7-7 7" />
@@ -253,7 +253,7 @@ const CustomerSuccessSlider = () => {
                     key={index}
                     onClick={() => handleSlideClick(index)}
                     className={`w-2 h-2 rounded-full transition-all duration-300 ${
-                      index === currentSlide ? 'bg-blue-600 w-6' : 'bg-gray-300'
+                      index === currentSlide ? 'bg-[#3567FF] w-6' : 'bg-white/20'
                     }`}
                   />
                 ))}
@@ -271,13 +271,13 @@ const CustomerSuccessSlider = () => {
             >
               {cardDetails.map((card, index) => (
                 <div key={index} className="keen-slider__slide">
-                  <div className="group relative h-full bg-white rounded-2xl p-8 shadow-lg hover:shadow-2xl transition-all duration-500 border border-gray-100 hover:border-blue-100">
+                  <div className="group relative h-full bg-[#1E1D28]/40 rounded-2xl p-8 shadow-lg hover:shadow-2xl transition-all duration-500 border border-white/5 hover:border-[#3567FF]/30">
                     {/* Gradient Accent */}
                     <div className={`absolute top-0 left-0 w-full h-1 bg-gradient-to-r ${card.gradient} rounded-t-2xl`} />
                     
                     {/* Quote Icon */}
-                    <div className="absolute top-6 right-6 opacity-10">
-                      <svg className="w-16 h-16 text-blue-500" fill="currentColor" viewBox="0 0 24 24">
+                    <div className="absolute top-6 right-6 opacity-5">
+                      <svg className="w-16 h-16 text-white" fill="currentColor" viewBox="0 0 24 24">
                         <path d="M4.583 17.321C3.553 16.227 3 15 3 13.011c0-3.5 2.457-6.637 6.03-8.188l.893 1.378c-3.335 1.804-3.987 4.145-4.247 5.621.537-.278 1.24-.375 1.929-.311 1.804.167 3.226 1.648 3.226 3.489a3.5 3.5 0 01-3.5 3.5c-1.073 0-2.099-.49-2.748-1.179zm10 0C13.553 16.227 13 15 13 13.011c0-3.5 2.457-6.637 6.03-8.188l.893 1.378c-3.335 1.804-3.987 4.145-4.247 5.621.537-.278 1.24-.375 1.929-.311 1.804.167 3.226 1.648 3.226 3.489a3.5 3.5 0 01-3.5 3.5c-1.073 0-2.099-.49-2.748-1.179z" />
                       </svg>
                     </div>
@@ -289,7 +289,7 @@ const CustomerSuccessSlider = () => {
                       </div>
 
                       {/* Content */}
-                      <p className="text-lg text-gray-700 leading-relaxed mb-6 line-clamp-5">
+                      <p className="text-lg text-[#8791AD] leading-relaxed mb-6 line-clamp-5">
                         "{card.content}"
                       </p>
 
@@ -306,18 +306,18 @@ const CustomerSuccessSlider = () => {
                         
                         <div className="flex-1">
                           <div className="flex items-center gap-2 mb-1">
-                            <h4 className="font-bold text-gray-900 text-lg">{card.author}</h4>
-                            <span className="text-blue-600">•</span>
-                            <span className="text-sm text-gray-500">{card.position}</span>
+                            <h4 className="font-bold text-white text-lg">{card.author}</h4>
+                            <span className="text-[#3567FF]">•</span>
+                            <span className="text-sm text-[#8791AD]">{card.position}</span>
                           </div>
-                          <p className="text-gray-600 text-sm">{card.company}</p>
-                          <p className="text-blue-600 text-sm font-medium">{card.project}</p>
+                          <p className="text-[#8791AD] text-sm">{card.company}</p>
+                          <p className="text-[#3567FF] text-sm font-semibold">{card.project}</p>
                         </div>
                       </div>
                     </div>
 
                     {/* Hover Effect */}
-                    <div className="absolute inset-0 rounded-2xl bg-gradient-to-br from-blue-50 to-purple-50 opacity-0 group-hover:opacity-100 transition-opacity duration-500 -z-10" />
+                    <div className="absolute inset-0 rounded-2xl bg-gradient-to-br from-blue-500/5 to-purple-500/5 opacity-0 group-hover:opacity-100 transition-opacity duration-500 -z-10" />
                   </div>
                 </div>
               ))}
@@ -329,7 +329,7 @@ const CustomerSuccessSlider = () => {
         <div className="flex lg:hidden justify-center gap-4 mt-8">
           <button
             onClick={handlePrev}
-            className="flex items-center justify-center w-12 h-12 rounded-full bg-white border border-gray-200 text-gray-700 hover:bg-blue-50 hover:text-blue-600 transition-all duration-300 shadow-sm"
+            className="flex items-center justify-center w-12 h-12 rounded-full bg-[#1E1D28] border border-white/10 text-white hover:bg-white/5 transition-all duration-300 shadow-sm"
           >
             <svg className="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
               <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M15 19l-7-7 7-7" />
@@ -338,7 +338,7 @@ const CustomerSuccessSlider = () => {
           
           <button
             onClick={handleNext}
-            className="flex items-center justify-center w-12 h-12 rounded-full bg-white border border-gray-200 text-gray-700 hover:bg-blue-50 hover:text-blue-600 transition-all duration-300 shadow-sm"
+            className="flex items-center justify-center w-12 h-12 rounded-full bg-[#1E1D28] border border-[#3567FF]/20 text-[#3567FF] hover:bg-[#3567FF]/10 transition-all duration-300 shadow-sm"
           >
             <svg className="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
               <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 5l7 7-7 7" />

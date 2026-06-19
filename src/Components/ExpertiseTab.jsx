@@ -138,12 +138,12 @@ const carouselData = [...expertiseData, ...expertiseData];
 
 const ExpertiseTab = () => {
   return (
-    <section className="bg-gray-950 py-16 lg:py-24 overflow-hidden">
+    <section className="bg-[#070508] py-16 lg:py-24 overflow-hidden border-t border-[#2D2B3B]/30">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center mb-12">
-        <h2 className="text-4xl lg:text-5xl font-extrabold text-transparent bg-clip-text bg-gradient-to-r from-teal-400 to-indigo-500">
+        <h2 className="text-4xl lg:text-5xl font-extrabold text-white tracking-tight">
           Our Full Suite of Expertise
         </h2>
-        <p className="text-xl text-gray-400 mt-3">
+        <p className="text-xl text-[#8791AD] mt-3">
           Explore the services that define our digital innovation.
         </p>
       </div>
@@ -169,12 +169,12 @@ const ExpertiseTab = () => {
                 className="
          h-[400px] rounded-2xl shadow-xl overflow-hidden relative
          bg-cover bg-center transition-all duration-500 cursor-pointer
-         group-hover:scale-[1.03] group-hover:shadow-2xl
+         group-hover:scale-[1.03] group-hover:shadow-2xl border border-white/10
         "
                 style={{ backgroundImage: `url(${item.backgroundImage})` }}
               >
                 {/* Dark, subtle gradient overlay for professionalism and text readability */}
-                <div className="absolute inset-0 bg-gradient-to-t from-gray-900 via-gray-900/60 to-transparent"></div>
+                <div className="absolute inset-0 bg-gradient-to-t from-[#070508] via-[#070508]/65 to-transparent"></div>
 
                 {/* Content positioning: at the bottom of the card */}
                 <div className="absolute bottom-0 left-0 right-0 p-6 z-10">
@@ -184,7 +184,7 @@ const ExpertiseTab = () => {
                   <h3 className="text-2xl font-bold text-white mb-2 drop-shadow-md">
                     {item.title}
                   </h3>
-                  <p className="text-gray-300 text-sm leading-relaxed line-clamp-3">
+                  <p className="text-[#8791AD] text-sm leading-relaxed line-clamp-3 group-hover:text-white transition-colors duration-300">
                     {item.details}
                   </p>
                   

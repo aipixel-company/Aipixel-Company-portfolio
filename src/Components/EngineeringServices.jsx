@@ -20,25 +20,42 @@ const services = [
 
 export default function EngineeringServices() {
   return (
-    <div className="w-full bg-gradient-to-r from-[#647A82] to-[#00BFA6] py-16">
-      <h1 className="text-4xl font-bold text-white text-center mb-10">
-        Engineering Services
-      </h1>
-      <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6 px-6">
-        {services.map((service, index) => (
-          <div
-            key={index}
-            className="bg-white/80 backdrop-blur-md rounded-2xl shadow-md hover:shadow-xl transition-all duration-300 p-6 flex flex-col justify-between"
-          >
-            <div className="flex items-center gap-3 mb-4">
-              <span className="text-lg font-bold text-[#647A82]">
-                0{index + 1}
-              </span>
-              <h1 className="font-semibold text-lg">{service.title}</h1>
+    <div className="w-full bg-[#070508] py-16 lg:py-24 border-t border-[#2D2B3B]/30" id="engineering">
+      <div className="max-w-7xl mx-auto px-6">
+        {/* Section header */}
+        <div className="text-center mb-12">
+          <span className="text-sm font-semibold text-[#3567FF] uppercase tracking-widest">
+            Engineering
+          </span>
+          <h2 className="text-4xl font-bold text-white mt-2 tracking-tight">
+            Engineering Services
+          </h2>
+          <p className="text-[#8791AD] mt-3 max-w-xl mx-auto">
+            Robust, scalable engineering solutions built to power your digital ambitions.
+          </p>
+        </div>
+
+        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6">
+          {services.map((service, index) => (
+            <div
+              key={index}
+              className="glow-card rounded-2xl p-7 flex flex-col group"
+            >
+              <div className="flex items-center gap-4 mb-5">
+                <span className="text-2xl font-bold text-[#3567FF]/60 group-hover:text-[#3567FF] transition-colors duration-300 font-mono">
+                  {String(index + 1).padStart(2, "0")}
+                </span>
+                <div className="h-px flex-1 bg-[#2D2B3B] group-hover:bg-[#3567FF]/30 transition-colors duration-300" />
+              </div>
+              <h3 className="font-semibold text-xl text-white mb-3">
+                {service.title}
+              </h3>
+              <p className="text-[#8791AD] text-sm leading-relaxed group-hover:text-white/80 transition-colors duration-300">
+                {service.description}
+              </p>
             </div>
-            <p className="text-gray-700 text-sm">{service.description}</p>
-          </div>
-        ))}
+          ))}
+        </div>
       </div>
     </div>
   );

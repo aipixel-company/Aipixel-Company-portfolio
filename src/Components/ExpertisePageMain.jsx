@@ -34,7 +34,7 @@ const ExpertisePageMain = () => {
         className="absolute inset-0 z-0"
         style={{
           background:
-            "radial-gradient(125% 125% at 50% 10%, #000000 40%, #0d1a36 100%)",
+            "radial-gradient(125% 125% at 50% 10%, #070508 40%, #1E1D28 100%)",
         }}
       />
 
@@ -49,7 +49,7 @@ const ExpertisePageMain = () => {
           initial={{ opacity: 0, y: -40 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.8 }}
-          className="text-4xl md:text-6xl font-extrabold bg-clip-text text-transparent bg-gradient-to-r from-cyan-300 via-blue-400 to-indigo-400 mb-6"
+          className="text-4xl md:text-6xl font-extrabold bg-clip-text text-transparent bg-gradient-to-r from-[#3567FF] via-[#3567FF]/80 to-[#61CE70] mb-6"
         >
           {sectionData.title}
         </motion.h1>
@@ -59,7 +59,7 @@ const ExpertisePageMain = () => {
           initial={{ opacity: 0, y: 20 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ delay: 0.2, duration: 0.8 }}
-          className="text-gray-300 text-base md:text-lg leading-relaxed max-w-3xl mx-auto mb-12"
+          className="text-[#8791AD] text-base md:text-lg leading-relaxed max-w-3xl mx-auto mb-12"
         >
           {sectionData.description}
         </motion.p>
@@ -74,12 +74,12 @@ const ExpertisePageMain = () => {
               initial={{ opacity: 0, y: 30 }}
               animate={{ opacity: 1, y: 0 }}
               transition={{ delay: 0.4 + index * 0.1, duration: 0.8 }}
-              className="bg-white/5 hover:bg-white/10 transition-all duration-300 rounded-2xl p-6 border border-white/10 shadow-md"
+              className="bg-[#1E1D28]/45 border border-white/5 hover:border-[#3567FF]/30 hover:bg-[#1E1D28]/60 transition-all duration-300 rounded-2xl p-6 shadow-md"
             >
-              <h3 className="text-xl font-semibold text-cyan-400 mb-3">
+              <h3 className="text-xl font-semibold text-[#3567FF] mb-3">
                 {point.title}
               </h3>
-              <p className="text-sm text-gray-300 leading-relaxed">
+              <p className="text-sm text-[#8791AD] leading-relaxed">
                 {point.desc}
               </p>
             </motion.div>

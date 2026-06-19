@@ -15,6 +15,10 @@ import IndustriesStock from "./Pages/IndustriesStock";
 import ContactUsStock from "./Pages/ContactUsStock";
 import PrivacyPolicy from "./Components/PrivacyPolicy";
 import TrendingBlogsSection from "./Components/TrendingBlogsSection";
+import ServiceDetail from "./Pages/ServiceDetail";
+import ExpertiseDetail from "./Pages/ExpertiseDetail";
+import IndustryDetail from "./Pages/IndustryDetail";
+import CaseStudyDetail from "./Pages/CaseStudyDetail";
 
 const router = createBrowserRouter(
   createRoutesFromElements(
@@ -23,11 +27,16 @@ const router = createBrowserRouter(
       <Route path="aboutus" element={<AboutStock />} />
       <Route path="contact-us" element={<ContactUsStock />} />
       <Route path="services" element={<ServicesStock />} />
+      <Route path="services/:id" element={<ServiceDetail />} />
 
       <Route path="clients" element={<ClientsStock />} />
+      <Route path="clients/:id" element={<CaseStudyDetail />} />
 
       <Route path="expertise" element={<ExpertiseStock />} />
+      <Route path="expertise/:id" element={<ExpertiseDetail />} />
+
       <Route path="industries" element={<IndustriesStock />} />
+      <Route path="industries/:id" element={<IndustryDetail />} />
 
       <Route path="blogs" element={<BlogStock />} />
       <Route path="privacy-policy" element={<PrivacyPolicy />} />

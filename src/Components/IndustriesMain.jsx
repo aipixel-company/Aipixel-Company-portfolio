@@ -4,14 +4,14 @@ import { useNavigate } from "react-router-dom";
 
 export default function IndustriesMain() {
   const headingClasses = "text-4xl font-extrabold tracking-tight text-white sm:text-5xl lg:text-6xl";
-  const preHeadingClasses = "text-sm font-semibold uppercase tracking-wider text-cyan-400"; // Lighter cyan for contrast
-  const paragraphClasses = "mt-6 text-xl text-gray-200 max-w-2xl"; // Lighter text for better contrast and increased max-width
+  const preHeadingClasses = "text-sm font-semibold uppercase tracking-wider text-[#3567FF]"; 
+  const paragraphClasses = "mt-6 text-xl text-[#8791AD] max-w-2xl"; 
   const featureTitleClasses = "font-semibold text-lg text-white";
-  const featureSubtitleClasses = "mt-2 text-sm text-gray-300"; 
-  const iconColorClass = "text-cyan-400"; // Lighter cyan for contrast
+  const featureSubtitleClasses = "mt-2 text-sm text-[#8791AD]"; 
+  const iconColorClass = "text-[#3567FF]"; 
   
   return (
-    <section className="relative py-20 sm:py-32 overflow-hidden" id="industries-hero">
+    <section className="relative py-20 sm:py-32 overflow-hidden bg-[#070508]" id="industries-hero">
       
       <div 
         className="absolute inset-0 z-0" 
@@ -19,13 +19,13 @@ export default function IndustriesMain() {
           backgroundImage: `url(${industryImage})`, 
           backgroundSize: 'cover', 
           backgroundPosition: '5% center', 
-          filter: 'grayscale(30%) brightness(0.9)' 
+          filter: 'grayscale(30%) brightness(0.4)' 
         }}
         aria-hidden="true"
       ></div>
 
       <div 
-        className="absolute inset-0 z-10 bg-gradient-to-br from-gray-900 via-gray-900/70 to-gray-700/50" 
+        className="absolute inset-0 z-10 bg-gradient-to-br from-[#070508] via-[#070508]/85 to-[#070508]/40" 
         aria-hidden="true"
       ></div>
 

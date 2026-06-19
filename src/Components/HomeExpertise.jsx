@@ -1,4 +1,5 @@
  import React from "react";
+import { Link } from "react-router-dom";
 
 // --- Technology Splash Images ---
 const techImages = {
@@ -248,14 +249,45 @@ const expertiseData = [
   },
 ];
 
+const getExpertiseSlug = (expertise) => {
+  const fieldMapping = {
+    "Web Development": "web-development",
+    "UI/UX Design": "user-interface-design",
+    "Artificial Intelligence": "artificial-intelligence",
+    "DevOps": "devops",
+    "Mobile App Development": "mobile-app-development",
+    "BlockChain": "blockchain",
+    "Quality Assurance": "quality-assurance",
+    "Software Testing": "software-testing",
+    "WordPress": "wordpress",
+    "Fintech": "fintech",
+    "Application Maintenance": "application-maintenance",
+    "Software Development": "software-development",
+    "Project Management": "project-management",
+    "AWS": "aws",
+    "Data Structures and Algorithms": "data-structures-and-algorithms",
+    "Programming Languages": "programming-languages",
+    "Cloud Platform Integration": "cloud-platform-integration",
+    "Text Editors": "text-editors",
+    "Integrated Development Environments": "integrated-development-environments",
+    "Databases": "databases",
+    "Networking Basics": "networking-basics",
+    "Basics of Testing": "basics-of-testing",
+    "Software Development Life Cycle": "software-development-life-cycle",
+    "SEO (Search Engine Optimization)": "seo-search-engine-optimization"
+  };
+  return fieldMapping[expertise.field] || expertise.name.toLowerCase().replace(/[^a-z0-9]+/g, "-");
+};
+
 // --- Enhanced Expertise Card with Splash Background ---
 const ExpertiseCard = ({ expertise }) => {
+  const slug = getExpertiseSlug(expertise);
   return (
-    <div
-      key={expertise.id}
+    <Link
+      to={`/expertise/${slug}`}
       className="relative flex flex-col flex-shrink-0 w-[18rem] lg:w-80 h-[280px] p-6 rounded-2xl shadow-xl 
                   hover:shadow-2xl hover:-translate-y-2 transition-all duration-500 cursor-pointer group
-                  border border-gray-100 overflow-hidden"
+                  border border-white/5 overflow-hidden bg-[#1E1D28]/40 no-underline"
     >
       {/* Splash Background Image */}
       <div 
@@ -281,12 +313,12 @@ const ExpertiseCard = ({ expertise }) => {
       {/* Content */}
       <div className="relative z-10 flex flex-col justify-start h-full mt-8">
         {/* Title */}
-        <h2 className="text-xl font-bold text-white mb-3 group-hover:text-gray-100 transition-colors duration-300 pr-20 drop-shadow-lg">
+        <h2 className="text-xl font-bold text-white mb-3 group-hover:text-gray-100 transition-colors duration-300 pr-20 drop-shadow-lg text-left">
           {expertise.name}
         </h2>
 
         {/* Description */}
-        <p className="text-sm text-gray-200 leading-relaxed line-clamp-5 group-hover:text-white transition-colors duration-300 drop-shadow-md">
+        <p className="text-sm text-gray-200 leading-relaxed line-clamp-5 group-hover:text-white transition-colors duration-300 drop-shadow-md text-left">
           {expertise.description}
         </p>
 
@@ -303,7 +335,7 @@ const ExpertiseCard = ({ expertise }) => {
       {/* Hover Effect Glow */}
       <div className={`absolute inset-0 rounded-2xl border-2 border-transparent bg-gradient-to-r ${expertise.gradient} 
                       opacity-0 group-hover:opacity-30 transition-opacity duration-300 -z-10`} />
-    </div>
+    </Link>
   );
 };
 
@@ -313,22 +345,22 @@ export default function HomeExpertise() {
   const loopedData = [...expertiseData, ...expertiseData];
 
   return (
-    <div className="flex flex-col items-center w-[98%] my-4 mx-auto rounded-md h-full p-4 lg:p-10 bg-gradient-to-br from-gray-900 via-blue-900 to-purple-900">
+    <div className="flex flex-col items-center w-[98%] my-4 mx-auto rounded-md h-full py-4 lg:py-6 px-4 lg:px-10 bg-[#070508]">
       {/* Header */}
-      <div className="w-full flex flex-col items-center pt-16 lg:pb-10 max-w-6xl text-center">
-        <div className="inline-flex items-center gap-2 px-4 py-2 rounded-full bg-blue-500/20 text-blue-200 text-sm font-medium mb-6 backdrop-blur-sm border border-blue-500/30">
-          <span className="w-2 h-2 bg-blue-400 rounded-full animate-pulse"></span>
+      <div className="w-full flex flex-col items-center pt-8 lg:pb-6 max-w-6xl text-center">
+        <div className="inline-flex items-center gap-2 px-4 py-2 rounded-full bg-[#3567FF]/10 text-[#3567FF] text-sm font-semibold mb-6 border border-[#3567FF]/20">
+          <span className="w-2 h-2 bg-[#61CE70] rounded-full animate-pulse"></span>
           Our Expertise Areas
         </div>
         
         <h1 className="text-4xl lg:text-6xl font-bold text-white mb-6 leading-tight">
           Unleash{" "}
-          <span className="bg-g  bg text-white -clip-text">
+          <span className="gradient-text-accent">
             Digital Excellence
           </span>
         </h1>
         
-        <p className="text-xl text-gray-300 leading-relaxed max-w-4xl mb-8">
+        <p className="text-xl text-[#8791AD] leading-relaxed max-w-4xl mb-8">
           Transform your vision into reality with our comprehensive suite of cutting-edge technologies 
           and innovative solutions tailored for your success.
         </p>
@@ -338,8 +370,8 @@ export default function HomeExpertise() {
       {/* Infinite Scroll Container */}
       <div className="relative w-full overflow-hidden mt-4 mb-8">
         {/* Gradient Overlays */}
-        <div className="absolute left-0 top-0 w-20 h-full bg-gradient-to-r from-gray-900 to-transparent z-10" />
-        <div className="absolute right-0 top-0 w-20 h-full bg-gradient-to-l from-gray-900 to-transparent z-10" />
+        <div className="absolute left-0 top-0 w-20 h-full bg-gradient-to-r from-[#070508] to-transparent z-10" />
+        <div className="absolute right-0 top-0 w-20 h-full bg-gradient-to-l from-[#070508] to-transparent z-10" />
         
         <div className="flex animate-scroll gap-6 w-max">
           {loopedData.map((expertise, index) => (

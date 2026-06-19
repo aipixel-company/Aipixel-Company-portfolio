@@ -1,135 +1,142 @@
-import React, { useState } from "react";
+import React from "react";
+import { Link } from "react-router-dom";
+
+const blogs = [
+  {
+    id: 1,
+    category: "AI & Technology",
+    date: "September 20, 2025",
+    title: "The Rise of Generative AI in Everyday Applications",
+    description:
+      "Generative AI is rapidly transforming industries by enabling machines to create content, from text and images to code and music.",
+    image: "https://images.unsplash.com/photo-1485827404703-89b55fcc595e?w=600&auto=format&fit=crop&q=80",
+    readTime: "5 min read",
+  },
+  {
+    id: 2,
+    category: "Blockchain",
+    date: "October 1, 2025",
+    title: "Blockchain Beyond Cryptocurrency: Real-World Applications",
+    description:
+      "While blockchain is often associated with cryptocurrency, its potential goes far beyond digital money into supply chain and healthcare.",
+    image: "https://images.unsplash.com/photo-1639762681485-074b7f938ba0?w=600&auto=format&fit=crop&q=80",
+    readTime: "6 min read",
+  },
+  {
+    id: 3,
+    category: "Cybersecurity",
+    date: "October 1, 2025",
+    title: "Cybersecurity in the Age of AI: Challenges and Solutions",
+    description:
+      "AI is becoming a double-edged sword in cybersecurity — helping both defenders and attackers. Learn the latest defense strategies.",
+    image: "https://images.unsplash.com/photo-1550751827-4bd374c3f58b?w=600&auto=format&fit=crop&q=80",
+    readTime: "7 min read",
+  },
+  {
+    id: 4,
+    category: "Infrastructure",
+    date: "October 5, 2025",
+    title: "Edge Computing: Powering the Next Wave of IoT",
+    description:
+      "As the Internet of Things expands, edge computing addresses the need for faster data processing by bringing computation closer to devices.",
+    image: "https://images.unsplash.com/photo-1451187580459-43490279c0fa?w=600&auto=format&fit=crop&q=80",
+    readTime: "5 min read",
+  },
+  {
+    id: 5,
+    category: "Sustainability",
+    date: "October 10, 2025",
+    title: "Sustainable Tech: Green Cloud and Eco-Friendly Computing",
+    description:
+      "As climate concerns grow, the tech industry is focusing on sustainability. Green cloud computing is becoming vital for businesses.",
+    image: "https://images.unsplash.com/photo-1473341304170-971dccb5ac1e?w=600&auto=format&fit=crop&q=80",
+    readTime: "4 min read",
+  },
+  {
+    id: 6,
+    category: "Mobile",
+    date: "October 15, 2025",
+    title: "Flutter vs React Native: Which to Choose in 2025?",
+    description:
+      "An in-depth comparison of the two dominant cross-platform mobile frameworks to help you make the right choice for your next app.",
+    image: "https://images.unsplash.com/photo-1512941937669-90a1b58e7e9c?w=600&auto=format&fit=crop&q=80",
+    readTime: "8 min read",
+  },
+];
 
 const BlogSection = () => {
-  const [slideIndex, setSlideIndex] = useState(0);
-  const slides = [
-    {
-      image: "https://pagedone.io/asset/uploads/1696244059.png",
-      title: "Clever ways to invest in product to organize your portfolio",
-      description:
-        "Discover smart investment strategies to streamline and organize your portfolio. Explore innovative approaches to optimize your...",
-    },
-    {
-      image:
-        "https://images.unsplash.com/photo-1715744005019-57c97a5d29e9?w=400&auto=format&fit=crop&q=60&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxlZGl0b3JpYWwtZmVlZHxzNXx8fGVufDB8fHx8fA%3D%3D",
-      title: "How to grow your profit through systematic investment",
-      description:
-        "Unlock the power of systematic investment with us and watch your profits soar. Our expert team will guide you on the path to financial...",
-    },
-    {
-      image:
-        "https://images.unsplash.com/photo-1499750310107-5fef28a66643?q=80&w=1470&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
-      title: "Maximizing your investments with expert advice",
-      description:
-        "Learn how to maximize your investment returns with insights from leading financial experts. Gain the knowledge you need to succeed...",
-    },
-    {
-      image:
-        "https://images.unsplash.com/photo-1614028674026-a65e31bfd27c?q=80&w=1470&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
-      title: "Investment trends to watch in 2024",
-      description:
-        "Stay ahead of the curve with our analysis of the top investment trends to watch in 2024. Discover where the smart money is headed...",
-    },
-    {
-      image:
-        "https://images.unsplash.com/photo-1522199755839-a2bacb67c546?q=80&w=1472&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
-      title: "Expert tips for diversifying your portfolio",
-      description:
-        "Diversification is key to a successful portfolio. Learn from the experts how to balance risk and reward by spreading your investments...",
-    },
-  ];
-
-  const handlePrevSlide = () => {
-    setSlideIndex((prevIndex) =>
-      prevIndex === 0 ? slides.length - 1 : prevIndex - 1
-    );
-  };
-
-  const handleNextSlide = () => {
-    setSlideIndex((prevIndex) =>
-      prevIndex === slides.length - 1 ? 0 : prevIndex + 1
-    );
-  };
-
   return (
-    <section className=" py-9">
-      <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
-        <div className="flex justify-center flex-wrap md:flex-wrap lg:flex-nowrap lg:flex-row lg:justify-between gap-8">
-          <div className="w-full flex items-center justify-center flex-col lg:w-2/5">
-            <div className="block lg:text-left text-center">
-              <h2 className="text-4xl font-bold text-gray-900 leading-[3.25rem] mb-5">
-                <span className="text-indigo-600">Expert </span>insights
-              </h2>
-              <p className="text-gray-500 mb-10 max-lg:max-w-xl max-lg:mx-auto">
-                Welcome to our blog section, where knowledge meets inspiration.
-                Explore insightful articles, expert tips, and the latest trends
-                in our field.
-              </p>
-              {/* <a
-                href="javascript:;"
-                className="cursor-pointer border border-gray-300 shadow-sm rounded-full py-3.5 px-7 w-52 lg:mx-0 mx-auto flex justify-center text-gray-900 font-semibold transition-all duration-300 hover:bg-gray-100"
-              >
-                View All
-              </a> */}
-            </div>
-            <div className="flex items-center lg:justify-start justify-center mt-8 gap-6 mb-4">
-              <button
-                className="group flex justify-center items-center border border-solid border-indigo-600 w-11 h-11 transition-all duration-500 rounded-full hover:bg-indigo-600"
-                onClick={handlePrevSlide}
-              >
-                <svg
-                  className="h-6 w-6 text-indigo-600 group-hover:text-white"
-                  viewBox="0 0 24 24"
-                  fill="none"
-                  xmlns="http://www.w3.org/2000/svg"
-                >
-                  <path
-                    d="M20.9999 12L4.99992 12M9.99992 6L4.70703 11.2929C4.3737 11.6262 4.20703 11.7929 4.20703 12C4.20703 12.2071 4.3737 12.3738 4.70703 12.7071L9.99992 18"
-                    stroke="currentColor"
-                    strokeWidth="2"
-                    strokeLinecap="round"
-                    strokeLinejoin="round"
-                  />
-                </svg>
-              </button>
-              <button
-                className="group flex justify-center items-center border border-solid border-indigo-600 w-11 h-11 transition-all duration-500 rounded-full hover:bg-indigo-600"
-                onClick={handleNextSlide}
-              >
-                <svg
-                  className="h-6 w-6 text-indigo-600 group-hover:text-white"
-                  viewBox="0 0 24 24"
-                  fill="none"
-                  xmlns="http://www.w3.org/2000/svg"
-                >
-                  <path
-                    d="M3 12L19 12M14 18L19.2929 12.7071C19.6262 12.3738 19.7929 12.2071 19.7929 12C19.7929 11.7929 19.6262 11.6262 19.2929 11.2929L14 6"
-                    stroke="currentColor"
-                    strokeWidth="2"
-                    strokeLinecap="round"
-                    strokeLinejoin="round"
-                  />
-                </svg>
-              </button>
-            </div>
+    <section className="py-10 lg:py-14 bg-[#070508] border-t border-[#2D2B3B]/30">
+      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+
+        {/* Header */}
+        <div className="flex flex-col md:flex-row md:items-end md:justify-between gap-6 mb-14">
+          <div>
+            <span className="inline-block mb-4 px-4 py-1.5 rounded-full text-xs font-semibold uppercase tracking-widest text-[#3567FF] border border-[#3567FF]/30 bg-[#3567FF]/10">
+              Insights & Updates
+            </span>
+            <h2 className="text-4xl lg:text-5xl font-extrabold text-white tracking-tight">
+              Expert <span className="text-[#3567FF]">Insights</span>
+            </h2>
+            <p className="text-[#8791AD] mt-3 max-w-lg">
+              Explore insightful articles, expert tips, and the latest trends in technology and digital transformation.
+            </p>
           </div>
-          <div className="lg:w-3/5  rounded-lg">
-            <div className="max-w-xl mx-auto p-3">
-              <img
-                src={slides[slideIndex].image}
-                srcSet={`${slides[slideIndex].image} 1x, ${slides[slideIndex].image} 2x`}
-                loading="lazy"
-                alt="Blog Slide"
-                className=" w-full mb-6 sm:h-[20rem] rounded-2xl"
-              />
-              <h3 className="text-xl text-gray-900 font-medium leading-8 mb-4 group-hover:text-indigo-600">
-                {slides[slideIndex].title}
-              </h3>
-              <p className="text-gray-500 leading-6 transition-all duration-500 mb-8">
-                {slides[slideIndex].description}
-              </p>
-            </div>
-          </div>
+          <Link
+            to="/blogs"
+            className="flex-shrink-0 inline-flex items-center gap-2 px-6 py-3 rounded-full border border-[#2D2B3B] text-[#8791AD] hover:text-white hover:border-white/20 text-sm font-medium transition-all duration-200"
+          >
+            View all posts
+            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20" fill="currentColor" className="w-4 h-4">
+              <path fillRule="evenodd" d="M3 10a.75.75 0 01.75-.75h10.638L10.23 5.29a.75.75 0 111.04-1.08l5.5 5.25a.75.75 0 010 1.08l-5.5 5.25a.75.75 0 11-1.04-1.08l4.158-3.96H3.75A.75.75 0 013 10z" clipRule="evenodd" />
+            </svg>
+          </Link>
+        </div>
+
+        {/* Blog Grid */}
+        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-7">
+          {blogs.map((blog) => (
+            <Link
+              key={blog.id}
+              to={`/blog/${blog.id}`}
+              className="group glow-card rounded-2xl overflow-hidden flex flex-col no-underline"
+            >
+              {/* Image */}
+              <div className="relative h-52 overflow-hidden">
+                <img
+                  src={blog.image}
+                  alt={blog.title}
+                  className="w-full h-full object-cover transition-transform duration-500"
+                  loading="lazy"
+                />
+                <div className="absolute inset-0 bg-gradient-to-t from-[#1E1D28] to-transparent opacity-60" />
+                <span className="absolute top-4 left-4 px-3 py-1 rounded-full bg-[#3567FF] text-white text-xs font-semibold tracking-wide">
+                  {blog.category}
+                </span>
+              </div>
+
+              {/* Content */}
+              <div className="p-6 flex flex-col flex-1 gap-3">
+                <div className="flex items-center gap-3 text-xs text-[#8791AD]">
+                  <span>{blog.date}</span>
+                  <span className="w-1 h-1 rounded-full bg-[#8791AD]" />
+                  <span>{blog.readTime}</span>
+                </div>
+                <h3 className="text-white font-bold text-lg leading-snug group-hover:text-[#3567FF] transition-colors duration-300 line-clamp-2">
+                  {blog.title}
+                </h3>
+                <p className="text-[#8791AD] text-sm leading-relaxed line-clamp-3 flex-1">
+                  {blog.description}
+                </p>
+                <div className="flex items-center gap-2 text-[#3567FF] text-sm font-semibold mt-2 group-hover:gap-3 transition-all duration-300">
+                  Read more
+                  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20" fill="currentColor" className="w-4 h-4">
+                    <path fillRule="evenodd" d="M3 10a.75.75 0 01.75-.75h10.638L10.23 5.29a.75.75 0 111.04-1.08l5.5 5.25a.75.75 0 010 1.08l-5.5 5.25a.75.75 0 11-1.04-1.08l4.158-3.96H3.75A.75.75 0 013 10z" clipRule="evenodd" />
+                  </svg>
+                </div>
+              </div>
+            </Link>
+          ))}
         </div>
       </div>
     </section>

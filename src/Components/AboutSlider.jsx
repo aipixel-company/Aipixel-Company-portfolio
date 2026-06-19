@@ -1,15 +1,15 @@
 import React from "react";
 import { motion } from "framer-motion";
 
-function HomeSlider() {
+function AboutSlider() {
   return (
     <section className="relative overflow-hidden flex flex-col items-center justify-center text-center min-h-[90vh] px-6">
-      {/* Azure Depths Background */}
+      {/* Dark Theme Background */}
       <div
         className="absolute inset-0 z-0"
         style={{
           background:
-            "radial-gradient(125% 125% at 50% 100%, #000000 40%, #010133 100%)",
+            "radial-gradient(125% 125% at 50% 100%, #070508 40%, rgba(53, 103, 255, 0.12) 100%)",
         }}
       />
 
@@ -24,7 +24,7 @@ function HomeSlider() {
           repeat: Infinity,
           ease: "easeInOut",
         }}
-        className="absolute top-1/4 left-1/2 -translate-x-1/2 w-[700px] h-[700px] bg-gradient-to-b from-blue-600/30 via-indigo-500/10 to-transparent blur-[160px] rounded-full pointer-events-none"
+        className="absolute top-1/4 left-1/2 -translate-x-1/2 w-[700px] h-[700px] bg-gradient-to-b from-[#3567FF]/20 via-[#61CE70]/5 to-transparent blur-[160px] rounded-full pointer-events-none"
       />
 
       {/* Content Section */}
@@ -35,7 +35,7 @@ function HomeSlider() {
         className="max-w-4xl text-gray-200 relative z-10"
       >
         <motion.h1
-          className="text-4xl md:text-6xl font-extrabold leading-tight mb-6 bg-gradient-to-r from-blue-400 via-indigo-400 to-purple-400 bg-clip-text text-transparent drop-shadow-lg"
+          className="text-4xl md:text-6xl font-extrabold leading-tight mb-6 gradient-text-accent bg-clip-text text-transparent drop-shadow-lg"
           initial={{ opacity: 0, y: 40 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{
@@ -48,7 +48,7 @@ function HomeSlider() {
         </motion.h1>
 
         <motion.p
-          className="text-lg md:text-xl text-gray-400 leading-relaxed max-w-3xl mx-auto mb-6"
+          className="text-lg md:text-xl text-[#8791AD] leading-relaxed max-w-3xl mx-auto mb-6"
           initial={{ opacity: 0, y: 30 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{
@@ -73,19 +73,19 @@ function HomeSlider() {
           }}
           className="space-y-3"
         >
-          <p className="text-gray-400 italic border-l-4 border-blue-500 pl-4 text-base md:text-lg">
+          <p className="text-[#8791AD] italic border-l-4 border-[#3567FF] pl-4 text-base md:text-lg">
             “Empowering industries through intelligence, innovation, and impact.”
           </p>
-          <p className="text-gray-500 text-sm md:text-base">
+          <p className="text-[#8791AD]/70 text-sm md:text-base">
             Delivering the future — one pixal of intelligence at a time.
           </p>
         </motion.div>
       </motion.div>
 
       {/* Subtle bottom fade */}
-      <div className="absolute bottom-0 inset-x-0 h-48 bg-gradient-to-t from-[#010133] via-transparent to-transparent pointer-events-none" />
+      <div className="absolute bottom-0 inset-x-0 h-48 bg-gradient-to-t from-[#070508] via-transparent to-transparent pointer-events-none" />
     </section>
   );
 }
 
-export default HomeSlider;
+export default AboutSlider;

@@ -1,126 +1,147 @@
-import React from "react";
+import React, { useState } from "react";
 import { Link } from "react-router-dom";
-// Assuming these assets are the images you want to use
-import blog from "../assets/blog.png"
-import blog1 from "../assets/blog1.png"
-import blog2 from "../assets/blog2.png"
-import blog3 from "../assets/blog3.png"
-import blog4 from "../assets/blog4.png"
+import blog from "../assets/blog.png";
+import blog1 from "../assets/blog1.png";
+import blog2 from "../assets/blog2.png";
+import blog3 from "../assets/blog3.png";
+import blog4 from "../assets/blog4.png";
 
+const categories = ["All", "AI & Technology", "Blockchain", "Cybersecurity", "Infrastructure", "Sustainability"];
 
 const cardsData = [
   {
     id: 1,
     imgSrc: blog2,
+    category: "AI & Technology",
+    date: "Sep 20, 2025",
+    readTime: "5 min read",
     title: "The Rise of Generative AI in Everyday Applications",
     description:
-      "Go beyond chat. Generative AI is now creating art, music, and code—a massive shift enabling unprecedented content creation. See how this technology is fundamentally reshaping daily life and business.",
+      "Go beyond chat. Generative AI is now creating art, music, and code — a massive shift enabling unprecedented content creation across all industries.",
   },
   {
     id: 2,
     imgSrc: blog1,
+    category: "Blockchain",
+    date: "Oct 1, 2025",
+    readTime: "6 min read",
     title: "Blockchain Beyond Cryptocurrency: Real-World Applications",
     description:
-      "It's not just crypto. Explore the transformative power of the blockchain in supply chain transparency, secure healthcare records, and next-gen financial architecture. The distributed ledger is rewriting industry rules.",
+      "Explore the transformative power of blockchain in supply chain transparency, secure healthcare records, and next-gen financial architecture.",
   },
   {
     id: 3,
     imgSrc: blog,
+    category: "Cybersecurity",
+    date: "Oct 1, 2025",
+    readTime: "7 min read",
     title: "Cybersecurity in the Age of AI: Challenges and Solutions",
     description:
-      "The ultimate defense is under threat. Learn how AI is simultaneously arming defenders with predictive analysis and empowering attackers with sophisticated automation. The future of security rests on adaptive AI solutions.",
+      "Learn how AI is simultaneously arming defenders with predictive analysis and empowering attackers with sophisticated automation.",
   },
   {
     id: 4,
     imgSrc: blog3,
+    category: "Infrastructure",
+    date: "Oct 5, 2025",
+    readTime: "5 min read",
     title: "Edge Computing: Powering the Next Wave of IoT",
     description:
-      "Stop waiting for the cloud. Edge computing brings processing right to the device, delivering instant insights and ultra-low latency. This is the critical infrastructure powering self-driving cars and industrial IoT's next wave.",
+      "Edge computing brings processing right to the device, delivering instant insights and ultra-low latency for industrial IoT applications.",
   },
   {
     id: 5,
     imgSrc: blog4,
+    category: "Sustainability",
+    date: "Oct 10, 2025",
+    readTime: "4 min read",
     title: "Sustainable Tech: Green Cloud and Eco-Friendly Computing",
     description:
-      "Tech responsibility is the new imperative. Discover the principles of Green Cloud, energy-efficient data centers, and eco-friendly hardware that are driving the industry toward a net-zero environmental footprint.",
+      "Discover the principles of Green Cloud, energy-efficient data centers, and eco-friendly hardware driving the industry toward net-zero.",
   },
 ];
 
-// --- Card Component (Kept White for Contrast) ---
-const Card = ({ imgSrc, title, description, id }) => (
-  <div className="w-full max-w-sm mb-12 mx-auto sm:w-1/2 md:w-1/3 p-4">
-    {/* Card UI: Added a deeper blue accent and a bolder hover shadow */}
-    <div className="bg-white rounded-xl shadow-2xl overflow-hidden transform transition duration-500 hover:scale-[1.03] hover:shadow-blue-500/60 flex flex-col h-full border-b-4 border-blue-600 hover:border-b-8">
-      
-      <div className="relative overflow-hidden">
-        <img 
-          src={imgSrc} 
-          alt={title} 
-          className="w-full h-48 object-cover transition duration-300 group-hover:opacity-90" 
-        />
-      </div>
-
-      <div className="p-6 flex flex-col flex-grow">
-        {/* Title now uses a strong Blue color */}
-        <h3 className="mb-3 text-xl font-bold text-blue-600 leading-tight">
-          {title}
-        </h3>
-        
-        <p className="mb-6 text-gray-600 text-sm line-clamp-4">
-          {description}
-        </p>
-        
-        <div className="mt-auto">
-          <Link 
-            to={`/blog/${id}`} 
-            // CTA color changed to match the blue accent
-            className="inline-flex items-center text-sm font-semibold text-white bg-blue-600 px-4 py-2 rounded-full hover:bg-blue-700 transition duration-300 shadow-lg" 
-          >
-            Read More
-            <svg className="ml-2 w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M14 5l7 7m0 0l-7 7m7-7H3"></path></svg>
-          </Link>
-        </div>
-      </div>
-    </div>
-  </div>
-);
-
-// --- Section Component with Colorful Gradient UI ---
 export default function AllBlogsSection() {
-  return (
-    // **** UPDATED: Colorful, Professional Dark-to-Light Gradient ****
-    // Starts with a deep, dark blue, transitions through a vibrant purple, and fades to white.
-    // from-blue-900: Deep, navy blue.
-    // via-fuchsia-900/90: A rich, professional magenta/purple.
-    // to-white: Fades to a clean white for a modern edge.
-    <div className="flex justify-center items-center py-20 min-h-screen bg-gradient-to-b from-blue-900 via-fuchsia-900/90 to-white relative z-0">
-      
-      {/* Container for Content */}
-      <section className="container mx-auto px-4 z-10">
-        
-        {/* Section Title - Text color changed to white for contrast */}
-        <div className="text-center mb-16">
-          <h2 className="text-6xl font-extrabold text-white leading-tight mb-2">
-            LATEST INSIGHTS
-          </h2>
-          <p className="mt-3 text-xl text-fuchsia-300 font-medium">
-            Cutting-edge topics shaping the future of technology.
-          </p>
-        </div>
+  const [activeCategory, setActiveCategory] = useState("All");
 
-        {/* Cards Grid */}
-        <div className="flex flex-wrap -mx-4">
-          {cardsData.map((card) => (
-            <Card
-              key={card.id}
-              id={card.id}
-              imgSrc={card.imgSrc}
-              title={card.title}
-              description={card.description}
-            />
+  const filtered =
+    activeCategory === "All"
+      ? cardsData
+      : cardsData.filter((b) => b.category === activeCategory);
+
+  return (
+    <div id="blogs" className="py-16 lg:py-24 bg-[#070508] border-t border-[#2D2B3B]/30">
+      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+
+        {/* Category Filter Tabs */}
+        <div className="flex flex-wrap gap-2 justify-center mb-12">
+          {categories.map((cat) => (
+            <button
+              key={cat}
+              onClick={() => setActiveCategory(cat)}
+              className={`px-5 py-2 rounded-full text-sm font-medium transition-all duration-200 border ${activeCategory === cat
+                  ? "bg-[#3567FF] text-white border-[#3567FF]"
+                  : "border-[#2D2B3B] text-[#8791AD] hover:text-white hover:border-white/20"
+                }`}
+            >
+              {cat}
+            </button>
           ))}
         </div>
-      </section>
+
+        {/* Blog Cards Grid */}
+        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-7">
+          {filtered.map((card) => (
+            <Link
+              key={card.id}
+              to={`/blog/${card.id}`}
+              className="group glow-card rounded-2xl overflow-hidden flex flex-col no-underline"
+            >
+              {/* Image */}
+              <div className="relative h-52 overflow-hidden">
+                <img
+                  src={card.imgSrc}
+                  alt={card.title}
+                  className="w-full h-full object-cover transition-transform duration-500"
+                  loading="lazy"
+                />
+                <div className="absolute inset-0 bg-gradient-to-t from-[#1E1D28] to-transparent opacity-60" />
+                <span className="absolute top-4 left-4 px-3 py-1 rounded-full bg-[#3567FF] text-white text-xs font-semibold tracking-wide">
+                  {card.category}
+                </span>
+              </div>
+
+              {/* Content */}
+              <div className="p-6 flex flex-col flex-1 gap-3">
+                <div className="flex items-center gap-3 text-xs text-[#8791AD]">
+                  <span>{card.date}</span>
+                  <span className="w-1 h-1 rounded-full bg-[#8791AD]" />
+                  <span>{card.readTime}</span>
+                </div>
+                <h3 className="text-white font-bold text-lg leading-snug group-hover:text-[#3567FF] transition-colors duration-300 line-clamp-2">
+                  {card.title}
+                </h3>
+                <p className="text-[#8791AD] text-sm leading-relaxed line-clamp-3 flex-1">
+                  {card.description}
+                </p>
+                <div className="flex items-center gap-2 text-[#3567FF] text-sm font-semibold mt-2 group-hover:gap-3 transition-all duration-300">
+                  Read article
+                  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20" fill="currentColor" className="w-4 h-4">
+                    <path fillRule="evenodd" d="M3 10a.75.75 0 01.75-.75h10.638L10.23 5.29a.75.75 0 111.04-1.08l5.5 5.25a.75.75 0 010 1.08l-5.5 5.25a.75.75 0 11-1.04-1.08l4.158-3.96H3.75A.75.75 0 013 10z" clipRule="evenodd" />
+                  </svg>
+                </div>
+              </div>
+            </Link>
+          ))}
+        </div>
+
+        {/* Empty state */}
+        {filtered.length === 0 && (
+          <div className="text-center py-20 text-[#8791AD]">
+            No posts found in this category yet.
+          </div>
+        )}
+      </div>
     </div>
   );
 }

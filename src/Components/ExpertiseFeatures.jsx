@@ -133,16 +133,15 @@ const expertiseFeatures = [
 
 export default function ExpertiseFeatures() {
   return (
-    // Transformed to a dark, high-contrast, professional block
-    <div className="bg-gradient-to-r from-[#0f172a]  to-[#334155] py-16 lg:py-24">
+    <div className="bg-[#070508] py-16 lg:py-24 border-t border-[#2D2B3B]/30">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         
         {/* Section Header */}
         <div className="text-center mb-12">
-          <p className="text-lg font-semibold text-teal-400 uppercase tracking-wider">
+          <p className="text-sm font-semibold text-[#3567FF] uppercase tracking-wider">
             Our Core Value Proposition
           </p>
-          <h2 className="font-extrabold text-4xl lg:text-5xl mt-2 text-white">
+          <h2 className="font-extrabold text-4xl lg:text-5xl mt-2 text-white tracking-tight">
             Features You'll Love
           </h2>
         </div>
@@ -152,20 +151,19 @@ export default function ExpertiseFeatures() {
           {expertiseFeatures.map((feature, index) => (
             <div 
               key={index}
-              // The transformative professional style: dark card with border, interactive hover
               className="
-                bg-gray-800 p-6 rounded-xl border border-gray-700 
+                bg-[#1E1D28] p-6 rounded-2xl border border-[#2D2B3B] 
                 shadow-lg transition-all duration-300 ease-in-out
-                hover:bg-gray-700 hover:shadow-2xl hover:border-teal-500
+                hover:border-[#3567FF]/40 hover:shadow-[0_10px_30px_-10px_rgba(53,103,255,0.15)]
                 transform hover:-translate-y-1 group
               "
             >
               <div className="flex items-center space-x-4">
-                {/* Icon Styling: Vibrant accent color and improved hover effect */}
+                {/* Icon Styling: Vibrant blue accent color and improved hover effect */}
                 <div className="
-                    p-4 rounded-full bg-teal-400/10 text-teal-400
-                    transition-colors duration-300
-                    group-hover:bg-teal-400 group-hover:text-gray-900
+                    p-3.5 rounded-xl bg-[#3567FF]/10 text-[#3567FF]
+                    transition-all duration-300
+                    group-hover:bg-[#3567FF] group-hover:text-white
                   "
                 >
                   {feature.icon}
@@ -178,13 +176,11 @@ export default function ExpertiseFeatures() {
               </div>
               
               {/* Description */}
-              <p className="mt-4 text-gray-400 text-base leading-relaxed">
+              <p className="mt-4 text-[#8791AD] text-base leading-relaxed group-hover:text-white/90 transition-colors duration-300">
                 {feature.description}
               </p>
             </div>
           ))}
-
-          
         </div>
       </div>
     </div>

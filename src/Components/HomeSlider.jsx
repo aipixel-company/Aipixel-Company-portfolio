@@ -73,22 +73,20 @@ const Card = memo(
   ({ card, isActive, progress, onClick, onMouseEnter, onMouseLeave }) => (
     <div
       key={card.id}
-      className={`w-56 h-auto cursor-pointer transition-all duration-300 ease-in-out hover:ring-4 hover:ring-blue-500/50 rounded-xl ${
-        isActive
-          ? "bg-white shadow-2xl transform scale-105 ring-4 ring- z-10" // Prominent active state
+      className={`w-64 md:w-36 lg:w-40 xl:w-44 2xl:w-48 h-auto cursor-pointer transition-all duration-300 ease-in-out hover:ring-4 hover:ring-blue-500/50 rounded-xl ${isActive
+          ? "bg-white shadow-2xl transform scale-105 ring-4 ring-blue-500/30 z-10" // Prominent active state
           : "bg-white rounded-xl shadow-lg border border-gray-100 opacity-90 hover:opacity-100" // Subtle inactive state
-      }`}
+        }`}
       onClick={() => onClick(card.id)}
       onMouseEnter={onMouseEnter}
       onMouseLeave={onMouseLeave}
     >
-      <div className="flex flex-col justify-between h-full p-6">
+      <div className="flex flex-col justify-between h-full p-4 lg:p-5">
         <div className="flex flex-col justify-center items-center h-full">
           {/* Logo with a more pronounced upward shift on active */}
           <div
-            className={`flex items-center transition-all duration-500 ${
-              isActive ? "translate-y-[-20%] mb-4" : "translate-y-0"
-            }`}
+            className={`flex items-center transition-all duration-500 ${isActive ? "translate-y-[-15%] mb-3" : "translate-y-0"
+              }`}
           >
             <img
               src={card.logo}
@@ -100,8 +98,8 @@ const Card = memo(
           </div>
           {/* Description visible only when active */}
           {isActive && (
-            <div className="mt-5 transition-opacity duration-500 opacity-100 animate-fadeIn">
-              <p className="text-black text-sm font-light text-center cario-db">
+            <div className="mt-3 lg:mt-4 transition-opacity duration-500 opacity-100 animate-fadeIn">
+              <p className="text-black text-xs lg:text-sm font-light text-center cario-db">
                 {card.description}
               </p>
             </div>
@@ -109,7 +107,7 @@ const Card = memo(
         </div>
         {/* Modern Progress Bar */}
         {isActive && (
-          <div className="w-full h-1 mt-6 rounded-full bg-gray-200 overflow-hidden">
+          <div className="w-full h-1 mt-4 lg:mt-5 rounded-full bg-gray-200 overflow-hidden">
             <div
               className="h-full bg-blue-600 transition-all duration-100 ease-linear" // Smooth but fast transition for progress bar
               style={{ width: `${progress}%` }}
@@ -196,22 +194,22 @@ function HomeSlider() {
       }}
     >
       {/* Catchy: Dark Overlay for text contrast on any background image */}
-      <div className="absolute inset-0 bg-black bg-opacity-40 transition-opacity duration-700"></div> 
-      
-      <div className="relative z-10 w-full px-4 sm:px-8 lg:px-16 py-16">
+      <div className="absolute inset-0 bg-black bg-opacity-40 transition-opacity duration-700"></div>
+
+      <div className="relative z-10 w-full px-4 sm:px-8 lg:px-16 py-8 md:py-10 lg:py-12">
         {/* Modern & Catchy Header Content */}
-        <div className="lg:mb-28 mb-16 mt-10 cursor-default text-center max-w-4xl mx-auto">
-          <h1 className="text-3xl sm:text-4xl md:text-5xl lg:text-7xl font-extrabold text-white tracking-tight drop-shadow-2xl animate-pulseOnce">
+        <div className="lg:mb-12 mb-8 mt-4 lg:mt-6 cursor-default text-center max-w-4xl mx-auto">
+          <h1 className="text-3xl sm:text-4xl md:text-5xl lg:text-5xl xl:text-6xl font-extrabold text-white tracking-tight drop-shadow-2xl animate-pulseOnce">
             Empowering Digital Transformation.
           </h1>
-          <h2 className="text-xl sm:text-2xl md:text-3xl lg:text-4xl text-white font-light mt-4 drop-shadow-lg">
-          Where Pixal gets Smarter
+          <h2 className="text-lg sm:text-xl md:text-2xl lg:text-2xl xl:text-3xl text-white font-light mt-3 lg:mt-4 drop-shadow-lg">
+            Where Pixal gets Smarter
           </h2>
-         
+
         </div>
-        
+
         {/* Desktop/Tablet Card Layout */}
-        <div className="hidden md:flex flex-row flex-wrap justify-center h-auto space-x-6">
+        <div className="hidden md:flex flex-row flex-wrap justify-center h-auto space-x-3 xl:space-x-4 2xl:space-x-6">
           {cards.map((card) => (
             <Card
               key={card.id}
@@ -224,7 +222,7 @@ function HomeSlider() {
             />
           ))}
         </div>
-        
+
         {/* Mobile Card Layout - Stacked and centered */}
         <div className="flex md:hidden flex-col space-y-4 mx-auto items-center mb-5">
           {cards.map((card) => (

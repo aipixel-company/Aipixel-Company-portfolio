@@ -1,55 +1,80 @@
 import React from "react";
 import { GoDotFill } from "react-icons/go";
 import { FaAngleRight } from "react-icons/fa6";
-
+import { Link } from "react-router-dom";
 
 const problems = [
   {
     title: "Build your perfect development team",
     description:
-      "Lorem ipsum dolor sit amet consectetur adipisicing elit. Earum consequatur omnis, minus deserunt aspernatur aliquid similique adipisci voluptate debitis natus quasi, repellat eius obcaecati fugiat blanditiis, aperiam aut eveniet quaerat vitae doloribus atque ad. A dolor sapiente tempore harum enim, numquam mollitia eius rem!",
+      "We assemble elite squads of specialists — developers, designers, and product managers — tailored precisely to your project needs, culture, and timeline. No overhead, no agency bloat.",
   },
   {
     title: "Adopt digital transformations",
     description:
-      "Lorem ipsum dolor sit amet consectetur adipisicing elit. Earum consequatur omnis, minus deserunt aspernatur aliquid similique adipisci voluptate debitis natus quasi, repellat eius obcaecati fugiat blanditiis, aperiam aut eveniet quaerat vitae doloribus atque ad. A dolor sapiente tempore harum enim, numquam mollitia eius rem!",
+      "From legacy modernization to cloud-native architectures, we guide your business through every phase of digital transformation with a clear roadmap and measurable outcomes.",
   },
   {
     title: "Unify your enterprise's digital ecosystem",
     description:
-      "Lorem ipsum dolor sit amet consectetur adipisicing elit. Earum consequatur omnis, minus deserunt aspernatur aliquid similique adipisci voluptate debitis natus quasi, repellat eius obcaecati fugiat blanditiis, aperiam aut eveniet quaerat vitae doloribus atque ad. A dolor sapiente tempore harum enim, numquam mollitia eius rem!",
+      "Seamlessly integrate disparate systems, data streams, and workflows into a cohesive digital ecosystem that enhances operational efficiency and delivers real-time insights.",
   },
 ];
 
 export default function SolutionsSection() {
   return (
-    <div className="w-full h-[80vh]">
-      <h1 className="text-center text-4xl font-body pt-5 mt-5">
-        Problems We'll Help You Solve
-      </h1>
-      <div className="flex gap-3 p-4 mt-6">
-        {problems.map((problem, index) => (
-          <div key={index} className="p-3 border rounded-lg">
-            <div className="flex flex-row items-center">
-              <GoDotFill />
-              <h1 className="font-body font-medium text-lg ml-2">
-                {problem.title}
-              </h1>
+    <div className="w-full bg-[#070508] border-t border-[#2D2B3B]/30">
+      {/* Section header */}
+      <div className="max-w-7xl mx-auto px-6 py-16 lg:py-24">
+        <div className="text-center mb-12">
+          <span className="text-sm font-semibold text-[#3567FF] uppercase tracking-widest">
+            Solutions
+          </span>
+          <h2 className="text-4xl font-bold text-white mt-2 tracking-tight">
+            Problems We'll Help You Solve
+          </h2>
+          <p className="text-[#8791AD] mt-3 max-w-xl mx-auto">
+            Real challenges. Practical solutions. Proven outcomes.
+          </p>
+        </div>
+
+        <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
+          {problems.map((problem, index) => (
+            <div key={index} className="glow-card rounded-2xl p-7 group">
+              <div className="flex items-center gap-3 mb-4">
+                <GoDotFill className="text-[#3567FF] flex-shrink-0 w-4 h-4" />
+                <h3 className="font-semibold text-lg text-white group-hover:text-[#3567FF] transition-colors duration-300">
+                  {problem.title}
+                </h3>
+              </div>
+              <p className="text-[#8791AD] text-sm leading-relaxed group-hover:text-white/80 transition-colors duration-300">
+                {problem.description}
+              </p>
             </div>
-            <p className="mt-4 text-gray-600">{problem.description}</p>
-          </div>
-        ))}
+          ))}
+        </div>
       </div>
-      <div className="bg-gradient-to-r from-blue-500 to-indigo-500 py-10">
-        <p className="text-3xl text-center text-white">
-          Ready to realise your product vision?
-          <a
-            href="/contact-us"
-            className="text-xl text-white ml-2 inline-flex items-center"
+
+      {/* CTA Banner */}
+      <div
+        className="py-14 px-6"
+        style={{
+          background: "linear-gradient(135deg, #1E1D28 0%, #0f0e18 100%)",
+          borderTop: "1px solid rgba(53,103,255,0.15)",
+        }}
+      >
+        <div className="max-w-4xl mx-auto flex flex-col md:flex-row items-center justify-between gap-6 text-center md:text-left">
+          <p className="text-2xl md:text-3xl font-bold text-white leading-snug">
+            Ready to realise your{" "}
+            <span className="gradient-text-accent">product vision?</span>
+          </p>
+          <Link
+            to="/contact-us"
+            className="flex-shrink-0 inline-flex items-center gap-2 btn-premium-blue px-8 py-3 rounded-full text-sm font-semibold"
           >
-            partner with us <FaAngleRight className="ml-1" />
-          </a>
-        </p>
+            Partner with us <FaAngleRight />
+          </Link>
+        </div>
       </div>
     </div>
   );
