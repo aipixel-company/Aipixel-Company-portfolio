@@ -38,12 +38,19 @@ export default function SEO({
     };
 
     // Helper function to set or create link tag
-    const setLinkTag = (rel, href) => {
-      let element = document.querySelector(`link[rel="${rel}"]`);
+    const setLinkTag = (rel, href, extraAttrs = {}) => {
+      let query = `link[rel="${rel}"]`;
+      Object.keys(extraAttrs).forEach(key => {
+        query += `[${key}="${extraAttrs[key]}"]`;
+      });
+      let element = document.querySelector(query);
       if (href) {
         if (!element) {
           element = document.createElement("link");
           element.setAttribute("rel", rel);
+          Object.keys(extraAttrs).forEach(key => {
+            element.setAttribute(key, extraAttrs[key]);
+          });
           document.head.appendChild(element);
         }
         element.setAttribute("href", href);
@@ -60,6 +67,10 @@ export default function SEO({
 
     // 4. Canonical
     setLinkTag("canonical", canonicalUrl);
+
+    // Locale Alternate/hreflang links
+    setLinkTag("alternate", canonicalUrl, { hreflang: "en-GB" });
+    setLinkTag("alternate", canonicalUrl, { hreflang: "x-default" });
 
     // 5. Open Graph tags
     setMetaTag("property", "og:type", ogType);
