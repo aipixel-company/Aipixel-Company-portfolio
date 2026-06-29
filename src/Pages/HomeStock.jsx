@@ -35,7 +35,7 @@ export default function HomeStock() {
   return (
     <>
       <SEO
-        title="AI Pixel | Premium AI Consultancy & Digital Product Studio"
+        title="AI Pixel | Where Pixal gets Smarter"
         description="AI Pixel is a leading digital product studio and AI engineering consultancy. We design and build custom machine learning solutions, web apps, and digital platforms."
         canonicalPath="/"
         schema={orgSchema}
