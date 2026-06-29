@@ -12,9 +12,9 @@ export default function HomeLayout() {
         <Nav />
       </div>
       <div className=' diplaymobilenav hidden'>
-        <MobileNavBar/>
+        <MobileNavBar />
       </div>
-      <div> 
+      <div>
         <Outlet />
       </div>
       {/* <div className=' md:hidden lg:hidden block'>

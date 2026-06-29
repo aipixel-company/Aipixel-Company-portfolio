@@ -21,13 +21,24 @@ body {
   font-family: 'Inter', system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
 }
 
-h1, h2, h3, h4, h5, h6 {
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
   font-family: 'Inter Tight', system-ui, -apple-system, sans-serif;
   font-weight: 600;
   color: var(--text-primary);
 }
 
-p, span, li, ul, div, label, Typography {
+p,
+span,
+li,
+ul,
+div,
+label,
+Typography {
   font-family: 'Inter', system-ui, sans-serif;
   font-weight: 400;
 }
@@ -50,6 +61,7 @@ p, span, li, ul, div, label, Typography {
   background-color: transparent !important;
   color: inherit !important;
 }
+
 .expertise-card {
   position: relative;
   overflow: hidden;
@@ -78,10 +90,12 @@ p, span, li, ul, div, label, Typography {
 .expertise-card:hover .expertise-overlay {
   background: rgba(7, 5, 8, 0.6);
 }
+
 @keyframes scroll {
   0% {
     transform: translateX(0);
   }
+
   100% {
     transform: translateX(-100%);
   }
@@ -105,42 +119,48 @@ p, span, li, ul, div, label, Typography {
 
 
 @keyframes slideDown {
-    0% {
-      transform: translateY(-100%);
-    }
-    100% {
-      transform: translateY(0);
-    }
+  0% {
+    transform: translateY(-100%);
   }
-  
-  .slide-down {
-    animation: slideDown 0.5s ease;
+
+  100% {
+    transform: translateY(0);
   }
- 
-  
-  .custom_scroll_behaviour{
-    overflow-y: auto; /* allow vertical scrollbar */
-        overflow-x: hidden; /* hide horizontal scrollbar */
-  }
-  
-  /* Add this to your CSS file or within a <style> tag in your component file */
+}
+
+.slide-down {
+  animation: slideDown 0.5s ease;
+}
+
+
+.custom_scroll_behaviour {
+  overflow-y: auto;
+  /* allow vertical scrollbar */
+  overflow-x: hidden;
+  /* hide horizontal scrollbar */
+}
+
+/* Add this to your CSS file or within a <style> tag in your component file */
 
 .custom_scroll_container {
-  scrollbar-width: none; /* Firefox */
-  -ms-overflow-style: none;  /* Internet Explorer 10+ */
+  scrollbar-width: none;
+  /* Firefox */
+  -ms-overflow-style: none;
+  /* Internet Explorer 10+ */
 }
 
 .custom_scroll_container::-webkit-scrollbar {
   width: 0;
-  height: 0; /* Safari and Chrome */
+  height: 0;
+  /* Safari and Chrome */
 }
 
 .smooth_scroll {
   scroll-behavior: smooth;
 }
 
-.scrollbar{
-  scrollbar-width:none;
+.scrollbar {
+  scrollbar-width: none;
 }
 
 /* Add this to your Tailwind CSS file or a custom CSS file */
@@ -148,6 +168,7 @@ p, span, li, ul, div, label, Typography {
   @apply w-full rounded-xl border border-[#2D2B3B] bg-[#1E1D28] text-white placeholder-[#8791AD] p-3;
   transition: border-color 0.2s ease;
 }
+
 .input-field:focus {
   @apply outline-none;
   border-color: rgba(53, 103, 255, 0.5);
@@ -155,45 +176,47 @@ p, span, li, ul, div, label, Typography {
 }
 
 @media only screen and (min-width:0px) and (max-width: 1139px) {
-  .diplaymobilenav{
+  .diplaymobilenav {
     display: block;
   }
 }
 
-@media only screen and (min-width: 756px) and  (max-width: 1065px) {
-  .cards{
-    display:grid;
+@media only screen and (min-width: 756px) and (max-width: 1065px) {
+  .cards {
+    display: grid;
     grid-template-columns: repeat(2, minmax(0, 1fr));
 
 
   }
 }
 
-@media only screen and (min-width: 540px) and  (max-width: 755px) {
-  .cards{
-    display:flex;
-    flex-direction: column;
-
-
-  }
-}
-@media only screen  and  (max-width: 539px) {
-  .cards{
-    display:flex;
+@media only screen and (min-width: 540px) and (max-width: 755px) {
+  .cards {
+    display: flex;
     flex-direction: column;
 
 
   }
 }
 
-  
+@media only screen and (max-width: 539px) {
+  .cards {
+    display: flex;
+    flex-direction: column;
 
 
-  /* Add to your global CSS */
+  }
+}
+
+
+
+
+/* Add to your global CSS */
 @keyframes shimmer {
   0% {
     transform: translateX(-100%) skewX(-12deg);
   }
+
   100% {
     transform: translateX(200%) skewX(-12deg);
   }
@@ -270,13 +293,16 @@ p, span, li, ul, div, label, Typography {
   width: 8px;
   height: 8px;
 }
+
 ::-webkit-scrollbar-track {
   background: var(--bg-dark);
 }
+
 ::-webkit-scrollbar-thumb {
   background: var(--border-dark);
   border-radius: 4px;
 }
+
 ::-webkit-scrollbar-thumb:hover {
   background: #3e3c52;
 }
@@ -287,6 +313,7 @@ p, span, li, ul, div, label, Typography {
     opacity: 0;
     transform: translateY(24px);
   }
+
   to {
     opacity: 1;
     transform: translateY(0);
@@ -298,16 +325,28 @@ p, span, li, ul, div, label, Typography {
 }
 
 /* Staggered animation delays */
-.delay-100 { animation-delay: 100ms; }
-.delay-200 { animation-delay: 200ms; }
-.delay-300 { animation-delay: 300ms; }
-.delay-400 { animation-delay: 400ms; }
+.delay-100 {
+  animation-delay: 100ms;
+}
+
+.delay-200 {
+  animation-delay: 200ms;
+}
+
+.delay-300 {
+  animation-delay: 300ms;
+}
+
+.delay-400 {
+  animation-delay: 400ms;
+}
 
 /* Subtle text link hover */
 .text-link {
   color: var(--text-secondary);
   transition: color 0.2s ease;
 }
+
 .text-link:hover {
   color: var(--accent-blue);
 }
@@ -338,6 +377,7 @@ p, span, li, ul, div, label, Typography {
   filter: grayscale(100%);
   transition: filter 0.4s ease;
 }
+
 .img-grayscale-hover:hover img {
   filter: grayscale(0%);
 }

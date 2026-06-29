@@ -86,9 +86,8 @@ function MobileNavBar() {
       {/* Slide-down Drawer */}
       <div
         ref={menuRef}
-        className={`transition-all duration-300 ease-in-out w-full absolute z-40 ${
-          isMenuOpen ? "opacity-100 translate-y-0" : "opacity-0 -translate-y-4 pointer-events-none"
-        }`}
+        className={`transition-all duration-300 ease-in-out w-full absolute z-40 ${isMenuOpen ? "opacity-100 translate-y-0" : "opacity-0 -translate-y-4 pointer-events-none"
+          }`}
         style={{
           background: "rgba(7, 5, 8, 0.97)",
           backdropFilter: "blur(24px)",
@@ -103,11 +102,10 @@ function MobileNavBar() {
                 <li key={index}>
                   <Link
                     to={item.path}
-                    className={`flex items-center space-x-3 px-4 py-3 rounded-xl transition-all duration-200 ${
-                      isActive
+                    className={`flex items-center space-x-3 px-4 py-3 rounded-xl transition-all duration-200 ${isActive
                         ? "bg-[#3567FF]/10 text-[#3567FF] border border-[#3567FF]/20"
                         : "text-[#8791AD] hover:text-white hover:bg-white/5"
-                    }`}
+                      }`}
                     onClick={toggleMenu}
                   >
                     <item.icon className="w-4 h-4 flex-shrink-0" />
