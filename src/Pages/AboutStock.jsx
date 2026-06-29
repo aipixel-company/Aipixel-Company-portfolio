@@ -1,4 +1,5 @@
 import React from 'react'
+import SEO from '../Components/SEO'
 import PageHero from '../Components/PageHero'
 import AboutSlider from '../Components/AboutSlider'
 import OurVison from '../Components/OurVison'
@@ -10,8 +11,33 @@ import CTABanner from '../Components/CTABanner'
 import ContactusFormSection from '../Components/ContactusFormSection'
 
 export default function AboutStock() {
+  const breadcrumbSchema = {
+    "@context": "https://schema.org",
+    "@type": "BreadcrumbList",
+    "itemListElement": [
+      {
+        "@type": "ListItem",
+        "position": 1,
+        "name": "Home",
+        "item": "https://aipixel.tech"
+      },
+      {
+        "@type": "ListItem",
+        "position": 2,
+        "name": "About Us",
+        "item": "https://aipixel.tech/aboutus"
+      }
+    ]
+  };
+
   return (
     <div className='bg-[#070508]'>
+      <SEO
+        title="About AI Pixel | Credentials, POV & Team"
+        description="Learn about AI Pixel, our core engineering values, our unique point of view on generative AI, and our mission to build high-performance products."
+        canonicalPath="/aboutus"
+        schema={breadcrumbSchema}
+      />
       {/* 1. Hero Banner */}
       <PageHero
         badge="Our Story"

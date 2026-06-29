@@ -3,6 +3,7 @@ import { useParams, Link } from "react-router-dom";
 import PageHero from "../Components/PageHero";
 import CTABanner from "../Components/CTABanner";
 import ContactusFormSection from "../Components/ContactusFormSection";
+import SEO from "../Components/SEO";
 
 const servicesData = {
   "web-development": {
@@ -171,8 +172,55 @@ export default function ServiceDetail() {
     );
   }
 
+  const combinedSchema = {
+    "@context": "https://schema.org",
+    "@graph": [
+      {
+        "@type": "BreadcrumbList",
+        "@id": `https://aipixel.tech/services/${id}/#breadcrumb`,
+        "itemListElement": [
+          {
+            "@type": "ListItem",
+            "position": 1,
+            "name": "Home",
+            "item": "https://aipixel.tech"
+          },
+          {
+            "@type": "ListItem",
+            "position": 2,
+            "name": "Services",
+            "item": "https://aipixel.tech/services"
+          },
+          {
+            "@type": "ListItem",
+            "position": 3,
+            "name": service.title,
+            "item": `https://aipixel.tech/services/${id}`
+          }
+        ]
+      },
+      {
+        "@type": "Service",
+        "@id": `https://aipixel.tech/services/${id}/#service`,
+        "name": service.title,
+        "description": service.description,
+        "provider": {
+          "@type": "Organization",
+          "name": "AI Pixel",
+          "url": "https://aipixel.tech"
+        }
+      }
+    ]
+  };
+
   return (
     <div className="min-h-screen bg-[#070508]">
+      <SEO
+        title={`${service.title} Services | AI Pixel`}
+        description={service.subtitle}
+        canonicalPath={`/services/${id}`}
+        schema={combinedSchema}
+      />
       {/* Hero Banner */}
       <PageHero
         badge="Core Service Details"

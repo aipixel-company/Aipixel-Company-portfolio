@@ -1,12 +1,38 @@
 import React from "react";
+import SEO from "../Components/SEO";
 import PageHero from "../Components/PageHero";
 import AllBlogsSection from "../Components/AllBlogsSection";
 import CTABanner from "../Components/CTABanner";
 import ContactusFormSection from "../Components/ContactusFormSection";
 
 export default function BlogStock() {
+  const breadcrumbSchema = {
+    "@context": "https://schema.org",
+    "@type": "BreadcrumbList",
+    "itemListElement": [
+      {
+        "@type": "ListItem",
+        "position": 1,
+        "name": "Home",
+        "item": "https://aipixel.tech"
+      },
+      {
+        "@type": "ListItem",
+        "position": 2,
+        "name": "Blog",
+        "item": "https://aipixel.tech/blogs"
+      }
+    ]
+  };
+
   return (
     <>
+      <SEO
+        title="Tech Insights & Thought Leadership Blog | AI Pixel"
+        description="Stay up to date with developer guides, industry tech deep-dives, and machine learning insights from the AI Pixel engineering team."
+        canonicalPath="/blogs"
+        schema={breadcrumbSchema}
+      />
       {/* 1. Hero Banner */}
       <PageHero
         badge="Blog & Insights"

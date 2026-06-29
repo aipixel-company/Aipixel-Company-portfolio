@@ -3,6 +3,7 @@ import { useParams, Link } from "react-router-dom";
 import PageHero from "../Components/PageHero";
 import CTABanner from "../Components/CTABanner";
 import ContactusFormSection from "../Components/ContactusFormSection";
+import SEO from "../Components/SEO";
 
 // Import client logos
 import moosaLogo from "../assets/moosa.png";
@@ -269,8 +270,39 @@ export default function CaseStudyDetail() {
     );
   }
 
+  const breadcrumbSchema = {
+    "@context": "https://schema.org",
+    "@type": "BreadcrumbList",
+    "itemListElement": [
+      {
+        "@type": "ListItem",
+        "position": 1,
+        "name": "Home",
+        "item": "https://aipixel.tech"
+      },
+      {
+        "@type": "ListItem",
+        "position": 2,
+        "name": "Case Studies",
+        "item": "https://aipixel.tech/clients"
+      },
+      {
+        "@type": "ListItem",
+        "position": 3,
+        "name": caseStudy.clientName,
+        "item": `https://aipixel.tech/clients/${id}`
+      }
+    ]
+  };
+
   return (
     <div className="min-h-screen bg-[#070508]">
+      <SEO
+        title={`${caseStudy.clientName} Case Study: ${caseStudy.title} | AI Pixel`}
+        description={`How AI Pixel engineered a high-performance solution for ${caseStudy.clientName} to achieve ${caseStudy.metric}.`}
+        canonicalPath={`/clients/${id}`}
+        schema={breadcrumbSchema}
+      />
       {/* Hero Banner */}
       <PageHero
         badge="Case Study / Success Story"

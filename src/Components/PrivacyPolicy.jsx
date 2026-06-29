@@ -1,4 +1,5 @@
 import React, { useRef } from "react";
+import SEO from "./SEO";
 
 export default function PrivacyPolicy() {
   const privacyPolicySteps = [
@@ -160,8 +161,33 @@ export default function PrivacyPolicy() {
     sectionRefs[index].current.scrollIntoView({ behavior: "smooth" });
   };
 
+  const breadcrumbSchema = {
+    "@context": "https://schema.org",
+    "@type": "BreadcrumbList",
+    "itemListElement": [
+      {
+        "@type": "ListItem",
+        "position": 1,
+        "name": "Home",
+        "item": "https://aipixel.tech"
+      },
+      {
+        "@type": "ListItem",
+        "position": 2,
+        "name": "Privacy Policy",
+        "item": "https://aipixel.tech/privacy-policy"
+      }
+    ]
+  };
+
   return (
     <section className="bg-[#070508] min-h-screen">
+      <SEO
+        title="Privacy Policy | AI Pixel"
+        description="Read the Privacy Policy for AI Pixel. Learn how we handle and protect your personal information in compliance with privacy guidelines."
+        canonicalPath="/privacy-policy"
+        schema={breadcrumbSchema}
+      />
       {/* Hero Header */}
       <div className="relative pt-24 pb-16 px-6 text-center border-b border-[#2D2B3B]/40">
         <div

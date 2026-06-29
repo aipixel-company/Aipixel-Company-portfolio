@@ -3,6 +3,7 @@ import { useParams, Link } from "react-router-dom";
 import PageHero from "../Components/PageHero";
 import CTABanner from "../Components/CTABanner";
 import ContactusFormSection from "../Components/ContactusFormSection";
+import SEO from "../Components/SEO";
 
 const expertiseDataMap = {
   "web-development": {
@@ -243,8 +244,39 @@ export default function ExpertiseDetail() {
     );
   }
 
+  const breadcrumbSchema = {
+    "@context": "https://schema.org",
+    "@type": "BreadcrumbList",
+    "itemListElement": [
+      {
+        "@type": "ListItem",
+        "position": 1,
+        "name": "Home",
+        "item": "https://aipixel.tech"
+      },
+      {
+        "@type": "ListItem",
+        "position": 2,
+        "name": "Expertise",
+        "item": "https://aipixel.tech/expertise"
+      },
+      {
+        "@type": "ListItem",
+        "position": 3,
+        "name": expertise.name,
+        "item": `https://aipixel.tech/expertise/${id}`
+      }
+    ]
+  };
+
   return (
     <div className="min-h-screen bg-[#070508]">
+      <SEO
+        title={`${expertise.name} | Technical Expertise | AI Pixel`}
+        description={expertise.description}
+        canonicalPath={`/expertise/${id}`}
+        schema={breadcrumbSchema}
+      />
       {/* Dynamic Header */}
       <PageHero
         badge="Technical Expertise Area"

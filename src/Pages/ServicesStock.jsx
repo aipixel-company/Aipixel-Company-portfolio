@@ -9,6 +9,7 @@ import IndustriesWeWorkServices from '../Components/IndustriesWeWorkServices';
 import SolutionsSection from '../Components/SolutionsSection';
 import CTABanner from '../Components/CTABanner';
 import ContactusFormSection from '../Components/ContactusFormSection';
+import SEO from '../Components/SEO';
 
 export default function ServicesStock() {
   const { hash } = useLocation();
@@ -22,8 +23,33 @@ export default function ServicesStock() {
     }
   }, [hash]);
 
+  const breadcrumbSchema = {
+    "@context": "https://schema.org",
+    "@type": "BreadcrumbList",
+    "itemListElement": [
+      {
+        "@type": "ListItem",
+        "position": 1,
+        "name": "Home",
+        "item": "https://aipixel.tech"
+      },
+      {
+        "@type": "ListItem",
+        "position": 2,
+        "name": "Services",
+        "item": "https://aipixel.tech/services"
+      }
+    ]
+  };
+
   return (
     <>
+      <SEO
+        title="Software Engineering & AI Services | AI Pixel"
+        description="Explore the range of digital solutions engineered by AI Pixel, including custom web systems, mobile applications, machine learning models, cloud DevOps, and cybersecurity."
+        canonicalPath="/services"
+        schema={breadcrumbSchema}
+      />
       {/* 1. Hero */}
       <PageHero
         badge="Our Services"

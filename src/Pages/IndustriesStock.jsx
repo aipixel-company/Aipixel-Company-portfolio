@@ -1,4 +1,5 @@
 import React from 'react'
+import SEO from '../Components/SEO'
 import PageHero from '../Components/PageHero'
 import IndustriesMain from '../Components/IndustriesMain'
 import IndustriesWeWorkWith from '../Components/IndustriesWeWorkWith'
@@ -9,8 +10,33 @@ import CTABanner from '../Components/CTABanner'
 import ContactusFormSection from '../Components/ContactusFormSection'
 
 export default function IndustriesStock() {
+  const breadcrumbSchema = {
+    "@context": "https://schema.org",
+    "@type": "BreadcrumbList",
+    "itemListElement": [
+      {
+        "@type": "ListItem",
+        "position": 1,
+        "name": "Home",
+        "item": "https://aipixel.tech"
+      },
+      {
+        "@type": "ListItem",
+        "position": 2,
+        "name": "Industries",
+        "item": "https://aipixel.tech/industries"
+      }
+    ]
+  };
+
   return (
     <>
+      <SEO
+        title="Industries & Sectors We Empower | AI Pixel"
+        description="We deliver customized digital transformation and AI integration across logistics, e-commerce, fintech, sports, education, and food traceability sectors."
+        canonicalPath="/industries"
+        schema={breadcrumbSchema}
+      />
       {/* 1. Hero Banner */}
       <PageHero
         badge="Industries"

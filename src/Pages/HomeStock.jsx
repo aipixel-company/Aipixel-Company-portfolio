@@ -15,10 +15,31 @@ import BlogSection from '../Components/BlogSection'
 import CTABanner from '../Components/CTABanner'
 import Map from '../Components/Map'
 import ContactusFormSection from '../Components/ContactusFormSection'
+import SEO from '../Components/SEO'
 
 export default function HomeStock() {
+  const orgSchema = {
+    "@context": "https://schema.org",
+    "@type": "Organization",
+    "@id": "https://aipixel.tech/#organization",
+    "name": "AI Pixel",
+    "url": "https://aipixel.tech",
+    "logo": "https://aipixel.tech/src/assets/navlogo.png",
+    "email": "hello@aipixel.tech",
+    "sameAs": [
+      "https://www.linkedin.com/company/aipixel-tech",
+      "https://github.com/aipixel-company"
+    ]
+  };
+
   return (
     <>
+      <SEO
+        title="AI Pixel | Premium AI Consultancy & Digital Product Studio"
+        description="AI Pixel is a leading digital product studio and AI engineering consultancy. We design and build custom machine learning solutions, web apps, and digital platforms."
+        canonicalPath="/"
+        schema={orgSchema}
+      />
       {/* 1. Hero — Badge + Large heading + Subtitle + CTA (DevZiv style) */}
       <HomeSlider />
 

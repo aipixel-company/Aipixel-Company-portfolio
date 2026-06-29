@@ -3,6 +3,7 @@ import { useParams, Link } from "react-router-dom";
 import PageHero from "../Components/PageHero";
 import CTABanner from "../Components/CTABanner";
 import ContactusFormSection from "../Components/ContactusFormSection";
+import SEO from "../Components/SEO";
 
 // Import client logos for referencing inside industry client cards
 import airhubLogo from "../assets/airhub.png";
@@ -208,8 +209,39 @@ export default function IndustryDetail() {
     );
   }
 
+  const breadcrumbSchema = {
+    "@context": "https://schema.org",
+    "@type": "BreadcrumbList",
+    "itemListElement": [
+      {
+        "@type": "ListItem",
+        "position": 1,
+        "name": "Home",
+        "item": "https://aipixel.tech"
+      },
+      {
+        "@type": "ListItem",
+        "position": 2,
+        "name": "Industries",
+        "item": "https://aipixel.tech/industries"
+      },
+      {
+        "@type": "ListItem",
+        "position": 3,
+        "name": industry.name,
+        "item": `https://aipixel.tech/industries/${id}`
+      }
+    ]
+  };
+
   return (
     <div className="min-h-screen bg-[#070508]">
+      <SEO
+        title={`AI & Software Solutions for ${industry.name} | AI Pixel`}
+        description={industry.description}
+        canonicalPath={`/industries/${id}`}
+        schema={breadcrumbSchema}
+      />
       {/* Page Hero */}
       <PageHero
         badge="Industry Sector Transformation"

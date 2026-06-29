@@ -1,6 +1,7 @@
 // BlogDetail.js
 import React from "react";
 import { useParams, Link } from "react-router-dom";
+import SEO from "./SEO";
 
 const blogPosts = [
   {
@@ -277,8 +278,64 @@ const BlogDetail = () => {
     );
   }
 
+  const combinedSchema = {
+    "@context": "https://schema.org",
+    "@graph": [
+      {
+        "@type": "BreadcrumbList",
+        "@id": `https://aipixel.tech/blog/${id}/#breadcrumb`,
+        "itemListElement": [
+          {
+            "@type": "ListItem",
+            "position": 1,
+            "name": "Home",
+            "item": "https://aipixel.tech"
+          },
+          {
+            "@type": "ListItem",
+            "position": 2,
+            "name": "Blog",
+            "item": "https://aipixel.tech/blogs"
+          },
+          {
+            "@type": "ListItem",
+            "position": 3,
+            "name": blog.title,
+            "item": `https://aipixel.tech/blog/${id}`
+          }
+        ]
+      },
+      {
+        "@type": "BlogPosting",
+        "@id": `https://aipixel.tech/blog/${id}/#article`,
+        "headline": blog.title,
+        "datePublished": "2025-10-01T00:00:00+00:00", // generic date matching format
+        "description": blog.sections && blog.sections[0] ? blog.sections[0].content : "",
+        "author": {
+          "@type": "Organization",
+          "name": "AI Pixel",
+          "url": "https://aipixel.tech"
+        },
+        "publisher": {
+          "@type": "Organization",
+          "name": "AI Pixel",
+          "logo": {
+            "@type": "ImageObject",
+            "url": "https://aipixel.tech/src/assets/navlogo.png"
+          }
+        }
+      }
+    ]
+  };
+
   return (
     <div className="min-h-screen bg-[#070508]">
+      <SEO
+        title={`${blog.title} | AI Pixel Blog`}
+        description={blog.sections && blog.sections[0] ? blog.sections[0].content : "Read this article from the AI Pixel engineering team."}
+        canonicalPath={`/blog/${id}`}
+        schema={combinedSchema}
+      />
       {/* Hero */}
       <div className="relative pt-28 pb-16 px-6 border-b border-[#2D2B3B]/40">
         <div
