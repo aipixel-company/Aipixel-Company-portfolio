@@ -31,7 +31,7 @@ export default function ClientsStock() {
   return (
     <>
       <SEO
-        title="Our Work & Case Studies | AI Pixel"
+        title="Our Work & Case Studies | AI Pixal"
         description="Explore our real-world case studies and success stories of custom web products, mobile apps, and machine learning integrations shipped for global clients."
         canonicalPath="/clients"
         schema={breadcrumbSchema}
@@ -41,7 +41,7 @@ export default function ClientsStock() {
         badge="Our Clients"
         title="Trusted by"
         highlight="Industry Leaders"
-        subtitle="From startups to enterprise organizations — we've built lasting partnerships with businesses that demand excellence."
+        subtitle="From startups to enterprise organizations we've built lasting partnerships with businesses that demand excellence."
         accentColor="green"
       />
 

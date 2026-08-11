@@ -2,7 +2,7 @@ import React from "react";
 import { Link } from "react-router-dom";
 
 /* ───────────────────────────────────────────────
-   Services data — AI / Automation are items 1-3
+   Services data AI / Automation are items 1-3
    ─────────────────────────────────────────────── */
 const services = [
   // ─── TOP 3: AI & AUTOMATION (featured) ───
@@ -10,7 +10,7 @@ const services = [
     icon: "🤖",
     title: "AI & Machine Learning",
     description:
-      "Intelligent automation, predictive analytics, and AI-driven products that transform your business operations.",
+      "Intelligent automation, predictive analytics, and AI driven products that transform your business operations.",
     link: "/services/ai-machine-learning",
     featured: true,
   },
@@ -18,7 +18,7 @@ const services = [
     icon: "🤖",
     title: "AI Solutions",
     description:
-      "We deliver AI-driven solutions that automate workflows, personalize customer journeys, and help businesses solve complex challenges.",
+      "We deliver AI driven solutions that automate workflows, personalize customer journeys, and help businesses solve complex challenges.",
     link: "/services/ai-solutions",
     featured: true,
   },
@@ -26,7 +26,7 @@ const services = [
     icon: "⚡",
     title: "Automation",
     description:
-      "End-to-end process automation powered by AI — from intelligent document processing and RPA to smart workflow orchestration that eliminates manual bottlenecks.",
+      "End to end process automation powered by AI from intelligent document processing and RPA to smart workflow orchestration that eliminates manual bottlenecks.",
     link: "/services/automation",
     featured: true,
   },
@@ -43,7 +43,7 @@ const services = [
     icon: "🌐",
     title: "Web Development",
     description:
-      "Scalable, high-performance web applications built with modern frameworks — React, Next.js, Node.js and beyond.",
+      "Scalable, high-performance web applications built with modern frameworks React, Next.js, Node.js and beyond.",
     link: "/services/web-development",
   },
   {
@@ -57,14 +57,14 @@ const services = [
     icon: "🎨",
     title: "UI/UX Design",
     description:
-      "Human-centered design that balances beauty and usability — wireframes, prototypes, and pixel-perfect interfaces.",
+      "Human centered design that balances beauty and usability wireframes, prototypes, and pixel perfect interfaces.",
     link: "/services/ui-ux-design",
   },
   {
     icon: "🔒",
     title: "Cybersecurity",
     description:
-      "End-to-end security audits, penetration testing, and compliance solutions to protect your digital assets.",
+      "End to end security audits, penetration testing, and compliance solutions to protect your digital assets.",
     link: "/services/cybersecurity",
   },
   {
@@ -103,11 +103,11 @@ export default function ServicesGrid() {
             Our Core Services
           </h2>
           <p className="text-[#8791AD] mt-4 max-w-2xl mx-auto text-lg">
-            From strategy to deployment — we deliver end-to-end digital solutions that drive real business growth.
+            From strategy to deployment we deliver end to end digital solutions that drive real business growth.
           </p>
         </div>
 
-        {/* Service Cards Grid — 1 col → 2 col → 3 col → 4 col */}
+        {/* Service Cards Grid 1 col → 2 col → 3 col → 4 col */}
         <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-6">
           {services.map((service, i) => (
             <Link

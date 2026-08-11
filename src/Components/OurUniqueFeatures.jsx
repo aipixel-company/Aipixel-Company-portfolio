@@ -17,7 +17,7 @@ const features = [
     icon: "🏆",
     title: "Dedication to Success",
     description:
-      "Your success is our mission. We are dedicated to providing innovative AI-driven solutions that drive business growth and deliver outstanding results — with an unwavering commitment to your goals.",
+      "Your success is our mission. We are dedicated to providing innovative AI-driven solutions that drive business growth and deliver outstanding results with an unwavering commitment to your goals.",
   },
   {
     icon: "🔒",

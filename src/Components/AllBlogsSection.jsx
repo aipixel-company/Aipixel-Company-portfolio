@@ -17,7 +17,7 @@ const cardsData = [
     readTime: "5 min read",
     title: "The Rise of Generative AI in Everyday Applications",
     description:
-      "Go beyond chat. Generative AI is now creating art, music, and code — a massive shift enabling unprecedented content creation across all industries.",
+      "Go beyond chat. Generative AI is now creating art, music, and code a massive shift enabling unprecedented content creation across all industries.",
   },
   {
     id: 2,
@@ -80,8 +80,8 @@ export default function AllBlogsSection() {
               key={cat}
               onClick={() => setActiveCategory(cat)}
               className={`px-5 py-2 rounded-full text-sm font-medium transition-all duration-200 border ${activeCategory === cat
-                  ? "bg-[#3567FF] text-white border-[#3567FF]"
-                  : "border-[#2D2B3B] text-[#8791AD] hover:text-white hover:border-white/20"
+                ? "bg-[#3567FF] text-white border-[#3567FF]"
+                : "border-[#2D2B3B] text-[#8791AD] hover:text-white hover:border-white/20"
                 }`}
             >
               {cat}

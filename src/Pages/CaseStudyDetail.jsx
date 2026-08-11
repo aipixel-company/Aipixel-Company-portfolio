@@ -298,8 +298,8 @@ export default function CaseStudyDetail() {
   return (
     <div className="min-h-screen bg-[#070508]">
       <SEO
-        title={`${caseStudy.clientName} Case Study: ${caseStudy.title} | AI Pixel`}
-        description={`How AI Pixel engineered a high-performance solution for ${caseStudy.clientName} to achieve ${caseStudy.metric}.`}
+        title={`${caseStudy.clientName} Case Study: ${caseStudy.title} | AI Pixal`}
+        description={`How AI Pixal engineered a high-performance solution for ${caseStudy.clientName} to achieve ${caseStudy.metric}.`}
         canonicalPath={`/clients/${id}`}
         schema={breadcrumbSchema}
       />
@@ -321,7 +321,7 @@ export default function CaseStudyDetail() {
         <div className="absolute top-1/3 left-1/3 w-[450px] h-[450px] bg-[#3567FF]/5 blur-[150px] rounded-full pointer-events-none" />
 
         <div className="max-w-4xl mx-auto px-6 relative z-10">
-          
+
           {/* Logo and Industry header */}
           <div className="flex flex-col sm:flex-row items-center gap-8 mb-12 border-b border-[#2D2B3B]/40 pb-8 text-center sm:text-left">
             <div className="w-36 h-36 flex items-center justify-center bg-[#1E1D28] rounded-xl p-4 border border-[#2D2B3B]/45">

@@ -45,8 +45,8 @@ export default function ServicesStock() {
   return (
     <>
       <SEO
-        title="Software Engineering & AI Services | AI Pixel"
-        description="Explore the range of digital solutions engineered by AI Pixel, including custom web systems, mobile applications, machine learning models, cloud DevOps, and cybersecurity."
+        title="Software Engineering & AI Services | AI Pixal"
+        description="Explore the range of digital solutions engineered by AI Pixal, including custom web systems, mobile applications, machine learning models, cloud DevOps, and cybersecurity."
         canonicalPath="/services"
         schema={breadcrumbSchema}
       />
@@ -55,7 +55,7 @@ export default function ServicesStock() {
         badge="Our Services"
         title="Powering the Future with"
         highlight="AI & Innovation"
-        subtitle="At AI-PIXAL, we design next-gen digital products with intelligent automation, scalable technology, and human-centered design — helping your business thrive."
+        subtitle="At AI-PIXAL, we design next-gen digital products with intelligent automation, scalable technology, and human-centered design helping your business thrive."
       />
 
       {/* 2. Solutions Problems */}

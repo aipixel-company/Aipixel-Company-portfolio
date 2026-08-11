@@ -5,11 +5,11 @@ const sectionData = {
   title: "Our Expertise",
   description:
     "We bring together innovation, technology, and strategic thinking to deliver powerful solutions that help businesses transform digitally. Our team combines deep technical knowledge with creative problem-solving to deliver value across industries.",
- 
+
   points: [
     {
       title: "Custom Software Development",
-      desc: "We build robust, scalable, and secure custom applications tailored to your business objectives — from concept to deployment.",
+      desc: "We build robust, scalable, and secure custom applications tailored to your business objectives from concept to deployment.",
     },
     {
       title: "Cloud Integration & Scalability",
@@ -64,7 +64,7 @@ const ExpertisePageMain = () => {
           {sectionData.description}
         </motion.p>
 
-        
+
 
         {/* Expertise Highlights */}
         <div className="grid grid-cols-1 md:grid-cols-2 gap-8 text-left text-gray-200">

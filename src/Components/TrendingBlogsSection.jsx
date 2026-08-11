@@ -313,12 +313,12 @@ const BlogDetail = () => {
         "description": blog.sections && blog.sections[0] ? blog.sections[0].content : "",
         "author": {
           "@type": "Organization",
-          "name": "AI Pixel",
+          "name": "AI Pixal",
           "url": "https://aipixel.tech"
         },
         "publisher": {
           "@type": "Organization",
-          "name": "AI Pixel",
+          "name": "AI Pixal",
           "logo": {
             "@type": "ImageObject",
             "url": "https://aipixel.tech/src/assets/navlogo.png"
@@ -331,8 +331,8 @@ const BlogDetail = () => {
   return (
     <div className="min-h-screen bg-[#070508]">
       <SEO
-        title={`${blog.title} | AI Pixel Blog`}
-        description={blog.sections && blog.sections[0] ? blog.sections[0].content : "Read this article from the AI Pixel engineering team."}
+        title={`${blog.title} | AI Pixal Blog`}
+        description={blog.sections && blog.sections[0] ? blog.sections[0].content : "Read this article from the AI Pixal engineering team."}
         canonicalPath={`/blog/${id}`}
         schema={combinedSchema}
       />

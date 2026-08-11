@@ -77,7 +77,7 @@ function AboutSlider() {
             “Empowering industries through intelligence, innovation, and impact.”
           </p>
           <p className="text-[#8791AD]/70 text-sm md:text-base">
-            Delivering the future — one pixal of intelligence at a time.
+            Delivering the future one pixal of intelligence at a time.
           </p>
         </motion.div>
       </motion.div>

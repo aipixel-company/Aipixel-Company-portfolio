@@ -272,7 +272,7 @@ export default function ExpertiseDetail() {
   return (
     <div className="min-h-screen bg-[#070508]">
       <SEO
-        title={`${expertise.name} | Technical Expertise | AI Pixel`}
+        title={`${expertise.name} | Technical Expertise | AI Pixal`}
         description={expertise.description}
         canonicalPath={`/expertise/${id}`}
         schema={breadcrumbSchema}

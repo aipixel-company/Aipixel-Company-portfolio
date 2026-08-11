@@ -78,7 +78,7 @@ const industriesData = {
   tourism: {
     name: "Tourism",
     cardtitle: "Building intelligent travel platforms with AI-powered recommendations",
-    description: "The Tourism industry encompasses businesses and services that cater to travelers — from accommodations and booking portals to personalized guides.",
+    description: "The Tourism industry encompasses businesses and services that cater to travelers from accommodations and booking portals to personalized guides.",
     extendedDesc: "Modern travelers demand frictionless booking, instant ticket confirmations, and localized recommendations. We construct custom event reservation booking software, payment triggers, and localized recommendations engines.",
     icon: "✈️",
     client: {
@@ -237,7 +237,7 @@ export default function IndustryDetail() {
   return (
     <div className="min-h-screen bg-[#070508]">
       <SEO
-        title={`AI & Software Solutions for ${industry.name} | AI Pixel`}
+        title={`AI & Software Solutions for ${industry.name} | AI Pixal`}
         description={industry.description}
         canonicalPath={`/industries/${id}`}
         schema={breadcrumbSchema}

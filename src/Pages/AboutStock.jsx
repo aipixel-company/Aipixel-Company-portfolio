@@ -33,8 +33,8 @@ export default function AboutStock() {
   return (
     <div className='bg-[#070508]'>
       <SEO
-        title="About AI Pixel | Credentials, POV & Team"
-        description="Learn about AI Pixel, our core engineering values, our unique point of view on generative AI, and our mission to build high-performance products."
+        title="About AI Pixal | Credentials, POV & Team"
+        description="Learn about AI Pixal, our core engineering values, our unique point of view on generative AI, and our mission to build high-performance products."
         canonicalPath="/aboutus"
         schema={breadcrumbSchema}
       />

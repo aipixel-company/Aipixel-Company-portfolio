@@ -28,8 +28,8 @@ export default function BlogStock() {
   return (
     <>
       <SEO
-        title="Tech Insights & Thought Leadership Blog | AI Pixel"
-        description="Stay up to date with developer guides, industry tech deep-dives, and machine learning insights from the AI Pixel engineering team."
+        title="Tech Insights & Thought Leadership Blog | AI Pixal"
+        description="Stay up to date with developer guides, industry tech deep-dives, and machine learning insights from the AI Pixal engineering team."
         canonicalPath="/blogs"
         schema={breadcrumbSchema}
       />

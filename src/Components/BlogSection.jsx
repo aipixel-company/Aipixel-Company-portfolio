@@ -28,7 +28,7 @@ const blogs = [
     date: "October 1, 2025",
     title: "Cybersecurity in the Age of AI: Challenges and Solutions",
     description:
-      "AI is becoming a double-edged sword in cybersecurity — helping both defenders and attackers. Learn the latest defense strategies.",
+      "AI is becoming a double-edged sword in cybersecurity helping both defenders and attackers. Learn the latest defense strategies.",
     image: "https://images.unsplash.com/photo-1550751827-4bd374c3f58b?w=600&auto=format&fit=crop&q=80",
     readTime: "7 min read",
   },

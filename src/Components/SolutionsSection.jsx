@@ -7,7 +7,7 @@ const problems = [
   {
     title: "Build your perfect development team",
     description:
-      "We assemble elite squads of specialists — developers, designers, and product managers — tailored precisely to your project needs, culture, and timeline. No overhead, no agency bloat.",
+      "We assemble elite squads of specialists developers, designers, and product managers tailored precisely to your project needs, culture, and timeline. No overhead, no agency bloat.",
   },
   {
     title: "Adopt digital transformations",

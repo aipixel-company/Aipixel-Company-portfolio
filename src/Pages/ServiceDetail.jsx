@@ -206,7 +206,7 @@ export default function ServiceDetail() {
         "description": service.description,
         "provider": {
           "@type": "Organization",
-          "name": "AI Pixel",
+          "name": "AI Pixal",
           "url": "https://aipixel.tech"
         }
       }
@@ -216,7 +216,7 @@ export default function ServiceDetail() {
   return (
     <div className="min-h-screen bg-[#070508]">
       <SEO
-        title={`${service.title} Services | AI Pixel`}
+        title={`${service.title} Services | AI Pixal`}
         description={service.subtitle}
         canonicalPath={`/services/${id}`}
         schema={combinedSchema}
@@ -247,7 +247,7 @@ export default function ServiceDetail() {
           </p>
 
           <h3 className="text-2xl font-bold text-white mb-8 border-b border-[#2D2B3B]/40 pb-4">Key Capabilities</h3>
-          
+
           <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
             {service.features.map((feat, index) => (
               <div key={index} className="glow-card rounded-2xl p-6 border border-white/5">

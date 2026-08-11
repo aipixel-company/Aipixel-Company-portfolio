@@ -78,7 +78,7 @@ export default function SEO({
     setMetaTag("property", "og:description", description);
     setMetaTag("property", "og:image", ogImage);
     setMetaTag("property", "og:url", canonicalUrl);
-    setMetaTag("property", "og:site_name", "AI Pixel");
+    setMetaTag("property", "og:site_name", "AI Pixal");
     setMetaTag("property", "og:locale", "en_GB");
 
     // 6. Twitter Card tags

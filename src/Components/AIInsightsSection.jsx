@@ -22,7 +22,7 @@ const aiArticles = [
     date: "October 1, 2025",
     title: "Cybersecurity in the Age of AI: Challenges and Solutions",
     description:
-      "AI is becoming a double-edged sword in cybersecurity — helping both defenders and attackers. Explore the latest defense strategies and learn how intelligent systems are reshaping the security landscape.",
+      "AI is becoming a double-edged sword in cybersecurity helping both defenders and attackers. Explore the latest defense strategies and learn how intelligent systems are reshaping the security landscape.",
     image:
       "https://images.unsplash.com/photo-1550751827-4bd374c3f58b?w=600&auto=format&fit=crop&q=80",
     readTime: "7 min read",
@@ -41,14 +41,14 @@ export default function AIInsightsSection() {
           <div>
             <span className="inline-flex items-center gap-2 mb-4 px-4 py-1.5 rounded-full text-xs font-semibold uppercase tracking-widest text-[#3567FF] border border-[#3567FF]/30 bg-[#3567FF]/10">
               <span className="w-2 h-2 bg-[#61CE70] rounded-full animate-pulse"></span>
-              AI-Focused Insights
+              AI Focused Insights
             </span>
             <h2 className="text-4xl lg:text-5xl font-extrabold text-white tracking-tight">
               Intelligence{" "}
               <span className="gradient-text-accent">Unlocked</span>
             </h2>
             <p className="text-[#8791AD] mt-3 max-w-lg">
-              Deep dives into the AI-driven trends shaping technology,
+              Deep dives into the AI driven trends shaping technology,
               security, and the future of business.
             </p>
           </div>
@@ -73,7 +73,7 @@ export default function AIInsightsSection() {
           </Link>
         </div>
 
-        {/* Two-article grid — 1 col mobile, 2 col tablet+ */}
+        {/* Two-article grid 1 col mobile, 2 col tablet+ */}
         <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
           {aiArticles.map((article) => (
             <Link

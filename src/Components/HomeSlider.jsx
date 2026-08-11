@@ -18,7 +18,7 @@ const cards = [
     title: "Dtec",
     logo: dtecch,
     description:
-      "AI-powered workflow automation and predictive analytics platform — boosting operational efficiency by 40% for DTEC's tech ecosystem.",
+      "AI powered workflow automation and predictive analytics platform boosting operational efficiency by 40% for DTEC's tech ecosystem.",
     backgroundImage: dtec,
     logoHeight: "50px",
   },
@@ -27,7 +27,7 @@ const cards = [
     title: "Moosa Group",
     logo: moosa,
     description:
-      "Intelligent supply-chain automation and ML-driven demand forecasting — enabling smarter decisions across Moosa Group's diverse portfolio.",
+      "Intelligent supply chain automation and ML driven demand forecasting enabling smarter decisions across Moosa Group's diverse portfolio.",
     backgroundImage: moosagroup,
     logoHeight: "60px",
   },
@@ -36,7 +36,7 @@ const cards = [
     title: "Bank Muscat",
     logo: bankmusqat,
     description:
-      "AI-enhanced fraud detection and automated compliance monitoring — securing millions of transactions for Oman's leading bank.",
+      "AI enhanced fraud detection and automated compliance monitoring securing millions of transactions for Oman's leading bank.",
     backgroundImage: bankmusqatt,
     logoHeight: "35px",
   },
@@ -45,7 +45,7 @@ const cards = [
     title: "Adventure Club",
     logo: adventureclub,
     description:
-      "ML-driven personalized booking recommendations and automated customer engagement — transforming adventure experiences.",
+      "ML driven personalized booking recommendations and automated customer engagement transforming adventure experiences.",
     backgroundImage: background,
     logoHeight: "70px",
   },
@@ -54,7 +54,7 @@ const cards = [
     title: "Absher",
     logo: absher,
     description:
-      "AI-powered smart networking with NFC technology — automated lead scoring and intelligent contact management with ABSHER.",
+      "AI powered smart networking with NFC technology automated lead scoring and intelligent contact management with ABSHER.",
     backgroundImage: laracee,
     logoHeight: "70px",
   },
@@ -201,17 +201,17 @@ function HomeSlider() {
         <div className="lg:mb-12 mb-8 mt-4 lg:mt-6 cursor-default text-center max-w-4xl mx-auto">
           <div className="inline-flex items-center gap-2 px-4 py-1.5 rounded-full bg-white/10 backdrop-blur-sm border border-white/20 text-white text-xs sm:text-sm font-semibold mb-5 tracking-wide">
             <span className="w-2 h-2 bg-[#61CE70] rounded-full animate-pulse"></span>
-            AI-Powered Digital Agency
+            AI Powered Digital Agency
           </div>
           <h1 className="text-3xl sm:text-4xl md:text-5xl lg:text-5xl xl:text-6xl font-extrabold text-white tracking-tight drop-shadow-2xl">
             Where Pixal gets Smarter
           </h1>
           <h2 className="text-lg sm:text-xl md:text-2xl lg:text-2xl xl:text-3xl text-white/90 font-light mt-3 lg:mt-4 drop-shadow-lg">
-            AI-powered automation that reduces manual effort by 60%+
+            AI powered automation that reduces manual effort by 60%+
           </h2>
           <p className="text-sm sm:text-base text-white/70 mt-4 lg:mt-5 max-w-2xl mx-auto leading-relaxed drop-shadow-md">
             We partner with businesses to architect intelligent digital solutions.
-            We leverage the latest technologies — React, AI/ML, Cloud platforms, and modern DevOps practices.
+            We leverage the latest technologies like React, AI/ML, Cloud platforms, and modern DevOps practices.
           </p>
           <div className="mt-6 lg:mt-8">
             <a

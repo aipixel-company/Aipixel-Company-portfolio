@@ -6,12 +6,12 @@ const packages = [
     icon: "📅",
     title: "Monthly Retainer",
     description:
-      "Best for continuous AI/ML iteration and ongoing automation development. Get a dedicated AI-focused team with predictable monthly costs.",
+      "Best for continuous AI/ML iteration and ongoing automation development. Get a dedicated AI focused team with predictable monthly costs.",
     features: [
       "Dedicated AI/ML engineer(s)",
       "Weekly sprint updates with ML metrics",
       "Flexible AI model tuning & scope changes",
-      "Priority support with AI-powered monitoring",
+      "Priority support with AI powered monitoring",
     ],
   },
   {
@@ -21,9 +21,9 @@ const packages = [
       "Best for a defined AI automation build, ML model deployment, or an intelligent system migration with clear milestones.",
     features: [
       "Fixed timeline & budget for AI delivery",
-      "Milestone-based ML model rollouts",
+      "Milestone based ML model rollouts",
       "Full AI pipeline documentation",
-      "Post-launch AI model monitoring & support",
+      "Post launch AI model monitoring & support",
     ],
   },
   {
@@ -32,7 +32,7 @@ const packages = [
     description:
       "Best for companies that need AI/ML specialists to extend their existing engineering team and accelerate automation initiatives.",
     features: [
-      "Plug-and-play AI/ML engineers",
+      "Plug and play AI/ML engineers",
       "Integrate with your tools & data pipelines",
       "Full integration with your data science team",
       "Scale AI capacity up or down anytime",

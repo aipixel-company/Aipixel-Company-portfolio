@@ -1,8 +1,8 @@
 import React from "react";
 
 const deliverables = [
-  "End-to-end product development from concept to deployment",
-  "AI-powered automation that reduces manual effort by 60%+",
+  "End to end product development from concept to deployment",
+  "AI powered automation that reduces manual effort by 60%+",
   "Scalable architecture that grows with your business",
   "Dedicated team of senior engineers and designers",
   "Full documentation and knowledge transfer so your team stays empowered",
@@ -14,7 +14,7 @@ export default function DeliverablesSection() {
     <section className="bg-[#070508] py-10 lg:py-14 border-t border-[#2D2B3B]/30">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="flex flex-col lg:flex-row gap-16 items-center">
-          {/* Left — checklist */}
+          {/* Left checklist */}
           <div className="w-full lg:w-1/2">
             {/* Badge */}
             <span className="inline-flex items-center gap-2 mb-5 px-4 py-1.5 rounded-full text-xs font-semibold uppercase tracking-widest text-[#3567FF] border border-[#3567FF]/30 bg-[#3567FF]/10">
@@ -42,7 +42,7 @@ export default function DeliverablesSection() {
             </ul>
           </div>
 
-          {/* Right — decorative glow card */}
+          {/* Right decorative glow card */}
           <div className="w-full lg:w-1/2 flex justify-center">
             <div className="relative w-full max-w-md">
               {/* Glow */}
@@ -53,7 +53,7 @@ export default function DeliverablesSection() {
                     🎯
                   </div>
                   <div>
-                    <h3 className="text-white font-bold text-lg">Result-Driven</h3>
+                    <h3 className="text-white font-bold text-lg">Result Driven</h3>
                     <p className="text-[#8791AD] text-sm">Every project built to deliver ROI</p>
                   </div>
                 </div>
@@ -64,7 +64,7 @@ export default function DeliverablesSection() {
                   </div>
                   <div>
                     <h3 className="text-white font-bold text-lg">Fast Delivery</h3>
-                    <p className="text-[#8791AD] text-sm">Agile sprints with bi-weekly demos</p>
+                    <p className="text-[#8791AD] text-sm">Agile sprints with bi weekly demos</p>
                   </div>
                 </div>
 

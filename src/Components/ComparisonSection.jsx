@@ -10,12 +10,12 @@ const oldWay = [
 ];
 
 const ourWay = [
-  "AI-powered custom architecture designed for your exact requirements",
+  "AI powered custom architecture designed for your exact requirements",
   "Dedicated cross-functional teams with AI/ML domain expertise",
-  "ML-driven analytics and automated sprint reporting with weekly demos",
-  "AI-enhanced security monitoring with built-in compliance automation",
-  "Intelligent documentation and AI-assisted knowledge transfer",
-  "Predictable costs with AI-optimized resource allocation and planning",
+  "ML driven analytics and automated sprint reporting with weekly demos",
+  "AI enhanced security monitoring with built in compliance automation",
+  "Intelligent documentation and AI assisted knowledge transfer",
+  "Predictable costs with AI optimized resource allocation and planning",
 ];
 
 export default function ComparisonSection() {

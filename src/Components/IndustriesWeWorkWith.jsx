@@ -40,7 +40,7 @@ const industries = [
     name: "Tourism",
     cardtitle: "Building intelligent travel platforms with AI-powered recommendations",
     description:
-      "The Tourism industry encompasses a broad range of businesses and services that cater to travelers — from accommodations and transportation to travel agencies and entertainment venues.",
+      "The Tourism industry encompasses a broad range of businesses and services that cater to travelers from accommodations and transportation to travel agencies and entertainment venues.",
     imageUrl:
       "https://firebasestorage.googleapis.com/v0/b/ai-pixel-portfolio.appspot.com/o/assets%2Ftourism.avif?alt=media&token=ecacc06c-6c71-42d5-a4ee-128768193f36",
   },

@@ -1,4 +1,4 @@
- import React from "react";
+import React from "react";
 import { Link } from "react-router-dom";
 
 // --- Technology Splash Images ---
@@ -34,8 +34,8 @@ const expertiseData = [
   {
     id: 1,
     field: "Web Development",
-    name: "AI-Powered Web Apps",
-    description: "We build intelligent web applications with embedded ML models, automated personalization engines, and AI-driven analytics dashboards for real-time decision making.",
+    name: "AI Powered Web Apps",
+    description: "We build intelligent web applications with embedded ML models, automated personalization engines, and AI driven analytics dashboards for real time decision making.",
     image: techImages.webDev,
     gradient: "from-blue-500 to-cyan-500",
     icon: "🌐"
@@ -43,8 +43,8 @@ const expertiseData = [
   {
     id: 2,
     field: "UI/UX Design",
-    name: "AI-Enhanced UX Design",
-    description: "Data-driven interface design powered by ML-based user behavior analysis, automated A/B testing, and AI heatmap insights for optimal conversion flows.",
+    name: "AI Enhanced UX Design",
+    description: "Data driven interface design powered by ML based user behavior analysis, automated A/B testing, and AI heatmap insights for optimal conversion flows.",
     image: techImages.uiUx,
     gradient: "from-purple-500 to-pink-500",
     icon: "🎨"
@@ -53,7 +53,7 @@ const expertiseData = [
     id: 3,
     field: "Artificial Intelligence",
     name: "AI & Machine Learning",
-    description: "End-to-end AI/ML solutions — from predictive analytics and NLP to computer vision and deep learning models that automate complex business operations.",
+    description: "End to end AI/ML solutions from predictive analytics and NLP to computer vision and deep learning models that automate complex business operations.",
     image: techImages.ai,
     gradient: "from-green-500 to-emerald-500",
     icon: "🤖"
@@ -61,8 +61,8 @@ const expertiseData = [
   {
     id: 4,
     field: "DevOps",
-    name: "AI-Driven DevOps",
-    description: "Intelligent CI/CD pipelines with automated testing, ML-powered anomaly detection, and AI-driven infrastructure scaling for zero-downtime deployments.",
+    name: "AI Driven DevOps",
+    description: "Intelligent CI/CD pipelines with automated testing, ML powered anomaly detection, and AI driven infrastructure scaling for zero downtime deployments.",
     image: techImages.devops,
     gradient: "from-orange-500 to-red-500",
     icon: "⚙️"
@@ -71,7 +71,7 @@ const expertiseData = [
     id: 5,
     field: "Mobile App Development",
     name: "Smart Mobile Apps",
-    description: "AI-integrated mobile apps with on-device ML models, intelligent push notifications, automated content personalization, and predictive user engagement.",
+    description: "AI integrated mobile apps with on device ML models, intelligent push notifications, automated content personalization, and predictive user engagement.",
     image: techImages.mobile,
     gradient: "from-indigo-500 to-purple-500",
     icon: "📱"
@@ -80,7 +80,7 @@ const expertiseData = [
     id: 6,
     field: "BlockChain",
     name: "AI + Blockchain",
-    description: "Smart contract automation enhanced with AI-powered fraud detection, ML-driven consensus optimization, and intelligent decentralized application workflows.",
+    description: "Smart contract automation enhanced with AI powered fraud detection, ML driven consensus optimization, and intelligent decentralized application workflows.",
     image: techImages.blockchain,
     gradient: "from-gray-700 to-gray-900",
     icon: "⛓️"
@@ -88,8 +88,8 @@ const expertiseData = [
   {
     id: 7,
     field: "Quality Assurance",
-    name: "AI-Powered QA",
-    description: "Automated testing powered by ML — intelligent test case generation, AI-driven regression detection, and predictive bug analysis for flawless releases.",
+    name: "AI Powered QA",
+    description: "Automated testing powered by ML intelligent test case generation, AI driven regression detection, and predictive bug analysis for flawless releases.",
     image: techImages.qa,
     gradient: "from-green-600 to-lime-500",
     icon: "✅"
@@ -98,7 +98,7 @@ const expertiseData = [
     id: 8,
     field: "Software Testing",
     name: "Intelligent Testing Automation",
-    description: "AI-accelerated test automation with self-healing scripts, ML-based test prioritization, and intelligent coverage analysis across platforms.",
+    description: "AI accelerated test automation with self healing scripts, ML based test prioritization, and intelligent coverage analysis across platforms.",
     image: techImages.testing,
     gradient: "from-teal-500 to-cyan-500",
     icon: "🔍"
@@ -106,8 +106,8 @@ const expertiseData = [
   {
     id: 9,
     field: "WordPress",
-    name: "AI-Optimized CMS",
-    description: "WordPress solutions with AI-powered content recommendations, automated SEO optimization, intelligent chatbot integration, and ML-driven analytics.",
+    name: "AI Optimized CMS",
+    description: "WordPress solutions with AI powered content recommendations, automated SEO optimization, intelligent chatbot integration, and ML driven analytics.",
     image: techImages.wordpress,
     gradient: "from-blue-700 to-blue-900",
     icon: "💻"
@@ -115,8 +115,8 @@ const expertiseData = [
   {
     id: 10,
     field: "Fintech",
-    name: "AI-Driven FinTech",
-    description: "Intelligent financial platforms with ML-powered risk scoring, automated fraud detection, AI-driven credit analysis, and predictive market insights.",
+    name: "AI Driven FinTech",
+    description: "Intelligent financial platforms with ML powered risk scoring, automated fraud detection, AI driven credit analysis, and predictive market insights.",
     image: techImages.fintech,
     gradient: "from-green-600 to-emerald-600",
     icon: "💰"
@@ -124,8 +124,8 @@ const expertiseData = [
   {
     id: 11,
     field: "Application Maintenance",
-    name: "AI-Managed Maintenance",
-    description: "Proactive AI-monitored application health — automated performance tuning, ML-driven anomaly alerts, and intelligent incident resolution for 24/7 reliability.",
+    name: "AI Managed Maintenance",
+    description: "Proactive AI monitored application health automated performance tuning, ML driven anomaly alerts, and intelligent incident resolution for 24/7 reliability.",
     image: techImages.maintenance,
     gradient: "from-yellow-500 to-orange-500",
     icon: "🔧"
@@ -133,8 +133,8 @@ const expertiseData = [
   {
     id: 12,
     field: "Software Development",
-    name: "AI-Integrated Software",
-    description: "Custom software embedded with intelligent automation — from AI-assisted code generation to ML-powered feature recommendations and smart data pipelines.",
+    name: "AI Integrated Software",
+    description: "Custom software embedded with intelligent automation from AI assisted code generation to ML powered feature recommendations and smart data pipelines.",
     image: techImages.software,
     gradient: "from-blue-600 to-indigo-600",
     icon: "💻"
@@ -142,8 +142,8 @@ const expertiseData = [
   {
     id: 13,
     field: "Project Management",
-    name: "AI-Powered Project Delivery",
-    description: "ML-driven sprint planning, automated risk prediction, AI-powered resource allocation, and intelligent milestone tracking for on-time AI project delivery.",
+    name: "AI Powered Project Delivery",
+    description: "ML driven sprint planning, automated risk prediction, AI powered resource allocation, and intelligent milestone tracking for on time AI project delivery.",
     image: techImages.project,
     gradient: "from-purple-600 to-indigo-600",
     icon: "📊"
@@ -161,7 +161,7 @@ const expertiseData = [
     id: 15,
     field: "Data Structures and Algorithms",
     name: "ML Algorithms & Data Pipelines",
-    description: "Optimized data structures and algorithms powering efficient ML training pipelines, real-time data processing, and intelligent feature engineering at scale.",
+    description: "Optimized data structures and algorithms powering efficient ML training pipelines, real time data processing, and intelligent feature engineering at scale.",
     image: techImages.dsa,
     gradient: "from-blue-500 to-teal-500",
     icon: "📊"
@@ -170,7 +170,7 @@ const expertiseData = [
     id: 16,
     field: "Programming Languages",
     name: "AI/ML Programming",
-    description: "Expert proficiency in Python, TensorFlow, PyTorch, and R — building production-grade ML models, AI microservices, and automated data science workflows.",
+    description: "Expert proficiency in Python, TensorFlow, PyTorch, and R building production grade ML models, AI microservices, and automated data science workflows.",
     image: techImages.programming,
     gradient: "from-indigo-500 to-purple-500",
     icon: "👨‍💻"
@@ -179,7 +179,7 @@ const expertiseData = [
     id: 17,
     field: "Cloud Platform Integration",
     name: "AI Cloud Integration",
-    description: "Seamless integration with AI cloud services — Azure Cognitive Services, Google AI Platform, and AWS AI — for intelligent multi-cloud automation.",
+    description: "Seamless integration with AI cloud services Azure Cognitive Services, Google AI Platform, and AWS AI for intelligent multi cloud automation.",
     image: techImages.cloud,
     gradient: "from-cyan-500 to-blue-500",
     icon: "🌩️"
@@ -187,8 +187,8 @@ const expertiseData = [
   {
     id: 18,
     field: "Text Editors",
-    name: "AI-Assisted Development Tools",
-    description: "AI-powered coding environments with intelligent code completion, automated refactoring suggestions, and ML-driven productivity optimization.",
+    name: "AI Assisted Development Tools",
+    description: "AI powered coding environments with intelligent code completion, automated refactoring suggestions, and ML driven productivity optimization.",
     image: techImages.editors,
     gradient: "from-gray-600 to-gray-800",
     icon: "📝"
@@ -196,8 +196,8 @@ const expertiseData = [
   {
     id: 19,
     field: "Integrated Development Environments",
-    name: "AI-Enhanced IDEs",
-    description: "Modern IDEs supercharged with AI copilots, automated debugging assistants, intelligent test generation, and ML-powered code review.",
+    name: "AI Enhanced IDEs",
+    description: "Modern IDEs supercharged with AI copilots, automated debugging assistants, intelligent test generation, and ML powered code review.",
     image: techImages.ides,
     gradient: "from-purple-500 to-pink-500",
     icon: "🔧"
@@ -206,7 +206,7 @@ const expertiseData = [
     id: 20,
     field: "Databases",
     name: "Intelligent Data Systems",
-    description: "AI-optimized database architectures with automated query tuning, ML-driven data classification, intelligent caching, and predictive storage scaling.",
+    description: "AI optimized database architectures with automated query tuning, ML driven data classification, intelligent caching, and predictive storage scaling.",
     image: techImages.databases,
     gradient: "from-blue-600 to-cyan-600",
     icon: "🗄️"
@@ -215,7 +215,7 @@ const expertiseData = [
     id: 22,
     field: "Networking Basics",
     name: "AI Network Automation",
-    description: "Intelligent network management with ML-powered traffic analysis, automated threat detection, and AI-driven performance optimization across infrastructure.",
+    description: "Intelligent network management with ML powered traffic analysis, automated threat detection, and AI driven performance optimization across infrastructure.",
     image: techImages.networking,
     gradient: "from-green-500 to-blue-500",
     icon: "🌐"
@@ -224,7 +224,7 @@ const expertiseData = [
     id: 23,
     field: "Basics of Testing",
     name: "AI Testing Fundamentals",
-    description: "Foundation-level AI testing skills — automated test frameworks, ML model validation techniques, and intelligent quality gates for AI-powered products.",
+    description: "Foundation level AI testing skills automated test frameworks, ML model validation techniques, and intelligent quality gates for AI powered products.",
     image: techImages.testingBasics,
     gradient: "from-red-500 to-pink-500",
     icon: "🧪"
@@ -232,8 +232,8 @@ const expertiseData = [
   {
     id: 26,
     field: "Software Development Life Cycle",
-    name: "AI-Augmented SDLC",
-    description: "AI-enhanced development lifecycle — from automated requirements analysis and ML-powered estimation to intelligent deployment and AI-driven post-release monitoring.",
+    name: "AI Augmented SDLC",
+    description: "AI enhanced development lifecycle from automated requirements analysis and ML powered estimation to intelligent deployment and AI driven post release monitoring.",
     image: techImages.sdlc,
     gradient: "from-indigo-500 to-purple-500",
     icon: "🔄"
@@ -241,8 +241,8 @@ const expertiseData = [
   {
     id: 28,
     field: "SEO (Search Engine Optimization)",
-    name: "AI-Powered SEO",
-    description: "ML-driven keyword analysis, automated content optimization, AI-powered competitor tracking, and intelligent search ranking strategies for maximum visibility.",
+    name: "AI Powered SEO",
+    description: "ML driven keyword analysis, automated content optimization, AI powered competitor tracking, and intelligent search ranking strategies for maximum visibility.",
     image: techImages.seo,
     gradient: "from-yellow-500 to-orange-500",
     icon: "🔎"
@@ -290,20 +290,20 @@ const ExpertiseCard = ({ expertise }) => {
                   border border-white/5 overflow-hidden bg-[#1E1D28]/40 no-underline"
     >
       {/* Splash Background Image */}
-      <div 
+      <div
         className="absolute inset-0 bg-cover bg-center transition-transform duration-700 group-hover:scale-110"
         style={{ backgroundImage: `url(${expertise.image})` }}
       >
         {/* Dark Overlay for Readability */}
         <div className="absolute inset-0 bg-black/60 group-hover:bg-black/50 transition-all duration-500" />
-        
+
         {/* Gradient Overlay */}
         <div className={`absolute inset-0 bg-gradient-to-br ${expertise.gradient} opacity-20 group-hover:opacity-30 transition-opacity duration-500`} />
       </div>
 
       {/* Gradient Top Bar */}
       <div className={`absolute top-0 left-0 w-full h-2 bg-gradient-to-r ${expertise.gradient} rounded-t-2xl z-20`} />
-      
+
       {/* Icon/Image Container */}
       <div className={`absolute top-4 right-4 w-16 h-16 rounded-xl bg-gradient-to-br ${expertise.gradient} 
                       flex items-center justify-center text-2xl group-hover:scale-110 transition-transform duration-300 shadow-lg z-20`}>
@@ -352,19 +352,19 @@ export default function HomeExpertise() {
           <span className="w-2 h-2 bg-[#61CE70] rounded-full animate-pulse"></span>
           Our Expertise Areas
         </div>
-        
+
         <h1 className="text-4xl lg:text-6xl font-bold text-white mb-6 leading-tight">
           Unleash{" "}
           <span className="gradient-text-accent">
             Digital Excellence
           </span>
         </h1>
-        
+
         <p className="text-xl text-[#8791AD] leading-relaxed max-w-4xl mb-8">
-          Transform your vision into reality with our comprehensive suite of cutting-edge technologies 
+          Transform your vision into reality with our comprehensive suite of cutting-edge technologies
           and innovative solutions tailored for your success.
         </p>
- 
+
       </div>
 
       {/* Infinite Scroll Container */}
@@ -372,7 +372,7 @@ export default function HomeExpertise() {
         {/* Gradient Overlays */}
         <div className="absolute left-0 top-0 w-20 h-full bg-gradient-to-r from-[#070508] to-transparent z-10" />
         <div className="absolute right-0 top-0 w-20 h-full bg-gradient-to-l from-[#070508] to-transparent z-10" />
-        
+
         <div className="flex animate-scroll gap-6 w-max">
           {loopedData.map((expertise, index) => (
             <ExpertiseCard key={index} expertise={expertise} />
@@ -381,7 +381,7 @@ export default function HomeExpertise() {
       </div>
 
       {/* CTA Button */}
-     
+
 
       <style jsx>{`
         @keyframes scroll {

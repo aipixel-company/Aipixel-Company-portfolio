@@ -32,7 +32,7 @@ export default function IndustriesStock() {
   return (
     <>
       <SEO
-        title="Industries & Sectors We Empower | AI Pixel"
+        title="Industries & Sectors We Empower | AI Pixal"
         description="We deliver customized digital transformation and AI integration across logistics, e-commerce, fintech, sports, education, and food traceability sectors."
         canonicalPath="/industries"
         schema={breadcrumbSchema}

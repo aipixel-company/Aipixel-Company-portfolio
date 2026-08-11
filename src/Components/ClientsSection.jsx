@@ -64,7 +64,7 @@ const testimonials = [
     slug: "larace",
     companyType: "Blockchain",
     description:
-      "Horse racing meets blockchain — redefining virtual sports and metaverse innovation.",
+      "Horse racing meets blockchain redefining virtual sports and metaverse innovation.",
     height: "180px",
   },
   {

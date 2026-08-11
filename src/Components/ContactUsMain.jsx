@@ -105,9 +105,9 @@ function ContactUsMain() {
             turn them into intelligent, future-ready solutions.
           </p>
           <blockquote className="italic border-l-4 pl-4 border-[#3567FF] text-[#8791AD]">
-            “We don’t just write code — we craft transformations.”  
+            “We don’t just write code we craft transformations.”
           </blockquote>
-          <p className="mt-3 font-semibold text-white">— Mian Usman, CEO</p>
+          <p className="mt-3 font-semibold text-white">Mian Usman, CEO</p>
         </div>
       </div>
 
@@ -118,22 +118,20 @@ function ContactUsMain() {
           <div className="flex border-b border-white/10 mb-8">
             <button
               type="button"
-              className={`pb-3 pr-6 text-sm font-semibold border-b-2 transition-all duration-300 ${
-                contactMode === "message"
+              className={`pb-3 pr-6 text-sm font-semibold border-b-2 transition-all duration-300 ${contactMode === "message"
                   ? "border-[#3567FF] text-[#3567FF]"
                   : "border-transparent text-[#8791AD] hover:text-white"
-              }`}
+                }`}
               onClick={() => setContactMode("message")}
             >
               Send Message
             </button>
             <button
               type="button"
-              className={`pb-3 px-6 text-sm font-semibold border-b-2 transition-all duration-300 ${
-                contactMode === "call"
+              className={`pb-3 px-6 text-sm font-semibold border-b-2 transition-all duration-300 ${contactMode === "call"
                   ? "border-[#3567FF] text-[#3567FF]"
                   : "border-transparent text-[#8791AD] hover:text-white"
-              }`}
+                }`}
               onClick={() => setContactMode("call")}
             >
               Schedule a Call

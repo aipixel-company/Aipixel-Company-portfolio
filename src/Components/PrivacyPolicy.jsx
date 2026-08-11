@@ -183,8 +183,8 @@ export default function PrivacyPolicy() {
   return (
     <section className="bg-[#070508] min-h-screen">
       <SEO
-        title="Privacy Policy | AI Pixel"
-        description="Read the Privacy Policy for AI Pixel. Learn how we handle and protect your personal information in compliance with privacy guidelines."
+        title="Privacy Policy | AI Pixal"
+        description="Read the Privacy Policy for AI Pixal. Learn how we handle and protect your personal information in compliance with privacy guidelines."
         canonicalPath="/privacy-policy"
         schema={breadcrumbSchema}
       />

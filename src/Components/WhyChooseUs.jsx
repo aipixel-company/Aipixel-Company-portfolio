@@ -8,8 +8,8 @@ const features = [
     icon: "🏆",
   },
   {
-    title: "Cutting-Edge Tech Stack",
-    description: "We leverage the latest technologies — React, AI/ML, Cloud platforms, and modern DevOps practices.",
+    title: "Cutting Edge Tech Stack",
+    description: "We leverage the latest technologies React, AI/ML, Cloud platforms, and modern DevOps practices.",
     icon: "⚡",
   },
   {
@@ -18,8 +18,8 @@ const features = [
     icon: "🔄",
   },
   {
-    title: "End-to-End Delivery",
-    description: "From concept and design to development, deployment, and ongoing support — we handle everything.",
+    title: "End to End Delivery",
+    description: "From concept and design to development, deployment, and ongoing support we handle everything.",
     icon: "🚀",
   },
   {
@@ -50,7 +50,7 @@ export default function WhyChooseUs() {
               <span className="gradient-text-accent">Software</span>
             </h2>
             <p className="text-[#8791AD] text-lg leading-relaxed mb-8">
-              We partner with businesses to architect intelligent digital solutions — combining engineering
+              We partner with businesses to architect intelligent digital solutions combining engineering
               excellence with strategic thinking to deliver outcomes that matter.
             </p>
 

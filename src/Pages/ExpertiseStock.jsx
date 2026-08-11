@@ -31,8 +31,8 @@ export default function ExpertiseStock() {
   return (
     <>
       <SEO
-        title="Technical Expertise & Domain Mastery | AI Pixel"
-        description="Discover the core engineering capabilities of AI Pixel across machine learning, user interface design, blockchain, cloud infrastructure, and software quality assurance."
+        title="Technical Expertise & Domain Mastery | AI Pixal"
+        description="Discover the core engineering capabilities of AI Pixal across machine learning, user interface design, blockchain, cloud infrastructure, and software quality assurance."
         canonicalPath="/expertise"
         schema={breadcrumbSchema}
       />
@@ -41,7 +41,7 @@ export default function ExpertiseStock() {
         badge="Our Expertise"
         title="Capabilities That"
         highlight="Drive Results"
-        subtitle="From cutting-edge AI to scalable cloud infrastructure — explore the full spectrum of technical expertise we bring to every engagement."
+        subtitle="From cutting-edge AI to scalable cloud infrastructure explore the full spectrum of technical expertise we bring to every engagement."
       />
 
       {/* 2. Expertise Main overview */}

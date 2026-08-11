@@ -23,7 +23,7 @@ export default function HomeStock() {
     "@context": "https://schema.org",
     "@type": "Organization",
     "@id": "https://aipixel.tech/#organization",
-    "name": "AI Pixel",
+    "name": "AI Pixal",
     "url": "https://aipixel.tech",
     "logo": "https://aipixel.tech/src/assets/navlogo.png",
     "email": "hello@aipixel.tech",
@@ -36,38 +36,38 @@ export default function HomeStock() {
   return (
     <>
       <SEO
-        title="AI Pixel | Where Pixal gets Smarter"
-        description="AI Pixel — Where Pixal gets Smarter. AI-powered automation that reduces manual effort by 60%+. We partner with businesses to architect intelligent digital solutions using React, AI/ML, Cloud platforms, and modern DevOps."
+        title="AI Pixal | Where Pixal gets Smarter"
+        description="AI Pixal Where Pixal gets Smarter. AI powered automation that reduces manual effort by 60%+. We partner with businesses to architect intelligent digital solutions using React, AI/ML, Cloud platforms, and modern DevOps."
         canonicalPath="/"
         schema={orgSchema}
       />
-      {/* 1. Hero — Badge + Large heading + Subtitle + CTA (DevZiv style) */}
+      {/* 1. Hero Badge + Large heading + Subtitle + CTA (DevZiv style) */}
       <HomeSlider />
 
 
 
-      {/* 3. Deliverables — "What you get with AIPixal" (DevZiv: checklist + image) */}
+      {/* 3. Deliverables "What you get with AIPixal" (DevZiv: checklist + image) */}
       <DeliverablesSection />
 
-      {/* 4. Pain Points — "When technology is weak..." (DevZiv: Conversion Leaks cards) */}
+      {/* 4. Pain Points "When technology is weak..." (DevZiv: Conversion Leaks cards) */}
       <PainPointsSection />
 
-      {/* 5. Comparison — "Old way vs AIPixal way" (DevZiv: side-by-side) */}
+      {/* 5. Comparison "Old way vs AIPixal way" (DevZiv: side-by-side) */}
       <ComparisonSection />
 
-      {/* 6. Services — "Our Core Services" grid (DevZiv: Our Services) */}
+      {/* 6. Services "Our Core Services" grid (DevZiv: Our Services) */}
       <ServicesGrid />
 
-      {/* 7. Packages — Engagement models (DevZiv: Packages section) */}
+      {/* 7. Packages Engagement models (DevZiv: Packages section) */}
       <PackagesSection />
 
-      {/* 8. Stats Band — Numbers at a glance */}
+      {/* 8. Stats Band Numbers at a glance */}
       <StatsSection />
 
-      {/* 9. Expertise Carousel — Tech stack showcase */}
+      {/* 9. Expertise Carousel Tech stack showcase */}
       <HomeExpertise />
 
-      {/* 10. Why Choose Us — 2-col feature grid */}
+      {/* 10. Why Choose Us 2-col feature grid */}
       <WhyChooseUs />
 
       {/* 11. Client Testimonials Slider */}
@@ -79,7 +79,7 @@ export default function HomeStock() {
       {/* 13. Blog / Insights Grid */}
       <BlogSection />
 
-      {/* 13b. AI-Focused Insights — dedicated section */}
+      {/* 13b. AI-Focused Insights dedicated section */}
       <AIInsightsSection />
 
       {/* 14. CTA Banner */}

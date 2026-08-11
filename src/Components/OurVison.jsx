@@ -18,7 +18,7 @@ const OurVision = () => {
               At <span className="font-semibold text-[#3567FF]">AI-PIXAL</span>,
               we envision a future where businesses harness the full power of
               Artificial Intelligence to innovate fearlessly and scale effortlessly.
-              We don’t just deliver software — we build <em>impactful solutions</em>
+              We don’t just deliver software we build <em>impactful solutions</em>
               that transform challenges into opportunities.
               <br /> <br />
               By aligning innovation with customer success, we empower

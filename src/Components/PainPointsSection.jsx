@@ -5,19 +5,19 @@ const painPoints = [
     icon: "📉",
     title: "No AI strategy means falling behind",
     description:
-      "Competitors using AI automation are moving 3x faster — without intelligent workflows, your team burns hours on tasks machines could handle.",
+      "Competitors using AI automation are moving 3x faster without intelligent workflows, your team burns hours on tasks machines could handle.",
   },
   {
     icon: "🔗",
     title: "Disconnected data, zero intelligence",
     description:
-      "Without ML-driven insights, your data sits in silos. No predictive analytics means missed patterns and wasted opportunities.",
+      "Without ML driven insights, your data sits in silos. No predictive analytics means missed patterns and wasted opportunities.",
   },
   {
     icon: "👤",
     title: "Manual processes drain your best talent",
     description:
-      "Skilled employees stuck on repetitive tasks instead of strategic work — without automation, human potential is wasted at scale.",
+      "Skilled employees stuck on repetitive tasks instead of strategic work without automation, human potential is wasted at scale.",
   },
   {
     icon: "📊",
@@ -29,7 +29,7 @@ const painPoints = [
     icon: "🔒",
     title: "Security without AI is reactive, not proactive",
     description:
-      "Traditional security can't keep up with evolving threats. Without AI-powered monitoring, breaches are detected too late.",
+      "Traditional security can't keep up with evolving threats. Without AI powered monitoring, breaches are detected too late.",
   },
 ];
 
@@ -53,14 +53,13 @@ export default function PainPointsSection() {
           </p>
         </div>
 
-        {/* Cards grid — top row 3 cards, bottom row 2 cards */}
+        {/* Cards grid top row 3 cards, bottom row 2 cards */}
         <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6">
           {painPoints.map((point, i) => (
             <div
               key={i}
-              className={`glow-card rounded-2xl p-8 group ${
-                i >= 3 ? "lg:col-span-1 sm:col-span-1" : ""
-              }`}
+              className={`glow-card rounded-2xl p-8 group ${i >= 3 ? "lg:col-span-1 sm:col-span-1" : ""
+                }`}
             >
               <div className="w-14 h-14 rounded-xl bg-[#1E1D28] border border-[#2D2B3B] flex items-center justify-center text-2xl mb-5 group-hover:border-[#3567FF]/40 transition-all duration-300">
                 {point.icon}

@@ -28,8 +28,8 @@ export default function ContactUsStock() {
   return (
     <>
       <SEO
-        title="Contact AI Pixel | Schedule a Technical Consultation"
-        description="Get in touch with the AI Pixel development team. Schedule a free technical consultation to review your software design, custom AI model needs, and timeline."
+        title="Contact AI Pixal | Schedule a Technical Consultation"
+        description="Get in touch with the AI Pixal development team. Schedule a free technical consultation to review your software design, custom AI model needs, and timeline."
         canonicalPath="/contact-us"
         schema={breadcrumbSchema}
       />

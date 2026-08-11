@@ -40,7 +40,7 @@ function ServicesMain() {
           At{" "}
           <span className="font-semibold text-white">AI-PIXAL</span>, we design
           next-gen digital products with intelligent automation, scalable
-          technology, and human-centered design — helping your business thrive
+          technology, and human-centered design helping your business thrive
           in the AI era.
         </p>
 
