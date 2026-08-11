@@ -10,12 +10,12 @@ const oldWay = [
 ];
 
 const ourWay = [
-  "Custom architecture designed for your exact requirements",
-  "Dedicated cross-functional teams with domain expertise",
-  "Agile sprints with transparent reporting and weekly demos",
-  "Security-first approach with built-in compliance",
-  "Full documentation and hands-on knowledge transfer",
-  "Predictable costs with fixed-scope or retainer models",
+  "AI-powered custom architecture designed for your exact requirements",
+  "Dedicated cross-functional teams with AI/ML domain expertise",
+  "ML-driven analytics and automated sprint reporting with weekly demos",
+  "AI-enhanced security monitoring with built-in compliance automation",
+  "Intelligent documentation and AI-assisted knowledge transfer",
+  "Predictable costs with AI-optimized resource allocation and planning",
 ];
 
 export default function ComparisonSection() {

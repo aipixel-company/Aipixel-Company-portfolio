@@ -6,36 +6,36 @@ const packages = [
     icon: "📅",
     title: "Monthly Retainer",
     description:
-      "Best for steady capacity and ongoing product iteration. Get a dedicated team with predictable monthly costs.",
+      "Best for continuous AI/ML iteration and ongoing automation development. Get a dedicated AI-focused team with predictable monthly costs.",
     features: [
-      "Dedicated developer(s)",
-      "Weekly sprint updates",
-      "Flexible scope changes",
-      "Priority support",
+      "Dedicated AI/ML engineer(s)",
+      "Weekly sprint updates with ML metrics",
+      "Flexible AI model tuning & scope changes",
+      "Priority support with AI-powered monitoring",
     ],
   },
   {
     icon: "✅",
     title: "Fixed Project",
     description:
-      "Best for a launch, redesign, migration, or a clearly scoped product build with defined milestones.",
+      "Best for a defined AI automation build, ML model deployment, or an intelligent system migration with clear milestones.",
     features: [
-      "Fixed timeline & budget",
-      "Milestone-based delivery",
-      "Full documentation",
-      "Post-launch support",
+      "Fixed timeline & budget for AI delivery",
+      "Milestone-based ML model rollouts",
+      "Full AI pipeline documentation",
+      "Post-launch AI model monitoring & support",
     ],
   },
   {
     icon: "🤝",
     title: "Team Augmentation",
     description:
-      "Best for companies that need a reliable extension of their existing engineering or design team.",
+      "Best for companies that need AI/ML specialists to extend their existing engineering team and accelerate automation initiatives.",
     features: [
-      "Plug-and-play engineers",
-      "Your tools & workflow",
-      "Full integration with team",
-      "Scale up or down anytime",
+      "Plug-and-play AI/ML engineers",
+      "Integrate with your tools & data pipelines",
+      "Full integration with your data science team",
+      "Scale AI capacity up or down anytime",
     ],
   },
 ];

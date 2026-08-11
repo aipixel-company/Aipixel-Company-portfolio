@@ -1,7 +1,44 @@
 import React from "react";
 import { Link } from "react-router-dom";
 
+/* ───────────────────────────────────────────────
+   Services data — AI / Automation are items 1-3
+   ─────────────────────────────────────────────── */
 const services = [
+  // ─── TOP 3: AI & AUTOMATION (featured) ───
+  {
+    icon: "🤖",
+    title: "AI & Machine Learning",
+    description:
+      "Intelligent automation, predictive analytics, and AI-driven products that transform your business operations.",
+    link: "/services/ai-machine-learning",
+    featured: true,
+  },
+  {
+    icon: "🤖",
+    title: "AI Solutions",
+    description:
+      "We deliver AI-driven solutions that automate workflows, personalize customer journeys, and help businesses solve complex challenges.",
+    link: "/services/ai-solutions",
+    featured: true,
+  },
+  {
+    icon: "⚡",
+    title: "Automation",
+    description:
+      "End-to-end process automation powered by AI — from intelligent document processing and RPA to smart workflow orchestration that eliminates manual bottlenecks.",
+    link: "/services/automation",
+    featured: true,
+  },
+  {
+    icon: "☁️",
+    title: "Cloud & DevOps",
+    description:
+      "Secure, scalable cloud infrastructure with CI/CD pipelines, containerization, and 24/7 monitoring.",
+    link: "/services/cloud-devops",
+    featured: true,
+  },
+  // ─── REMAINING SERVICES (standard) ───
   {
     icon: "🌐",
     title: "Web Development",
@@ -17,25 +54,11 @@ const services = [
     link: "/services/mobile-app-development",
   },
   {
-    icon: "🤖",
-    title: "AI & Machine Learning",
-    description:
-      "Intelligent automation, predictive analytics, and AI-driven products that transform your business operations.",
-    link: "/services/ai-machine-learning",
-  },
-  {
     icon: "🎨",
     title: "UI/UX Design",
     description:
       "Human-centered design that balances beauty and usability — wireframes, prototypes, and pixel-perfect interfaces.",
     link: "/services/ui-ux-design",
-  },
-  {
-    icon: "☁️",
-    title: "Cloud & DevOps",
-    description:
-      "Secure, scalable cloud infrastructure with CI/CD pipelines, containerization, and 24/7 monitoring.",
-    link: "/services/cloud-devops",
   },
   {
     icon: "🔒",
@@ -44,11 +67,32 @@ const services = [
       "End-to-end security audits, penetration testing, and compliance solutions to protect your digital assets.",
     link: "/services/cybersecurity",
   },
+  {
+    icon: "⛓️",
+    title: "Blockchain",
+    description:
+      "Secure and transparent blockchain-based applications that enhance trust and empower decentralized technologies.",
+    link: "/services/blockchain",
+  },
+  {
+    icon: "✅",
+    title: "Quality Assurance",
+    description:
+      "Rigorous testing processes that eliminate bugs, guarantee optimal stability, and ensure flawless performance.",
+    link: "/services/quality-assurance",
+  },
+  {
+    icon: "💰",
+    title: "FinTech",
+    description:
+      "Innovative financial solutions empowering businesses with secure, modern, and compliant technologies.",
+    link: "/services/fintech",
+  },
 ];
 
 export default function ServicesGrid() {
   return (
-    <section className="bg-[#070508] py-10 lg:py-14 border-t border-[#2D2B3B]/30">
+    <section id="services-grid" className="bg-[#070508] py-10 lg:py-14 border-t border-[#2D2B3B]/30">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         {/* Header */}
         <div className="text-center mb-16">
@@ -63,16 +107,33 @@ export default function ServicesGrid() {
           </p>
         </div>
 
-        {/* Service Cards Grid */}
-        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6">
+        {/* Service Cards Grid — 1 col → 2 col → 3 col → 4 col */}
+        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-6">
           {services.map((service, i) => (
             <Link
               key={i}
               to={service.link}
-              className="group glow-card rounded-2xl p-8 flex flex-col gap-4 cursor-pointer no-underline"
+              className={`group rounded-2xl p-8 flex flex-col gap-4 cursor-pointer no-underline relative overflow-hidden transition-all duration-300
+                ${service.featured
+                  ? "glow-card border-l-4 border-l-[#3567FF]"
+                  : "glow-card"
+                }`}
             >
+              {/* Featured badge */}
+              {service.featured && (
+                <span className="absolute top-4 right-4 px-2.5 py-1 rounded-full text-[10px] font-bold uppercase tracking-wider bg-[#3567FF]/15 text-[#3567FF] border border-[#3567FF]/25">
+                  Featured
+                </span>
+              )}
+
               {/* Icon */}
-              <div className="w-14 h-14 rounded-xl bg-[#3567FF]/10 flex items-center justify-center text-2xl border border-[#3567FF]/20 group-hover:bg-[#3567FF] group-hover:border-[#3567FF] transition-all duration-300">
+              <div
+                className={`w-14 h-14 rounded-xl flex items-center justify-center text-2xl transition-all duration-300
+                  ${service.featured
+                    ? "bg-[#3567FF]/20 border border-[#3567FF]/30 group-hover:bg-[#3567FF] group-hover:border-[#3567FF]"
+                    : "bg-[#3567FF]/10 border border-[#3567FF]/20 group-hover:bg-[#3567FF] group-hover:border-[#3567FF]"
+                  }`}
+              >
                 {service.icon}
               </div>
 

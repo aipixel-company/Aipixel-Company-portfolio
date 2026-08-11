@@ -18,7 +18,7 @@ const cards = [
     title: "Dtec",
     logo: dtecch,
     description:
-      "DTEC provides innovative tech solutions to enhance business efficiency and drive growth in various sectors.",
+      "AI-powered workflow automation and predictive analytics platform — boosting operational efficiency by 40% for DTEC's tech ecosystem.",
     backgroundImage: dtec,
     logoHeight: "50px",
   },
@@ -27,7 +27,7 @@ const cards = [
     title: "Moosa Group",
     logo: moosa,
     description:
-      "Moosa Group is a conglomerate with diverse business interests, delivering quality products and services.",
+      "Intelligent supply-chain automation and ML-driven demand forecasting — enabling smarter decisions across Moosa Group's diverse portfolio.",
     backgroundImage: moosagroup,
     logoHeight: "60px",
   },
@@ -36,7 +36,7 @@ const cards = [
     title: "Bank Muscat",
     logo: bankmusqat,
     description:
-      "Bank Muscat is a leading financial institution in Oman, offering a wide range of banking services and solutions.",
+      "AI-enhanced fraud detection and automated compliance monitoring — securing millions of transactions for Oman's leading bank.",
     backgroundImage: bankmusqatt,
     logoHeight: "35px",
   },
@@ -45,7 +45,7 @@ const cards = [
     title: "Adventure Club",
     logo: adventureclub,
     description:
-      "Adventure Club offers thrilling and adventurous activities for those who seek excitement and unforgettable experiences.",
+      "ML-driven personalized booking recommendations and automated customer engagement — transforming adventure experiences.",
     backgroundImage: background,
     logoHeight: "70px",
   },
@@ -54,7 +54,7 @@ const cards = [
     title: "Absher",
     logo: absher,
     description:
-      "Connect instantly using NFC technology with ABSHER digital business cards.",
+      "AI-powered smart networking with NFC technology — automated lead scoring and intelligent contact management with ABSHER.",
     backgroundImage: laracee,
     logoHeight: "70px",
   },
@@ -74,8 +74,8 @@ const Card = memo(
     <div
       key={card.id}
       className={`w-64 md:w-36 lg:w-40 xl:w-44 2xl:w-48 h-auto cursor-pointer transition-all duration-300 ease-in-out hover:ring-4 hover:ring-blue-500/50 rounded-xl ${isActive
-          ? "bg-white shadow-2xl transform scale-105 ring-4 ring-blue-500/30 z-10" // Prominent active state
-          : "bg-white rounded-xl shadow-lg border border-gray-100 opacity-90 hover:opacity-100" // Subtle inactive state
+        ? "bg-white shadow-2xl transform scale-105 ring-4 ring-blue-500/30 z-10" // Prominent active state
+        : "bg-white rounded-xl shadow-lg border border-gray-100 opacity-90 hover:opacity-100" // Subtle inactive state
         }`}
       onClick={() => onClick(card.id)}
       onMouseEnter={onMouseEnter}
@@ -199,13 +199,32 @@ function HomeSlider() {
       <div className="relative z-10 w-full px-4 sm:px-8 lg:px-16 py-8 md:py-10 lg:py-12">
         {/* Modern & Catchy Header Content */}
         <div className="lg:mb-12 mb-8 mt-4 lg:mt-6 cursor-default text-center max-w-4xl mx-auto">
-          <h1 className="text-3xl sm:text-4xl md:text-5xl lg:text-5xl xl:text-6xl font-extrabold text-white tracking-tight drop-shadow-2xl animate-pulseOnce">
-            Empowering Digital Transformation.
-          </h1>
-          <h2 className="text-lg sm:text-xl md:text-2xl lg:text-2xl xl:text-3xl text-white font-light mt-3 lg:mt-4 drop-shadow-lg">
+          <div className="inline-flex items-center gap-2 px-4 py-1.5 rounded-full bg-white/10 backdrop-blur-sm border border-white/20 text-white text-xs sm:text-sm font-semibold mb-5 tracking-wide">
+            <span className="w-2 h-2 bg-[#61CE70] rounded-full animate-pulse"></span>
+            AI-Powered Digital Agency
+          </div>
+          <h1 className="text-3xl sm:text-4xl md:text-5xl lg:text-5xl xl:text-6xl font-extrabold text-white tracking-tight drop-shadow-2xl">
             Where Pixal gets Smarter
+          </h1>
+          <h2 className="text-lg sm:text-xl md:text-2xl lg:text-2xl xl:text-3xl text-white/90 font-light mt-3 lg:mt-4 drop-shadow-lg">
+            AI-powered automation that reduces manual effort by 60%+
           </h2>
-
+          <p className="text-sm sm:text-base text-white/70 mt-4 lg:mt-5 max-w-2xl mx-auto leading-relaxed drop-shadow-md">
+            We partner with businesses to architect intelligent digital solutions.
+            We leverage the latest technologies — React, AI/ML, Cloud platforms, and modern DevOps practices.
+          </p>
+          <div className="mt-6 lg:mt-8">
+            <a
+              href="/services"
+              className="inline-flex items-center gap-2 px-7 py-3 rounded-full bg-[#3567FF] text-white text-sm font-semibold
+                         hover:bg-[#1a4fd9] hover:shadow-[0_0_25px_rgba(53,103,255,0.5)] transition-all duration-300 no-underline"
+            >
+              Explore Our Services
+              <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20" fill="currentColor" className="w-4 h-4">
+                <path fillRule="evenodd" d="M3 10a.75.75 0 01.75-.75h10.638L10.23 5.29a.75.75 0 111.04-1.08l5.5 5.25a.75.75 0 010 1.08l-5.5 5.25a.75.75 0 11-1.04-1.08l4.158-3.96H3.75A.75.75 0 013 10z" clipRule="evenodd" />
+              </svg>
+            </a>
+          </div>
         </div>
 
         {/* Desktop/Tablet Card Layout */}

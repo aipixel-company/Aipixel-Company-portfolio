@@ -34,8 +34,8 @@ const expertiseData = [
   {
     id: 1,
     field: "Web Development",
-    name: "Web Development",
-    description: "AI Pixal builds scalable and visually appealing web applications that deliver outstanding performance and adapt seamlessly to future business growth.",
+    name: "AI-Powered Web Apps",
+    description: "We build intelligent web applications with embedded ML models, automated personalization engines, and AI-driven analytics dashboards for real-time decision making.",
     image: techImages.webDev,
     gradient: "from-blue-500 to-cyan-500",
     icon: "🌐"
@@ -43,8 +43,8 @@ const expertiseData = [
   {
     id: 2,
     field: "UI/UX Design",
-    name: "User Interface Design",
-    description: "Our design team creates engaging, user-friendly interfaces that balance aesthetics with usability, ensuring intuitive digital experiences.",
+    name: "AI-Enhanced UX Design",
+    description: "Data-driven interface design powered by ML-based user behavior analysis, automated A/B testing, and AI heatmap insights for optimal conversion flows.",
     image: techImages.uiUx,
     gradient: "from-purple-500 to-pink-500",
     icon: "🎨"
@@ -52,8 +52,8 @@ const expertiseData = [
   {
     id: 3,
     field: "Artificial Intelligence",
-    name: "AI Solutions",
-    description: "We deliver AI-driven solutions that automate workflows, personalize customer journeys, and help businesses solve complex challenges.",
+    name: "AI & Machine Learning",
+    description: "End-to-end AI/ML solutions — from predictive analytics and NLP to computer vision and deep learning models that automate complex business operations.",
     image: techImages.ai,
     gradient: "from-green-500 to-emerald-500",
     icon: "🤖"
@@ -61,8 +61,8 @@ const expertiseData = [
   {
     id: 4,
     field: "DevOps",
-    name: "DevOps",
-    description: "Our DevOps experts streamline collaboration between development and operations, enabling faster deployments and continuous delivery pipelines.",
+    name: "AI-Driven DevOps",
+    description: "Intelligent CI/CD pipelines with automated testing, ML-powered anomaly detection, and AI-driven infrastructure scaling for zero-downtime deployments.",
     image: techImages.devops,
     gradient: "from-orange-500 to-red-500",
     icon: "⚙️"
@@ -70,8 +70,8 @@ const expertiseData = [
   {
     id: 5,
     field: "Mobile App Development",
-    name: "Mobile App Development",
-    description: "AI Pixal designs and develops mobile apps that offer seamless user experiences across all platforms with effective prototyping.",
+    name: "Smart Mobile Apps",
+    description: "AI-integrated mobile apps with on-device ML models, intelligent push notifications, automated content personalization, and predictive user engagement.",
     image: techImages.mobile,
     gradient: "from-indigo-500 to-purple-500",
     icon: "📱"
@@ -79,8 +79,8 @@ const expertiseData = [
   {
     id: 6,
     field: "BlockChain",
-    name: "BlockChain",
-    description: "We create secure and transparent blockchain-based applications that enhance trust and empower businesses with decentralized technologies.",
+    name: "AI + Blockchain",
+    description: "Smart contract automation enhanced with AI-powered fraud detection, ML-driven consensus optimization, and intelligent decentralized application workflows.",
     image: techImages.blockchain,
     gradient: "from-gray-700 to-gray-900",
     icon: "⛓️"
@@ -88,8 +88,8 @@ const expertiseData = [
   {
     id: 7,
     field: "Quality Assurance",
-    name: "Quality Assurance",
-    description: "AI Pixal ensures top quality by performing rigorous testing processes that eliminate bugs and guarantee optimal stability.",
+    name: "AI-Powered QA",
+    description: "Automated testing powered by ML — intelligent test case generation, AI-driven regression detection, and predictive bug analysis for flawless releases.",
     image: techImages.qa,
     gradient: "from-green-600 to-lime-500",
     icon: "✅"
@@ -97,8 +97,8 @@ const expertiseData = [
   {
     id: 8,
     field: "Software Testing",
-    name: "Software Testing",
-    description: "Our testing team validates functionality, security, and usability, ensuring flawless performance across platforms.",
+    name: "Intelligent Testing Automation",
+    description: "AI-accelerated test automation with self-healing scripts, ML-based test prioritization, and intelligent coverage analysis across platforms.",
     image: techImages.testing,
     gradient: "from-teal-500 to-cyan-500",
     icon: "🔍"
@@ -106,8 +106,8 @@ const expertiseData = [
   {
     id: 9,
     field: "WordPress",
-    name: "WordPress",
-    description: "We build creative, flexible, and fully optimized WordPress websites that empower businesses to publish and scale content effortlessly.",
+    name: "AI-Optimized CMS",
+    description: "WordPress solutions with AI-powered content recommendations, automated SEO optimization, intelligent chatbot integration, and ML-driven analytics.",
     image: techImages.wordpress,
     gradient: "from-blue-700 to-blue-900",
     icon: "💻"
@@ -115,8 +115,8 @@ const expertiseData = [
   {
     id: 10,
     field: "Fintech",
-    name: "Fintech",
-    description: "AI Pixal develops innovative financial solutions, empowering businesses with secure, modern, and compliant technologies.",
+    name: "AI-Driven FinTech",
+    description: "Intelligent financial platforms with ML-powered risk scoring, automated fraud detection, AI-driven credit analysis, and predictive market insights.",
     image: techImages.fintech,
     gradient: "from-green-600 to-emerald-600",
     icon: "💰"
@@ -124,8 +124,8 @@ const expertiseData = [
   {
     id: 11,
     field: "Application Maintenance",
-    name: "Application Maintenance",
-    description: "We provide proactive support and regular maintenance services to keep software systems updated, stable, and secure.",
+    name: "AI-Managed Maintenance",
+    description: "Proactive AI-monitored application health — automated performance tuning, ML-driven anomaly alerts, and intelligent incident resolution for 24/7 reliability.",
     image: techImages.maintenance,
     gradient: "from-yellow-500 to-orange-500",
     icon: "🔧"
@@ -133,8 +133,8 @@ const expertiseData = [
   {
     id: 12,
     field: "Software Development",
-    name: "Software Development",
-    description: "Our software engineers design and deliver interactive applications that combine reliability, usability, and performance.",
+    name: "AI-Integrated Software",
+    description: "Custom software embedded with intelligent automation — from AI-assisted code generation to ML-powered feature recommendations and smart data pipelines.",
     image: techImages.software,
     gradient: "from-blue-600 to-indigo-600",
     icon: "💻"
@@ -142,8 +142,8 @@ const expertiseData = [
   {
     id: 13,
     field: "Project Management",
-    name: "Project Management",
-    description: "AI Pixal ensures projects are delivered on time, within scope, and with maximum efficiency using proven frameworks.",
+    name: "AI-Powered Project Delivery",
+    description: "ML-driven sprint planning, automated risk prediction, AI-powered resource allocation, and intelligent milestone tracking for on-time AI project delivery.",
     image: techImages.project,
     gradient: "from-purple-600 to-indigo-600",
     icon: "📊"
@@ -151,8 +151,8 @@ const expertiseData = [
   {
     id: 14,
     field: "AWS",
-    name: "AWS",
-    description: "We leverage Amazon Web Services to deliver secure, scalable, and cost-effective cloud infrastructure for business transformation.",
+    name: "AI on AWS Cloud",
+    description: "Leveraging AWS SageMaker, Bedrock, and Lambda for scalable ML model training, automated inference pipelines, and intelligent cloud infrastructure.",
     image: techImages.aws,
     gradient: "from-orange-400 to-red-500",
     icon: "☁️"
@@ -160,8 +160,8 @@ const expertiseData = [
   {
     id: 15,
     field: "Data Structures and Algorithms",
-    name: "Data Structures & Algorithms",
-    description: "Our experts apply data structures and algorithms to build efficient, optimized, and reliable systems for complex problems.",
+    name: "ML Algorithms & Data Pipelines",
+    description: "Optimized data structures and algorithms powering efficient ML training pipelines, real-time data processing, and intelligent feature engineering at scale.",
     image: techImages.dsa,
     gradient: "from-blue-500 to-teal-500",
     icon: "📊"
@@ -169,8 +169,8 @@ const expertiseData = [
   {
     id: 16,
     field: "Programming Languages",
-    name: "Programming Languages",
-    description: "AI Pixal developers are proficient in a wide range of programming languages, enabling tailored solutions across diverse platforms.",
+    name: "AI/ML Programming",
+    description: "Expert proficiency in Python, TensorFlow, PyTorch, and R — building production-grade ML models, AI microservices, and automated data science workflows.",
     image: techImages.programming,
     gradient: "from-indigo-500 to-purple-500",
     icon: "👨‍💻"
@@ -178,8 +178,8 @@ const expertiseData = [
   {
     id: 17,
     field: "Cloud Platform Integration",
-    name: "Cloud Platform Integration",
-    description: "We integrate applications with leading cloud platforms, providing flexibility and seamless connections for business growth.",
+    name: "AI Cloud Integration",
+    description: "Seamless integration with AI cloud services — Azure Cognitive Services, Google AI Platform, and AWS AI — for intelligent multi-cloud automation.",
     image: techImages.cloud,
     gradient: "from-cyan-500 to-blue-500",
     icon: "🌩️"
@@ -187,8 +187,8 @@ const expertiseData = [
   {
     id: 18,
     field: "Text Editors",
-    name: "Text Editors",
-    description: "Our team equips developers with the best text editors that streamline productivity and enhance the software development workflow.",
+    name: "AI-Assisted Development Tools",
+    description: "AI-powered coding environments with intelligent code completion, automated refactoring suggestions, and ML-driven productivity optimization.",
     image: techImages.editors,
     gradient: "from-gray-600 to-gray-800",
     icon: "📝"
@@ -196,8 +196,8 @@ const expertiseData = [
   {
     id: 19,
     field: "Integrated Development Environments",
-    name: "IDEs",
-    description: "We enable access to modern IDEs that simplify coding, debugging, and testing for efficient developer workflows.",
+    name: "AI-Enhanced IDEs",
+    description: "Modern IDEs supercharged with AI copilots, automated debugging assistants, intelligent test generation, and ML-powered code review.",
     image: techImages.ides,
     gradient: "from-purple-500 to-pink-500",
     icon: "🔧"
@@ -205,8 +205,8 @@ const expertiseData = [
   {
     id: 20,
     field: "Databases",
-    name: "Databases",
-    description: "AI Pixal designs secure, efficient, and scalable database systems that ensure reliable data storage and management.",
+    name: "Intelligent Data Systems",
+    description: "AI-optimized database architectures with automated query tuning, ML-driven data classification, intelligent caching, and predictive storage scaling.",
     image: techImages.databases,
     gradient: "from-blue-600 to-cyan-600",
     icon: "🗄️"
@@ -214,8 +214,8 @@ const expertiseData = [
   {
     id: 22,
     field: "Networking Basics",
-    name: "Networking Basics",
-    description: "We provide comprehensive networking training and solutions, empowering teams with strong foundations in connectivity.",
+    name: "AI Network Automation",
+    description: "Intelligent network management with ML-powered traffic analysis, automated threat detection, and AI-driven performance optimization across infrastructure.",
     image: techImages.networking,
     gradient: "from-green-500 to-blue-500",
     icon: "🌐"
@@ -223,8 +223,8 @@ const expertiseData = [
   {
     id: 23,
     field: "Basics of Testing",
-    name: "Software Testing",
-    description: "Our training in software testing equips professionals with essential skills to identify bugs and ensure reliable products.",
+    name: "AI Testing Fundamentals",
+    description: "Foundation-level AI testing skills — automated test frameworks, ML model validation techniques, and intelligent quality gates for AI-powered products.",
     image: techImages.testingBasics,
     gradient: "from-red-500 to-pink-500",
     icon: "🧪"
@@ -232,8 +232,8 @@ const expertiseData = [
   {
     id: 26,
     field: "Software Development Life Cycle",
-    name: "SDLC",
-    description: "AI Pixal follows a structured SDLC methodology to ensure projects move smoothly from concept to deployment with quality.",
+    name: "AI-Augmented SDLC",
+    description: "AI-enhanced development lifecycle — from automated requirements analysis and ML-powered estimation to intelligent deployment and AI-driven post-release monitoring.",
     image: techImages.sdlc,
     gradient: "from-indigo-500 to-purple-500",
     icon: "🔄"
@@ -241,8 +241,8 @@ const expertiseData = [
   {
     id: 28,
     field: "SEO (Search Engine Optimization)",
-    name: "SEO",
-    description: "Our SEO experts apply proven strategies that improve search visibility, drive organic traffic, and enhance brand presence.",
+    name: "AI-Powered SEO",
+    description: "ML-driven keyword analysis, automated content optimization, AI-powered competitor tracking, and intelligent search ranking strategies for maximum visibility.",
     image: techImages.seo,
     gradient: "from-yellow-500 to-orange-500",
     icon: "🔎"

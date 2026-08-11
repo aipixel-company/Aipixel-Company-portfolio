@@ -3,33 +3,33 @@ import React from "react";
 const painPoints = [
   {
     icon: "📉",
-    title: "Projects that stall mid-development",
+    title: "No AI strategy means falling behind",
     description:
-      "Without clear architecture, scope creep and missed deadlines drain your budget and momentum.",
+      "Competitors using AI automation are moving 3x faster — without intelligent workflows, your team burns hours on tasks machines could handle.",
   },
   {
     icon: "🔗",
-    title: "Disconnected tech and business goals",
+    title: "Disconnected data, zero intelligence",
     description:
-      "Technology built without strategy creates tools nobody uses and investments that don't compound.",
+      "Without ML-driven insights, your data sits in silos. No predictive analytics means missed patterns and wasted opportunities.",
   },
   {
     icon: "👤",
-    title: "Talent gaps that slow everything down",
+    title: "Manual processes drain your best talent",
     description:
-      "Hiring and retaining senior engineers is expensive — and a single knowledge gap can block an entire roadmap.",
+      "Skilled employees stuck on repetitive tasks instead of strategic work — without automation, human potential is wasted at scale.",
   },
   {
     icon: "📊",
-    title: "Scaling breaks what already works",
+    title: "Scaling without AI breaks everything",
     description:
-      "Without proper foundations, every new feature introduces bugs, inconsistency, and technical debt.",
+      "Manual operations crumble under growth. Without intelligent automation, every new customer multiplies costs instead of revenue.",
   },
   {
     icon: "🔒",
-    title: "Security treated as an afterthought",
+    title: "Security without AI is reactive, not proactive",
     description:
-      "Vulnerabilities discovered late in the cycle are 10x more expensive to fix and put trust at risk.",
+      "Traditional security can't keep up with evolving threats. Without AI-powered monitoring, breaches are detected too late.",
   },
 ];
 
@@ -48,8 +48,8 @@ export default function PainPointsSection() {
             the business pays for it
           </h2>
           <p className="text-[#8791AD] mt-4 max-w-2xl mx-auto text-lg">
-            Products don't fail because they're ugly. They fail because they create confusion,
-            slow launches, and leak opportunities.
+            Without AI and intelligent automation, businesses leak revenue through manual bottlenecks,
+            missed insights, and reactive operations that can't scale.
           </p>
         </div>
 

@@ -12,6 +12,7 @@ import WhyChooseUs from '../Components/WhyChooseUs'
 import CustomerSuccessSlider from '../Components/CustomerSuccessSlider'
 import CollaboratingPartners from '../Components/CollaboratingPartners'
 import BlogSection from '../Components/BlogSection'
+import AIInsightsSection from '../Components/AIInsightsSection'
 import CTABanner from '../Components/CTABanner'
 import Map from '../Components/Map'
 import ContactusFormSection from '../Components/ContactusFormSection'
@@ -36,7 +37,7 @@ export default function HomeStock() {
     <>
       <SEO
         title="AI Pixel | Where Pixal gets Smarter"
-        description="AI Pixel is a leading digital product studio and AI engineering consultancy. We design and build custom machine learning solutions, web apps, and digital platforms."
+        description="AI Pixel — Where Pixal gets Smarter. AI-powered automation that reduces manual effort by 60%+. We partner with businesses to architect intelligent digital solutions using React, AI/ML, Cloud platforms, and modern DevOps."
         canonicalPath="/"
         schema={orgSchema}
       />
@@ -77,6 +78,9 @@ export default function HomeStock() {
 
       {/* 13. Blog / Insights Grid */}
       <BlogSection />
+
+      {/* 13b. AI-Focused Insights — dedicated section */}
+      <AIInsightsSection />
 
       {/* 14. CTA Banner */}
       <CTABanner />
