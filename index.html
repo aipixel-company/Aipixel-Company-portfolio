@@ -28,6 +28,21 @@
 <body>
   <div id="root"></div>
   <script type="module" src="/src/main.jsx"></script>
+  <!-- Website agent (Maya). The server address comes from VITE_AGENT_SERVER in .env.development / .env.production;
+       a build without it simply has no agent. -->
+  <script>
+    (function () {
+      var server = "%VITE_AGENT_SERVER%";
+      if (!server || server.charAt(0) === "%") return;
+      var s = document.createElement("script");
+      s.src = server.replace(/\/+$/, "") + "/v1/loader.js";
+      s.async = true;
+      s.setAttribute("data-agent", "aipixal");
+      // On a copy of the site whose address is not the live one (localhost, staging), show pages here too.
+      if ("%VITE_AGENT_PAGES%" === "here") s.setAttribute("data-pages", "here");
+      document.body.appendChild(s);
+    })();
+  </script>
 </body>
 
 </html>

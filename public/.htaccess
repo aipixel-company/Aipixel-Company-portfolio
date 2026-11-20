@@ -1,0 +1,9 @@
+# The main site is a single-page app: its own pages (/services, /clients/moosa, …) are answered with
+# index.html, so they open when someone types the address, follows a link or reloads. Only these names
+# are covered; the other apps in their own folders (crm, mizan, rukn, …) are left alone.
+<IfModule mod_rewrite.c>
+  RewriteEngine On
+  RewriteBase /
+  RewriteCond %{REQUEST_FILENAME} !-f
+  RewriteRule ^(aboutus|contact-us|services|clients|expertise|industries|blogs|blog|privacy-policy|terms-of-service)(/.*)?$ /index.html [L]
+</IfModule>
