@@ -5,5 +5,6 @@
   RewriteEngine On
   RewriteBase /
   RewriteCond %{REQUEST_FILENAME} !-f
+  RewriteCond %{REQUEST_FILENAME} !-d
   RewriteRule ^(aboutus|contact-us|services|clients|expertise|industries|blogs|blog|privacy-policy|terms-of-service)(/.*)?$ /index.html [L]
 </IfModule>
